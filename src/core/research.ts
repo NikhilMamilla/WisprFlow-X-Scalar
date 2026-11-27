@@ -11,7 +11,7 @@
 //      status never advances the verification status.
 //   2. Missing information stays UNKNOWN. Nothing here guesses a rule, a source
 //      or a date.
-import { REGIONS, findRegion } from './geo'
+import { findRegion } from './geo'
 import {
   CONFIDENCE_LEVELS,
   VERIFICATION_STATUSES,
@@ -40,9 +40,6 @@ export const RESEARCH_STATUSES = [
   'CLOSED',
 ] as const
 export type ResearchStatus = (typeof RESEARCH_STATUSES)[number]
-
-// Ordering used for reporting only (how far through research something is).
-export const RESEARCH_STATUS_ORDER: readonly ResearchStatus[] = RESEARCH_STATUSES
 
 export const RESEARCH_TRANSITIONS: Readonly<Record<ResearchStatus, readonly ResearchStatus[]>> = Object.freeze({
   DISCOVERED: ['CATALOGUED', 'NEEDS_RESEARCH', 'CONFLICTING', 'OUTDATED', 'CLOSED'],
@@ -790,6 +787,3 @@ export function filterResearchRecords(records: readonly ResearchRecord[], filter
   })
 }
 
-// Coverage areas are the 28 states, 8 UTs and central government, from the one
-// geography table the app already uses: no second list of states.
-export const COVERAGE_REGIONS = REGIONS

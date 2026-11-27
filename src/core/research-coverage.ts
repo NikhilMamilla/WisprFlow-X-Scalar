@@ -4,10 +4,11 @@
 //
 // NONE_FOUND is a statement about a search that was performed. It never proves
 // that no scheme exists for that area, and the report says so.
-import { findRegion } from './geo'
+// The 28 states and 8 UTs come from the one geography table the app already
+// uses; there is no second list of states.
+import { REGIONS, findRegion } from './geo'
 import {
   COVERAGE_AGE_BANDS,
-  COVERAGE_REGIONS,
   RESEARCH_GROUPS,
   eligibilityVerified,
   missingSources,
@@ -105,10 +106,10 @@ export function buildCoverageReport(records: readonly ResearchRecord[], claims: 
   const inRegion = (name: string) =>
     records.filter((record) => record.state !== undefined && findRegion(record.state)?.name === name)
 
-  const stateAreas = COVERAGE_REGIONS.filter((region) => region.type === 'state').map((region) =>
+  const stateAreas = REGIONS.filter((region) => region.type === 'state').map((region) =>
     area(region.code, region.name, 'state', inRegion(region.name), claimFor(claims, region.code, [region.name, region.code])),
   )
-  const unionAreas = COVERAGE_REGIONS.filter((region) => region.type === 'union_territory').map((region) =>
+  const unionAreas = REGIONS.filter((region) => region.type === 'union_territory').map((region) =>
     area(region.code, region.name, 'ut', inRegion(region.name), claimFor(claims, region.code, [region.name, region.code])),
   )
 
