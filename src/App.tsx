@@ -1,16 +1,20 @@
+import { useEffect, useState } from 'react'
 import DiagnosticPage from './DiagnosticPage'
-import './App.css'
+import Flow from './Flow'
+
+function useHash(): string {
+  const [hash, setHash] = useState(window.location.hash)
+  useEffect(() => {
+    const onChange = () => setHash(window.location.hash)
+    window.addEventListener('hashchange', onChange)
+    return () => window.removeEventListener('hashchange', onChange)
+  }, [])
+  return hash
+}
 
 function App() {
-  return (
-    <main>
-      <header className="placeholder">
-        <h1>Haq Bolo</h1>
-        <p>Speak. We find your schemes.</p>
-      </header>
-      <DiagnosticPage />
-    </main>
-  )
+  const hash = useHash()
+  return hash === '#/diagnostic' ? <DiagnosticPage /> : <Flow />
 }
 
 export default App

@@ -1,0 +1,25 @@
+.flow {
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  position: relative;
+  padding-bottom: 56px;
+}
+
+.no-voice-banner {
+  background: #fff3cd;
+  border-bottom: 1px solid #c99;
+  padding: 8px 16px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.about-link {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #999;
+  background: white;
+}

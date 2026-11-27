@@ -1,0 +1,86 @@
+.question-screen {
+  padding: 24px 16px;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.question-text {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.listening-indicator {
+  font-size: 18px;
+  color: #b42318;
+  margin-bottom: 16px;
+}
+
+.yesno-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.yes-button,
+.no-button {
+  min-width: 140px;
+  min-height: 72px;
+  font-size: 26px;
+  border-radius: 14px;
+  border: none;
+  color: white;
+}
+
+.yes-button {
+  background: #1a7f37;
+}
+
+.no-button {
+  background: #b42318;
+}
+
+.number-input-row,
+.open-input-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.number-input {
+  font-size: 24px;
+  width: 140px;
+  padding: 8px;
+  text-align: center;
+}
+
+.open-input {
+  font-size: 20px;
+  flex: 1;
+  padding: 8px;
+}
+
+.number-input-row button,
+.open-input-row button {
+  min-height: 48px;
+  font-size: 18px;
+  padding: 0 16px;
+}
+
+.occupation-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.occupation-quick button {
+  min-height: 48px;
+  font-size: 16px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: white;
+}

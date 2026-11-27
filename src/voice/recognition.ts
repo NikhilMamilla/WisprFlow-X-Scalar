@@ -32,6 +32,7 @@ interface MinimalSpeechRecognition {
   continuous: boolean
   start: () => void
   stop: () => void
+  abort: () => void
   onresult: ((event: any) => void) | null
   onerror: ((event: any) => void) | null
   onstart: (() => void) | null

@@ -1,0 +1,41 @@
+.language-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+.language-screen h1 {
+  font-size: 44px;
+  margin-bottom: 4px;
+}
+
+.tagline {
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+
+.language-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.language-button {
+  min-height: 72px;
+  font-size: 28px;
+  border-radius: 14px;
+  border: 2px solid #1a7f37;
+  background: white;
+  color: #1a1a1a;
+}
+
+.language-button:active {
+  background: #1a7f37;
+  color: white;
+}

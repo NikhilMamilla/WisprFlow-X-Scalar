@@ -10,6 +10,6 @@ export const LANGUAGES: VoiceLanguage[] = [
   { code: 'en-IN', label: 'Hinglish', sample: 'Hello, main Haq Bolo se baat kar raha hoon.' },
 ]
 
-// Fixed sentence for the "Play sample" demo-without-a-mic button.
+// Fixed sentence for the "Play sample" demo-without-a-mic button: the full demo story.
 export const FIXED_SAMPLE_SENTENCE =
-  'Mera naam Ramesh hai, main mazdoor hoon, mujhe scheme chahiye.'
+  'Main thela lagata hoon, teen bachche hain, kiraye ke ghar mein rehta hoon, bank account bhai ke naam pe hai.'

@@ -26,10 +26,22 @@ export function onVoicesChanged(callback: () => void): () => void {
   return () => window.speechSynthesis.removeEventListener('voiceschanged', callback)
 }
 
-export function speak(text: string, lang: string): void {
-  if (!isSynthesisSupported()) return
+export function speak(text: string, lang: string, onEnd?: () => void): void {
+  if (!isSynthesisSupported()) {
+    onEnd?.()
+    return
+  }
   const utterance = new SpeechSynthesisUtterance(text)
   utterance.lang = lang
+  if (onEnd) {
+    utterance.onend = onEnd
+    utterance.onerror = onEnd
+  }
   window.speechSynthesis.cancel()
   window.speechSynthesis.speak(utterance)
+}
+
+export function cancel(): void {
+  if (!isSynthesisSupported()) return
+  window.speechSynthesis.cancel()
 }

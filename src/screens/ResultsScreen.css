@@ -1,0 +1,67 @@
+.results-screen {
+  padding: 16px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.results-screen h1 {
+  font-size: 26px;
+  text-align: center;
+}
+
+.result-group h2 {
+  font-size: 22px;
+  margin-top: 24px;
+}
+
+.result-card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.result-card h3 {
+  font-size: 20px;
+  margin: 0 0 4px;
+}
+
+.benefit {
+  font-size: 16px;
+  color: #333;
+}
+
+.why,
+.why-list {
+  font-size: 16px;
+  color: #444;
+}
+
+.documents {
+  font-size: 14px;
+  color: #666;
+}
+
+.unverified-badge {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  background: #fff3cd;
+  border: 1px solid #c99;
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.results-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  justify-content: center;
+}
+
+.results-actions button {
+  min-height: 56px;
+  font-size: 20px;
+  padding: 0 24px;
+  border-radius: 12px;
+}

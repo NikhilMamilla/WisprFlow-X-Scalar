@@ -1,6 +1,8 @@
 export * from './types'
 export { extract, extractProfile } from './extractor'
 export { parseSpokenNumber } from './numbers'
+export { parseYesNo } from './answers'
 export * from './schemes'
 export * from './matcher'
 export * from './followups'
+export * from './dialog'

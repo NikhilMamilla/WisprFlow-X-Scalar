@@ -1,0 +1,22 @@
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.chip {
+  background: #eef6ee;
+  border: 1px solid #1a7f37;
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chip em {
+  font-size: 13px;
+  color: #555;
+  font-style: italic;
+}

@@ -1,0 +1,21 @@
+.about-screen {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.about-screen h1 {
+  font-size: 24px;
+}
+
+.about-screen p {
+  font-size: 18px;
+  margin: 16px 0;
+}
+
+.about-screen button {
+  min-height: 48px;
+  font-size: 18px;
+  padding: 0 20px;
+  margin-top: 16px;
+}
