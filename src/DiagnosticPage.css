@@ -1,0 +1,91 @@
+.diagnostic {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  max-width: 480px;
+  margin: 0 auto;
+  font-family: system-ui, sans-serif;
+  font-size: 20px;
+}
+
+.panel {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.panel h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.support-panel .ua {
+  font-size: 14px;
+  word-break: break-all;
+  color: #555;
+}
+
+.lang-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.lang-button {
+  flex: 1;
+  min-width: 100px;
+  min-height: 56px;
+  font-size: 22px;
+  border-radius: 10px;
+  border: 2px solid #333;
+  background: white;
+}
+
+.lang-button.active {
+  background: #333;
+  color: white;
+}
+
+.mic-button {
+  width: 100%;
+  min-height: 64px;
+  font-size: 22px;
+  border-radius: 12px;
+  border: none;
+  background: #1a7f37;
+  color: white;
+}
+
+.mic-button.listening {
+  background: #b42318;
+}
+
+.status-line {
+  font-weight: bold;
+}
+
+.speak-box {
+  width: 100%;
+  font-size: 20px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.button-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.button-row button {
+  min-height: 48px;
+  font-size: 18px;
+  flex: 1;
+}
+
+.voice-list {
+  padding-left: 20px;
+  font-size: 16px;
+}
