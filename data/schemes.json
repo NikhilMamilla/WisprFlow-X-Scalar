@@ -1,5 +1,5 @@
 {
-  "_note": "Hand-built dataset for the Haq Bolo prototype. Five schemes only. Rules were checked against official sources on 27 Nov 2026. Always confirm at the office. Benefit amounts are deliberately left general where not verified.",
+  "_note": "Hand-built dataset for the Haq Bolo prototype. Six schemes only. Rules were checked against official sources on 27 Nov 2026. Always confirm at the office. Benefit amounts are deliberately left general where not verified.",
   "checked_on": "2026-11-27",
   "schemes": [
     {
@@ -82,6 +82,22 @@
       "source_url": "https://www.india.gov.in/spotlight/pm-street-vendors-atmanirbhar-nidhi-pm-svanidhi",
       "rules_verified": false,
       "verify_note": "Defined for urban vendors vending on or before 24 March 2020, but the scheme was restructured in Dec 2025 to add new beneficiaries. Current cutoff not confirmed. Show as 'possible match, confirm with your municipal office'."
+    },
+    {
+      "id": "pmjdy",
+      "name_en": "PM Jan Dhan Yojana (bank account)",
+      "name_hi": "प्रधानमंत्री जन धन योजना (बैंक खाता)",
+      "benefit_en": "A basic bank account in your own name. You need it for the insurance and pension schemes.",
+      "rules": {
+        "age_min": 18,
+        "only_if": { "has_bank_account": false },
+        "not": [],
+        "requires": []
+      },
+      "documents": ["Aadhaar card", "If you have no Aadhaar: an address proof"],
+      "source_url": "https://pmsvanidhi.qcin.org/assets/documents/FAQ-%20SVANidhi%20se%20Samriddhi.pdf",
+      "rules_verified": true,
+      "verify_note": "Any adult without a bank account. Confirm the required documents at the bank."
     }
   ]
 }
