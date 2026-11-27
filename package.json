@@ -1,0 +1,32 @@
+{
+  "name": "haq-bolo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "server": "tsx server/index.ts",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "gate": "tsc -b && vitest run && docker build -t haq-bolo ."
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tsx": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "oxlint": "^1.94.0",
+    "typescript": "~7.0.2",
+    "vite": "^8.4.0",
+    "vitest": "^2.1.8"
+  }
+}

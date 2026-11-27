@@ -1,0 +1,87 @@
+{
+  "_note": "Hand-built dataset for the Haq Bolo prototype. Five schemes only. Rules were checked against official sources on 27 Nov 2026. Always confirm at the office. Benefit amounts are deliberately left general where not verified.",
+  "checked_on": "2026-11-27",
+  "schemes": [
+    {
+      "id": "eshram",
+      "name_en": "e-Shram registration",
+      "name_hi": "ई-श्रम पंजीकरण",
+      "benefit_en": "Free registration for unorganised workers. Your record can be linked to welfare schemes.",
+      "rules": {
+        "age_min": 16,
+        "age_max": null,
+        "not": ["pays_income_tax", "in_epf_esic_nps"],
+        "requires": []
+      },
+      "documents": ["Aadhaar card", "Mobile number linked to Aadhaar", "Bank account details"],
+      "source_url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc_9692_20260825_14270901.pdf",
+      "rules_verified": false,
+      "verify_note": "Sources disagree on the upper age limit: a Dec 2024 PIB document says 16 to 59, an Aug 2026 PIB document says 16 and above. Registration is free. Ask no fee."
+    },
+    {
+      "id": "pmsym",
+      "name_en": "PM Shram Yogi Maan-dhan (pension)",
+      "name_hi": "प्रधानमंत्री श्रम योगी मान-धन (पेंशन)",
+      "benefit_en": "Assured pension of Rs 3,000 a month after age 60, with the government matching your monthly contribution.",
+      "rules": {
+        "age_min": 18,
+        "age_max": 40,
+        "income_max_monthly": 15000,
+        "not": ["pays_income_tax", "in_epf_esic_nps"],
+        "requires": ["has_aadhaar", "has_bank_account"]
+      },
+      "documents": ["Aadhaar card", "Savings bank or Jan Dhan account number with IFSC"],
+      "source_url": "https://labour.gov.in/enrolment-process",
+      "rules_verified": true,
+      "verify_note": "Unorganised worker, entry age 18 to 40, monthly income up to Rs 15,000, not in EPF, NPS or ESIC, not an income tax payer."
+    },
+    {
+      "id": "pmsby",
+      "name_en": "PM Suraksha Bima Yojana (accident insurance)",
+      "name_hi": "प्रधानमंत्री सुरक्षा बीमा योजना (दुर्घटना बीमा)",
+      "benefit_en": "Accident insurance at a very low yearly premium, taken from your bank account.",
+      "rules": {
+        "age_min": 18,
+        "age_max": 70,
+        "not": [],
+        "requires": ["has_bank_account"]
+      },
+      "documents": ["Aadhaar card", "Bank account with consent for auto-debit"],
+      "source_url": "https://pmsvanidhi.qcin.org/assets/documents/FAQ-%20SVANidhi%20se%20Samriddhi.pdf",
+      "rules_verified": true,
+      "verify_note": "Age 18 to 70 with a bank account. Cover and premium amounts are not stated here on purpose: confirm at the bank."
+    },
+    {
+      "id": "pmjjby",
+      "name_en": "PM Jeevan Jyoti Bima Yojana (life insurance)",
+      "name_hi": "प्रधानमंत्री जीवन ज्योति बीमा योजना (जीवन बीमा)",
+      "benefit_en": "Life insurance at a low yearly premium, taken from your bank account.",
+      "rules": {
+        "age_min": 18,
+        "age_max": 50,
+        "not": [],
+        "requires": ["has_bank_account"]
+      },
+      "documents": ["Aadhaar card", "Bank account with consent for auto-debit"],
+      "source_url": "https://pmsvanidhi.qcin.org/assets/documents/FAQ-%20SVANidhi%20se%20Samriddhi.pdf",
+      "rules_verified": true,
+      "verify_note": "Age 18 to 50 with a bank account. Cover and premium amounts are not stated here on purpose: confirm at the bank."
+    },
+    {
+      "id": "svanidhi",
+      "name_en": "PM SVANidhi (street vendor loan)",
+      "name_hi": "पीएम स्वनिधि (रेहड़ी-पटरी ऋण)",
+      "benefit_en": "Working capital loan for street vendors.",
+      "rules": {
+        "occupation_in": ["street_vendor"],
+        "urban_only": true,
+        "not": [],
+        "requires": []
+      },
+      "documents": ["Aadhaar card", "Mobile number linked to Aadhaar", "Proof you vend (vending certificate or local body letter, if you have one)"],
+      "source_url": "https://www.india.gov.in/spotlight/pm-street-vendors-atmanirbhar-nidhi-pm-svanidhi",
+      "rules_verified": false,
+      "verify_note": "Defined for urban vendors vending on or before 24 March 2020, but the scheme was restructured in Dec 2025 to add new beneficiaries. Current cutoff not confirmed. Show as 'possible match, confirm with your municipal office'."
+    }
+  ]
+}
