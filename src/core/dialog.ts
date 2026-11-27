@@ -1,13 +1,16 @@
 // Pure dialog reducer for the happy-path flow. No browser or server imports:
 // the UI reads `effects` and performs the actual speaking/listening/navigation.
-import { extractProfile } from './extractor'
+import { extractWithConflicts, type Conflict } from './extractor'
 import { pickNextFollowUp, READ_BACK_FIELDS, type FollowUp } from './followups'
 import { matchSchemes, type MatchResult } from './matcher'
 import { emptyProfile, PROFILE_FIELDS, type Profile, type ProfileField } from './types'
 
-export type Screen = 'language' | 'story' | 'readback' | 'followup' | 'results' | 'sheet'
+export type Screen = 'language' | 'story' | 'readback' | 'followup' | 'conflict' | 'results' | 'sheet'
 export type LanguageCode = 'hi-IN' | 'te-IN' | 'en-IN'
 export type ListenMode = 'story' | 'yesno' | 'number' | 'open'
+
+export const LOW_CONFIDENCE_LIMIT = 2 // after this many, the UI makes manual controls primary
+export const OFF_TOPIC_LIMIT = 1 // after this many, the UI offers a Skip button
 
 export interface DialogState {
   screen: Screen
@@ -17,6 +20,9 @@ export interface DialogState {
   asked: ProfileField[] // follow-up fields already asked (at most MAX_FOLLOWUPS)
   currentFollowup: FollowUp | null
   pendingReadback: ProfileField | null
+  conflict: Conflict | null // two different values for one field in a single utterance
+  lowConfidenceFailures: number // empty/low-confidence recognition on the current question
+  offTopicFailures: number // recognised fine, but didn't answer the current question
   results: MatchResult[]
 }
 
@@ -31,6 +37,9 @@ export type DialogEvent =
   | { type: 'yesNoAnswer'; value: 'yes' | 'no' }
   | { type: 'numberAnswer'; value: number }
   | { type: 'textAnswer'; text: string }
+  | { type: 'conflictResolved'; value: string | number | boolean }
+  | { type: 'recognitionFailed' } // empty transcript or confidence below 0.6
+  | { type: 'offTopicAnswer' } // recognised, but didn't fit the question asked
   | { type: 'skip' }
   | { type: 'restart' }
 
@@ -48,6 +57,9 @@ export function initialState(): DialogState {
     asked: [],
     currentFollowup: null,
     pendingReadback: null,
+    conflict: null,
+    lowConfidenceFailures: 0,
+    offTopicFailures: 0,
     results: [],
   }
 }
@@ -83,6 +95,21 @@ function speakKeyFor(followup: FollowUp): string {
   return followup.field === 'occupation' ? 'ask_occupation_open' : `followup_${followup.field}`
 }
 
+function conflictKeyFor(field: ProfileField): string {
+  return field === 'age' ? 'conflict_age' : 'conflict_generic'
+}
+
+function toConflict(state: DialogState, conflict: Conflict): StepResult {
+  return {
+    state: { ...state, screen: 'conflict', conflict, currentFollowup: null, pendingReadback: null },
+    effects: [
+      { type: 'speak', key: conflictKeyFor(conflict.field), params: { a: conflict.values[0], b: conflict.values[1] } },
+      { type: 'listen', mode: 'open' },
+      { type: 'show', screen: 'conflict' },
+    ],
+  }
+}
+
 function toReadback(state: DialogState, field: ProfileField): StepResult {
   const key =
     field === 'age' ? 'readback_age' : state.profile.income_estimated ? 'readback_income_roughly' : 'readback_income'
@@ -105,8 +132,10 @@ function toFollowup(state: DialogState, followup: FollowUp): StepResult {
 }
 
 // Decide what happens after any profile/asked update: read back age/income first
-// (one at a time), then the next follow-up, then results.
-function advance(state: DialogState): StepResult {
+// (one at a time), then the next follow-up, then results. A new question starts with
+// a clean slate of failures.
+function advance(stateIn: DialogState): StepResult {
+  const state: DialogState = { ...stateIn, lowConfidenceFailures: 0, offTopicFailures: 0 }
   for (const field of READ_BACK_FIELDS) {
     if (state.profile[field] !== null && !state.locked.includes(field)) return toReadback(state, field)
   }
@@ -136,7 +165,10 @@ export function step(state: DialogState, event: DialogEvent): StepResult {
 
     case 'storyDone': {
       if (state.screen !== 'story') return { state, effects: [] }
-      const profile = mergeProfile(state.profile, extractProfile(event.transcript), state.locked)
+      const { profile: extracted, conflicts } = extractWithConflicts(event.transcript)
+      const profile = mergeProfile(state.profile, extracted, state.locked)
+      const conflict = conflicts.find((c) => !state.locked.includes(c.field))
+      if (conflict) return toConflict({ ...state, profile }, conflict)
       return advance({ ...state, profile })
     }
 
@@ -176,10 +208,51 @@ export function step(state: DialogState, event: DialogEvent): StepResult {
 
     case 'textAnswer': {
       if (state.screen === 'followup' && state.currentFollowup?.field === 'occupation') {
-        const profile = mergeProfile(state.profile, extractProfile(event.text), state.locked)
-        return advance({ ...state, profile, asked: [...state.asked, 'occupation' as ProfileField], currentFollowup: null })
+        const { profile: extracted, conflicts } = extractWithConflicts(event.text)
+        const profile = mergeProfile(state.profile, extracted, state.locked)
+        const asked = [...state.asked, 'occupation' as ProfileField]
+        const conflict = conflicts.find((c) => !state.locked.includes(c.field))
+        if (conflict) return toConflict({ ...state, profile, asked }, conflict)
+        return advance({ ...state, profile, asked, currentFollowup: null })
       }
       return { state, effects: [] }
+    }
+
+    case 'conflictResolved': {
+      if (state.screen !== 'conflict' || !state.conflict) return { state, effects: [] }
+      const field = state.conflict.field
+      const profile = { ...state.profile, [field]: event.value } as Profile
+      return advance({ ...state, profile, locked: [...state.locked, field], conflict: null })
+    }
+
+    case 'recognitionFailed': {
+      const failures = state.lowConfidenceFailures + 1
+      const next = { ...state, lowConfidenceFailures: failures }
+      if (state.screen === 'story') {
+        return { state: next, effects: [{ type: 'speak', key: 'low_confidence' }, { type: 'listen', mode: 'story' }] }
+      }
+      if (state.screen === 'readback' && state.pendingReadback) {
+        return { state: next, effects: [{ type: 'speak', key: 'low_confidence' }, { type: 'listen', mode: 'yesno' }] }
+      }
+      if (state.screen === 'followup' && state.currentFollowup) {
+        return {
+          state: next,
+          effects: [{ type: 'speak', key: 'low_confidence' }, { type: 'listen', mode: listenModeFor(state.currentFollowup) }],
+        }
+      }
+      if (state.screen === 'conflict') {
+        return { state: next, effects: [{ type: 'speak', key: 'low_confidence' }, { type: 'listen', mode: 'open' }] }
+      }
+      return { state, effects: [] }
+    }
+
+    case 'offTopicAnswer': {
+      if (state.screen !== 'followup' && state.screen !== 'readback') return { state, effects: [] }
+      const mode = state.screen === 'readback' ? 'yesno' : listenModeFor(state.currentFollowup!)
+      return {
+        state: { ...state, offTopicFailures: state.offTopicFailures + 1 },
+        effects: [{ type: 'speak', key: 'off_topic_hint' }, { type: 'listen', mode }],
+      }
     }
 
     case 'skip': {

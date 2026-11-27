@@ -21,8 +21,8 @@ export default function ProfileChips({ profile }: { profile: Profile }) {
   if (known.length === 0) return null
   return (
     <div className="chips">
-      {known.map((field) => (
-        <span className="chip" key={field}>
+      {known.map((field, i) => (
+        <span className="chip" key={field} style={{ animationDelay: `${i * 80}ms` }}>
           <strong>{displayValue(profile, field)}</strong>
           {profile.evidence[field] && <em>&ldquo;{profile.evidence[field]}&rdquo;</em>}
         </span>

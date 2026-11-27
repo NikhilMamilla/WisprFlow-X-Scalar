@@ -78,3 +78,16 @@
   font-size: 16px;
   padding: 0 14px;
 }
+
+/* after two low-confidence failures: make the manual controls the obvious choice */
+.primary-fallback .yesno-buttons .btn,
+.primary-fallback .number-input-row .btn,
+.primary-fallback .number-input {
+  box-shadow: 5px 5px 0 var(--ink);
+  transform: scale(1.05);
+}
+
+.skip-button {
+  display: block;
+  margin: 20px auto 0;
+}

@@ -9,9 +9,14 @@ export interface SessionUpdate {
   listening: boolean
 }
 
+export interface StopResult {
+  transcript: string
+  confidence: number // of the last final result seen; 0 if none arrived
+}
+
 export interface ListeningSession {
   start: () => void
-  stop: () => string // stops and returns the final accumulated transcript
+  stop: () => StopResult // stops and returns the final accumulated transcript
   abort: () => void
 }
 
@@ -22,6 +27,7 @@ export function createSession(
 ): ListeningSession {
   let transcript = ''
   let interim = ''
+  let confidence = 0
   let wanted = false
   let current: ReturnType<typeof createRecognizer> = null
 
@@ -34,6 +40,7 @@ export function createSession(
       onResult: (result) => {
         if (result.isFinal) {
           transcript = transcript ? `${transcript} ${result.transcript}`.trim() : result.transcript.trim()
+          confidence = result.confidence
           interim = ''
         } else {
           interim = result.transcript
@@ -62,13 +69,14 @@ export function createSession(
       wanted = true
       transcript = ''
       interim = ''
+      confidence = 0
       attach()
       emit(true)
     },
     stop() {
       wanted = false
       current?.stop()
-      return transcript
+      return { transcript, confidence }
     },
     abort() {
       wanted = false

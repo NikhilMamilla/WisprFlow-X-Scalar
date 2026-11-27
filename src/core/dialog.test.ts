@@ -89,4 +89,51 @@ describe('dialog reducer', () => {
     expect(state.screen).toBe('results')
     expect(state.asked.length).toBeLessThanOrEqual(4)
   })
+
+  it('a contradiction in the story goes to the conflict screen, and picking a value locks it', () => {
+    let state = send(initialState(), { type: 'languagePicked', lang: 'en-IN' })
+    state = send(state, { type: 'storyDone', transcript: 'Meri umar tees saal hai... nahi nahi, paintees saal.' })
+    expect(state.screen).toBe('conflict')
+    expect(state.conflict).toEqual({ field: 'age', values: [30, 35] })
+    expect(state.profile.age).toBeNull()
+
+    state = send(state, { type: 'conflictResolved', value: 35 })
+    expect(state.profile.age).toBe(35)
+    expect(state.locked).toContain('age') // confirmed, so no read-back needed again
+    expect(state.conflict).toBeNull()
+  })
+
+  it('low-confidence recognition re-listens on the same question and counts failures', () => {
+    let state = send(initialState(), { type: 'languagePicked', lang: 'en-IN' })
+    state = send(state, { type: 'storyDone', transcript: 'pata nahi' }) // -> a followup screen
+    expect(state.screen).toBe('followup')
+    const field = state.currentFollowup!.field
+
+    state = send(state, { type: 'recognitionFailed' })
+    expect(state.screen).toBe('followup')
+    expect(state.currentFollowup!.field).toBe(field) // same question, not advanced
+    expect(state.lowConfidenceFailures).toBe(1)
+
+    state = send(state, { type: 'recognitionFailed' })
+    expect(state.lowConfidenceFailures).toBe(2) // UI makes manual controls primary at this point
+
+    // answering normally afterwards clears the counter for the next question
+    state = send(state, { type: 'yesNoAnswer', value: 'yes' })
+    expect(state.lowConfidenceFailures).toBe(0)
+  })
+
+  it('an off-topic answer re-asks once, then the UI can offer Skip', () => {
+    let state = send(initialState(), { type: 'languagePicked', lang: 'en-IN' })
+    state = send(state, { type: 'storyDone', transcript: 'pata nahi' })
+    expect(state.screen).toBe('followup')
+    const field = state.currentFollowup!.field
+
+    state = send(state, { type: 'offTopicAnswer' })
+    expect(state.offTopicFailures).toBe(1)
+    expect(state.currentFollowup!.field).toBe(field)
+
+    state = send(state, { type: 'skip' }) // the UI's Skip button
+    expect(state.asked).toContain(field)
+    expect(state.profile[field]).toBeNull() // skipped, not guessed
+  })
 })

@@ -10,12 +10,16 @@ export default function StoryScreen({
   profile,
   listening,
   interim,
+  primaryFallback,
+  message,
   onMicTap,
   onSubmitText,
 }: {
   profile: Profile
   listening: boolean
   interim: string
+  primaryFallback?: boolean // after two low-confidence failures: make typed/sample stand out
+  message?: string | null // mic denied, recognition unsupported, etc.
   onMicTap: () => void
   onSubmitText: (text: string) => void
 }) {
@@ -33,6 +37,8 @@ export default function StoryScreen({
       <div className="story-content">
         <span className="eyebrow">Your story</span>
         <p className="prompt">Apni kahani bataiye — aap kya kaam karte hain, ghar mein kitne log hain.</p>
+
+        {message && <p className="mic-message">{message}</p>}
 
         <div className="mic-wrap">
           {listening && (
@@ -53,7 +59,7 @@ export default function StoryScreen({
 
         <ProfileChips profile={profile} />
 
-        <div className="fallback">
+        <div className={primaryFallback ? 'fallback primary-fallback' : 'fallback'}>
           <textarea
             className="type-box"
             value={typed}

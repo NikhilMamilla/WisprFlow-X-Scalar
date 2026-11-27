@@ -141,6 +141,39 @@ export const STRINGS: Record<string, Entry> = {
     en: 'Is bhasha ke liye koi awaaz nahi mili. Sab kuch yahan likha hua dikhega.',
     hi: 'इस भाषा के लिए कोई आवाज़ नहीं मिली। सब कुछ यहां लिखा हुआ दिखेगा।',
   },
+
+  low_confidence: {
+    en: 'Awaaz saaf nahi aayi, phone paas rakhiye aur dobara boliye.',
+    hi: 'आवाज़ साफ़ नहीं आई, फ़ोन पास रखिए और दोबारा बोलिए।',
+    te: 'మీ వాయిస్ స్పష్టంగా వినబడలేదు, ఫోన్ దగ్గరగా పట్టుకొని మళ్ళీ చెప్పండి.', // NEEDS NATIVE TELUGU REVIEW
+  },
+  silence_nudge: {
+    en: 'Boliye, main sun raha hoon.',
+    hi: 'बोलिए, मैं सुन रहा हूं।',
+    te: 'చెప్పండి, నేను వింటున్నాను.', // NEEDS NATIVE TELUGU REVIEW
+  },
+  off_topic_hint: {
+    en: 'Samajh nahi aaya. Sawaal phir se suniye aur Haan, Nahi ya number mein jawab dijiye.',
+    hi: 'समझ नहीं आया। सवाल फिर से सुनिए और हां, नहीं या नंबर में जवाब दीजिए।',
+  },
+  conflict_age: {
+    en: 'Aapne do umar bataayi: {a} aur {b}. Kaun si sahi hai?',
+    hi: 'आपने दो उम्र बताई: {a} और {b}। कौन सी सही है?',
+  },
+  conflict_generic: {
+    en: 'Aapne do alag jawab diye: {a} aur {b}. Kaun sa sahi hai?',
+    hi: 'आपने दो अलग जवाब दिए: {a} और {b}। कौन सा सही है?',
+  },
+  skip_label: { en: 'Skip kariye', hi: 'छोड़ दें' },
+  mic_denied_message: {
+    en: 'Mic ki permission nahi mili. Neeche type kariye ya sample sunayein.',
+    hi: 'माइक की अनुमति नहीं मिली। नीचे टाइप करें या नमूना सुनें।',
+  },
+  recognition_unsupported_message: {
+    en: 'Is browser mein awaaz pehchaanna kaam nahi karta. Neeche type kariye ya sample sunayein.',
+    hi: 'इस ब्राउज़र में आवाज़ पहचानना काम नहीं करता। नीचे टाइप करें या नमूना सुनें।',
+  },
+  what_i_understood: { en: 'What I understood', hi: 'मैंने यह समझा', te: 'నేను ఇది అర్థం చేసుకున్నాను' }, // te: NEEDS NATIVE TELUGU REVIEW
 }
 
 const LANG_FOR: Record<LanguageCode, StringLang> = { 'hi-IN': 'hi', 'te-IN': 'te', 'en-IN': 'en' }

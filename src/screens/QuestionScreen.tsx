@@ -13,17 +13,23 @@ export default function QuestionScreen({
   mode,
   listening,
   interim,
+  primaryFallback,
+  showSkip,
   onYesNo,
   onNumber,
   onText,
+  onSkip,
 }: {
   text: string
   mode: 'yesno' | 'number' | 'open'
   listening: boolean
   interim: string
+  primaryFallback?: boolean // after two low-confidence failures: make manual controls stand out
+  showSkip?: boolean // after an off-topic answer: offer a way out
   onYesNo: (value: 'yes' | 'no') => void
   onNumber: (value: number) => void
   onText: (text: string) => void
+  onSkip: () => void
 }) {
   const [numberInput, setNumberInput] = useState('')
   const [textInput, setTextInput] = useState('')
@@ -41,12 +47,10 @@ export default function QuestionScreen({
   }
 
   return (
-    <div className="question-screen">
+    <div className={primaryFallback ? 'question-screen primary-fallback' : 'question-screen'}>
       <span className="eyebrow">Question</span>
       <p className="question-text">{text}</p>
-      {listening && (
-        <p className="listening-indicator">{interim || 'Sun raha hoon...'}</p>
-      )}
+      {listening && <p className="listening-indicator">{interim || 'Sun raha hoon...'}</p>}
 
       {mode === 'yesno' && (
         <div className="yesno-buttons">
@@ -97,6 +101,12 @@ export default function QuestionScreen({
             ))}
           </div>
         </>
+      )}
+
+      {showSkip && (
+        <button type="button" className="btn btn-secondary skip-button" onClick={onSkip}>
+          Skip kariye
+        </button>
       )}
     </div>
   )

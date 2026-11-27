@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { extract, extractProfile } from './extractor'
+import { extract, extractProfile, extractWithConflicts } from './extractor'
 import { PROFILE_FIELDS, type Profile } from './types'
 
 type Expected = Partial<Omit<Profile, 'evidence'>>
@@ -108,6 +108,25 @@ describe('Telugu (script)', () => {
     ['పిల్లలు లేరు', { dependants: 0 }], // NEEDS NATIVE TELUGU REVIEW
   ])('%s', (text, expected) => {
     expectOnly(text, expected)
+  })
+})
+
+describe('extractWithConflicts', () => {
+  it('flags two different ages in one utterance; profile.age stays null', () => {
+    const { profile, conflicts } = extractWithConflicts('Meri umar tees saal hai... nahi nahi, paintees saal.')
+    expect(profile.age).toBeNull()
+    expect(conflicts).toEqual([{ field: 'age', values: [30, 35] }])
+  })
+
+  it('no conflict when only one value is said', () => {
+    const { conflicts } = extractWithConflicts('main 32 saal ka hoon')
+    expect(conflicts).toEqual([])
+  })
+
+  it('flags two different occupations', () => {
+    const { profile, conflicts } = extractWithConflicts('pehle mistri tha ab thela lagata hoon')
+    expect(profile.occupation).toBeNull()
+    expect(conflicts).toEqual([{ field: 'occupation', values: ['street_vendor', 'construction_worker'] }])
   })
 })
 

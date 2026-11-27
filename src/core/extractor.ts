@@ -2,7 +2,14 @@
 // Keywords ending in * are prefix matches (Telugu suffixes); see text.tokenMatches.
 import { findNumbers, type NumberSpan } from './numbers'
 import { BOUNDARY, findAll, phrases, quote, tokenize, type Hit, type Phrase } from './text'
-import { emptyProfile, type BooleanField, type ExtractFn, type Occupation, type Profile } from './types'
+import { emptyProfile, type BooleanField, type ExtractFn, type Occupation, type Profile, type ProfileField } from './types'
+
+// One utterance gave two different values for a field: the field stays null, and the
+// dialog can ask the user which one is right.
+export interface Conflict {
+  field: ProfileField
+  values: (string | number | boolean)[]
+}
 
 const NEGATION = phrases([
   'nahi', 'nahin', 'nai', 'nhi', 'na', 'mat', 'no', 'not', 'never',
@@ -180,12 +187,19 @@ function indexSet(hits: Hit[]): Set<number> {
   return s
 }
 
-function single<T>(values: T[]): T | null {
+// Resolves to the one distinct value said, or null when nothing (or more than one) was.
+function resolve<T extends string | number | boolean>(
+  values: T[],
+  field: ProfileField,
+  conflicts: Conflict[],
+): T | null {
   const unique = [...new Set(values)]
-  return unique.length === 1 ? unique[0] : null // none said, or contradictory: don't pick
+  if (unique.length > 1) conflicts.push({ field, values: unique })
+  return unique.length === 1 ? unique[0] : null
 }
 
-export function extractProfile(transcript: string): Profile {
+function extractCore(transcript: string): { profile: Profile; conflicts: Conflict[] } {
+  const conflicts: Conflict[] = []
   const { raw, norm } = tokenize(transcript)
   const profile = emptyProfile()
   const numbers = findNumbers(norm)
@@ -228,7 +242,7 @@ export function extractProfile(transcript: string): Profile {
       values.push(value)
       evidence ||= quote(raw, qlo, qhi)
     }
-    const v = single(values)
+    const v = resolve(values, field, conflicts)
     if (v !== null) {
       profile[field] = v
       profile.evidence[field] = evidence
@@ -246,7 +260,7 @@ export function extractProfile(transcript: string): Profile {
   }
   const specific = occFound.filter((o) => o.occ !== 'other')
   const occPool = specific.length > 0 ? specific : occFound
-  const occ = single(occPool.map((o) => o.occ))
+  const occ = resolve(occPool.map((o) => o.occ), 'occupation', conflicts)
   if (occ !== null) {
     profile.occupation = occ
     profile.evidence.occupation = quote(raw, occPool[0].lo, occPool[0].hi)
@@ -260,7 +274,9 @@ export function extractProfile(transcript: string): Profile {
     })
   const urban = place(URBAN)
   const rural = place(RURAL)
-  if (urban.length > 0 !== rural.length > 0) {
+  if (urban.length > 0 && rural.length > 0) {
+    conflicts.push({ field: 'urban_or_rural', values: ['urban', 'rural'] })
+  } else if (urban.length > 0 !== rural.length > 0) {
     const hit = (urban[0] ?? rural[0])!
     profile.urban_or_rural = urban.length > 0 ? 'urban' : 'rural'
     profile.evidence.urban_or_rural = quote(raw, hit.start, hit.end)
@@ -268,7 +284,7 @@ export function extractProfile(transcript: string): Profile {
 
   // --- state ---
   const states = STATES.flatMap(([name, list]) => findAll(norm, list).map((hit) => ({ name, hit })))
-  const state = single(states.map((s) => s.name))
+  const state = resolve(states.map((s) => s.name), 'state', conflicts)
   if (state !== null) {
     profile.state = state
     profile.evidence.state = quote(raw, states[0].hit.start, states[0].hit.end)
@@ -302,7 +318,7 @@ export function extractProfile(transcript: string): Profile {
     }
   }
   const ages = strongAges.length > 0 ? strongAges : weakAges
-  const age = single(ages.map((a) => a.span.value))
+  const age = resolve(ages.map((a) => a.span.value), 'age', conflicts)
   if (age !== null) {
     const a = ages[0]
     profile.age = age
@@ -324,7 +340,7 @@ export function extractProfile(transcript: string): Profile {
     const [lo, hi] = windowAround(norm, hit, 2, 2, new Set())
     if (!attached && negated(norm, hit, lo, hi)) kids.push({ value: 0, lo, hi })
   }
-  const dependants = single(kids.map((k) => k.value))
+  const dependants = resolve(kids.map((k) => k.value), 'dependants', conflicts)
   if (dependants !== null) {
     profile.dependants = dependants
     profile.evidence.dependants = quote(raw, kids[0].lo, kids[0].hi)
@@ -346,7 +362,7 @@ export function extractProfile(transcript: string): Profile {
     ;(m <= d ? monthly : daily).push(entry)
   }
   const pool = monthly.length > 0 ? monthly : daily
-  const income = single(pool.map((e) => e.value))
+  const income = resolve(pool.map((e) => e.value), 'monthly_income', conflicts)
   if (income !== null) {
     const estimated = pool === daily
     profile.monthly_income = estimated ? income * WORKING_DAYS_PER_MONTH : income
@@ -354,7 +370,16 @@ export function extractProfile(transcript: string): Profile {
     profile.evidence.monthly_income = quote(raw, pool[0].lo, pool[0].hi)
   }
 
-  return profile
+  return { profile, conflicts }
+}
+
+export function extractProfile(transcript: string): Profile {
+  return extractCore(transcript).profile
+}
+
+// Same extraction pass, also exposing which fields got two different values in one utterance.
+export function extractWithConflicts(transcript: string): { profile: Profile; conflicts: Conflict[] } {
+  return extractCore(transcript)
 }
 
 export const extract: ExtractFn = async (transcript) => extractProfile(transcript)

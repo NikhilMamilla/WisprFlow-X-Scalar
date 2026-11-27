@@ -79,3 +79,19 @@
   flex: 1;
   font-size: 16px;
 }
+
+.fallback.primary-fallback .btn-primary,
+.fallback.primary-fallback .type-box {
+  box-shadow: 5px 5px 0 var(--coral);
+}
+
+.mic-message {
+  background: var(--pink);
+  color: var(--ink);
+  border-radius: var(--radius-button);
+  padding: 8px 14px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
