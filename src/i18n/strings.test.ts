@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { ASKABLE_FIELDS } from '../core/followups'
-import { checksFor, type MatchStatus } from '../core/matcher'
+import { type MatchStatus } from '../core/matcher'
+import { compileChecks } from '../core/rules'
 import { SCHEMES } from '../core/schemes'
 import { STRINGS } from './strings'
 
@@ -11,6 +12,7 @@ const STATUS_KEY: Record<MatchStatus, string> = {
   needs_info: 'status_maybe',
   needs_prerequisite: 'status_do_this_first',
   not_needed: 'status_not_needed',
+  not_applicable: 'status_not_applicable',
 }
 
 function requiredKeys(): string[] {
@@ -31,7 +33,7 @@ function requiredKeys(): string[] {
 
   // Every rule id that data/schemes.json actually produces.
   for (const scheme of SCHEMES) {
-    for (const check of checksFor(scheme)) keys.add(`rule_${check.ruleId.replace(':', '_')}`)
+    for (const check of compileChecks(scheme)) keys.add(`rule_${check.ruleId.replace(':', '_')}`)
   }
 
   return [...keys]

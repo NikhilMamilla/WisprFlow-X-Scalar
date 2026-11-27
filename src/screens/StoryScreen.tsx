@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import type { Profile } from '../core'
-import type { StringLang } from '../i18n/strings'
-import { FIXED_SAMPLE_SENTENCE } from '../voice/languages'
+import { t, type StringLang } from '../i18n/strings'
+import { sampleStoryFor } from '../voice/languages'
 import DotField from '../components/DotField'
 import Waveform from '../components/Waveform'
 import ProfileChips from './ProfileChips'
@@ -38,8 +38,8 @@ export default function StoryScreen({
     <div className="story-screen">
       <DotField />
       <div className="story-content">
-        <span className="eyebrow">Your story</span>
-        <p className="prompt">Apni kahani bataiye — aap kya kaam karte hain, ghar mein kitne log hain.</p>
+        <span className="eyebrow">{t(lang, 'eyebrow_story')}</span>
+        <p className="prompt">{t(lang, 'story_prompt')}</p>
 
         {message && <p className="mic-message">{message}</p>}
 
@@ -52,13 +52,13 @@ export default function StoryScreen({
             </div>
           )}
           <button type="button" className={listening ? 'story-mic listening' : 'story-mic'} onClick={onMicTap}>
-            {listening ? 'Rukiye' : 'Boliye'}
+            {listening ? t(lang, 'mic_stop') : t(lang, 'mic_start')}
           </button>
         </div>
 
         <Waveform active={listening} bars={7} />
 
-        <p className="transcript">{interim || (listening ? 'Sun raha hoon...' : ' ')}</p>
+        <p className="transcript">{interim || (listening ? t(lang, 'mic_listening') : ' ')}</p>
 
         <ProfileChips profile={profile} lang={lang} />
 
@@ -67,15 +67,15 @@ export default function StoryScreen({
             className="type-box"
             value={typed}
             onChange={(e) => setTyped(e.target.value)}
-            placeholder="Yahan type kariye..."
+            placeholder={t(lang, 'type_instead_placeholder')}
             rows={3}
           />
           <div className="fallback-buttons">
             <button type="button" className="btn btn-primary" onClick={submitTyped}>
-              Submit
+              {t(lang, 'submit_label')}
             </button>
-            <button type="button" className="btn btn-secondary" onClick={() => onSubmitText(FIXED_SAMPLE_SENTENCE)}>
-              Sample sunayein
+            <button type="button" className="btn btn-secondary" onClick={() => onSubmitText(sampleStoryFor(lang))}>
+              {t(lang, 'play_sample_label')}
             </button>
           </div>
         </div>

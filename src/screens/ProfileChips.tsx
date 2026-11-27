@@ -4,7 +4,7 @@ import './ProfileChips.css'
 
 // Chips for fields the extractor has filled in, each showing the user's own words.
 const ORDER: ProfileField[] = [
-  'occupation', 'age', 'monthly_income', 'dependants', 'urban_or_rural', 'state',
+  'occupation', 'age', 'monthly_income', 'dependants', 'urban_or_rural', 'state', 'district',
   'has_bank_account', 'has_aadhaar', 'in_epf_esic_nps', 'pays_income_tax',
 ]
 
@@ -19,6 +19,8 @@ function displayValue(profile: Profile, field: ProfileField, lang: StringLang): 
     return `${t(lang, 'chip_income')}: ${amount}`
   }
   if (field === 'dependants') return `${t(lang, 'chip_dependants')}: ${value}`
+  if (field === 'state') return `${t(lang, 'chip_state')}: ${value}`
+  if (field === 'district') return `${t(lang, 'chip_district')}: ${value}`
   return String(value)
 }
 

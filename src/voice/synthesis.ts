@@ -33,6 +33,10 @@ export function speak(text: string, lang: string, onEnd?: () => void): void {
   }
   const utterance = new SpeechSynthesisUtterance(text)
   utterance.lang = lang
+  // Speak with a voice that really matches the chosen language, not the browser default.
+  const prefix = lang.split('-')[0].toLowerCase()
+  const voice = window.speechSynthesis.getVoices().find((v) => v.lang.toLowerCase().startsWith(prefix))
+  if (voice) utterance.voice = voice
   if (onEnd) {
     utterance.onend = onEnd
     utterance.onerror = onEnd

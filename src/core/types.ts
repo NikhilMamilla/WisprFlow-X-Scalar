@@ -23,6 +23,7 @@ export const PROFILE_FIELDS = [
   ...BOOLEAN_FIELDS,
   'dependants',
   'state',
+  'district',
 ] as const
 export type ProfileField = (typeof PROFILE_FIELDS)[number]
 
@@ -38,7 +39,8 @@ export interface Profile {
   in_epf_esic_nps: boolean | null
   pays_income_tax: boolean | null
   dependants: number | null
-  state: string | null
+  state: string | null // canonical state/UT name once recognised
+  district: string | null // user's own district spelling; never guessed
   evidence: Partial<Record<ProfileField, string>> // the user's exact words per field
 }
 
@@ -57,6 +59,7 @@ export function emptyProfile(): Profile {
     pays_income_tax: null,
     dependants: null,
     state: null,
+    district: null,
     evidence: {},
   }
 }
@@ -82,6 +85,7 @@ export const PROFILE_JSON_SCHEMA = {
     pays_income_tax: nullableBool,
     dependants: { type: ['integer', 'null'], minimum: 0 },
     state: { type: ['string', 'null'] },
+    district: { type: ['string', 'null'] },
     evidence: {
       type: 'object',
       additionalProperties: false,

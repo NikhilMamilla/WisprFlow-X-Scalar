@@ -13,6 +13,7 @@ import { parseSpokenNumber, parseYesNo } from './core/answers'
 import { stringLangFor, t, type StringLang } from './i18n/strings'
 import { createRecognizer, isRecognitionSupported, type RecognitionErrorCode } from './voice/recognition'
 import { createSession, type ListeningSession } from './voice/session'
+import { recognitionLocaleFor } from './voice/languages'
 import { cancel, chooseSpeech, getAllVoices, isSynthesisSupported, onVoicesChanged, speak } from './voice/synthesis'
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -124,15 +125,16 @@ export default function Flow() {
 
   function startAnswerListening(mode: ListenMode, listenLang: string) {
     cancel() // interruption: a new listen cycle always wins over any speech still playing
+    const uiLang = stringLangFor(listenLang as never)
     if (!isRecognitionSupported()) {
-      setMicMessage(t(stringLangFor(listenLang as never), 'recognition_unsupported_message'))
+      setMicMessage(t(uiLang, 'recognition_unsupported_message'))
       return
     }
     setMicMessage(null)
     setInterim('')
     setListening(true)
     startSilenceTimers(listenLang)
-    const recognizer = createRecognizer(listenLang, {
+    const recognizer = createRecognizer(recognitionLocaleFor(listenLang as never), {
       onResult: (result) => {
         cancel()
         bumpSilenceNudge(listenLang)
@@ -149,7 +151,10 @@ export default function Flow() {
         clearSilenceTimers()
         setListening(false)
         if (code === 'not-allowed' || code === 'service-not-allowed') {
-          setMicMessage(t(stringLangFor(listenLang as never), 'mic_denied_message'))
+          setMicMessage(t(uiLang, 'mic_denied_message'))
+        } else if (code === 'language-not-supported' || code === 'audio-capture') {
+          // The browser cannot listen in this language: say so, text input still works.
+          setMicMessage(t(uiLang, code === 'language-not-supported' ? 'language_unsupported_message' : 'mic_denied_message'))
         }
       },
       onEnd: () => setListening(false),
@@ -204,7 +209,7 @@ export default function Flow() {
     setMicMessage(null)
     setInterim('')
     const session = createSession(
-      lang,
+      recognitionLocaleFor(lang),
       (update) => {
         bumpSilenceNudge(lang)
         setInterim(update.transcript ? `${update.transcript} ${update.interim}`.trim() : update.interim)
@@ -214,6 +219,8 @@ export default function Flow() {
         setListening(false)
         if (code === 'not-allowed' || code === 'service-not-allowed') {
           setMicMessage(t(stringLang, 'mic_denied_message'))
+        } else if (code === 'language-not-supported' || code === 'audio-capture') {
+          setMicMessage(t(stringLang, code === 'language-not-supported' ? 'language_unsupported_message' : 'mic_denied_message'))
         }
       },
     )
@@ -262,6 +269,8 @@ export default function Flow() {
             <QuestionScreen
               text={questionText(state, stringLang)}
               mode={questionMode(state)}
+              lang={stringLang}
+              quick={state.currentFollowup?.field === 'occupation'}
               listening={listening}
               interim={interim}
               primaryFallback={primaryFallback}
@@ -291,6 +300,7 @@ export default function Flow() {
               profile={state.profile}
               lang={stringLang}
               onViewSheet={() => dispatch({ type: 'skip' })}
+              onChangeLocation={() => dispatch({ type: 'locationCorrection' })}
             />
           </>
         )}
@@ -307,7 +317,7 @@ export default function Flow() {
 
       {state.screen !== 'sheet' && (
         <button type="button" className="about-link" onClick={() => setShowAbout((v) => !v)}>
-          About
+          {t(stringLang, 'app_about_link')}
         </button>
       )}
 
@@ -320,7 +330,7 @@ function questionMode(state: DialogState): 'yesno' | 'number' | 'open' {
   if (state.screen === 'readback') return 'yesno'
   const followup = state.currentFollowup
   if (!followup) return 'yesno'
-  if (followup.field === 'occupation') return 'open'
+  if (followup.field === 'occupation' || followup.answer === 'text') return 'open'
   return followup.answer === 'number' ? 'number' : 'yesno'
 }
 

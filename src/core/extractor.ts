@@ -1,5 +1,6 @@
 // Rule-based profile extractor. Every field stays null unless the user clearly said it.
 // Keywords ending in * are prefix matches (Telugu suffixes); see text.tokenMatches.
+import { STATE_KEYWORDS } from './geo'
 import { findNumbers, type NumberSpan } from './numbers'
 import { BOUNDARY, findAll, phrases, quote, tokenize, type Hit, type Phrase } from './text'
 import { emptyProfile, type BooleanField, type ExtractFn, type Occupation, type Profile, type ProfileField } from './types'
@@ -80,40 +81,9 @@ const OCCUPATION_KEYWORDS: [Occupation, Phrase[]][] = [
 const URBAN = phrases(['shahar', 'shehar', 'sheher', 'shaher', 'city', 'town', 'शहर', 'పట్నం*', 'నగరం*'])
 const RURAL = phrases(['gaon', 'gaanv', 'gaav', 'village', 'dehat', 'गांव', 'गाँव', 'गाव', 'देहात', 'పల్లె*', 'గ్రామ*'])
 
-const STATES: [string, Phrase[]][] = (
-  [
-    ['Andhra Pradesh', ['andhra pradesh', 'andhra', 'आंध्र प्रदेश', 'ఆంధ్ర*']],
-    ['Telangana', ['telangana', 'तेलंगाना', 'తెలంగాణ*']],
-    ['Bihar', ['bihar', 'बिहार']],
-    ['Uttar Pradesh', ['uttar pradesh', 'उत्तर प्रदेश']],
-    ['Delhi', ['delhi', 'dilli', 'दिल्ली']],
-    ['Maharashtra', ['maharashtra', 'महाराष्ट्र']],
-    ['West Bengal', ['west bengal', 'bengal', 'bangal', 'पश्चिम बंगाल', 'बंगाल']],
-    ['Rajasthan', ['rajasthan', 'राजस्थान']],
-    ['Madhya Pradesh', ['madhya pradesh', 'मध्य प्रदेश']],
-    ['Gujarat', ['gujarat', 'गुजरात']],
-    ['Karnataka', ['karnataka', 'कर्नाटक']],
-    ['Tamil Nadu', ['tamil nadu', 'tamilnadu', 'तमिलनाडु', 'तमिल नाडु']],
-    ['Kerala', ['kerala', 'केरल']],
-    ['Odisha', ['odisha', 'orissa', 'ओडिशा', 'उड़ीसा']],
-    ['Jharkhand', ['jharkhand', 'झारखंड']],
-    ['Chhattisgarh', ['chhattisgarh', 'छत्तीसगढ़']],
-    ['Punjab', ['punjab', 'पंजाब']],
-    ['Haryana', ['haryana', 'हरियाणा']],
-    ['Uttarakhand', ['uttarakhand', 'उत्तराखंड']],
-    ['Himachal Pradesh', ['himachal pradesh', 'himachal', 'हिमाचल']],
-    ['Assam', ['assam', 'असम']],
-    ['Goa', ['goa', 'गोवा']],
-    ['Jammu and Kashmir', ['jammu kashmir', 'kashmir', 'जम्मू कश्मीर', 'कश्मीर']],
-    ['Tripura', ['tripura']],
-    ['Manipur', ['manipur']],
-    ['Meghalaya', ['meghalaya']],
-    ['Mizoram', ['mizoram']],
-    ['Nagaland', ['nagaland']],
-    ['Arunachal Pradesh', ['arunachal pradesh', 'arunachal']],
-    ['Sikkim', ['sikkim']],
-  ] as [string, string[]][]
-).map(([name, list]) => [name, phrases(list)])
+// The state/UT table lives in geo.ts: one source of truth, shared with the
+// follow-up answers and the geography evaluator.
+const STATES: [string, Phrase[]][] = STATE_KEYWORDS.map(([name, list]) => [name, phrases(list)])
 
 const CHILD = phrases([
   'bachche', 'bacche', 'bachhe', 'bache', 'bachcha', 'baccha', 'bachchi', 'beta', 'bete', 'beti',

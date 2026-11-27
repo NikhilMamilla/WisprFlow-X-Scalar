@@ -1,9 +1,10 @@
-import type { StringLang } from '../i18n/strings'
+import { t, type StringLang } from '../i18n/strings'
 import './ConflictScreen.css'
 
 export default function ConflictScreen({
   text,
   values,
+  lang,
   onPick,
 }: {
   text: string
@@ -13,7 +14,7 @@ export default function ConflictScreen({
 }) {
   return (
     <div className="question-screen conflict-screen">
-      <span className="eyebrow">Which one?</span>
+      <span className="eyebrow">{t(lang, 'eyebrow_conflict')}</span>
       <p className="question-text">{text}</p>
       <div className="conflict-buttons">
         {values.map((v) => (

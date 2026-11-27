@@ -1,4 +1,4 @@
-import { SCHEMES, type MatchResult, type Profile } from '../core'
+import { SCHEMES, locationSensitive, type MatchResult, type Profile } from '../core'
 import { t, type StringLang } from '../i18n/strings'
 import { documentNames, schemeBenefit, schemeName } from './localize'
 import './ResultsScreen.css'
@@ -37,6 +37,9 @@ function Card({
 }) {
   const scheme = SCHEMES.find((s) => s.id === result.id)
   if (!scheme) return null
+  // A rule set that is not fully verified can never read as "you qualify": it is a
+  // possible match the worker must confirm at the office.
+  const label = result.status === 'qualifies' && !scheme.rules_verified ? t(lang, 'status_possible_confirm') : pillLabel
   // Quote the user's own words for whichever rule this scheme actually passed on.
   const evidenceLine = result.passed
     .map((ruleId) => profile.evidence[fieldOf(ruleId) as keyof typeof profile.evidence])
@@ -44,7 +47,7 @@ function Card({
 
   return (
     <div className={highlighted ? 'card card-highlight result-card' : 'card result-card'}>
-      <span className={`pill ${pillClass}`}>{pillLabel}</span>
+      <span className={`pill ${pillClass}`}>{label}</span>
       <h3>{schemeName(scheme, lang)}</h3>
       <p className="benefit">{schemeBenefit(scheme, lang)}</p>
 
@@ -55,7 +58,9 @@ function Card({
         </p>
       )}
       {result.status === 'needs_info' && result.missing.length > 0 && (
-        <p className="why">{t(lang, 'needs_info_reason', { fields: result.missing.join(', ') })}</p>
+        <p className="why">
+          {t(lang, 'needs_info_reason', { fields: result.missing.map((f) => t(lang, `field_${f}`)).join(', ') })}
+        </p>
       )}
       {result.status === 'does_not_qualify' && (
         <ul className="why-list">
@@ -67,9 +72,9 @@ function Card({
 
       <p className="documents">{documentNames(scheme, lang).join(', ')}</p>
       <a className="quiet-link" href={scheme.source_url} target="_blank" rel="noreferrer">
-        Source
+        {t(lang, 'link_source')}
       </a>
-      {!scheme.rules_verified && <span className="badge-unverified">Rules not fully verified</span>}
+      {!scheme.rules_verified && <span className="badge-unverified">{t(lang, 'badge_unverified')}</span>}
     </div>
   )
 }
@@ -79,17 +84,25 @@ export default function ResultsScreen({
   profile,
   lang,
   onViewSheet,
+  onChangeLocation,
 }: {
   results: MatchResult[]
   profile: Profile
   lang: StringLang
   onViewSheet: () => void
+  onChangeLocation?: () => void
 }) {
   // The scheme(s) that other results point to via unlocked_by: when the user qualifies for one
   // of those directly, it's the actionable first step, not just an ordinary "you qualify" item.
   const unlockerIds = new Set(
     results.filter((r) => r.status === 'needs_prerequisite' && r.unlocked_by).map((r) => r.unlocked_by!),
   )
+  // Only offer a location correction when a state/UT/district scheme exists, so the
+  // six central schemes never add a pointless button.
+  const geographyMatters = results.some((r) => {
+    const scheme = SCHEMES.find((s) => s.id === r.id)
+    return scheme ? locationSensitive(scheme) : false
+  })
   const groups: { heading: string; items: MatchResult[]; highlight?: boolean; pillClass: string; pillKey: string }[] = [
     {
       heading: 'results_heading_do_first',
@@ -126,8 +139,9 @@ export default function ResultsScreen({
 
   return (
     <div className="results-screen">
-      <span className="eyebrow">Results</span>
+      <span className="eyebrow">{t(lang, 'eyebrow_results')}</span>
       <h1>{t(lang, 'results_summary_header')}</h1>
+      <p className="why">{t(lang, 'results_trust_note')}</p>
       {groups.map(({ heading, items, highlight, pillClass, pillKey }) => {
         if (items.length === 0) return null
         return (
@@ -149,8 +163,13 @@ export default function ResultsScreen({
       })}
       <div className="results-actions">
         <button type="button" className="btn btn-primary" onClick={onViewSheet}>
-          Sheet dekhiye
+          {t(lang, 'results_cta_sheet')}
         </button>
+        {geographyMatters && onChangeLocation && (
+          <button type="button" className="btn btn-secondary" onClick={onChangeLocation}>
+            {t(lang, 'results_change_location')}
+          </button>
+        )}
       </div>
     </div>
   )

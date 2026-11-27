@@ -1,16 +1,21 @@
 import { useState } from 'react'
+import { t, type StringLang } from '../i18n/strings'
 import './QuestionScreen.css'
 
+// `text` is what the extractor receives, so it stays in the spellings it understands;
+// only the visible label is translated.
 const OCCUPATION_QUICK = [
-  { label: 'Thela / Rehdi', text: 'thela' },
-  { label: 'Construction', text: 'mazdoor' },
-  { label: 'Delivery', text: 'delivery' },
-  { label: 'Other', text: 'auto' },
+  { labelKey: 'quick_vendor', text: 'thela' },
+  { labelKey: 'quick_construction', text: 'mazdoor' },
+  { labelKey: 'quick_delivery', text: 'delivery' },
+  { labelKey: 'quick_other', text: 'auto' },
 ]
 
 export default function QuestionScreen({
   text,
   mode,
+  lang,
+  quick,
   listening,
   interim,
   primaryFallback,
@@ -22,6 +27,8 @@ export default function QuestionScreen({
 }: {
   text: string
   mode: 'yesno' | 'number' | 'open'
+  lang: StringLang
+  quick?: boolean // occupation shortcuts only: a state question must not show "Thela / Rehdi"
   listening: boolean
   interim: string
   primaryFallback?: boolean // after two low-confidence failures: make manual controls stand out
@@ -48,17 +55,17 @@ export default function QuestionScreen({
 
   return (
     <div className={primaryFallback ? 'question-screen primary-fallback' : 'question-screen'}>
-      <span className="eyebrow">Question</span>
+      <span className="eyebrow">{t(lang, 'eyebrow_question')}</span>
       <p className="question-text">{text}</p>
-      {listening && <p className="listening-indicator">{interim || 'Sun raha hoon...'}</p>}
+      {listening && <p className="listening-indicator">{interim || t(lang, 'mic_listening')}</p>}
 
       {mode === 'yesno' && (
         <div className="yesno-buttons">
           <button type="button" className="btn btn-primary yes-button" onClick={() => onYesNo('yes')}>
-            Haan
+            {t(lang, 'label_yes')}
           </button>
           <button type="button" className="btn btn-secondary no-button" onClick={() => onYesNo('no')}>
-            Nahi
+            {t(lang, 'label_no')}
           </button>
         </div>
       )}
@@ -74,7 +81,7 @@ export default function QuestionScreen({
             placeholder="0"
           />
           <button type="button" className="btn btn-primary" onClick={submitNumber}>
-            Submit
+            {t(lang, 'submit_label')}
           </button>
         </div>
       )}
@@ -87,25 +94,27 @@ export default function QuestionScreen({
               className="open-input"
               value={textInput}
               onChange={(e) => setTextInput(e.target.value)}
-              placeholder="Yahan type kariye..."
+              placeholder={t(lang, 'type_instead_placeholder')}
             />
             <button type="button" className="btn btn-primary" onClick={submitText}>
-              Submit
+              {t(lang, 'submit_label')}
             </button>
           </div>
-          <div className="occupation-quick">
-            {OCCUPATION_QUICK.map((o) => (
-              <button key={o.label} type="button" className="btn btn-secondary" onClick={() => onText(o.text)}>
-                {o.label}
-              </button>
-            ))}
-          </div>
+          {quick && (
+            <div className="occupation-quick">
+              {OCCUPATION_QUICK.map((o) => (
+                <button key={o.labelKey} type="button" className="btn btn-secondary" onClick={() => onText(o.text)}>
+                  {t(lang, o.labelKey)}
+                </button>
+              ))}
+            </div>
+          )}
         </>
       )}
 
       {showSkip && (
         <button type="button" className="btn btn-secondary skip-button" onClick={onSkip}>
-          Skip kariye
+          {t(lang, 'skip_label')}
         </button>
       )}
     </div>

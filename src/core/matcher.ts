@@ -1,133 +1,116 @@
-// Plain-code eligibility over data/schemes.json. Ids only; the UI renders the words.
-import { SCHEMES, type Scheme } from './schemes'
-import type { BooleanField, Profile, ProfileField } from './types'
+// Plain-code eligibility over the scheme catalogue. Ids and structured
+// evaluations only; the UI renders the words.
+import { evaluateGeography, type GeographyEvaluation } from './geography'
+import {
+  checksFor,
+  evaluate,
+  type CompiledChecks,
+  type FailedRule,
+  type MissingField,
+  type RuleEvaluation,
+  type RuleId,
+} from './rules'
+import { providerMap, type Scheme, type VerificationStatus } from './scheme'
+import { SCHEMES } from './schemes'
+import type { BooleanField, Profile } from './types'
 
-export type RuleId =
-  | 'age_min'
-  | 'age_max'
-  | 'income_max_monthly'
-  | 'occupation_in'
-  | 'urban_only'
-  | `not:${BooleanField}`
-  | `requires:${BooleanField}`
-
-export interface FailedRule {
-  ruleId: RuleId
-  detail: {
-    field: ProfileField
-    actual: number | string | boolean
-    expected: number | string | boolean | string[] // the limit or required value
-  }
-}
-
-export type MatchStatus = 'qualifies' | 'does_not_qualify' | 'needs_info' | 'needs_prerequisite' | 'not_needed'
+export type MatchStatus =
+  | 'qualifies'
+  | 'does_not_qualify'
+  | 'needs_info'
+  | 'needs_prerequisite'
+  | 'not_needed'
+  | 'not_applicable' // outside the user's state, or discontinued
 
 export interface MatchResult {
   id: string
   status: MatchStatus
   passed: RuleId[]
   failed: FailedRule[]
-  missing: ProfileField[]
+  missing: MissingField[]
   rules_verified: boolean
-  // Only set when status is 'needs_prerequisite': the requires: rules that failed, and,
-  // where one exists, the scheme that provides it (e.g. has_bank_account -> pmjdy).
+  verification: VerificationStatus
+  // Why this scheme does or does not apply to the user's location.
+  geography: GeographyEvaluation
+  // One row per condition: expected, actual, pass/fail/unknown, verified.
+  evaluations: RuleEvaluation[]
+  // Only set when status is 'needs_prerequisite': the requires: rules that failed.
   prerequisites?: BooleanField[]
   unlocked_by?: string
 }
 
-// A scheme that itself supplies a prerequisite field, so another scheme can point to it.
-const PREREQUISITE_UNLOCKERS: Partial<Record<BooleanField, string>> = {
-  has_bank_account: 'pmjdy',
-}
+const DEFAULT_PROVIDERS = providerMap(SCHEMES)
 
-interface Check {
-  ruleId: RuleId
-  field: ProfileField
-  expected: FailedRule['detail']['expected']
-  ok: (value: NonNullable<Profile[ProfileField]>) => boolean
-}
-
-export function checksFor(scheme: Scheme): Check[] {
-  const r = scheme.rules
-  const checks: Check[] = []
-  if (r.age_min != null) {
-    const min = r.age_min
-    checks.push({ ruleId: 'age_min', field: 'age', expected: min, ok: (v) => (v as number) >= min })
-  }
-  if (r.age_max != null) {
-    const max = r.age_max
-    checks.push({ ruleId: 'age_max', field: 'age', expected: max, ok: (v) => (v as number) <= max })
-  }
-  if (r.income_max_monthly != null) {
-    const max = r.income_max_monthly
-    checks.push({ ruleId: 'income_max_monthly', field: 'monthly_income', expected: max, ok: (v) => (v as number) <= max })
-  }
-  if (r.occupation_in && r.occupation_in.length > 0) {
-    const allowed = r.occupation_in
-    checks.push({ ruleId: 'occupation_in', field: 'occupation', expected: allowed, ok: (v) => allowed.includes(v as never) })
-  }
-  if (r.urban_only) {
-    checks.push({ ruleId: 'urban_only', field: 'urban_or_rural', expected: 'urban', ok: (v) => v === 'urban' })
-  }
-  for (const f of r.not) checks.push({ ruleId: `not:${f}`, field: f, expected: false, ok: (v) => v === false })
-  for (const f of r.requires) checks.push({ ruleId: `requires:${f}`, field: f, expected: true, ok: (v) => v === true })
-  return checks
-}
-
-export function matchScheme(profile: Profile, scheme: Scheme): MatchResult {
+export function matchScheme(
+  profile: Profile,
+  scheme: Scheme,
+  providers: ReadonlyMap<BooleanField, string[]> = DEFAULT_PROVIDERS,
+  // Precompiled by the registry (or cached per scheme object) rather than
+  // recompiled for every profile.
+  checks: CompiledChecks = checksFor(scheme),
+): MatchResult {
   const base: Omit<MatchResult, 'status'> = {
     id: scheme.id,
     passed: [],
     failed: [],
     missing: [],
     rules_verified: scheme.rules_verified,
+    verification: scheme.verification.status,
+    geography: evaluateGeography(profile, scheme),
+    evaluations: [],
   }
 
-  // only_if is checked first: an unmet precondition makes the scheme inapplicable, not failed.
+  if (scheme.verification.status === 'DISCONTINUED') return { ...base, status: 'not_applicable' }
+
+  // only_if is checked first: an unmet precondition makes the scheme
+  // inapplicable, not failed.
   for (const [field, expected] of Object.entries(scheme.rules.only_if ?? {}) as [BooleanField, boolean][]) {
     const value = profile[field]
     if (value === null) return { ...base, status: 'needs_info', missing: [field] }
     if (value !== expected) return { ...base, status: 'not_needed' }
   }
 
-  const passed: RuleId[] = []
-  const failed: FailedRule[] = []
-  const missing: ProfileField[] = []
-  for (const c of checksFor(scheme)) {
-    const value = profile[c.field]
-    if (value === null) {
-      if (!missing.includes(c.field)) missing.push(c.field) // unknown is never a pass or a fail
-    } else if (c.ok(value)) {
-      passed.push(c.ruleId)
-    } else {
-      failed.push({ ruleId: c.ruleId, detail: { field: c.field, actual: value, expected: c.expected } })
-    }
+  // Geography is evaluated after only_if so "not needed" keeps its meaning, and
+  // before the rules so an out-of-state scheme never asks for a rule answer.
+  const geography = base.geography
+  if (geography.result === 'not_applicable') return { ...base, status: 'not_applicable' }
+  if (geography.result === 'unknown_state' || geography.result === 'invalid_metadata') {
+    return { ...base, status: 'needs_info', missing: ['state'] }
   }
+  if (geography.result === 'unknown_district') return { ...base, status: 'needs_info', missing: ['district'] }
 
-  const realFailures = failed.filter((f) => !f.ruleId.startsWith('requires:'))
-  const prerequisiteFailures = failed.filter((f) => f.ruleId.startsWith('requires:'))
+  const result = evaluate(scheme, profile, checks)
+  const evaluated = { ...base, evaluations: result.evaluations, passed: result.passed, failed: result.failed }
 
-  if (realFailures.length > 0) {
-    return { ...base, status: 'does_not_qualify', passed, failed, missing }
+  if (result.realFailures.length > 0) {
+    return { ...evaluated, status: 'does_not_qualify', missing: result.missing }
   }
-  if (prerequisiteFailures.length > 0) {
-    const prerequisites = prerequisiteFailures.map((f) => f.detail.field as BooleanField)
-    const unlocked_by = PREREQUISITE_UNLOCKERS[prerequisites[0]]
+  if (result.prerequisiteFailures.length > 0) {
+    const prerequisites = result.prerequisiteFailures.map((f) => f.detail.field as BooleanField)
+    const unlocked_by = providers.get(prerequisites[0])?.[0]
     return {
-      ...base,
+      ...evaluated,
       status: 'needs_prerequisite',
-      passed,
-      failed,
-      missing,
+      missing: result.missing,
       prerequisites,
       ...(unlocked_by ? { unlocked_by } : {}),
     }
   }
   // One known failure settles it, even with other fields still unknown.
-  const status = missing.length > 0 ? 'needs_info' : 'qualifies'
-  return { ...base, status, passed, failed, missing }
+  return { ...evaluated, status: result.missing.length > 0 ? 'needs_info' : 'qualifies', missing: result.missing }
 }
 
-export function matchSchemes(profile: Profile, schemes: Scheme[] = SCHEMES): MatchResult[] {
-  return schemes.map((s) => matchScheme(profile, s))
+// For a smaller catalogue the provider map is rebuilt from the list passed in;
+// `matchAll` reuses a prebuilt registry map instead (see registry.ts).
+export function matchSchemes(
+  profile: Profile,
+  schemes: Scheme[] = SCHEMES,
+  providers: ReadonlyMap<BooleanField, string[]> = schemes === SCHEMES ? DEFAULT_PROVIDERS : providerMap(schemes),
+  checksById?: ReadonlyMap<string, CompiledChecks>,
+): MatchResult[] {
+  return schemes.map((s) => matchScheme(profile, s, providers, checksById?.get(s.id)))
+}
+
+export function filterByStatus(results: MatchResult[], statuses: MatchStatus[]): MatchResult[] {
+  return results.filter((r) => statuses.includes(r.status))
 }
