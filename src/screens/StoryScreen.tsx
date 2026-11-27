@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { Profile } from '../core'
+import type { StringLang } from '../i18n/strings'
 import { FIXED_SAMPLE_SENTENCE } from '../voice/languages'
 import DotField from '../components/DotField'
 import Waveform from '../components/Waveform'
@@ -8,6 +9,7 @@ import './StoryScreen.css'
 
 export default function StoryScreen({
   profile,
+  lang,
   listening,
   interim,
   primaryFallback,
@@ -16,6 +18,7 @@ export default function StoryScreen({
   onSubmitText,
 }: {
   profile: Profile
+  lang: StringLang
   listening: boolean
   interim: string
   primaryFallback?: boolean // after two low-confidence failures: make typed/sample stand out
@@ -57,7 +60,7 @@ export default function StoryScreen({
 
         <p className="transcript">{interim || (listening ? 'Sun raha hoon...' : ' ')}</p>
 
-        <ProfileChips profile={profile} />
+        <ProfileChips profile={profile} lang={lang} />
 
         <div className={primaryFallback ? 'fallback primary-fallback' : 'fallback'}>
           <textarea

@@ -10,7 +10,7 @@ export default function WhatIUnderstood({ profile, lang }: { profile: Profile; l
   return (
     <div className="what-i-understood">
       <span className="eyebrow">{t(lang, 'what_i_understood')}</span>
-      <ProfileChips profile={profile} />
+      <ProfileChips profile={profile} lang={lang} />
     </div>
   )
 }

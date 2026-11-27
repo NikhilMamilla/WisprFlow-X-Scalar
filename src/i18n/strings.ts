@@ -125,13 +125,35 @@ export const STRINGS: Record<string, Entry> = {
     hi: 'आपकी आवाज़ इस फ़ोन/ब्राउज़र की स्पीच सेवा से समझी जाती है। ट्रांसक्रिप्ट इसी ब्राउज़र में रहता है, हमारे सर्वर पर नहीं जाता।',
   },
 
-  label_occupation_street_vendor: { en: 'Thela / Rehdi vendor', hi: 'ठेला / रेहड़ी विक्रेता' },
-  label_occupation_construction_worker: { en: 'Construction mazdoor', hi: 'निर्माण मज़दूर' },
-  label_occupation_delivery_rider: { en: 'Delivery rider', hi: 'डिलीवरी राइडर' },
-  label_occupation_domestic_worker: { en: 'Ghar ka kaam karne waale', hi: 'घर का काम करने वाले' },
-  label_occupation_other: { en: 'Doosra kaam', hi: 'दूसरा काम' },
-  label_urban: { en: 'Shahar', hi: 'शहर' },
-  label_rural: { en: 'Gaon', hi: 'गांव' },
+  label_occupation_street_vendor: {
+    en: 'Thela / Rehdi vendor', hi: 'ठेला / रेहड़ी विक्रेता',
+    te: 'తోపుడు బండి / వీధి వ్యాపారి', // NEEDS NATIVE TELUGU REVIEW
+  },
+  label_occupation_construction_worker: {
+    en: 'Construction mazdoor', hi: 'निर्माण मज़दूर',
+    te: 'నిర్మాణ కార్మికుడు', // NEEDS NATIVE TELUGU REVIEW
+  },
+  label_occupation_delivery_rider: {
+    en: 'Delivery rider', hi: 'डिलीवरी राइडर',
+    te: 'డెలివరీ రైడర్', // NEEDS NATIVE TELUGU REVIEW
+  },
+  label_occupation_domestic_worker: {
+    en: 'Ghar ka kaam karne waale', hi: 'घर का काम करने वाले',
+    te: 'ఇంటి పని చేసేవారు', // NEEDS NATIVE TELUGU REVIEW
+  },
+  label_occupation_other: {
+    en: 'Doosra kaam', hi: 'दूसरा काम',
+    te: 'ఇతర పని', // NEEDS NATIVE TELUGU REVIEW
+  },
+  label_urban: { en: 'Shahar', hi: 'शहर', te: 'పట్నం' }, // NEEDS NATIVE TELUGU REVIEW
+  label_rural: { en: 'Gaon', hi: 'गांव', te: 'గ్రామం' }, // NEEDS NATIVE TELUGU REVIEW
+  label_yes: { en: 'Haan', hi: 'हां', te: 'అవును' }, // NEEDS NATIVE TELUGU REVIEW
+  label_no: { en: 'Nahi', hi: 'नहीं', te: 'కాదు' }, // NEEDS NATIVE TELUGU REVIEW
+
+  chip_age: { en: 'Umar', hi: 'उम्र', te: 'వయస్సు' }, // NEEDS NATIVE TELUGU REVIEW
+  chip_income: { en: 'Aamdani', hi: 'आमदनी', te: 'ఆదాయం' }, // NEEDS NATIVE TELUGU REVIEW
+  chip_month_suffix: { en: '/mahina', hi: '/महीना', te: '/నెల' }, // NEEDS NATIVE TELUGU REVIEW
+  chip_dependants: { en: 'Parivar', hi: 'परिवार', te: 'కుటుంబం' }, // NEEDS NATIVE TELUGU REVIEW
 
   type_instead_placeholder: { en: 'Yahan type kariye...', hi: 'यहां टाइप करें...' },
   play_sample_label: { en: 'Sample sunayein', hi: 'नमूना सुनाएं' },

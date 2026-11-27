@@ -8,6 +8,10 @@ const distDir = path.join(__dirname, '..', 'dist')
 const app = express()
 app.use(express.json())
 
+app.get('/healthz', (_req, res) => {
+  res.status(200).send('ok')
+})
+
 app.post('/api/extract', (_req, res) => {
   res.status(501).json({
     error: 'not_configured',

@@ -246,6 +246,7 @@ export default function Flow() {
         {!showAbout && state.screen === 'story' && (
           <StoryScreen
             profile={state.profile}
+            lang={stringLang}
             listening={listening}
             interim={interim}
             primaryFallback={primaryFallback}
