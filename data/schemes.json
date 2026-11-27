@@ -7,13 +7,19 @@
       "name_en": "e-Shram registration",
       "name_hi": "ई-श्रम पंजीकरण",
       "benefit_en": "Free registration for unorganised workers. Your record can be linked to welfare schemes.",
+      "benefit_hi": "असंगठित श्रमिकों के लिए मुफ़्त पंजीकरण। आपका रिकॉर्ड कल्याण योजनाओं से जोड़ा जा सकता है।",
+      "benefit_en_roman": "Asangathit mazdooron ke liye muft registration. Aapka record welfare schemes se jud sakta hai.",
       "rules": {
         "age_min": 16,
         "age_max": null,
         "not": ["pays_income_tax", "in_epf_esic_nps"],
         "requires": []
       },
-      "documents": ["Aadhaar card", "Mobile number linked to Aadhaar", "Bank account details"],
+      "documents": [
+        { "en": "Aadhaar card", "hi": "आधार कार्ड", "en_roman": "Aadhaar card" },
+        { "en": "Mobile number linked to Aadhaar", "hi": "आधार से जुड़ा मोबाइल नंबर", "en_roman": "Aadhaar se juda mobile number" },
+        { "en": "Bank account details", "hi": "बैंक खाते की जानकारी", "en_roman": "Bank account ki jaankari" }
+      ],
       "source_url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc_9692_20260825_14270901.pdf",
       "rules_verified": false,
       "verify_note": "Sources disagree on the upper age limit: a Dec 2024 PIB document says 16 to 59, an Aug 2026 PIB document says 16 and above. Registration is free. Ask no fee."
@@ -23,6 +29,8 @@
       "name_en": "PM Shram Yogi Maan-dhan (pension)",
       "name_hi": "प्रधानमंत्री श्रम योगी मान-धन (पेंशन)",
       "benefit_en": "Assured pension of Rs 3,000 a month after age 60, with the government matching your monthly contribution.",
+      "benefit_hi": "60 साल की उम्र के बाद हर महीने ₹3,000 की निश्चित पेंशन, जिसमें सरकार आपकी मासिक राशि के बराबर योगदान देती है।",
+      "benefit_en_roman": "60 saal ki umar ke baad har mahine ₹3,000 ki guaranteed pension, jisme sarkar aapke mahine ke paise ke barabar paisa deti hai.",
       "rules": {
         "age_min": 18,
         "age_max": 40,
@@ -30,7 +38,10 @@
         "not": ["pays_income_tax", "in_epf_esic_nps"],
         "requires": ["has_aadhaar", "has_bank_account"]
       },
-      "documents": ["Aadhaar card", "Savings bank or Jan Dhan account number with IFSC"],
+      "documents": [
+        { "en": "Aadhaar card", "hi": "आधार कार्ड", "en_roman": "Aadhaar card" },
+        { "en": "Savings bank or Jan Dhan account number with IFSC", "hi": "बचत बैंक या जन धन खाता नंबर, IFSC के साथ", "en_roman": "Savings bank ya Jan Dhan account number, IFSC ke saath" }
+      ],
       "source_url": "https://labour.gov.in/enrolment-process",
       "rules_verified": true,
       "verify_note": "Unorganised worker, entry age 18 to 40, monthly income up to Rs 15,000, not in EPF, NPS or ESIC, not an income tax payer."
@@ -40,13 +51,18 @@
       "name_en": "PM Suraksha Bima Yojana (accident insurance)",
       "name_hi": "प्रधानमंत्री सुरक्षा बीमा योजना (दुर्घटना बीमा)",
       "benefit_en": "Accident insurance at a very low yearly premium, taken from your bank account.",
+      "benefit_hi": "बहुत कम सालाना प्रीमियम पर दुर्घटना बीमा, जो आपके बैंक खाते से लिया जाता है।",
+      "benefit_en_roman": "Bahut kam yearly premium par accident insurance, jo aapke bank account se liya jaata hai.",
       "rules": {
         "age_min": 18,
         "age_max": 70,
         "not": [],
         "requires": ["has_bank_account"]
       },
-      "documents": ["Aadhaar card", "Bank account with consent for auto-debit"],
+      "documents": [
+        { "en": "Aadhaar card", "hi": "आधार कार्ड", "en_roman": "Aadhaar card" },
+        { "en": "Bank account with consent for auto-debit", "hi": "ऑटो-डेबिट की सहमति वाला बैंक खाता", "en_roman": "Auto-debit consent waala bank account" }
+      ],
       "source_url": "https://pmsvanidhi.qcin.org/assets/documents/FAQ-%20SVANidhi%20se%20Samriddhi.pdf",
       "rules_verified": true,
       "verify_note": "Age 18 to 70 with a bank account. Cover and premium amounts are not stated here on purpose: confirm at the bank."
@@ -56,13 +72,18 @@
       "name_en": "PM Jeevan Jyoti Bima Yojana (life insurance)",
       "name_hi": "प्रधानमंत्री जीवन ज्योति बीमा योजना (जीवन बीमा)",
       "benefit_en": "Life insurance at a low yearly premium, taken from your bank account.",
+      "benefit_hi": "कम सालाना प्रीमियम पर जीवन बीमा, जो आपके बैंक खाते से लिया जाता है।",
+      "benefit_en_roman": "Kam yearly premium par life insurance, jo aapke bank account se liya jaata hai.",
       "rules": {
         "age_min": 18,
         "age_max": 50,
         "not": [],
         "requires": ["has_bank_account"]
       },
-      "documents": ["Aadhaar card", "Bank account with consent for auto-debit"],
+      "documents": [
+        { "en": "Aadhaar card", "hi": "आधार कार्ड", "en_roman": "Aadhaar card" },
+        { "en": "Bank account with consent for auto-debit", "hi": "ऑटो-डेबिट की सहमति वाला बैंक खाता", "en_roman": "Auto-debit consent waala bank account" }
+      ],
       "source_url": "https://pmsvanidhi.qcin.org/assets/documents/FAQ-%20SVANidhi%20se%20Samriddhi.pdf",
       "rules_verified": true,
       "verify_note": "Age 18 to 50 with a bank account. Cover and premium amounts are not stated here on purpose: confirm at the bank."
@@ -72,13 +93,19 @@
       "name_en": "PM SVANidhi (street vendor loan)",
       "name_hi": "पीएम स्वनिधि (रेहड़ी-पटरी ऋण)",
       "benefit_en": "Working capital loan for street vendors.",
+      "benefit_hi": "रेहड़ी-पटरी विक्रेताओं के लिए कार्यशील पूंजी ऋण।",
+      "benefit_en_roman": "Rehdi-patri vendors ke liye working capital loan.",
       "rules": {
         "occupation_in": ["street_vendor"],
         "urban_only": true,
         "not": [],
         "requires": []
       },
-      "documents": ["Aadhaar card", "Mobile number linked to Aadhaar", "Proof you vend (vending certificate or local body letter, if you have one)"],
+      "documents": [
+        { "en": "Aadhaar card", "hi": "आधार कार्ड", "en_roman": "Aadhaar card" },
+        { "en": "Mobile number linked to Aadhaar", "hi": "आधार से जुड़ा मोबाइल नंबर", "en_roman": "Aadhaar se juda mobile number" },
+        { "en": "Proof you vend (vending certificate or local body letter, if you have one)", "hi": "आप विक्रय करते हैं इसका प्रमाण (वेंडिंग सर्टिफिकेट या नगर निकाय का पत्र, अगर है)", "en_roman": "Aap vend karte hain iska proof (vending certificate ya local body ka letter, agar hai)" }
+      ],
       "source_url": "https://www.india.gov.in/spotlight/pm-street-vendors-atmanirbhar-nidhi-pm-svanidhi",
       "rules_verified": false,
       "verify_note": "Defined for urban vendors vending on or before 24 March 2020, but the scheme was restructured in Dec 2025 to add new beneficiaries. Current cutoff not confirmed. Show as 'possible match, confirm with your municipal office'."
@@ -88,13 +115,18 @@
       "name_en": "PM Jan Dhan Yojana (bank account)",
       "name_hi": "प्रधानमंत्री जन धन योजना (बैंक खाता)",
       "benefit_en": "A basic bank account in your own name. You need it for the insurance and pension schemes.",
+      "benefit_hi": "आपके अपने नाम पर एक बेसिक बैंक खाता। बीमा और पेंशन योजनाओं के लिए यह ज़रूरी है।",
+      "benefit_en_roman": "Aapke apne naam par ek basic bank account. Insurance aur pension schemes ke liye yeh zaroori hai.",
       "rules": {
         "age_min": 18,
         "only_if": { "has_bank_account": false },
         "not": [],
         "requires": []
       },
-      "documents": ["Aadhaar card", "If you have no Aadhaar: an address proof"],
+      "documents": [
+        { "en": "Aadhaar card", "hi": "आधार कार्ड", "en_roman": "Aadhaar card" },
+        { "en": "If you have no Aadhaar: an address proof", "hi": "अगर आधार नहीं है: पता प्रमाण", "en_roman": "Agar Aadhaar nahi hai: address proof" }
+      ],
       "source_url": "https://pmsvanidhi.qcin.org/assets/documents/FAQ-%20SVANidhi%20se%20Samriddhi.pdf",
       "rules_verified": true,
       "verify_note": "Any adult without a bank account. Confirm the required documents at the bank."

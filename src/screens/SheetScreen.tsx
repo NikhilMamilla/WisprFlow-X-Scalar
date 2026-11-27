@@ -1,6 +1,12 @@
 import { SCHEMES, type MatchResult, type Profile } from '../core'
 import { t, type StringLang } from '../i18n/strings'
+import { documentNames, occupationLabel, schemeName, urbanRuralLabel } from './localize'
 import './SheetScreen.css'
+
+function statusLabel(id: string, status: MatchResult['status'], lang: StringLang): string {
+  if (status === 'qualifies') return t(lang, id === 'pmjdy' ? 'status_do_this_first' : 'status_qualifies')
+  return t(lang, 'status_unlocks_after')
+}
 
 export default function SheetScreen({
   results,
@@ -14,7 +20,11 @@ export default function SheetScreen({
   onBack: () => void
 }) {
   const relevant = results.filter((r) => r.status === 'qualifies' || r.status === 'needs_prerequisite')
-  const documents = [...new Set(relevant.flatMap((r) => SCHEMES.find((s) => s.id === r.id)?.documents ?? []))]
+  // Jan Dhan (if present) leads the list and its documents lead the checklist: it's the step to do first.
+  const ordered = [...relevant].sort((a, b) => (a.id === 'pmjdy' ? -1 : b.id === 'pmjdy' ? 1 : 0))
+  const documents = [
+    ...new Set(ordered.flatMap((r) => documentNames(SCHEMES.find((s) => s.id === r.id)!, lang))),
+  ]
 
   return (
     <div className="sheet-screen">
@@ -30,19 +40,19 @@ export default function SheetScreen({
       <div className="sheet-page">
         <h1>{t(lang, 'sheet_title')}</h1>
         <p>
-          Age: {profile.age ?? '—'} · Occupation: {profile.occupation ?? '—'} ·{' '}
-          {profile.urban_or_rural ?? '—'}
+          Age: {profile.age ?? '—'} · Occupation: {profile.occupation ? occupationLabel(profile.occupation, lang) : '—'} ·{' '}
+          {profile.urban_or_rural ? urbanRuralLabel(profile.urban_or_rural, lang) : '—'}
         </p>
 
         <table>
           <tbody>
-            {relevant.map((r) => {
+            {ordered.map((r) => {
               const scheme = SCHEMES.find((s) => s.id === r.id)
               if (!scheme) return null
               return (
                 <tr key={r.id}>
-                  <td>{lang === 'hi' ? scheme.name_hi : scheme.name_en}</td>
-                  <td>{r.status === 'needs_prerequisite' ? t(lang, 'status_do_this_first') : t(lang, 'status_qualifies')}</td>
+                  <td>{schemeName(scheme, lang)}</td>
+                  <td>{statusLabel(r.id, r.status, lang)}</td>
                 </tr>
               )
             })}

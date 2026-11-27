@@ -14,13 +14,21 @@ export interface SchemeRules {
   requires: BooleanField[] // must be true
 }
 
+export interface DocumentName {
+  en: string
+  hi: string
+  en_roman: string // Hinglish, Roman script
+}
+
 export interface Scheme {
   id: string
   name_en: string
   name_hi: string
   benefit_en: string
+  benefit_hi: string
+  benefit_en_roman: string // Hinglish, Roman script
   rules: SchemeRules
-  documents: string[]
+  documents: DocumentName[]
   source_url: string
   rules_verified: boolean
   verify_note: string

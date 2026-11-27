@@ -47,7 +47,7 @@ interface Check {
   ok: (value: NonNullable<Profile[ProfileField]>) => boolean
 }
 
-function checksFor(scheme: Scheme): Check[] {
+export function checksFor(scheme: Scheme): Check[] {
   const r = scheme.rules
   const checks: Check[] = []
   if (r.age_min != null) {

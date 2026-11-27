@@ -139,7 +139,6 @@ export default function Flow() {
           profile={state.profile}
           lang={stringLang}
           onViewSheet={() => dispatch({ type: 'skip' })}
-          onAbout={() => setShowAbout(true)}
         />
       )}
 

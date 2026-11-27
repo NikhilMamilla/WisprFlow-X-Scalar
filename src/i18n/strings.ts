@@ -57,6 +57,16 @@ export const STRINGS: Record<string, Entry> = {
     en: 'Kya aap shahar mein rehte hain?',
     hi: 'क्या आप शहर में रहते हैं?',
   },
+  followup_age: {
+    en: 'Aapki umar kitne saal hai?',
+    hi: 'आपकी उम्र कितने साल है?',
+    te: 'మీ వయస్సు ఎంత?', // NEEDS NATIVE TELUGU REVIEW
+  },
+  followup_monthly_income: {
+    en: 'Aap mahine mein kitna kamate hain?',
+    hi: 'आप महीने में कितना कमाते हैं?',
+    te: 'మీరు నెలకు ఎంత సంపాదిస్తారు?', // NEEDS NATIVE TELUGU REVIEW
+  },
   ask_occupation_open: {
     en: 'Aap kya kaam karte hain?',
     hi: 'आप क्या काम करते हैं?',
@@ -67,11 +77,15 @@ export const STRINGS: Record<string, Entry> = {
   status_maybe: { en: 'Shayad, kuch jaankari aur chahiye', hi: 'शायद, कुछ जानकारी और चाहिए' },
   status_do_this_first: { en: 'Pehle yeh kariye', hi: 'पहले यह करिए' },
   status_not_eligible: { en: 'Abhi eligible nahi hain', hi: 'अभी योग्य नहीं हैं' },
+  status_not_needed: { en: 'Zaroorat nahi, aapke paas pehle se hai', hi: 'ज़रूरत नहीं, आपके पास पहले से है' },
+  status_unlocks_after: { en: 'Baad mein', hi: 'बाद में' },
   results_line: { en: '{scheme}: {status}.', hi: '{scheme}: {status}।' },
   results_summary_header: { en: 'Yeh hai aapka natija:', hi: 'यह है आपका नतीजा:' },
+  results_summary: { en: 'Aapka natija taiyaar hai. Neeche dekhiye.', hi: 'आपका नतीजा तैयार है। नीचे देखिए।' },
 
   results_heading_do_first: { en: 'Pehle yeh kariye', hi: 'पहले यह करिए' },
   results_heading_qualify: { en: 'Aap in sabke liye qualify karte hain', hi: 'आप इन सबके लिए योग्य हैं' },
+  results_heading_unlocks_after: { en: 'Yeh iske baad unlock hoga', hi: 'यह इसके बाद अनलॉक होगा' },
   results_heading_maybe: { en: 'Shayad — aur jaankari chahiye', hi: 'शायद — और जानकारी चाहिए' },
   results_heading_not_eligible: { en: 'Abhi eligible nahi', hi: 'अभी योग्य नहीं' },
   needs_prerequisite_reason: {
@@ -110,6 +124,14 @@ export const STRINGS: Record<string, Entry> = {
     en: 'Aapki awaaz is phone/browser ke speech service se samjhi jaati hai. Transcript isi browser mein rehta hai, hamare server par nahi jaata.',
     hi: 'आपकी आवाज़ इस फ़ोन/ब्राउज़र की स्पीच सेवा से समझी जाती है। ट्रांसक्रिप्ट इसी ब्राउज़र में रहता है, हमारे सर्वर पर नहीं जाता।',
   },
+
+  label_occupation_street_vendor: { en: 'Thela / Rehdi vendor', hi: 'ठेला / रेहड़ी विक्रेता' },
+  label_occupation_construction_worker: { en: 'Construction mazdoor', hi: 'निर्माण मज़दूर' },
+  label_occupation_delivery_rider: { en: 'Delivery rider', hi: 'डिलीवरी राइडर' },
+  label_occupation_domestic_worker: { en: 'Ghar ka kaam karne waale', hi: 'घर का काम करने वाले' },
+  label_occupation_other: { en: 'Doosra kaam', hi: 'दूसरा काम' },
+  label_urban: { en: 'Shahar', hi: 'शहर' },
+  label_rural: { en: 'Gaon', hi: 'गांव' },
 
   type_instead_placeholder: { en: 'Yahan type kariye...', hi: 'यहां टाइप करें...' },
   play_sample_label: { en: 'Sample sunayein', hi: 'नमूना सुनाएं' },

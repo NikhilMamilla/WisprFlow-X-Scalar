@@ -21,6 +21,9 @@ const ANSWER: Partial<Record<ProfileField, 'number' | 'yes_no'>> = {
   urban_or_rural: 'yes_no',
 }
 
+// Every field that can ever be asked about, as a follow-up or (age/monthly_income) a read-back retry.
+export const ASKABLE_FIELDS = Object.keys(ANSWER) as ProfileField[]
+
 // Tie-break order when two fields would settle the same number of schemes.
 const PRIORITY: ProfileField[] = [
   'age',
