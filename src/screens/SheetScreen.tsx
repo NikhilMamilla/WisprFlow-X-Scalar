@@ -29,15 +29,16 @@ export default function SheetScreen({
   return (
     <div className="sheet-screen">
       <div className="sheet-actions no-print">
-        <button type="button" onClick={onBack}>
+        <button type="button" className="btn btn-secondary" onClick={onBack}>
           Back
         </button>
-        <button type="button" onClick={() => window.print()}>
+        <button type="button" className="btn btn-primary" onClick={() => window.print()}>
           Print
         </button>
       </div>
 
       <div className="sheet-page">
+        <span className="eyebrow no-print">Your sheet</span>
         <h1>{t(lang, 'sheet_title')}</h1>
         <p>
           Age: {profile.age ?? '—'} · Occupation: {profile.occupation ? occupationLabel(profile.occupation, lang) : '—'} ·{' '}

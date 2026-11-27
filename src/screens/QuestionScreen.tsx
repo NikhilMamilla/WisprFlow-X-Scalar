@@ -42,6 +42,7 @@ export default function QuestionScreen({
 
   return (
     <div className="question-screen">
+      <span className="eyebrow">Question</span>
       <p className="question-text">{text}</p>
       {listening && (
         <p className="listening-indicator">{interim || 'Sun raha hoon...'}</p>
@@ -49,10 +50,10 @@ export default function QuestionScreen({
 
       {mode === 'yesno' && (
         <div className="yesno-buttons">
-          <button type="button" className="yes-button" onClick={() => onYesNo('yes')}>
+          <button type="button" className="btn btn-primary yes-button" onClick={() => onYesNo('yes')}>
             Haan
           </button>
-          <button type="button" className="no-button" onClick={() => onYesNo('no')}>
+          <button type="button" className="btn btn-secondary no-button" onClick={() => onYesNo('no')}>
             Nahi
           </button>
         </div>
@@ -68,7 +69,7 @@ export default function QuestionScreen({
             onChange={(e) => setNumberInput(e.target.value)}
             placeholder="0"
           />
-          <button type="button" onClick={submitNumber}>
+          <button type="button" className="btn btn-primary" onClick={submitNumber}>
             Submit
           </button>
         </div>
@@ -84,13 +85,13 @@ export default function QuestionScreen({
               onChange={(e) => setTextInput(e.target.value)}
               placeholder="Yahan type kariye..."
             />
-            <button type="button" onClick={submitText}>
+            <button type="button" className="btn btn-primary" onClick={submitText}>
               Submit
             </button>
           </div>
           <div className="occupation-quick">
             {OCCUPATION_QUICK.map((o) => (
-              <button key={o.label} type="button" onClick={() => onText(o.text)}>
+              <button key={o.label} type="button" className="btn btn-secondary" onClick={() => onText(o.text)}>
                 {o.label}
               </button>
             ))}

@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import type { Profile } from '../core'
 import { FIXED_SAMPLE_SENTENCE } from '../voice/languages'
+import DotField from '../components/DotField'
+import Waveform from '../components/Waveform'
 import ProfileChips from './ProfileChips'
 import './StoryScreen.css'
 
@@ -27,36 +29,46 @@ export default function StoryScreen({
 
   return (
     <div className="story-screen">
-      <p className="prompt">Apni kahani bataiye — aap kya kaam karte hain, ghar mein kitne log hain.</p>
+      <DotField />
+      <div className="story-content">
+        <span className="eyebrow">Your story</span>
+        <p className="prompt">Apni kahani bataiye — aap kya kaam karte hain, ghar mein kitne log hain.</p>
 
-      <button
-        type="button"
-        className={listening ? 'story-mic listening' : 'story-mic'}
-        onClick={onMicTap}
-      >
-        {listening ? 'Rukiye' : 'Boliye'}
-      </button>
-      {listening && <div className="pulse" aria-hidden="true" />}
-
-      <p className="transcript">{interim || (listening ? 'Sun raha hoon...' : ' ')}</p>
-
-      <ProfileChips profile={profile} />
-
-      <div className="fallback">
-        <textarea
-          className="type-box"
-          value={typed}
-          onChange={(e) => setTyped(e.target.value)}
-          placeholder="Yahan type kariye..."
-          rows={3}
-        />
-        <div className="fallback-buttons">
-          <button type="button" onClick={submitTyped}>
-            Submit
+        <div className="mic-wrap">
+          {listening && (
+            <div className="mic-rings" aria-hidden="true">
+              <span className="ring" />
+              <span className="ring" />
+              <span className="ring" />
+            </div>
+          )}
+          <button type="button" className={listening ? 'story-mic listening' : 'story-mic'} onClick={onMicTap}>
+            {listening ? 'Rukiye' : 'Boliye'}
           </button>
-          <button type="button" onClick={() => onSubmitText(FIXED_SAMPLE_SENTENCE)}>
-            Sample sunayein
-          </button>
+        </div>
+
+        <Waveform active={listening} bars={7} />
+
+        <p className="transcript">{interim || (listening ? 'Sun raha hoon...' : ' ')}</p>
+
+        <ProfileChips profile={profile} />
+
+        <div className="fallback">
+          <textarea
+            className="type-box"
+            value={typed}
+            onChange={(e) => setTyped(e.target.value)}
+            placeholder="Yahan type kariye..."
+            rows={3}
+          />
+          <div className="fallback-buttons">
+            <button type="button" className="btn btn-primary" onClick={submitTyped}>
+              Submit
+            </button>
+            <button type="button" className="btn btn-secondary" onClick={() => onSubmitText(FIXED_SAMPLE_SENTENCE)}>
+              Sample sunayein
+            </button>
+          </div>
         </div>
       </div>
     </div>

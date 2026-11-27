@@ -5,6 +5,8 @@ import { stringLangFor, t, type StringLang } from './i18n/strings'
 import { createRecognizer, type RecognitionErrorCode } from './voice/recognition'
 import { createSession, type ListeningSession } from './voice/session'
 import { getVoicesForLanguage, isSynthesisSupported, speak } from './voice/synthesis'
+import Footer from './components/Footer'
+import Header from './components/Header'
 import AboutScreen from './screens/AboutScreen'
 import LanguageScreen from './screens/LanguageScreen'
 import QuestionScreen from './screens/QuestionScreen'
@@ -12,6 +14,8 @@ import ResultsScreen from './screens/ResultsScreen'
 import SheetScreen from './screens/SheetScreen'
 import StoryScreen from './screens/StoryScreen'
 import './Flow.css'
+
+const NIGHT_SCREENS = new Set(['language', 'story'])
 
 export default function Flow() {
   const [state, setState] = useState<DialogState>(() => initialState())
@@ -101,61 +105,68 @@ export default function Flow() {
     dispatch({ type: 'storyDone', transcript: text })
   }
 
-  if (showAbout) return <AboutScreen lang={stringLang} onBack={() => setShowAbout(false)} />
+  const isNight = !showAbout && NIGHT_SCREENS.has(state.screen)
 
   return (
-    <div className="flow">
+    <div className={isNight ? 'flow theme-night' : 'flow'}>
+      <Header />
       {noVoice && <p className="no-voice-banner">{t(stringLang, 'no_voice_notice')}</p>}
 
-      {state.screen === 'language' && (
-        <LanguageScreen onPick={(pickedLang) => dispatch({ type: 'languagePicked', lang: pickedLang })} />
-      )}
+      <div key={showAbout ? 'about' : state.screen} className="screen-enter">
+        {showAbout && <AboutScreen lang={stringLang} onBack={() => setShowAbout(false)} />}
 
-      {state.screen === 'story' && (
-        <StoryScreen
-          profile={state.profile}
-          listening={listening}
-          interim={interim}
-          onMicTap={toggleStoryMic}
-          onSubmitText={submitStoryText}
-        />
-      )}
+        {!showAbout && state.screen === 'language' && (
+          <LanguageScreen onPick={(pickedLang) => dispatch({ type: 'languagePicked', lang: pickedLang })} />
+        )}
 
-      {(state.screen === 'readback' || state.screen === 'followup') && (
-        <QuestionScreen
-          text={questionText(state, stringLang)}
-          mode={questionMode(state)}
-          listening={listening}
-          interim={interim}
-          onYesNo={(value) => dispatch({ type: 'yesNoAnswer', value })}
-          onNumber={(value) => dispatch({ type: 'numberAnswer', value })}
-          onText={(text) => dispatch({ type: 'textAnswer', text })}
-        />
-      )}
+        {!showAbout && state.screen === 'story' && (
+          <StoryScreen
+            profile={state.profile}
+            listening={listening}
+            interim={interim}
+            onMicTap={toggleStoryMic}
+            onSubmitText={submitStoryText}
+          />
+        )}
 
-      {state.screen === 'results' && (
-        <ResultsScreen
-          results={state.results}
-          profile={state.profile}
-          lang={stringLang}
-          onViewSheet={() => dispatch({ type: 'skip' })}
-        />
-      )}
+        {!showAbout && (state.screen === 'readback' || state.screen === 'followup') && (
+          <QuestionScreen
+            text={questionText(state, stringLang)}
+            mode={questionMode(state)}
+            listening={listening}
+            interim={interim}
+            onYesNo={(value) => dispatch({ type: 'yesNoAnswer', value })}
+            onNumber={(value) => dispatch({ type: 'numberAnswer', value })}
+            onText={(text) => dispatch({ type: 'textAnswer', text })}
+          />
+        )}
 
-      {state.screen === 'sheet' && (
-        <SheetScreen
-          results={state.results}
-          profile={state.profile}
-          lang={stringLang}
-          onBack={() => dispatch({ type: 'restart' })}
-        />
-      )}
+        {!showAbout && state.screen === 'results' && (
+          <ResultsScreen
+            results={state.results}
+            profile={state.profile}
+            lang={stringLang}
+            onViewSheet={() => dispatch({ type: 'skip' })}
+          />
+        )}
+
+        {!showAbout && state.screen === 'sheet' && (
+          <SheetScreen
+            results={state.results}
+            profile={state.profile}
+            lang={stringLang}
+            onBack={() => dispatch({ type: 'restart' })}
+          />
+        )}
+      </div>
 
       {state.screen !== 'sheet' && (
-        <button type="button" className="about-link" onClick={() => setShowAbout(true)}>
+        <button type="button" className="about-link" onClick={() => setShowAbout((v) => !v)}>
           About
         </button>
       )}
+
+      <Footer />
     </div>
   )
 }

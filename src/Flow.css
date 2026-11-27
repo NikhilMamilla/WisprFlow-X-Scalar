@@ -1,16 +1,23 @@
 .flow {
   min-height: 100vh;
-  font-family: system-ui, sans-serif;
   position: relative;
   padding-bottom: 56px;
+  background: var(--cream);
+}
+
+.flow.theme-night {
+  background: var(--night);
 }
 
 .no-voice-banner {
-  background: #fff3cd;
-  border-bottom: 1px solid #c99;
+  background: var(--pink);
+  color: var(--ink);
+  border-bottom: 0.8px solid var(--line);
   padding: 8px 16px;
   font-size: 14px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .about-link {
@@ -19,8 +26,16 @@
   right: 12px;
   font-size: 14px;
   padding: 8px 14px;
-  border-radius: 20px;
-  border: 1px solid #999;
-  background: white;
-  color: #1a1a1a;
+  border-radius: 999px;
+  border: 1.6px solid var(--ink);
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 600;
+  z-index: 2;
+  transition: background var(--t-fast) var(--ease);
+}
+
+.about-link:hover {
+  background: var(--lavender);
 }

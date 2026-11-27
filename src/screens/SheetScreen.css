@@ -1,7 +1,8 @@
 .sheet-screen {
   max-width: 640px;
   margin: 0 auto;
-  padding: 16px;
+  padding: var(--page-padding);
+  background: var(--cream);
 }
 
 .sheet-actions {
@@ -10,10 +11,22 @@
   margin-bottom: 16px;
 }
 
-.sheet-actions button {
+.sheet-actions .btn {
   min-height: 48px;
   font-size: 18px;
   padding: 0 20px;
+}
+
+.sheet-page {
+  background: #fff;
+  border: 0.8px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 24px;
+}
+
+.sheet-page p {
+  font-size: var(--size-body-min);
+  color: var(--ink2);
 }
 
 .sheet-page table {
@@ -23,19 +36,36 @@
 }
 
 .sheet-page td {
-  border: 1px solid #999;
-  padding: 8px;
-  font-size: 16px;
+  border: 1px solid var(--line);
+  padding: 10px;
+  font-size: var(--size-body-min);
+  color: var(--ink);
 }
 
 .footer {
   margin-top: 24px;
   font-size: 14px;
   font-style: italic;
+  color: var(--ink2); /* mute fails 4.5:1 on white */
 }
 
 @media print {
-  .no-print {
-    display: none;
+  html,
+  body {
+    background: #fff;
+  }
+  .sheet-screen,
+  .sheet-page {
+    background: #fff;
+    border: none;
+    padding: 0;
+  }
+  .sheet-page p,
+  .sheet-page td,
+  .footer {
+    color: #000;
+  }
+  .sheet-page td {
+    border: 1px solid #000;
   }
 }

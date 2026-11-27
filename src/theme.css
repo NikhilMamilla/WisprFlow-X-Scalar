@@ -1,0 +1,389 @@
+/* Design tokens for the Haq Bolo visual redesign. Use only these variables/classes. */
+
+:root {
+  /* colours */
+  --cream: #ffffeb;
+  --cream2: #f6f6e0;
+  --line: #e4e4d0;
+  --ink: #1a1a1a;
+  --ink2: #4a4a43;
+  --mute: #8c8c80;
+  --green: #034f46;
+  --lavender: #f0d7ff;
+  --orange: #ffa946;
+  --pink: #ffbcf2;
+  --mint: #6bd49f;
+  --blue: #0041ca;
+  --blue-hover: #0033a3;
+  --coral: #ff6c4c;
+  --night: #121211;
+
+  /* type */
+  --font-heading: 'DM Sans Variable', 'Noto Sans Devanagari', 'Noto Sans Telugu', sans-serif;
+  --font-accent: 'DM Serif Display', 'Noto Sans Devanagari', 'Noto Sans Telugu', serif;
+  --font-body: 'Plus Jakarta Sans', 'Noto Sans Devanagari', 'Noto Sans Telugu', sans-serif;
+  --size-display: clamp(40px, 4.2vw, 60px);
+  --size-h2: clamp(28px, 2.65vw, 38px);
+  --size-body: 16px;
+  --size-body-min: 20px; /* the floor for anything the worker must read or tap */
+
+  /* shape & motion */
+  --radius-button: 11px;
+  --radius-card: 21px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast: 0.3s;
+  --t-slow: 0.5s;
+  --page-padding: clamp(20px, 4vw, 56px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  margin: 0;
+  color: var(--ink);
+}
+
+h1 {
+  font-size: var(--size-display);
+}
+h2 {
+  font-size: var(--size-h2);
+}
+
+/* one accent word per heading */
+.accent {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink2); /* mute fails 4.5:1 on cream at this size */
+  margin-bottom: 8px;
+}
+
+/* buttons */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 18px;
+  min-height: 48px;
+  border-radius: var(--radius-button);
+  border: 1.6px solid var(--ink);
+  padding: 0 22px;
+  cursor: pointer;
+  transition: transform var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-primary {
+  background: var(--blue);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--blue-hover);
+}
+.btn-secondary {
+  background: var(--lavender);
+  color: var(--ink);
+}
+
+/* cards */
+.card {
+  background: #fff;
+  border: 0.8px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 20px;
+}
+.card-highlight {
+  border: 1.6px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+/* status pills (results groups) */
+.pill {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  color: var(--ink);
+}
+.pill-do_first {
+  background: var(--orange);
+}
+.pill-qualify {
+  background: var(--mint);
+}
+.pill-unlocks {
+  background: var(--lavender);
+}
+.pill-maybe {
+  background: var(--pink);
+}
+.pill-not_eligible {
+  background: var(--line);
+}
+
+.badge-unverified {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  border: 1.6px solid var(--coral);
+  color: var(--ink); /* coral text alone fails 4.5:1 on white at this size */
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+
+.quiet-link {
+  color: var(--ink2);
+  text-decoration-color: var(--line);
+}
+
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* night theme: Language and Story screens */
+.theme-night {
+  background: var(--night);
+  color: var(--cream);
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.theme-night::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(55% 60% at 78% 32%, rgba(3, 79, 70, 0.75), transparent 70%);
+  pointer-events: none;
+}
+
+.dot-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.dot-field .dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--cream2);
+  opacity: 0.2;
+  animation: twinkle 7s ease-in-out infinite;
+}
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.12;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+/* hello bubbles (Language screen) */
+.hello-bubble {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: var(--cream);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-family: var(--font-body);
+}
+.hello-bubble .word {
+  font-size: 15px;
+  font-weight: 600;
+}
+.hello-bubble .label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink2); /* mute fails 4.5:1 on the bubble's cream background */
+}
+.hello-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.hello-bubble {
+  animation: bob 3.4s var(--ease) infinite;
+}
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* header / footer */
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: var(--page-padding) var(--page-padding) 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 18px;
+  position: relative;
+  z-index: 1;
+}
+.app-footer {
+  text-align: center;
+  padding: 16px var(--page-padding) calc(var(--page-padding) + 8px);
+  font-size: 13px;
+  color: var(--ink2); /* mute fails 4.5:1 on cream at this size */
+  position: relative;
+  z-index: 1;
+}
+
+.theme-night .app-footer {
+  color: var(--cream2); /* ink2 fails 4.5:1 on the night background */
+}
+
+/* waveform bars: header glyph and the listening indicator */
+.waveform {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 20px;
+}
+.waveform .bar {
+  width: 4px;
+  background: currentColor;
+  border-radius: 2px;
+  height: 6px;
+}
+.waveform.active .bar {
+  animation: wave 0.9s var(--ease) infinite;
+}
+.waveform .bar:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.waveform .bar:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.waveform .bar:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.waveform .bar:nth-child(5) {
+  animation-delay: 0.4s;
+}
+@keyframes wave {
+  0%,
+  100% {
+    height: 6px;
+  }
+  50% {
+    height: 20px;
+  }
+}
+
+/* mic pulsing rings */
+.mic-rings {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+.mic-rings .ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--mint);
+  animation: pulse-ring 1.6s var(--ease) infinite;
+}
+.mic-rings .ring:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.mic-rings .ring:nth-child(3) {
+  animation-delay: 1s;
+}
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* screen-to-screen transition */
+.screen-enter {
+  animation: fade-rise var(--t-slow) var(--ease);
+}
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media print {
+  .theme-night,
+  .dot-field,
+  .mic-rings,
+  .no-print {
+    display: none !important;
+  }
+}

@@ -13,6 +13,11 @@
     "gate": "tsc -b && vitest run && docker build -t haq-bolo ."
   },
   "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@fontsource/dm-serif-display": "^5.3.0",
+    "@fontsource/noto-sans-devanagari": "^5.3.0",
+    "@fontsource/noto-sans-telugu": "^5.3.0",
+    "@fontsource/plus-jakarta-sans": "^5.3.0",
     "express": "^4.21.2",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
