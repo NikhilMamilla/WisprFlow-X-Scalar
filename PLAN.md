@@ -99,6 +99,15 @@ Status:
 - No verification upgrade, no eligibility conditions, no amounts, no imports; data/schemes.json unchanged.
 - Verification: research validate/coverage/gaps/list, tsc, full Vitest suite, lint, build.
 
+## M9.3 - High-impact verification (implemented)
+Twenty records taken from discovery status to evidence-backed verification. See docs/RESEARCH_VERIFICATION_M9_3.md.
+
+Status:
+- 6 records fully VERIFIED (BOCWWB, PM-KISAN, AIF, PMFME, SC overseas scholarship, BC corporation subsidy); 14 partially verified with the missing piece named; PMFBY left conflicting because two official replies disagree about Telangana participation.
+- 17 new sources, including G.O.Ms.No.7 (2025), G.O.Rt.No.298 (2015), the overseas scholarship G.O.s, the Labour Welfare Fund Act 1987, PMKISAN/PMFME/AIF/PMFBY guidelines and the Aarogyasri/C KGBV portals.
+- Register now 88 records / 95 sources: 41 researched, 12 verified, 27 partial, 0 import-ready.
+- No engine, matcher or UI change; data/schemes.json unchanged.
+
 ## M5 (original plan, now later work) - Optional LLM extractor and Telugu polish
 POST /api/extract uses the LLM only if LLM_API_KEY is set, otherwise the rule-based extractor. Same output schema. Improve Telugu phrases and voice fallbacks from VOICE_FINDINGS.md.
 Done when: app behaves identically with no key, and better on messy speech with a key.
