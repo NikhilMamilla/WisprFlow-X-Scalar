@@ -4,9 +4,11 @@ import {
   canTransition,
   eligibilityVerified,
   filterResearchRecords,
+  staleSources,
   missingSources,
   validateResearch,
   type ResearchRecord,
+  type ResearchSource,
 } from './research'
 
 const source = (id: string, overrides: Record<string, unknown> = {}) => ({
@@ -433,5 +435,31 @@ describe('research filtering', () => {
     const bare = { ...records[0], eligibilityEvidence: [], verificationEvidence: [], discoveryUrl: undefined }
     expect(missingSources(bare)).toBe(true)
     expect(filterResearchRecords([bare], { onlyMissingSources: true })).toHaveLength(1)
+  })
+})
+
+describe('source freshness queue', () => {
+  const at = (id: string, overrides: Record<string, unknown> = {}) => source(id, overrides)
+
+  it('lists sources that are old, never checked, or gone', () => {
+    const sources = [
+      at('fresh', { change: { status: 'UNCHECKED', lastCheckedOn: '2026-11-27' } }),
+      at('old', { change: { status: 'UNCHECKED', lastCheckedOn: '2026-01-01' } }),
+      at('never', { retrievedOn: '' }),
+      at('gone', { change: { status: 'GONE' } }),
+    ] as unknown as ResearchSource[]
+    const stale = staleSources(sources, { today: '2026-11-28', days: 90 })
+    expect(stale.map((entry) => entry.id)).toEqual(['gone', 'never', 'old'])
+    expect(stale.find((entry) => entry.id === 'old')?.ageDays).toBeGreaterThan(90)
+    expect(stale.find((entry) => entry.id === 'never')?.ageDays).toBeNull()
+    // A dead link is a re-review task, never a status change.
+    expect(stale.find((entry) => entry.id === 'gone')?.state).toBe('GONE')
+  })
+
+  it('leaves a recently checked source out of the queue', () => {
+    const sources = [
+      at('fresh', { change: { status: 'UNCHECKED', lastCheckedOn: '2026-11-27' } }),
+    ] as unknown as ResearchSource[]
+    expect(staleSources(sources, { today: '2026-11-28', days: 90 })).toEqual([])
   })
 })

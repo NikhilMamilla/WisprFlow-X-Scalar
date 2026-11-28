@@ -8,6 +8,7 @@
 //   npm run research -- validate
 //   npm run research -- coverage
 //   npm run research -- gaps
+//   npm run research -- sources [--days 90] [--today 2026-11-28]
 //   npm run research -- export --out research-export.json
 //
 // Optional: --file data/research/records.json --catalogue data/schemes.json
@@ -22,6 +23,7 @@ import {
   RESEARCH_STATUSES,
   filterResearchRecords,
   missingSources,
+  staleSources,
   validateResearch,
   type ResearchFilter,
   type ResearchRecord,
@@ -29,7 +31,7 @@ import {
 } from '../src/core/research.ts'
 
 const args = process.argv.slice(2)
-const COMMANDS = new Set(['list', 'show', 'validate', 'coverage', 'gaps', 'export'])
+const COMMANDS = new Set(['list', 'show', 'validate', 'coverage', 'gaps', 'sources', 'export'])
 const command = args[0] !== undefined && COMMANDS.has(args[0]) ? args[0] : 'list'
 const has = (name: string) => args.includes(`--${name}`)
 const valueOf = (name: string): string | undefined => {
@@ -37,7 +39,7 @@ const valueOf = (name: string): string | undefined => {
   return index >= 0 ? args[index + 1] : undefined
 }
 // A status or state value must never be mistaken for a command or an id.
-const VALUE_OPTIONS = new Set(['status', 'level', 'state', 'category', 'group', 'file', 'catalogue', 'out'])
+const VALUE_OPTIONS = new Set(['status', 'level', 'state', 'category', 'group', 'file', 'catalogue', 'out', 'days', 'today'])
 const positionals: string[] = []
 for (let i = 0; i < args.length; i += 1) {
   const arg = args[i]
@@ -158,6 +160,23 @@ if (command === 'list') {
     process.exit(1)
   }
   console.log(detail(record))
+} else if (command === 'sources') {
+  // Deterministic re-verification queue. No network: a fetch failure is never
+  // proof that a scheme closed, so checking stays a deliberate manual step.
+  const days = Number(valueOf('days') ?? 90)
+  const stale = staleSources(report.sources, { today: valueOf('today'), days })
+  const counts = report.sources.reduce<Record<string, number>>((acc, source) => {
+    const state = source.change?.status ?? 'UNCHECKED'
+    acc[state] = (acc[state] ?? 0) + 1
+    return acc
+  }, {})
+  console.log(`sources: ${report.sources.length} total, ${stale.length} need a check (older than ${days} days or never checked)`)
+  console.log(`by change state: ${Object.entries(counts).map(([state, n]) => `${state} ${n}`).join(', ')}`)
+  for (const entry of stale) {
+    const age = entry.ageDays === null ? 'never checked' : `${entry.ageDays}d ago`
+    console.log(`  ${entry.state.padEnd(10)} ${age.padEnd(14)} ${entry.url}`)
+  }
+  console.log('A stale or unreachable source is a re-review task; it never changes a verification status on its own.')
 } else if (command === 'validate') {
   console.log(
     `ok: ${records.length} record(s), ${report.sources.length} source(s), ${report.coverageClaims.length} coverage claim(s); ` +

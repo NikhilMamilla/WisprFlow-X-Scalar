@@ -311,6 +311,58 @@ export interface ResearchRecord {
   statusHistory: StatusHistoryEntry[]
 }
 
+// ---------------------------------------------------------------------------
+// Freshness / re-verification queue
+// ---------------------------------------------------------------------------
+// Nothing here fetches anything: the queue is derived from the dates already in
+// the register, so it is deterministic and safe to run in CI. Fetching a page and
+// hashing it is a separate, manual step; a failed fetch is never treated as proof
+// that a scheme closed.
+const DAY_MS = 24 * 60 * 60 * 1000
+const validDay = (value: string | undefined): number | null => {
+  if (!value || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return null
+  const time = Date.parse(`${value}T00:00:00Z`)
+  return Number.isNaN(time) ? null : time
+}
+
+export interface StaleSource {
+  id: string
+  url: string
+  lastCheckedOn?: string
+  ageDays: number | null // null when the source was never checked
+  state: SourceChangeState
+}
+
+// A source is stale when its last check is older than `days` or was never
+// recorded. `GONE` sources are always listed first: a dead link is a task, not a
+// fact about the scheme.
+export function staleSources(
+  sources: readonly ResearchSource[],
+  options: { today?: string; days?: number } = {},
+): StaleSource[] {
+  const now = validDay(options.today ?? new Date().toISOString().slice(0, 10))
+  const days = options.days ?? 90
+  if (now === null) return []
+  return sources
+    .map((source) => {
+      const last = source.change?.lastCheckedOn ?? source.verifiedOn ?? source.retrievedOn
+      const checked = validDay(last)
+      return {
+        id: source.id,
+        url: source.url,
+        ...(last ? { lastCheckedOn: last } : {}),
+        ageDays: checked === null ? null : Math.floor((now - checked) / DAY_MS),
+        state: source.change?.status ?? 'UNCHECKED',
+      }
+    })
+    .filter((entry) => entry.state === 'GONE' || entry.ageDays === null || entry.ageDays > days)
+    .sort((a, b) => {
+      if (a.state === 'GONE' && b.state !== 'GONE') return -1
+      if (b.state === 'GONE' && a.state !== 'GONE') return 1
+      return (b.ageDays ?? Number.MAX_SAFE_INTEGER) - (a.ageDays ?? Number.MAX_SAFE_INTEGER)
+    })
+}
+
 // A researcher's explicit note about an area with no records. NONE_FOUND is a
 // statement about the search performed, never proof that no scheme exists.
 export interface CoverageClaim {
