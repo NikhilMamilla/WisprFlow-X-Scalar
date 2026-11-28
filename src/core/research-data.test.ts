@@ -35,10 +35,12 @@ describe('shipped research register', () => {
     expect(schemeIds).toHaveLength(6)
   })
 
-  it('keeps expansion discoveries unverified and unimportable', () => {
+  it('keeps unverified expansion discoveries unverified and unimportable', () => {
     const report = validateResearch(researchJson, { schemeIds, today: '2026-11-28' })
-    const discovered = report.records.filter((record) => record.discoveredOn >= '2026-11-28')
-    expect(discovered.length).toBeGreaterThan(40)
+    const discovered = report.records.filter(
+      (record) => record.discoveredOn >= '2026-11-28' && record.status === 'CATALOGUED',
+    )
+    expect(discovered.length).toBeGreaterThan(30)
     for (const record of discovered) {
       // A discovery may not claim verification it did not earn.
       expect(record.verificationStatus).toBe('UNVERIFIED')
@@ -51,6 +53,27 @@ describe('shipped research register', () => {
       const sources = report.sources.filter((source) => source.schemeIds?.includes(record.id))
       expect(sources.length).toBeGreaterThan(0)
       expect(sources.every((source) => source.tier === 'PRIMARY_OFFICIAL')).toBe(true)
+    }
+  })
+
+  it('gives every verification claim a registered source', () => {
+    const report = validateResearch(researchJson, { schemeIds, today: '2026-11-28' })
+    const verified = report.records.filter((record) => record.lastVerifiedOn !== undefined)
+    expect(verified.length).toBeGreaterThanOrEqual(20)
+    const sourceIds = new Set(report.sources.map((source) => source.id))
+    for (const record of verified) {
+      // A status without evidence is the failure mode this milestone exists to stop.
+      if (record.status === 'ELIGIBILITY_VERIFIED') {
+        expect(record.eligibilityConditions.length).toBeGreaterThan(0)
+        expect(record.eligibilityEvidence.length).toBeGreaterThan(0)
+      }
+      for (const condition of record.eligibilityConditions) {
+        expect(condition.sourceId).toBeTruthy()
+        expect(sourceIds.has(condition.sourceId ?? '')).toBe(true)
+      }
+      for (const evidence of [...record.eligibilityEvidence, ...record.verificationEvidence]) {
+        expect(sourceIds.has(evidence.sourceId)).toBe(true)
+      }
     }
   })
 })
