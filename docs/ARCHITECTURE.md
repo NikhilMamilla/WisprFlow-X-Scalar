@@ -244,6 +244,8 @@ Coverage is derived from the register, never assumed: central government, the 28
 
 `NONE_FOUND` is a statement about a search, not about the country. It requires a note saying what was searched, it never creates a record, it is overridden as soon as a record exists, and the report prints the caveat every time. No national scheme count is hardcoded anywhere.
 
+The coverage report also counts records by department and prints the count, because discovery is run department by department and the next pass should start where the last one stopped. The department map itself lives in `docs/RESEARCH_DISCOVERY_REGISTER.md`.
+
 Discovery is not coverage. A record that exists only on a listing page (status `DISCOVERED`/`CATALOGUED` with no registered evidence) is counted as `discovered`, never as `researched`, and an area is never `COVERED` while one sits unexamined; an area with listings only reports `NEEDS_MORE_RESEARCH`. The report prints both counts, because a register that inflates coverage with unopened tabs is worse than a small one.
 
 Validation enforces the same distinction: `ELIGIBILITY_VERIFIED` needs at least one recorded condition, a source id on every condition and eligibility evidence; `OFFICIALLY_VERIFIED` needs evidence; a source URL cannot be registered twice; and a source's associated scheme id must be a catalogue scheme or a research record.

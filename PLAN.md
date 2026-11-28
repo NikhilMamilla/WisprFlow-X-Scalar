@@ -89,6 +89,16 @@ Status:
 - Preserved: 29 records, 0 imports, data/schemes.json unchanged, matcher and UI untouched.
 - Verification: research validation clean, coverage/gaps/list run, tsc, full Vitest suite, build, lint.
 
+## M9.2 - Telangana discovery expansion (implemented)
+Six independent discovery paths (department, beneficiary, welfare board, central-implementation, district page, keyword variants) over the Telangana ecosystem. See docs/RESEARCH_TELANGANA_DISCOVERY.md and docs/RESEARCH_DISCOVERY_REGISTER.md.
+
+Status:
+- 59 new records (52 state, 7 central) from official pages fetched on 2026-11-28; register now 88 records, 78 sources, 50 departments, 17 categories.
+- 12 duplicate or already-known candidates rejected; board benefits kept as one record per registration; central schemes kept separate from state delivery.
+- Coverage report now breaks records down by department; four categories added (education, skill_development, disability, transport) with the reason recorded.
+- No verification upgrade, no eligibility conditions, no amounts, no imports; data/schemes.json unchanged.
+- Verification: research validate/coverage/gaps/list, tsc, full Vitest suite, lint, build.
+
 ## M5 (original plan, now later work) - Optional LLM extractor and Telugu polish
 POST /api/extract uses the LLM only if LLM_API_KEY is set, otherwise the rule-based extractor. Same output schema. Improve Telugu phrases and voice fallbacks from VOICE_FINDINGS.md.
 Done when: app behaves identically with no key, and better on messy speech with a key.

@@ -77,9 +77,9 @@ npm run research -- show research-eshram
 npm run research -- export --out research-export.json
 ```
 
-The first campaign covered Telangana: 23 state records and an evidence audit of the six central schemes, written up in [docs/RESEARCH_TELANGANA.md](docs/RESEARCH_TELANGANA.md). None of those schemes is in the eligibility catalogue yet.
+The first campaign covered Telangana: 23 state records and an evidence audit of the six central schemes ([docs/RESEARCH_TELANGANA.md](docs/RESEARCH_TELANGANA.md)). A discovery expansion then catalogued 59 more programmes from official pages ([docs/RESEARCH_TELANGANA_DISCOVERY.md](docs/RESEARCH_TELANGANA_DISCOVERY.md)), so the register now holds 88 records: 75 Telangana state and 13 central. Only the original six central schemes are in the eligibility catalogue; every Telangana record is research, not catalogue data.
 
-Coverage statuses are `COVERED`, `PARTIAL`, `NOT_RESEARCHED`, `NONE_FOUND` and `NEEDS_MORE_RESEARCH`. `NONE_FOUND` records that a search found nothing; it is never proof that no scheme exists, and the report says so. Counts come only from the register, and the current register contains the six central schemes and no state, UT or district research yet.
+Coverage statuses are `COVERED`, `PARTIAL`, `NOT_RESEARCHED`, `NONE_FOUND` and `NEEDS_MORE_RESEARCH`. `NONE_FOUND` records that a search found nothing; it is never proof that no scheme exists, and the report says so. Counts come only from the register. Discovery and research are counted separately: a programme seen once on a listing page is a discovery, not coverage. No state other than Telangana has research yet, and no district has been studied.
 
 ## Eligibility engine
 

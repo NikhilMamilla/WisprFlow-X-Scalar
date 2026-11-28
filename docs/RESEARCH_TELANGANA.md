@@ -4,6 +4,8 @@ Date: 27 November 2026. Register: `data/research/records.json`. Tooling: `npm ru
 
 This milestone is research, not engineering. No scheme was imported into `data/schemes.json`, no eligibility rule was changed, and nothing was merged. Every count below is derived from the register; none is estimated.
 
+**Expanded in M9.2:** 59 further Telangana and central programmes were catalogued from official pages; see [RESEARCH_TELANGANA_DISCOVERY.md](RESEARCH_TELANGANA_DISCOVERY.md). This document remains the record of the original 29-record research campaign.
+
 **Amended by the M9.1 quality audit** ([docs/RESEARCH_QUALITY_AUDIT_M9_1.md](RESEARCH_QUALITY_AUDIT_M9_1.md)): two verification statuses were downgraded, an incorrect Aasara age limit was corrected, two unreachable application links were withdrawn, and coverage now separates researched from listing-only records. The counts below are post-audit.
 
 ## Summary
