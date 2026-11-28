@@ -149,6 +149,17 @@ Status:
 - 18 new tests (55 in the journey suite); no scheme, rule, research or explanation change.
 - Next: M9.8 - wire the journey core into the results screen (frontend only, no new eligibility logic).
 
+## M9.8 - Research quality and citizen impact (implemented)
+Deterministic research priority model, evidence-quality report and one limited evidence pass. See docs/RESEARCH_QUALITY_AND_CITIZEN_IMPACT_M9_8.md.
+
+Status:
+- `src/core/research-priority.ts`: 7 weighted factors, model 1.0.0, explainable scores; never touches eligibility or status.
+- `src/core/research-quality.ts`: per-record outcome (conflicting, inaccessible, not authoritative, condition unverified, not researched, outdated, complete), health totals, action queue, readiness guard.
+- `npm run research -- quality`: deterministic report; all inputs derived from the register.
+- Research: 3 sources fetched (Suryapet/Wanaparthy Cheyutha pages, NACO copy of G.O.Ms.No.34); Cheyutha conflict sharpened and preserved; Aasara amounts traceable to a legal copy again.
+- 28 new tests; no scheme, rule, research status or import change.
+- Next: M9.9 - close the top ten research gaps (evidence only), starting with Cheyutha and Aasara.
+
 ## M5 (original plan, now later work) - Optional LLM extractor and Telugu polish
 POST /api/extract uses the LLM only if LLM_API_KEY is set, otherwise the rule-based extractor. Same output schema. Improve Telugu phrases and voice fallbacks from VOICE_FINDINGS.md.
 Done when: app behaves identically with no key, and better on messy speech with a key.
