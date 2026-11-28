@@ -346,6 +346,17 @@ export const STRINGS: Record<string, Entry> = {
   chip_dependants: { en: 'Parivar', hi: 'परिवार', te: 'కుటుంబం' }, // NEEDS NATIVE TELUGU REVIEW
   chip_state: { en: 'Rajya', hi: 'राज्य', te: 'రాష్ట్రం' }, // NEEDS NATIVE TELUGU REVIEW
   chip_district: { en: 'Zila', hi: 'ज़िला', te: 'జిల్లా' }, // NEEDS NATIVE TELUGU REVIEW
+  chip_occupation: { en: 'Kaam', hi: 'काम', te: 'పని' }, // NEEDS NATIVE TELUGU REVIEW
+  chip_place: { en: 'Jagah', hi: 'जगह', te: 'ప్రాంతం' }, // NEEDS NATIVE TELUGU REVIEW
+  chip_bank: { en: 'Bank account', hi: 'बैंक खाता', te: 'బ్యాంక్ ఖాతా' }, // NEEDS NATIVE TELUGU REVIEW
+  chip_aadhaar: { en: 'Aadhaar', hi: 'आधार', te: 'ఆధార్' }, // NEEDS NATIVE TELUGU REVIEW
+  chip_epf_esic: { en: 'PF/ESIC', hi: 'पीएफ़/ईएसआईसी', te: 'పీఎఫ్/ఈఎస్ఐసీ' }, // NEEDS NATIVE TELUGU REVIEW
+  chip_income_tax: { en: 'Income tax', hi: 'इनकम टैक्स', te: 'ఇన్‌కమ్ ట్యాక్స్' }, // NEEDS NATIVE TELUGU REVIEW
+  chip_construction_90: {
+    en: 'Construction ke 90+ din',
+    hi: 'निर्माण के 90+ दिन',
+    te: 'నిర్మాణంలో 90+ రోజులు', // NEEDS NATIVE TELUGU REVIEW
+  },
   location_unknown: {
     en: 'Yeh jagah samajh nahi aayi. Rajya ya zile ka naam phir se boliye, ya neeche type kariye.',
     hi: 'यह जगह समझ नहीं आई। राज्य या ज़िले का नाम फिर से बोलिए, या नीचे टाइप करें।',
@@ -425,6 +436,11 @@ export const STRINGS: Record<string, Entry> = {
     te: 'ఈ బ్రౌజర్‌లో ఈ భాష వాయిస్ గుర్తించలేము. కింద టైప్ చేయండి లేదా నమూనా వినండి.', // NEEDS NATIVE TELUGU REVIEW
   },
   what_i_understood: { en: 'What I understood', hi: 'मैंने यह समझा', te: 'నేను ఇది అర్థం చేసుకున్నాను' }, // NEEDS NATIVE TELUGU REVIEW
+  what_i_understood_count: {
+    en: 'Maine yeh samjha ({n})',
+    hi: 'मैंने यह समझा ({n})',
+    te: 'నేను ఇది అర్థం చేసుకున్నాను ({n})', // NEEDS NATIVE TELUGU REVIEW
+  },
 }
 
 const LANG_FOR: Record<LanguageCode, StringLang> = { 'hi-IN': 'hi', 'te-IN': 'te', 'en-IN': 'en' }

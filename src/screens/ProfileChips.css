@@ -1,26 +1,74 @@
 .chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 16px 0;
+  gap: var(--sp-1);
+  margin: var(--sp-1) 0;
+  padding: 0;
   justify-content: center;
 }
 
 .chip {
   background: var(--cream);
   color: var(--ink);
-  border: 1.6px solid var(--mint);
-  border-radius: 10px;
-  padding: 6px 10px;
-  font-size: 15px;
+  border: 2px solid var(--mint);
+  border-radius: var(--radius-pill);
+  padding: 2px var(--sp-1);
+  font-size: var(--fs-meta);
+  line-height: 1.5;
   display: flex;
   flex-direction: column;
   font-family: var(--font-body);
+  text-align: left;
   animation: fade-rise var(--t-slow) var(--ease) both;
 }
 
+.chip strong {
+  font-weight: 600;
+}
+
 .chip em {
-  font-size: 12px;
+  display: none;
+  font-size: var(--fs-meta);
   color: var(--ink2);
   font-style: italic;
+}
+
+/* Room for the quote only on wide screens; mobile keeps label + value. */
+@media (min-width: 768px) {
+  .chip em {
+    display: block;
+  }
+}
+
+.chips-more {
+  min-height: var(--sp-6);
+  padding: 0 var(--sp-2);
+  border-radius: var(--radius-pill);
+  border: 2px dashed var(--ink2);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-meta);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chips-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-1);
+}
+
+.chips-summary-toggle {
+  min-height: var(--sp-6);
+  padding: 0 var(--sp-2);
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--ink);
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  cursor: pointer;
 }

@@ -272,7 +272,7 @@ export default function Flow() {
 
         {!showAbout && (state.screen === 'readback' || state.screen === 'followup') && (
           <>
-            <WhatIUnderstood profile={state.profile} lang={stringLang} />
+            <WhatIUnderstood profile={state.profile} lang={stringLang} mode="compact" />
             <QuestionScreen
               text={questionText(state, stringLang)}
               mode={questionMode(state)}
@@ -301,7 +301,7 @@ export default function Flow() {
 
         {!showAbout && state.screen === 'results' && (
           <>
-            <WhatIUnderstood profile={state.profile} lang={stringLang} />
+            <WhatIUnderstood profile={state.profile} lang={stringLang} mode="results" />
             <ResultsScreen
               results={state.results}
               profile={state.profile}
