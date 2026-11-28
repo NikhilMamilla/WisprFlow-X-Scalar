@@ -5,7 +5,7 @@ import './ProfileChips.css'
 // Chips for fields the extractor has filled in, each showing the user's own words.
 const ORDER: ProfileField[] = [
   'occupation', 'age', 'monthly_income', 'dependants', 'urban_or_rural', 'state', 'district',
-  'has_bank_account', 'has_aadhaar', 'in_epf_esic_nps', 'pays_income_tax',
+  'has_bank_account', 'has_aadhaar', 'in_epf_esic_nps', 'pays_income_tax', 'worked_90_days_construction',
 ]
 
 function displayValue(profile: Profile, field: ProfileField, lang: StringLang): string {

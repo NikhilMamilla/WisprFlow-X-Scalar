@@ -66,6 +66,19 @@ export const REGIONS: Region[] = [
   { name: 'Puducherry', code: 'PY', type: 'union_territory', aliases: ['pondicherry', 'पुदुचेरी', 'पॉंडिचेरी', 'పుదుచ్చేరి', 'పాండిచేరి'] },
 ]
 
+// District names that also identify their state, so a story that says only
+// "Hyderabad" still lands in Telangana. These are spellings only, not a district
+// table: DISTRICTS_BY_STATE below stays empty for the same reason.
+export interface DistrictAlias {
+  state: string // canonical state name, as in REGIONS
+  district: string // display form
+  aliases: string[]
+}
+
+export const DISTRICT_ALIASES: DistrictAlias[] = [
+  { state: 'Telangana', district: 'Hyderabad', aliases: ['हैदराबाद', 'హైదరాబాద్'] },
+]
+
 const SCRIPT = /[\u0900-\u097F]|[\u0C00-\u0C7F]/
 const TRAILING_WORDS = new Set([
   'state',
@@ -142,6 +155,15 @@ export function sameRegion(a: string, b: string): boolean {
 export const STATE_KEYWORDS: [string, string[]][] = REGIONS.map((r) => [
   r.name,
   [r.name, ...r.aliases].flatMap((alias) =>
+    SCRIPT.test(alias) && alias.length > 3 ? [alias, `${alias}*`] : [alias],
+  ),
+])
+
+// District aliases for the story extractor, as [district record, keywords].
+// Telugu keywords are matched as prefixes too (హైదరాబాద్‌లో = "in Hyderabad").
+export const DISTRICT_KEYWORDS: [DistrictAlias, string[]][] = DISTRICT_ALIASES.map((d) => [
+  d,
+  [d.district, ...d.aliases].flatMap((alias) =>
     SCRIPT.test(alias) && alias.length > 3 ? [alias, `${alias}*`] : [alias],
   ),
 ])

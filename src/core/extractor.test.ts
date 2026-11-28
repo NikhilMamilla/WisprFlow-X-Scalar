@@ -111,6 +111,50 @@ describe('Telugu (script)', () => {
   })
 })
 
+describe('place names in the story', () => {
+  it.each<[string, Expected]>([
+    ['Main Hyderabad mein construction worker hoon', { state: 'Telangana', district: 'Hyderabad', occupation: 'construction_worker' }],
+    ['मैं हैदराबाद में काम करता हूँ', { state: 'Telangana', district: 'Hyderabad' }],
+    ['నేను హైదరాబాద్‌లో ఉంటాను', { state: 'Telangana', district: 'Hyderabad' }], // NEEDS NATIVE TELUGU REVIEW
+  ])('%s', (text, expected) => {
+    expectOnly(text, expected)
+  })
+
+  it('a district does not override a state the story names itself', () => {
+    const p = expectOnly('Main Bihar se hoon, Hyderabad mein kaam karta hoon', {
+      state: 'Bihar',
+      district: 'Hyderabad',
+    })
+    expect(p.evidence.district).toContain('Hyderabad')
+  })
+
+  it('shows the place as evidence for the chip', () => {
+    const p = extractProfile('Main Hyderabad mein rehta hoon')
+    expect(p.evidence.state).toBe('Hyderabad')
+    expect(p.evidence.district).toBe('Hyderabad')
+  })
+})
+
+describe('90 days of construction work', () => {
+  it.each<[string, Expected]>([
+    ['Main construction mistri hoon, pichhle saal nabbe din se zyada kaam kiya', { occupation: 'construction_worker', worked_90_days_construction: true }],
+    ['construction worker hoon, 90 din kaam kiya', { occupation: 'construction_worker', worked_90_days_construction: true }],
+    ['मैं मिस्त्री हूँ, नब्बे दिन काम किया', { occupation: 'construction_worker', worked_90_days_construction: true }],
+    ['నేను కూలి పని చేస్తాను, తొంభై రోజులు పని చేశాను', { occupation: 'construction_worker', worked_90_days_construction: true }], // NEEDS NATIVE TELUGU REVIEW
+  ])('%s', (text, expected) => {
+    const p = expectOnly(text, expected)
+    expect(p.evidence.worked_90_days_construction).toBeTruthy()
+  })
+
+  it.each([
+    'Main thela lagata hoon, 90 din kaam kiya', // not construction work
+    'construction worker hoon, sattar din kaam kiya', // 70 days is too few
+    'construction worker hoon', // no days stated
+  ])('stays null: %s', (text) => {
+    expect(extractProfile(text).worked_90_days_construction).toBeNull()
+  })
+})
+
 describe('extractWithConflicts', () => {
   it('flags two different ages in one utterance; profile.age stays null', () => {
     const { profile, conflicts } = extractWithConflicts('Meri umar tees saal hai... nahi nahi, paintees saal.')

@@ -1,6 +1,6 @@
 // Rule-based profile extractor. Every field stays null unless the user clearly said it.
 // Keywords ending in * are prefix matches (Telugu suffixes); see text.tokenMatches.
-import { STATE_KEYWORDS } from './geo'
+import { DISTRICT_KEYWORDS, STATE_KEYWORDS } from './geo'
 import { findNumbers, type NumberSpan } from './numbers'
 import { BOUNDARY, findAll, phrases, quote, tokenize, type Hit, type Phrase } from './text'
 import { emptyProfile, type BooleanField, type ExtractFn, type Occupation, type Profile, type ProfileField } from './types'
@@ -32,9 +32,9 @@ const BOOL_KEYWORDS: Record<BooleanField, Phrase[]> = {
   in_epf_esic_nps: phrases([
     'epf', 'pf', 'esic', 'esi', 'nps', 'provident fund', 'पीएफ', 'ईपीएफ', 'पी एफ', 'ईएसआईसी', 'పీఎఫ్*',
   ]),
-  worked_90_days_construction: phrases([
-    '90 din', '90 days', '90 day', 'pichhle saal construction', 'निर्माण कार्य 90 दिन', '90 दिन', 'నిర్మాణ పని 90',
-  ]),
+  // Never set from a keyword: only from a stated number of days (90 or more) plus a
+  // construction occupation, see the 90-day block below.
+  worked_90_days_construction: phrases([]),
   pays_income_tax: phrases([
     'income tax', 'tax', 'itr', 'इनकम टैक्स', 'टैक्स', 'आयकर', 'ట్యాక్స్*', 'పన్ను*',
   ]),
@@ -87,6 +87,15 @@ const RURAL = phrases(['gaon', 'gaanv', 'gaav', 'village', 'dehat', 'गां�
 // The state/UT table lives in geo.ts: one source of truth, shared with the
 // follow-up answers and the geography evaluator.
 const STATES: [string, Phrase[]][] = STATE_KEYWORDS.map(([name, list]) => [name, phrases(list)])
+
+const DISTRICTS: [string, string, Phrase[]][] = DISTRICT_KEYWORDS.map(([d, list]) => [
+  d.state,
+  d.district,
+  phrases(list),
+])
+
+// "90 din", "nabbe din", "ninety days", "తొంభై రోజులు"
+const DAY_UNIT = phrases(['din', 'day', 'days', 'दिन', 'రోజు*', 'రోజుల*'])
 
 const CHILD = phrases([
   'bachche', 'bacche', 'bachhe', 'bache', 'bachcha', 'baccha', 'bachchi', 'beta', 'bete', 'beti',
@@ -261,6 +270,39 @@ function extractCore(transcript: string): { profile: Profile; conflicts: Conflic
   if (state !== null) {
     profile.state = state
     profile.evidence.state = quote(raw, states[0].hit.start, states[0].hit.end)
+  }
+
+  // --- district (known names only; other place text is left alone) ---
+  const districts = DISTRICTS.flatMap(([owner, name, list]) =>
+    findAll(norm, list).map((hit) => ({ owner, name, hit })),
+  )
+  const district = resolve(districts.map((d) => d.name), 'district', conflicts)
+  if (district !== null) {
+    profile.district = district
+    profile.evidence.district = quote(raw, districts[0].hit.start, districts[0].hit.end)
+    // A district name alone also tells us the state (bare "Hyderabad" = Telangana).
+    // A state the user said themselves always wins.
+    if (profile.state === null) {
+      profile.state = districts[0].owner
+      profile.evidence.state = profile.evidence.district
+    }
+  }
+
+  // --- 90+ days of construction work: needs both halves, so neither is guessed ---
+  if (profile.occupation === 'construction_worker') {
+    for (const span of numbers) {
+      if (used.has(span) || span.value < 90) continue
+      const units = hitsIn(norm, span.start - 2, span.end + 3, DAY_UNIT)
+      if (units.length === 0) continue
+      used.add(span)
+      profile.worked_90_days_construction = true
+      profile.evidence.worked_90_days_construction = quote(
+        raw,
+        Math.min(span.start, units[0].start),
+        Math.max(span.end, units[0].end),
+      )
+      break
+    }
   }
 
   // --- age ---
