@@ -9,6 +9,7 @@
 //   npm run research -- coverage
 //   npm run research -- gaps
 //   npm run research -- sources [--days 90] [--today 2026-11-28]
+//   npm run research -- quality [--limit 10] [--today 2026-11-28]
 //   npm run research -- export --out research-export.json
 //
 // Optional: --file data/research/records.json --catalogue data/schemes.json
@@ -16,11 +17,13 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { validateCatalogue } from '../src/core/catalogue.ts'
 import { buildCoverageReport, formatCoverageReport } from '../src/core/research-coverage.ts'
+import { buildQualityReport, formatQualityReport, importReadinessProblems } from '../src/core/research-quality.ts'
 import {
   COVERAGE_STATUSES,
   GOVERNMENT_LEVELS,
   RESEARCH_GROUPS,
   RESEARCH_STATUSES,
+  eligibilityVerified,
   filterResearchRecords,
   missingSources,
   staleSources,
@@ -31,7 +34,7 @@ import {
 } from '../src/core/research.ts'
 
 const args = process.argv.slice(2)
-const COMMANDS = new Set(['list', 'show', 'validate', 'coverage', 'gaps', 'sources', 'export'])
+const COMMANDS = new Set(['list', 'show', 'validate', 'coverage', 'gaps', 'sources', 'quality', 'export'])
 const command = args[0] !== undefined && COMMANDS.has(args[0]) ? args[0] : 'list'
 const has = (name: string) => args.includes(`--${name}`)
 const valueOf = (name: string): string | undefined => {
@@ -39,7 +42,7 @@ const valueOf = (name: string): string | undefined => {
   return index >= 0 ? args[index + 1] : undefined
 }
 // A status or state value must never be mistaken for a command or an id.
-const VALUE_OPTIONS = new Set(['status', 'level', 'state', 'category', 'group', 'file', 'catalogue', 'out', 'days', 'today'])
+const VALUE_OPTIONS = new Set(['status', 'level', 'state', 'category', 'group', 'file', 'catalogue', 'out', 'days', 'today', 'limit'])
 const positionals: string[] = []
 for (let i = 0; i < args.length; i += 1) {
   const arg = args[i]
@@ -177,6 +180,21 @@ if (command === 'list') {
     console.log(`  ${entry.state.padEnd(10)} ${age.padEnd(14)} ${entry.url}`)
   }
   console.log('A stale or unreachable source is a re-review task; it never changes a verification status on its own.')
+} else if (command === 'quality') {
+  // Deterministic report: no network and no clock unless --today is given.
+  const limit = Number(valueOf('limit') ?? 10)
+  const quality = buildQualityReport(records, report.sources, {
+    claims: report.coverageClaims,
+    today: valueOf('today'),
+    limit,
+  })
+  console.log(formatQualityReport(quality))
+  const unsupported = importReadinessProblems(records, eligibilityVerified)
+  if (unsupported.length > 0) {
+    console.log('')
+    console.log('Readiness claims that the evidence does not support:')
+    for (const row of unsupported) console.log(`  ${row.recordId}: ${row.reason}`)
+  }
 } else if (command === 'validate') {
   console.log(
     `ok: ${records.length} record(s), ${report.sources.length} source(s), ${report.coverageClaims.length} coverage claim(s); ` +
@@ -211,7 +229,7 @@ if (command === 'list') {
   }
 } else {
   console.error(
-    `unknown command "${command}". Use: list, show, validate, coverage, gaps, export.\n` +
+    `unknown command "${command}". Use: list, show, validate, coverage, gaps, sources, quality, export.\n` +
       `coverage statuses: ${COVERAGE_STATUSES.join(', ')}\n` +
       `statuses: ${RESEARCH_STATUSES.join(', ')}`,
   )
