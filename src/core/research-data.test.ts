@@ -30,7 +30,7 @@ describe('shipped research register', () => {
   it('keeps the Telangana batch in the register, not in the matcher catalogue', () => {
     const report = validateResearch(researchJson, { schemeIds, today: '2026-11-28' })
     const telangana = report.records.filter((record) => record.state === 'Telangana')
-    expect(telangana).toHaveLength(75)
+    expect(telangana).toHaveLength(85)
     expect(telangana.every((record) => record.schemeId === undefined)).toBe(true)
     expect(schemeIds).toHaveLength(6)
   })

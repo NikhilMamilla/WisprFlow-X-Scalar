@@ -427,7 +427,8 @@
       "kind": "other",
       "retrievedOn": "2026-11-27",
       "schemeIds": [
-        "research-tg-aasara-pensions"
+        "research-tg-aasara-pensions",
+        "research-tg-disability-pension"
       ],
       "change": {
         "status": "UNCHECKED"
@@ -948,7 +949,8 @@
       },
       "schemeIds": [
         "research-aids-appliances",
-        "research-bc-federation-assistance"
+        "research-bc-federation-assistance",
+        "research-tg-disability-aids"
       ],
       "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
     },
@@ -1877,7 +1879,8 @@
       },
       "schemeIds": [
         "research-nethanna-bima",
-        "research-chenetha-mithra"
+        "research-chenetha-mithra",
+        "research-tg-transgender-welfare-board"
       ],
       "licenseNotes": "Describes Nethanna Bima and Chenetha Mitra among the handloom welfare schemes."
     },
@@ -1899,6 +1902,141 @@
       },
       "schemeIds": [],
       "licenseNotes": "Lists the handloom schemes in force in 2026; Chenetha Mitra is absent from the list."
+    },
+    {
+      "id": "tslsa-disability-schemes",
+      "url": "https://tslsa.telangana.gov.in/pdf/State%20Goverment%20Schemes%20for%20Children%20with%20Disabilitie.pdf",
+      "title": "State Government Schemes for Children with Disabilities",
+      "issuedBy": "Telangana State Legal Services Authority",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "other",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-tg-disability-pension",
+        "research-tg-disability-pre-matric-scholarship",
+        "research-tg-disability-post-matric-scholarship",
+        "research-tg-disability-aids",
+        "research-tg-disability-bus-pass",
+        "research-tg-disability-residential"
+      ],
+      "licenseNotes": "Official compilation of state disability schemes with amounts, age limits and application routes."
+    },
+    {
+      "id": "warangal-wcd",
+      "url": "https://warangal.telangana.gov.in/women-child-welfare-department",
+      "title": "Women and Child Welfare Department - Warangal",
+      "issuedBy": "Women, Children, Disabled and Senior Citizens Department, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-post-matric-scholarship",
+        "research-tg-disability-pre-matric-scholarship",
+        "research-tg-disability-post-matric-scholarship"
+      ],
+      "licenseNotes": "District page stating PwD pre-matric and post-matric scholarship amounts and the Rs 1 lakh income limit."
+    },
+    {
+      "id": "wanaparthy-welfare",
+      "url": "https://wanaparthy.telangana.gov.in/district-welfare",
+      "title": "Women, Children, Disabled and Senior Citizen Welfare - Wanaparthy",
+      "issuedBy": "Women, Children, Disabled and Senior Citizens Department, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-tg-disability-economic-rehab",
+        "research-tg-disability-marriage-incentive",
+        "research-tg-transgender-economic-rehab"
+      ],
+      "licenseNotes": "District page listing PwD marriage incentive, economic rehabilitation slabs, aids, and a transgender loan."
+    },
+    {
+      "id": "khammam-minorities",
+      "url": "https://khammam.telangana.gov.in/minorities-welfare",
+      "title": "Minorities Welfare - Khammam",
+      "issuedBy": "Minorities Welfare Department, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-post-matric-scholarship"
+      ],
+      "licenseNotes": "District page stating the minority scholarship income limits of Rs 1.5 lakh rural and Rs 2 lakh urban."
+    },
+    {
+      "id": "sansad-pmfby-2026",
+      "url": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2644_TsQCG4.pdf?source=lsapps",
+      "title": "Lok Sabha USQ 2644 - PMFBY state-wise enrolment 2021-22 to 2025-26",
+      "issuedBy": "Ministry of Agriculture and Farmers Welfare, Government of India",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "other",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-pmfby"
+      ],
+      "licenseNotes": "Answered 3 August 2026; the enrolment table does not list Telangana."
+    },
+    {
+      "id": "sansad-pmfby-2025",
+      "url": "https://sansad.in/getFile/loksabhaquestions/annex/184/AU5026_TWTntK.pdf?source=pqals",
+      "title": "Lok Sabha USQ 5026 - PMFBY state-wise enrolment",
+      "issuedBy": "Ministry of Agriculture and Farmers Welfare, Government of India",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "other",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-pmfby"
+      ],
+      "licenseNotes": "Answered 29 March 2025; lists Telangana with 40.11 lakh applications."
     }
   ],
   "records": [
@@ -4529,16 +4667,12 @@
         {
           "text": "Handloom, powerloom and ancillary workers covered by the weaver welfare programme.",
           "sourceId": "tg-seo-2023"
-        },
-        {
-          "text": "Scheme launched 07.08.2022 and implemented from 14.08.2022, on the Rythu Bima model.",
-          "sourceId": "tg-seo-2023"
         }
       ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
-      "status": "ELIGIBILITY_VERIFIED",
+      "status": "OFFICIALLY_VERIFIED",
       "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
@@ -4549,7 +4683,7 @@
         "Whether enrolment is still open is not published."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Verified 2026-11-28 at the level the sources allow: existence, launch date and beneficiary class are official; the amount is not.",
+      "notes": "Corrected 2026-11-28: launch date removed from eligibility; the scheme is officially described but its enrolment test and cover are not published.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -4827,11 +4961,11 @@
         },
         {
           "text": "Minorities: income not more than Rs 1.50 lakh a year rural, Rs 2.00 lakh urban.",
-          "sourceId": "disc-pre-matric-scholarship"
+          "sourceId": "khammam-minorities"
         },
         {
           "text": "Differently abled: parent or guardian income below Rs 1.00 lakh a year.",
-          "sourceId": "disc-pre-matric-scholarship"
+          "sourceId": "warangal-wcd"
         },
         {
           "text": "75% attendance per quarter for sanction and renewal.",
@@ -4862,10 +4996,11 @@
       "unresolvedQuestions": [
         "The ePASS \"Who is eligible\" page returns HTTP 404, so the widely quoted SC ceiling of Rs 2.50 lakh could not be read on an official page; the last verifiable official SC figure is Rs 2 lakh (RTI manual, 2023).",
         "RTF and MTF rupee rates are not published in a government document that loaded; only the PwD welfare rate table is official (Intermediate/Degree Rs 5,000, PG/Professional Rs 6,500 a year).",
-        "A 2024 SC post-matric G.O. that may supersede the RTI manual could not be opened."
+        "A 2024 SC post-matric G.O. that may supersede the RTI manual could not be opened.",
+        "MTF is reported as a monthly rate by course group and hostel status (Rs 1,500/650 professional, Rs 1,000/500 degree, Rs 750/500 intermediate, 10 months, plus 10% for disabled students), and RTF as a fee-based reimbursement of Rs 850 to Rs 6.9 lakh depending on course; neither structure is stated in a government document that could be fetched."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Verified 2026-11-28 as one umbrella record: four departments, four income tests, all recorded with their own source. The portal figure of Rs 2.5 lakh is deliberately not recorded.",
+      "notes": "Verified 2026-11-28 as one umbrella record: four departments, four income tests, each cited to the page that states it.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -4919,7 +5054,7 @@
       "benefitSummary": "Compulsory non-refundable tuition fee paid to the institution on the student's behalf; separate from the maintenance fee paid to the student.",
       "eligibilityConditions": [
         {
-          "text": "Eligible post-matric student in a recognised course; the fee is reimbursed to the institution, which may not collect it from the student.",
+          "text": "Eligible post-matric student in a recognised course; the tuition fee is reimbursed against the government-notified fee for the course.",
           "sourceId": "epass-rti-manual"
         }
       ],
@@ -4932,8 +5067,8 @@
       "lastResearchedOn": "2026-11-28",
       "confidence": "low",
       "unresolvedQuestions": [
-        "No government document that loaded states the group-wise RTF amounts; only college reproductions of the ePASS table do.",
-        "Whether RTF and the post-matric scholarship are one sanction or two is not stated in the RTI manual."
+        "The rule that colleges may not collect the fee from eligible students is stated in the 2026 DBT orders, which could not be read here; only the definition is sourced.",
+        "No government document that loaded states group-wise RTF amounts; only college reproductions of the ePASS table do."
       ],
       "importReadiness": "NEEDS_INFO",
       "notes": "Verified 2026-11-28 only as far as the definition: RTF goes to the college, MTF to the student. No amount recorded.",
@@ -5751,7 +5886,7 @@
         "The exact list of 1,672 procedures is not published as a downloadable document on the portal."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Verified 2026-11-28. Eligibility is the food-security card test, not an income figure; the record therefore carries no income threshold. Cover figure conflict with the FAQ preserved.",
+      "notes": "Verified 2026-11-28. Amount deliberately not stored as a number: the Trust publishes two different covers on its own site.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -5771,10 +5906,9 @@
       "applicationNotes": "No application: treatment is availed at a network government or empanelled hospital with the card; 104 is the helpline. No enrolment portal exists.",
       "benefit": {
         "kind": "service",
-        "summary": "Cashless hospital treatment up to Rs 10,00,000 a year per family",
-        "amountInr": 1000000,
+        "summary": "Cashless treatment for listed procedures up to the scheme cover, which the current scheme page states as Rs 10 lakh a year per family",
         "frequency": "per family per year",
-        "amountNote": "The scheme page and the 2025-26 budget state Rs 10 lakh; the FAQ still states Rs 1.5 lakh plus a Rs 50,000 buffer."
+        "amountNote": "Three official figures exist: the Trust FAQ still says Rs 1.5 lakh + Rs 50,000 buffer (Rs 2 lakh); a 2023 guideline copy says Rs 5 lakh with Rs 10 lakh for high-end procedures; the current scheme page and the 2025-26 budget say Rs 10 lakh a year. No single number is stored until the Trust restates the FAQ."
       },
       "lastVerifiedOn": "2026-11-28"
     },
@@ -5845,12 +5979,13 @@
       "lastResearchedOn": "2026-11-28",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "No maximum assistance amount is published on the CMRF portal, the CMO site or the state portal; press figures are not official.",
-        "No official list of required documents was found.",
-        "No income ceiling is published; eligibility is stated only as BPL."
+        "No maximum assistance is published by the CMRF, the CMO or the state portal.",
+        "The \"Rs 2 lakh\" figure in circulation is Aarogyasri's earlier cover (Rs 1.5 lakh plus a Rs 50,000 buffer), and in press reports an income test; it is not a CMRF ceiling.",
+        "The \"Rs 10 lakh\" figure belongs to Aarogyasri, not to CMRF.",
+        "No official document list is published."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Verified 2026-11-28. Deliberately recorded without an amount: the widely repeated Rs 5 lakh figure appears only on non-official sites.",
+      "notes": "Verified 2026-11-28. The apparent ceiling conflict was traced to Aarogyasri figures being read as CMRF ones; CMRF itself publishes no ceiling, so none is recorded.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -6490,6 +6625,14 @@
       ],
       "verificationEvidence": [
         {
+          "sourceId": "sansad-pmfby-2025",
+          "note": "Telangana enrolment in 2024-25"
+        },
+        {
+          "sourceId": "sansad-pmfby-2026",
+          "note": "Telangana absent from the 2021-26 table"
+        },
+        {
           "sourceId": "disc-pmfby"
         }
       ],
@@ -6509,12 +6652,12 @@
       "lastResearchedOn": "2026-11-28",
       "confidence": "low",
       "unresolvedQuestions": [
-        "Official answers conflict on whether Telangana is in PMFBY: a 2024 Rajya Sabha reply says Telangana re-joined, a March 2026 Lok Sabha reply lists Telangana among states not implementing the scheme.",
-        "No Telangana notification for the current Rabi season was found, so no notified crops, cut-off date or premium can be recorded.",
-        "The 2023 operational guidelines PDF returned HTTP 404 during this check; premium rates were therefore not recorded."
+        "A March 2025 parliamentary reply lists Telangana with 40.11 lakh enrolled applications; an August 2026 enrolment table for 2021-22 to 2025-26 does not list Telangana at all.",
+        "No Telangana notification for Kharif or Rabi 2025-26 or 2026 was found, so participation for the current season is unresolved.",
+        "The 2023 operational guidelines PDF returned HTTP 404, so no premium rate or cut-off date is recorded."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Kept as CONFLICTING rather than resolved: two official replies describe opposite states of affairs, and the state has published no current notification.",
+      "notes": "Kept CONFLICTING. Evidence now shows Telangana enrolled through at least 2024-25 and absent from the current-year official table; that is not the same as a published opt-out.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -6850,20 +6993,7 @@
         }
       ],
       "benefitSummary": "Assistance of 40% of unit cost for general category and 60% for SC, ST and women beneficiaries; women entrepreneur projects up to Rs 1.5 crore with 60% support.",
-      "eligibilityConditions": [
-        {
-          "text": "Applicant aged 18 to 60 years.",
-          "sourceId": "disc-pmmsy"
-        },
-        {
-          "text": "One project per person.",
-          "sourceId": "disc-pmmsy"
-        },
-        {
-          "text": "Lease of at least 10 years for infrastructure projects, 7 years for non-infrastructure projects.",
-          "sourceId": "disc-pmmsy"
-        }
-      ],
+      "eligibilityConditions": [],
       "exclusions": [],
       "prerequisites": [
         "Detailed Project Report or self-contained proposal",
@@ -6873,17 +7003,18 @@
         "DPR/SCP",
         "Land availability and statutory clearances"
       ],
-      "status": "ELIGIBILITY_VERIFIED",
+      "status": "OFFICIALLY_VERIFIED",
       "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
       "confidence": "medium",
       "unresolvedQuestions": [
         "The scheme was reported as continued only until September 2026; no official notification beyond that was located.",
-        "Activity-wise unit costs and subsidy rates are not in the sources read and vary by sub-component."
+        "Activity-wise unit costs and subsidy rates are not in the sources read and vary by sub-component.",
+        "Age 18-60, one project per person and the 10/7-year lease rules came from a fisheries FAQ that could not be fetched; they are not recorded as conditions until that document is read."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Verified 2026-11-28; the 40/60 split and the women ceiling are official, the activity-wise table is not recorded.",
+      "notes": "Corrected 2026-11-28: the eligibility conditions were removed because their source was never verified. Identity, the 40/60 funding split and the women ceiling remain sourced.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -7891,7 +8022,7 @@
           "sourceId": "pm-surya-ghar-portal"
         }
       ],
-      "benefitSummary": "Central financial assistance for residential rooftop solar: Rs 30,000 per kW for the first 2 kW, Rs 18,000 per kW for the third, capped at Rs 78,000.",
+      "benefitSummary": "Central financial assistance for residential rooftop solar. The published guideline figures (Rs 30,000/kW up to 2 kW, Rs 18,000/kW for the third kW, capped at Rs 78,000) were not re-read at source in this pass.",
       "eligibilityConditions": [
         {
           "text": "Residential electricity consumer with a valid consumer account number for the distribution utility.",
@@ -7926,7 +8057,7 @@
         "No itemised document checklist is published on the portal beyond bank proof."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Verified 2026-11-28: identity, route and consumer-number test are portal-confirmed; the rupee figures are marked as guideline values.",
+      "notes": "Verified 2026-11-28 for identity and application route; the subsidy figures are guideline values whose PDF did not load.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -7951,6 +8082,740 @@
         "amountNote": "Rs 30,000/kW up to 2 kW, Rs 18,000/kW for the third kW, total capped at Rs 78,000 (MNRE guidelines, 07.06.2024). The guidelines PDF did not load during this check, so the figures are recorded as guideline values, not portal-verified."
       },
       "lastVerifiedOn": "2026-11-28"
+    },
+    {
+      "id": "research-tg-disability-pension",
+      "name": "Disability pension",
+      "officialName": "Aasara disability pension",
+      "aliases": [
+        "Divyang pension",
+        "disabled pension"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Department for Empowerment of Persons with Disabilities, Senior Citizens and Transgender Persons",
+      "category": "social_welfare",
+      "subcategory": "disability pension",
+      "beneficiaryGroups": [
+        "persons_with_disabilities"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://tslsa.telangana.gov.in/pdf/State%20Goverment%20Schemes%20for%20Children%20with%20Disabilitie.pdf",
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "sourceId": "tslsa-disability-schemes"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "tslsa-disability-schemes"
+        },
+        {
+          "sourceId": "cag-aasara-audit",
+          "note": "Older rate and the 40%/51% test"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Disability of 40% or more under SADAREM assessment; 51% for hearing impairment.",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "Sanctioned irrespective of age.",
+          "sourceId": "tslsa-disability-schemes"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [
+        "SADAREM or UDID disability certificate",
+        "Aadhaar-linked bank account"
+      ],
+      "documents": [],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "lastVerifiedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "The CAG 2023 audit states Rs 3,016 a month (2019 rate) while the 2025 legal services compilation states Rs 4,016; the current rate should be confirmed against a pension order.",
+        "No income or household test is stated in either document, although district pages mention one.",
+        "Whether a disability pensioner can also hold a UDID-based central benefit is not addressed."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Added 2026-11-28. The pension is part of the Aasara family but has its own amount and eligibility test, so it is a separate record.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": [
+        {
+          "type": "RELATED",
+          "recordId": "research-tg-aasara-pensions",
+          "note": "Same delivery system, separate category and amount."
+        }
+      ],
+      "benefit": {
+        "kind": "cash",
+        "summary": "Monthly disability pension",
+        "amountInr": 4016,
+        "frequency": "per month",
+        "amountNote": "Rs 4,016 a month per the 2025 legal services compilation; the 2019 order and the CAG audit state Rs 3,016."
+      },
+      "benefitSummary": "Monthly pension for persons with disabilities, paid by direct transfer.",
+      "applicationNotes": "Apply with the disability certificate and bank details at the District Collector or DRDA office."
+    },
+    {
+      "id": "research-tg-disability-pre-matric-scholarship",
+      "name": "PwD pre-matric scholarship",
+      "officialName": "Pre-matric Scholarships to Students with Disabilities",
+      "aliases": [
+        "disabled pre-matric scholarship"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Department for Empowerment of Persons with Disabilities, Senior Citizens and Transgender Persons",
+      "category": "education",
+      "subcategory": "disability scholarship",
+      "beneficiaryGroups": [
+        "students",
+        "persons_with_disabilities"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://warangal.telangana.gov.in/women-child-welfare-department",
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "tslsa-disability-schemes"
+        },
+        {
+          "sourceId": "warangal-wcd"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "tslsa-disability-schemes"
+        },
+        {
+          "sourceId": "warangal-wcd"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Student with disability studying in Class I to X in a government or government-recognised school.",
+          "sourceId": "tslsa-disability-schemes"
+        },
+        {
+          "text": "Parental or guardian income below Rs 1,00,000 a year.",
+          "sourceId": "warangal-wcd"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [
+        "Disability certificate",
+        "Income certificate",
+        "Aadhaar",
+        "Bank passbook"
+      ],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "lastVerifiedOn": "2026-11-28",
+      "confidence": "high",
+      "unresolvedQuestions": [
+        "The reader allowance and prosthetic maintenance allowance are stated only in the legal services compilation, not on the district page."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Added 2026-11-28. Two official sources agree on the class-wise scholarship amounts.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": [],
+      "benefitSummary": "Scholarship of Rs 700 (I-V), Rs 1,000 (VI-VIII) and Rs 1,820 (IX-X) a year, plus transport, prosthetic maintenance and reader allowances.",
+      "benefit": {
+        "kind": "cash",
+        "summary": "Annual disability scholarship",
+        "amountInr": 1820,
+        "frequency": "per academic year, class-dependent",
+        "amountNote": "Rs 700 for I-V, Rs 1,000 for VI-VIII, Rs 1,820 for IX-X; transport Rs 500, prosthetic maintenance Rs 250, reader allowance Rs 250 (I-VIII) or Rs 500 (IX-X)."
+      },
+      "applicationUrl": "https://telanganaepass.cgg.gov.in/",
+      "applicationNotes": "Register on ePASS; the district welfare officer for disability handles sanction."
+    },
+    {
+      "id": "research-tg-disability-post-matric-scholarship",
+      "name": "PwD post-matric scholarship",
+      "officialName": "Post-matric Scholarships to Students with Disabilities",
+      "aliases": [
+        "disabled post-matric scholarship"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Department for Empowerment of Persons with Disabilities, Senior Citizens and Transgender Persons",
+      "category": "education",
+      "subcategory": "disability scholarship",
+      "beneficiaryGroups": [
+        "students",
+        "persons_with_disabilities"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://tslsa.telangana.gov.in/pdf/State%20Goverment%20Schemes%20for%20Children%20with%20Disabilitie.pdf",
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "tslsa-disability-schemes"
+        },
+        {
+          "sourceId": "warangal-wcd"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "tslsa-disability-schemes"
+        },
+        {
+          "sourceId": "warangal-wcd"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Student with disability in an intermediate or higher course; SC, ST, BC and minority students are sanctioned by their own departments.",
+          "sourceId": "tslsa-disability-schemes"
+        },
+        {
+          "text": "Parental or guardian income below Rs 1,00,000 a year.",
+          "sourceId": "warangal-wcd"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "lastVerifiedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Two official sources describe post-matric support differently: the legal services compilation states tuition reimbursement plus Rs 5,000 (Intermediate/Degree) or Rs 6,500 (PG/professional) maintenance, while the Warangal district page states Rs 1,820 / Rs 2,400 / Rs 4,290. They may be different heads (scholarship vs maintenance) but no order explains the difference.",
+        "The income limit is stated only on the district page."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Added 2026-11-28. Recorded as one record with both descriptions; no single amount is asserted.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": [],
+      "benefitSummary": "Tuition and special fee reimbursement paid to the institution, plus a maintenance amount for hostellers.",
+      "benefit": {
+        "kind": "cash",
+        "summary": "Fee reimbursement plus maintenance",
+        "amountNote": "Maintenance Rs 5,000 (Intermediate/Degree) and Rs 6,500 (PG/professional) per the 2025 compilation; the district page states scholarships of Rs 1,820 / Rs 2,400 / Rs 4,290. The difference is unresolved."
+      },
+      "applicationUrl": "https://telanganaepass.cgg.gov.in/"
+    },
+    {
+      "id": "research-tg-disability-aids",
+      "name": "PwD aids and appliances",
+      "officialName": "Rehabilitation and supply of prosthetic aids",
+      "aliases": [
+        "assistive devices",
+        "aids and appliances"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Department for Empowerment of Persons with Disabilities, Senior Citizens and Transgender Persons",
+      "category": "disability",
+      "subcategory": "assistive devices",
+      "beneficiaryGroups": [
+        "persons_with_disabilities"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://tslsa.telangana.gov.in/pdf/State%20Goverment%20Schemes%20for%20Children%20with%20Disabilitie.pdf",
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "tslsa-disability-schemes"
+        },
+        {
+          "sourceId": "disc-aids-appliances"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "tslsa-disability-schemes"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Person with the specific disability and age stated for the item, for example hearing aids at 51% disability and age 5-18, artificial limbs from age 6, wheelchairs from age 10.",
+          "sourceId": "tslsa-disability-schemes"
+        },
+        {
+          "text": "Application through the OBMMS disabled welfare module.",
+          "sourceId": "disc-aids-appliances"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "lastVerifiedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "The 2025-26 application window on OBMMS closed on 10-02-2026; whether a new window opened is not published.",
+        "Item availability depends on the annual annexure list, which is a spreadsheet rather than a scheme document."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Added 2026-11-28. Item list and age/disability floors come from the official compilation; application through OBMMS.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": [],
+      "benefitSummary": "Free assistive aids: battery wheelchairs, retrofitted scooters, calipers, artificial limbs, crutches, hearing aids, daisy players, Braille books, smart phones, tablets, laptops and teaching material.",
+      "benefit": {
+        "kind": "in_kind",
+        "summary": "Assistive device supplied free of cost"
+      },
+      "applicationUrl": "https://tgobmms.cgg.gov.in/",
+      "applicationNotes": "OBMMS registration; requires a food security card number or MeeSeva income number."
+    },
+    {
+      "id": "research-tg-disability-economic-rehab",
+      "name": "PwD economic rehabilitation",
+      "officialName": "Economic Rehabilitation Scheme for Persons with Disabilities",
+      "aliases": [
+        "self employment subsidy for PwDs"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Department for Empowerment of Persons with Disabilities, Senior Citizens and Transgender Persons",
+      "category": "entrepreneurship",
+      "subcategory": "disability self-employment",
+      "beneficiaryGroups": [
+        "persons_with_disabilities",
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/district-welfare",
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "wanaparthy-welfare"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "wanaparthy-welfare"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Person with disability setting up a petty trade or business unit.",
+          "sourceId": "wanaparthy-welfare"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "lastVerifiedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "The department page (unreachable from here) is reported to state 40% disability, age 21-55, income Rs 1.5 lakh rural / Rs 2 lakh urban and 100/80/70/60% slabs; the district page read here states only the subsidy pattern.",
+        "No state order for this scheme was located, so the age and income tests are unconfirmed."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Added 2026-11-28. Only the district-published subsidy pattern is recorded; the eligibility test is an open question.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": [],
+      "benefitSummary": "Subsidy of 100% up to Rs 50,000 for non-bank-linked units; 80% subsidy on bank-linked units of Rs 1-3 lakh.",
+      "benefit": {
+        "kind": "subsidy",
+        "summary": "Unit subsidy",
+        "amountInr": 50000,
+        "amountNote": "Rs 50,000 at 100% for non-bank-linked units; 80% subsidy for bank-linked units of Rs 1, 2 or 3 lakh."
+      }
+    },
+    {
+      "id": "research-tg-disability-bus-pass",
+      "name": "PwD bus pass",
+      "officialName": "Free and concessional bus passes for persons with disabilities",
+      "aliases": [
+        "disability bus pass"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Department for Empowerment of Persons with Disabilities, Senior Citizens and Transgender Persons",
+      "category": "transport",
+      "subcategory": "travel concession",
+      "beneficiaryGroups": [
+        "persons_with_disabilities"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://tslsa.telangana.gov.in/pdf/State%20Goverment%20Schemes%20for%20Children%20with%20Disabilitie.pdf",
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "tslsa-disability-schemes"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "tslsa-disability-schemes"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Visual impairment 100%, deaf and dumb 100%, locomotor disability 40%, intellectual disability with IQ below 69, or leprosy cured above 40%.",
+          "sourceId": "tslsa-disability-schemes"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "lastVerifiedOn": "2026-11-28",
+      "confidence": "high",
+      "unresolvedQuestions": [
+        "Whether the pass is issued for all TGSRTC services or city ordinary only is stated but not operational detail."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Added 2026-11-28. Category-wise disability percentages are stated in the official compilation.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": [
+        {
+          "type": "RELATED",
+          "recordId": "research-tgsrtc-passes",
+          "note": "The general TGSRTC concession record covers other categories."
+        }
+      ],
+      "benefitSummary": "Free travel in city ordinary buses and 50% concession on normal fares up to deluxe services.",
+      "benefit": {
+        "kind": "service",
+        "summary": "Free or concessional bus travel"
+      },
+      "applicationNotes": "Apply at a TGSRTC bus pass counter with the disability certificate."
+    },
+    {
+      "id": "research-tg-disability-marriage-incentive",
+      "name": "PwD marriage incentive",
+      "officialName": "Marriage Incentive Award for disabled couples",
+      "aliases": [
+        "disability marriage incentive"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Department for Empowerment of Persons with Disabilities, Senior Citizens and Transgender Persons",
+      "category": "social_welfare",
+      "subcategory": "marriage assistance",
+      "beneficiaryGroups": [
+        "persons_with_disabilities"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/district-welfare",
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "wanaparthy-welfare"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "wanaparthy-welfare"
+        }
+      ],
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "OFFICIALLY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "lastVerifiedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Only a district page states the amounts; no state order was located.",
+        "Whether the incentive is limited to first marriages, and which certificate proves disability, is not stated."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Added 2026-11-28. District-published amounts, flagged as such.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": [],
+      "benefitSummary": "Rs 1 lakh when one partner has a disability; Rs 2 lakh when both partners do.",
+      "benefit": {
+        "kind": "cash",
+        "summary": "Marriage incentive",
+        "amountInr": 100000,
+        "amountNote": "Rs 1,00,000 for a marriage between a disabled and a non-disabled person; Rs 2,00,000 when both are disabled."
+      }
+    },
+    {
+      "id": "research-tg-disability-residential",
+      "name": "PwD residential schools and homes",
+      "officialName": "Government residential schools, homes and hostels for persons with disabilities",
+      "aliases": [
+        "disability hostels"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Department for Empowerment of Persons with Disabilities, Senior Citizens and Transgender Persons",
+      "category": "education",
+      "subcategory": "residential care",
+      "beneficiaryGroups": [
+        "students",
+        "persons_with_disabilities",
+        "orphans"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://tslsa.telangana.gov.in/pdf/State%20Goverment%20Schemes%20for%20Children%20with%20Disabilitie.pdf",
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "tslsa-disability-schemes"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "tslsa-disability-schemes"
+        }
+      ],
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "OFFICIALLY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "lastVerifiedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Admission procedure and district-wise seat availability are not published.",
+        "The document lists sanctioned strength, not current occupancy."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Added 2026-11-28. Facilities and diet rates are official; admission route is not documented.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": [],
+      "benefitSummary": "Five residential schools for visually and hearing impaired children (830 places) and 20 homes and hostels (2,258 places) with free boarding, uniforms, bedding and diet.",
+      "benefit": {
+        "kind": "in_kind",
+        "summary": "Residential schooling and hostel care",
+        "amountNote": "Diet Rs 1,200/month (Classes 3-7), Rs 1,500 (8-10), Rs 2,000 (post-matric); uniforms four pairs at Rs 3,000 a year; bedding Rs 1,500 a year."
+      }
+    },
+    {
+      "id": "research-tg-transgender-welfare-board",
+      "name": "Telangana Transgender Welfare Board",
+      "officialName": "State Welfare Board for Transgender Persons",
+      "aliases": [
+        "transgender board"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Department for Empowerment of Persons with Disabilities, Senior Citizens and Transgender Persons",
+      "category": "social_welfare",
+      "subcategory": "transgender welfare governance",
+      "beneficiaryGroups": [
+        "transgender"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://www.telangana.gov.in/wp-content/uploads/2023/05/Telangana-Socio-Economic-Outlook-2023.pdf",
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "tg-seo-2023"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "tg-seo-2023"
+        }
+      ],
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "OFFICIALLY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "lastVerifiedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "The board's composition, meeting record and current budget are not published in the documents read.",
+        "A separate department page for transgender welfare exists but did not respond during verification."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Added 2026-11-28. The board is a governance body, not a benefit; recorded so the delivery structure is traceable.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": [],
+      "benefitSummary": "State welfare board constituted to advise on policy; Rs 200 lakh sanctioned for skill training, economic rehabilitation, a home and a help desk, with 245 identity cards issued."
+    },
+    {
+      "id": "research-tg-transgender-economic-rehab",
+      "name": "Transgender economic rehabilitation",
+      "officialName": "Economic rehabilitation and livelihood support for transgender persons",
+      "aliases": [
+        "transgender loan",
+        "transgender subsidy"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Department for Empowerment of Persons with Disabilities, Senior Citizens and Transgender Persons",
+      "category": "entrepreneurship",
+      "subcategory": "transgender livelihood",
+      "beneficiaryGroups": [
+        "transgender",
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/district-welfare",
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "wanaparthy-welfare"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "wanaparthy-welfare"
+        }
+      ],
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "SOURCE_IDENTIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "lastVerifiedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "The district page states a 100% subsidy loan of Rs 75,000 for one unit in 2025-26; no state order or guideline was located.",
+        "The department economic rehabilitation page (unreachable here) is reported to list Rs 50,000 at 100% and 80/70/60% bank-linked slabs; that is not confirmed.",
+        "Whether the scheme requires a transgender identity card is stated by the department page, not by the district page."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Added 2026-11-28 as a discovery with one district-published figure; eligibility is not recorded.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": [],
+      "benefitSummary": "Subsidised loan for a livelihood unit; the district page states a Rs 75,000 unit at 100% subsidy for 2025-26.",
+      "benefit": {
+        "kind": "loan",
+        "summary": "Subsidised livelihood unit",
+        "amountInr": 75000,
+        "amountNote": "One unit of Rs 75,000 at 100% subsidy, 2025-26, per a district page."
+      }
     }
   ],
   "coverageClaims": [],
