@@ -139,6 +139,16 @@ Status:
 - Invalid answers are refused with typed errors and leave the frozen session untouched.
 - 37 tests; no scheme, rule or research data changed. Sessions live in memory only.
 
+## M9.7 - Citizen journey hardening (implemented)
+Answer correction, skip/revisit, skip-aware selection, session isolation and atomicity for the M9.6 journey core. See docs/CITIZEN_JOURNEY_HARDENING_M9_7.md.
+
+Status:
+- Corrections are append-only (`action`, `previousValue`, `sequence`) and re-evaluate every scheme.
+- Skips are logged separately from answers, never read as a no; a question gets at most two offers.
+- Explicit revisit; store methods `correct`, `skip`, `revisit`.
+- 18 new tests (55 in the journey suite); no scheme, rule, research or explanation change.
+- Next: M9.8 - wire the journey core into the results screen (frontend only, no new eligibility logic).
+
 ## M5 (original plan, now later work) - Optional LLM extractor and Telugu polish
 POST /api/extract uses the LLM only if LLM_API_KEY is set, otherwise the rule-based extractor. Same output schema. Improve Telugu phrases and voice fallbacks from VOICE_FINDINGS.md.
 Done when: app behaves identically with no key, and better on messy speech with a key.
