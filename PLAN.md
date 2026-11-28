@@ -149,6 +149,16 @@ Status:
 - 18 new tests (55 in the journey suite); no scheme, rule, research or explanation change.
 - Next: M9.8 - wire the journey core into the results screen (frontend only, no new eligibility logic).
 
+## M9.9 - High-impact evidence closure (implemented)
+Six highest-priority records investigated against primary sources; statuses changed only where evidence allowed. See docs/EVIDENCE_CLOSURE_M9_9.md.
+
+Status:
+- Aasara criteria, Single Women criteria, PwD aids general eligibility, Supplementary Nutrition entitlement and transgender eligibility now recorded condition by condition.
+- Cheyutha, Aasara rate and transgender unit cost conflicts deliberately retained; nothing inferred.
+- 7 new sources (CAG audit, MCR HRD summary, 2022 SNP Rules, Poshan 2.0 guidelines, department pages); 108 sources, 0 warnings; all 98 records valid.
+- Complete outcomes 42 -> 46; condition-unverified 52 -> 48; import ready still 0.
+- Next: M9.10 - retrieve the Cheyutha order and the current Aasara order.
+
 ## M9.8 - Research quality and citizen impact (implemented)
 Deterministic research priority model, evidence-quality report and one limited evidence pass. See docs/RESEARCH_QUALITY_AND_CITIZEN_IMPACT_M9_8.md.
 
