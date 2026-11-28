@@ -50,6 +50,14 @@ export interface CoverageTotals {
   categories: number
 }
 
+// Discovery works department by department, so the report says which departments
+// have produced records and which have not. A department with no records is not
+// evidence that it has no schemes.
+export interface DepartmentCount {
+  label: string
+  records: number
+}
+
 export interface CoverageReport {
   totals: CoverageTotals
   states: CoverageArea[]
@@ -57,6 +65,7 @@ export interface CoverageReport {
   groups: CoverageArea[]
   ageBands: CoverageArea[]
   categories: CoverageArea[]
+  departments: DepartmentCount[]
   gaps: CoverageArea[]
   priorities: string[]
 }
@@ -193,6 +202,15 @@ export function buildCoverageReport(records: readonly ResearchRecord[], claims: 
     categories: categoryAreas.length,
   }
 
+  const departmentCounts = new Map<string, number>()
+  for (const record of records) {
+    const label = record.department?.trim()
+    if (label) departmentCounts.set(label, (departmentCounts.get(label) ?? 0) + 1)
+  }
+  const departments = [...departmentCounts.entries()]
+    .map(([label, count]) => ({ label, records: count }))
+    .sort((a, b) => b.records - a.records || a.label.localeCompare(b.label))
+
   const priorities = gaps.slice(0, 15).map((entry) => `${entry.label} (${entry.status})`)
 
   return {
@@ -202,6 +220,7 @@ export function buildCoverageReport(records: readonly ResearchRecord[], claims: 
     groups: groupAreas,
     ageBands: ageAreas,
     categories: categoryAreas,
+    departments,
     gaps,
     priorities,
   }
@@ -236,6 +255,9 @@ export function formatCoverageReport(report: CoverageReport): string {
     '',
     'Coverage by category',
     ...report.categories.map((c) => `  ${c.label}: ${c.status} (${c.researched} researched, ${c.discovered} discovered)`),
+    '',
+    `Departments with records: ${report.departments.length}`,
+    ...report.departments.map((d) => `  ${d.label}: ${d.records}`),
     '',
     'Research gaps and priorities',
     ...report.priorities.map((p) => `  ${p}`),

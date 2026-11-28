@@ -157,6 +157,20 @@ describe('coverage audit', () => {
     expect(mixed?.discovered).toBe(1)
   })
 
+  it('counts records by department so discovery can be aimed at the rest', () => {
+    const report = buildCoverageReport([
+      record({ id: 'a', department: 'Agriculture Department' }),
+      record({ id: 'b', department: 'Agriculture Department' }),
+      record({ id: 'c', department: 'Health Department' }),
+      record({ id: 'd' }),
+    ])
+    expect(report.departments).toEqual([
+      { label: 'Agriculture Department', records: 2 },
+      { label: 'Health Department', records: 1 },
+    ])
+    expect(formatCoverageReport(report)).toContain('Departments with records: 2')
+  })
+
   it('renders a report with the caveat and the gaps', () => {
     const text = formatCoverageReport(buildCoverageReport([record({ category: 'labour' })]))
     expect(text).toContain('Research coverage')
