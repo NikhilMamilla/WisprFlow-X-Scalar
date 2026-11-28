@@ -2037,6 +2037,73 @@
         "research-pmfby"
       ],
       "licenseNotes": "Answered 29 March 2025; lists Telangana with 40.11 lakh applications."
+    },
+    {
+      "id": "suryapet-cheyutha",
+      "url": "https://suryapet.telangana.gov.in/scheme/cheyutha-scheme",
+      "title": "Cheyutha Scheme — Suryapet district",
+      "issuedBy": "Suryapet District Administration, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "SECONDARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "reliability": "medium",
+      "schemeIds": [
+        "research-tg-cheyutha"
+      ],
+      "change": {
+        "status": "UNCHECKED",
+        "lastCheckedOn": "2026-11-28"
+      }
+    },
+    {
+      "id": "wanaparthy-cheyutha-detail",
+      "url": "https://wanaparthy.telangana.gov.in/scheme/scheme-title-1-will-appear-here-14",
+      "title": "Cheyutha Scheme — Wanaparthy district",
+      "issuedBy": "Wanaparthy District Administration, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "SECONDARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "reliability": "low",
+      "schemeIds": [
+        "research-tg-cheyutha"
+      ],
+      "change": {
+        "status": "UNCHECKED",
+        "lastCheckedOn": "2026-11-28"
+      }
+    },
+    {
+      "id": "naco-aasara-go34",
+      "url": "https://naco.mohfw.gov.in/files/Telengana.pdf",
+      "title": "G.O.Ms.No.34, PR&RD (RD.II), 28-05-2019 — Aasara pension enhancement (NACO copy)",
+      "issuedBy": "Panchayat Raj & Rural Development Department, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_LEGAL",
+      "kind": "government_order",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "reliability": "high",
+      "licenseNotes": "A copy of the state order hosted by NACO; the original on scpwd.telangana.gov.in does not respond.",
+      "schemeIds": [
+        "research-tg-aasara-pensions"
+      ],
+      "change": {
+        "status": "UNCHECKED",
+        "lastCheckedOn": "2026-11-28"
+      }
     }
   ],
   "records": [
@@ -2894,7 +2961,7 @@
       "benefit": {
         "kind": "cash",
         "amountInr": 2016,
-        "amountNote": "Rs 2,016 per month for old age, widows, weavers, toddy tappers, HIV-AIDS, beedi workers, single women and filaria patients; Rs 3,016 for persons with disabilities. The state Socio Economic Outlook 2021 confirms these amounts since June 2019; the current rate is unconfirmed.",
+        "amountNote": "Rs 2,016 per month for old age, widows, weavers, toddy tappers, HIV-AIDS, beedi workers, single women and filaria patients; Rs 3,016 for persons with disabilities. The amounts come from G.O.Ms.No.34 dated 28-05-2019, read in an accessible NACO copy on 2026-11-28; whether they were enhanced after 2019 is still unconfirmed.",
         "frequency": "monthly"
       },
       "districts": [],
@@ -2909,6 +2976,9 @@
         },
         {
           "sourceId": "tg-socio-economic-outlook-2021"
+        },
+        {
+          "sourceId": "naco-aasara-go34"
         }
       ],
       "eligibilityConditions": [
@@ -2951,12 +3021,12 @@
       "status": "ELIGIBILITY_VERIFIED",
       "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-27",
-      "lastResearchedOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-28",
       "lastVerifiedOn": "2026-11-27",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "The old-age age limit is 57 in the 2021 state outlook but 65 in the CAG table for 2018-21; the current Government Order is needed.",
-        "The pension amount is a 2019 figure; confirm the current rate.",
+        "The old-age age limit is 57 in the 2021 state outlook but 65 in the G.O. table for 2018-21; the current order is needed.",
+        "The pension amount is the 2019 order figure; confirm whether it was enhanced after 2019.",
         "The Aasara portal did not respond at audit; confirm the current application route.",
         "Exclusions beyond income and land (children in employment, four-wheeler owners, government pensioners) come from the CAG summary and are not recorded as separate fields."
       ],
@@ -2990,7 +3060,7 @@
           "note": "Aasara includes a single women category; the separate record was not researched"
         }
       ],
-      "notes": "M9.1 audit: old-age age corrected from 65 to 57, verification downgraded to partial, the unreachable 2019 GO URL marked GONE, and the application URL removed because it did not respond."
+      "notes": "M9.1 audit: old-age age corrected from 65 to 57, verification downgraded to partial, the unreachable 2019 GO URL marked GONE, and the application URL removed. M9.8: the same 2019 order was read in an accessible NACO copy, so the amount is now traceable to a legal source; the dead scpwd link stays on the record as GONE."
     },
     {
       "id": "research-tg-kalyana-lakshmi",
@@ -3662,6 +3732,12 @@
         },
         {
           "sourceId": "wanaparthy-schemes"
+        },
+        {
+          "sourceId": "suryapet-cheyutha"
+        },
+        {
+          "sourceId": "wanaparthy-cheyutha-detail"
         }
       ],
       "verificationEvidence": [],
@@ -3673,6 +3749,14 @@
         {
           "text": "District page: BPL household with a white ration card, in one of the listed categories such as senior citizens, widows, persons with disabilities, beedi workers or single women",
           "sourceId": "wanaparthy-schemes"
+        },
+        {
+          "text": "Suryapet district page: BPL card families; ₹10 lakh per family medical cover under Rajiv Aarogyasri, 1,672 packages and 21 specialities; launched 9 December 2023",
+          "sourceId": "suryapet-cheyutha"
+        },
+        {
+          "text": "Wanaparthy district page: monthly pension of ₹4,000 (₹6,000 for disabled beneficiaries) plus ₹10 lakh Aarogyasri cover, for BPL white-ration-card holders in the listed categories",
+          "sourceId": "wanaparthy-cheyutha-detail"
         }
       ],
       "exclusions": [],
@@ -3681,15 +3765,15 @@
       "status": "CONFLICTING",
       "verificationStatus": "UNVERIFIED",
       "discoveredOn": "2026-11-27",
-      "lastResearchedOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-28",
       "confidence": "low",
       "unresolvedQuestions": [
-        "Two official pages describe different schemes under the name Cheyutha: a 2023 health cover launched with Mahalakshmi, and a 2018 financial assistance page for vulnerable groups.",
-        "Resolve with a Government Order before any eligibility is recorded as verified.",
-        "Which of the two, if either, is currently open."
+        "The state portal and the Suryapet page describe Cheyutha as a ₹10 lakh Aarogyasri health cover; the Wanaparthy page describes the same name as a monthly pension (₹4,000 / ₹6,000 for disabled) plus the health cover, and its application route is a pension form. No Government Order read so far settles which is correct.",
+        "The 2025-26 budget speech lists Cheyutha among the Abhayahastam welfare schemes without a benefit amount; it does not resolve the conflict.",
+        "Which of the two readings, if either, is currently open, and whether the ₹4,000 / ₹6,000 amounts are real or a district-page error."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Recorded as CONFLICTING on purpose. Nothing was merged and no benefit amount is stated because the sources disagree.",
+      "notes": "M9.8: added two district pages that contradict each other on what Cheyutha is. The conflict is deliberately unresolved; no amount is recorded in the benefit field and no condition was merged away.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
