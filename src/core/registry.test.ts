@@ -9,7 +9,7 @@ const ids = (schemes: Scheme[]) => schemes.map((s) => s.id)
 
 describe('the bundled registry', () => {
   it('indexes all six schemes by id', () => {
-    expect([...REGISTRY.byId.keys()]).toEqual(['eshram', 'pmsym', 'pmsby', 'pmjjby', 'svanidhi', 'pmjdy'])
+    expect([...REGISTRY.byId.keys()]).toEqual(['eshram', 'pmsym', 'pmsby', 'pmjjby', 'svanidhi', 'pmjdy', 'telangana-bocwwb'])
   })
 
   it('finds a scheme by id or alias', () => {
@@ -23,11 +23,11 @@ describe('the bundled registry', () => {
     expect(ids(REGISTRY.byCategory.get('insurance')!)).toEqual(['pmsby', 'pmjjby'])
     expect(REGISTRY.byCategory.get('pension')!.map((s) => s.id)).toEqual(['pmsym'])
     expect(REGISTRY.providers.get('has_bank_account')).toEqual(['pmjdy'])
-    expect(REGISTRY.byState.size).toBe(0) // all six are central schemes
+    expect(REGISTRY.byState.size).toBe(1) // one Telangana scheme, six central
   })
 
   it('treats every central scheme as applicable in any state', () => {
-    expect(ids(applicableInState(REGISTRY, 'Telangana'))).toHaveLength(6)
+    expect(ids(applicableInState(REGISTRY, 'Telangana'))).toHaveLength(7)
   })
 
   it('has no dependency edges until scheme-id prerequisites are added', () => {
@@ -42,10 +42,10 @@ describe('filterSchemes', () => {
     expect(ids(filterSchemes(REGISTRY, { scope: 'central' }))).toHaveLength(6)
     expect(ids(filterSchemes(REGISTRY, { occupation: 'street_vendor' }))).toEqual(['svanidhi'])
     expect(ids(filterSchemes(REGISTRY, { provides: 'has_bank_account' }))).toEqual(['pmjdy'])
-    expect(ids(filterSchemes(REGISTRY, { verification: 'VERIFIED' }))).toHaveLength(4)
+    expect(ids(filterSchemes(REGISTRY, { verification: 'VERIFIED' }))).toHaveLength(5)
     expect(ids(filterSchemes(REGISTRY, { beneficiaryGroup: 'business' }))).toEqual(['svanidhi'])
     expect(ids(filterSchemes(REGISTRY, { tag: 'street_vendors' }))).toEqual(['svanidhi'])
-    expect(ids(filterSchemes(REGISTRY, { state: 'Telangana', availableOnly: true }))).toHaveLength(6)
+    expect(ids(filterSchemes(REGISTRY, { state: 'Telangana', availableOnly: true }))).toHaveLength(7)
     expect(filterSchemes(REGISTRY, { category: 'nope' })).toEqual([])
   })
 
@@ -77,7 +77,7 @@ describe('geography indexes', () => {
   const registry = buildRegistry([...clone(SCHEMES), stateScheme, districtScheme])
 
   it('indexes states under a normalised key, and resolves a code through the evaluator', () => {
-    expect(ids(registry.byState.get('telangana')!)).toEqual(['tg_state', 'tg_district'])
+    expect(ids(registry.byState.get('telangana')!)).toEqual(['telangana-bocwwb', 'tg_state', 'tg_district'])
     // A code is not a separate index key, but it still resolves when filtering.
     expect(ids(applicableInState(registry, 'TS'))).toContain('tg_state')
   })
@@ -101,7 +101,7 @@ describe('geography indexes', () => {
   })
 
   it('searches through the registry index', () => {
-    expect(searchSchemes(registry.searchIndex, 'telangana').map((s) => s.id)).toEqual(['tg_state', 'tg_district'])
+    expect(searchSchemes(registry.searchIndex, 'telangana').map((s) => s.id)).toEqual(['telangana-bocwwb', 'tg_state', 'tg_district'])
   })
 })
 

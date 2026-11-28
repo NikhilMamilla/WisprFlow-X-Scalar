@@ -43,6 +43,7 @@ describe('pickNextFollowUp', () => {
       ...emptyProfile(),
       age: 32, occupation: 'street_vendor', urban_or_rural: 'urban', monthly_income: 10000,
       has_bank_account: true, has_aadhaar: true, in_epf_esic_nps: false, pays_income_tax: false,
+      state: 'Telangana', worked_90_days_construction: false,
     }
     expect(next(settled)).toBeNull()
   })

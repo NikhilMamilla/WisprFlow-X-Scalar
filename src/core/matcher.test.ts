@@ -22,12 +22,14 @@ const byId = (results: MatchResult[], id: string) => results.find((r) => r.id ==
 
 describe('matchSchemes', () => {
   it('loads all six schemes from data/schemes.json', () => {
-    expect(SCHEMES.map((s) => s.id)).toEqual(['eshram', 'pmsym', 'pmsby', 'pmjjby', 'svanidhi', 'pmjdy'])
+    expect(SCHEMES.map((s) => s.id)).toEqual(['eshram', 'pmsym', 'pmsby', 'pmjjby', 'svanidhi', 'pmjdy', 'telangana-bocwwb'])
   })
 
   it('a fully known, eligible vendor (own bank account) qualifies for all but PM Jan Dhan, which is not_needed', () => {
-    const results = matchSchemes(eligibleVendor)
+    const results = matchSchemes(eligibleVendor).filter((r) => r.id !== 'telangana-bocwwb')
     for (const r of results) expect(r.status).toBe(r.id === 'pmjdy' ? 'not_needed' : 'qualifies')
+    // The state scheme is a new, separate record; it is not part of this claim.
+    expect(matchSchemes(eligibleVendor).find((r) => r.id === 'telangana-bocwwb')!.status).toBe('needs_info')
     expect(byId(results, 'eshram').rules_verified).toBe(false)
     expect(byId(results, 'pmsym').rules_verified).toBe(true)
   })

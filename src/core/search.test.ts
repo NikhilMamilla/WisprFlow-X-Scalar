@@ -62,8 +62,8 @@ describe('scheme search', () => {
       geography: { scope: 'state', states: ['Telangana'] },
     }
     const withState = buildSearchIndex([...clone(SCHEMES), telangana])
-    expect(searchSchemes(withState, 'telangana').map((s) => s.id)).toEqual(['tg_state'])
-    expect(searchSchemes(withState, 'TS').map((s) => s.id)).toEqual(['tg_state'])
+    expect(searchSchemes(withState, 'telangana').map((s) => s.id)).toEqual(['telangana-bocwwb', 'tg_state'])
+    expect(searchSchemes(withState, 'TS').map((s) => s.id)).toEqual(['telangana-bocwwb', 'tg_state'])
   })
 
   it('stays usable with a catalogue of two thousand schemes', () => {

@@ -15,6 +15,7 @@ function driveToResults(state: DialogState, maxSteps = 20): DialogState {
       const f = state.currentFollowup
       if (f.field === 'occupation') state = send(state, { type: 'textAnswer', text: 'mazdoor' })
       else if (f.answer === 'number') state = send(state, { type: 'numberAnswer', value: f.field === 'age' ? 30 : 8000 })
+      else if (f.answer === 'text') state = send(state, { type: 'textAnswer', text: f.field === 'state' ? 'Telangana' : 'Hyderabad' })
       else state = send(state, { type: 'yesNoAnswer', value: 'yes' })
     } else throw new Error(`stuck on screen ${state.screen}`)
   }

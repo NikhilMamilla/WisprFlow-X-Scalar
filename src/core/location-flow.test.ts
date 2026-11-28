@@ -62,7 +62,11 @@ describe('when the app asks for a location', () => {
       in_epf_esic_nps: false,
       pays_income_tax: false,
     }
-    expect(pickNextFollowUp(profile, matchSchemes(profile), [])).toBeNull()
+    // The bundled catalogue now contains one state scheme, so the state is the
+    // first thing blocked; with central schemes only, nothing asks for it.
+    const centralOnly = SCHEMES.filter((scheme) => scheme.geography.scope === 'central')
+    expect(pickNextFollowUp(profile, matchSchemes(profile, centralOnly), [])).toBeNull()
+    expect(pickNextFollowUp(profile, matchSchemes(profile), [])?.field).toBe('state')
     const results = matchSchemes(profile, [telangana])
     expect(results[0].status).toBe('needs_info')
     expect(pickNextFollowUp(profile, results, [])).toEqual({ field: 'state', answer: 'text', readBack: false })

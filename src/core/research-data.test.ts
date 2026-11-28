@@ -23,8 +23,8 @@ describe('shipped research register', () => {
     }
   })
 
-  it('still describes the same six catalogue schemes', () => {
-    expect(schemeIds).toEqual(['eshram', 'pmsym', 'pmsby', 'pmjjby', 'svanidhi', 'pmjdy'])
+  it('still describes the same catalogue schemes', () => {
+    expect(schemeIds).toEqual(['eshram', 'pmsym', 'pmsby', 'pmjjby', 'svanidhi', 'pmjdy', 'telangana-bocwwb'])
   })
 
   it('keeps the Telangana batch in the register, not in the matcher catalogue', () => {
@@ -32,7 +32,7 @@ describe('shipped research register', () => {
     const telangana = report.records.filter((record) => record.state === 'Telangana')
     expect(telangana).toHaveLength(85)
     expect(telangana.every((record) => record.schemeId === undefined)).toBe(true)
-    expect(schemeIds).toHaveLength(6)
+    expect(schemeIds).toHaveLength(7)
   })
 
   it('keeps unverified expansion discoveries unverified and unimportable', () => {

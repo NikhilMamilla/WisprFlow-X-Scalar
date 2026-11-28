@@ -13,14 +13,14 @@ describe('landing page', () => {
 
   it('explains the three steps and the limitation honestly', () => {
     expect(html).toContain('How it works')
-    expect(html).toContain('six schemes')
+    expect(html).toContain('seven schemes')
     expect(html).toContain('guidance, not an application')
     expect(html).toContain('not an official government')
   })
 
   it('shows every scheme in the dataset without inventing eligibility', () => {
     const cards = html.match(/class="lp-scheme"/g) ?? []
-    expect(cards.length).toBe(6)
+    expect(cards.length).toBe(7)
     expect(html).toContain('Eligibility is only decided after your answers')
     expect(html).not.toContain('You qualify')
   })

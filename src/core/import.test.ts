@@ -20,7 +20,7 @@ describe('a valid import', () => {
     expect(report.counts).toMatchObject({ examined: 1, valid: 1, invalid: 0 })
     expect(report.addedIds).toEqual(['research_one'])
     expect(report.catalogue.map((s) => s.id)).toEqual([...existingIds, 'research_one'])
-    expect(existing).toHaveLength(6) // the input catalogue is never mutated
+    expect(existing).toHaveLength(7) // the input catalogue is never mutated
   })
 
   it('accepts the { schemes: [...] } research-file shape', () => {

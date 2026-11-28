@@ -21,7 +21,7 @@ function scheme(geography: Scheme['geography']): Scheme {
 
 describe('national schemes', () => {
   it('apply with no location data at all', () => {
-    for (const s of SCHEMES) {
+    for (const s of SCHEMES.filter((scheme) => scheme.geography.scope === 'central')) {
       const result = evaluateGeography(emptyProfile(), s)
       expect(result.result).toBe('applicable')
       expect(result.missingField).toBeNull()

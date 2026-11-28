@@ -32,6 +32,8 @@ const fullVendor = {
   has_aadhaar: true,
   in_epf_esic_nps: false,
   pays_income_tax: false,
+  state: 'Telangana',
+  worked_90_days_construction: false,
 }
 
 const sessionOf = (input: unknown, schemes?: Scheme[]): JourneySession => {
@@ -423,13 +425,15 @@ describe('journey completion', () => {
       has_aadhaar: 'haan',
       pays_income_tax: 'nahi',
       in_epf_esic_nps: 'nahi',
+      state: 'Telangana',
+      worked_90_days_construction: 'nahi',
     })
     expect(final.nextQuestion).toBeNull()
     expect(final.status).toBe('READY_WITH_RESULTS')
     const pension = final.results.likelyEligible.find((r) => r.schemeId === 'pmsym')
     expect(pension?.state).toBe('LIKELY_ELIGIBLE')
-    expect(final.answers).toHaveLength(5)
-    expect(new Set(final.answers.map((a) => a.field)).size).toBe(5)
+    expect(final.answers).toHaveLength(7)
+    expect(new Set(final.answers.map((a) => a.field)).size).toBe(7)
   })
 })
 
@@ -534,6 +538,8 @@ describe('answer correction', () => {
     has_bank_account: true,
     in_epf_esic_nps: false,
     pays_income_tax: false,
+    state: 'Telangana',
+    worked_90_days_construction: true,
   }
 
   // Answers the current question with a value its input type accepts.

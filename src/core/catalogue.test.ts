@@ -13,7 +13,7 @@ describe('the bundled catalogue', () => {
   it('validates with no errors and keeps catalogue order', () => {
     expect(report.ok).toBe(true)
     expect(report.errors).toEqual([])
-    expect(report.schemes.map((s) => s.id)).toEqual(['eshram', 'pmsym', 'pmsby', 'pmjjby', 'svanidhi', 'pmjdy'])
+    expect(report.schemes.map((s) => s.id)).toEqual(['eshram', 'pmsym', 'pmsby', 'pmjjby', 'svanidhi', 'pmjdy', 'telangana-bocwwb'])
   })
 
   it('derives rules_verified from verification.status, so unverified rules stay unverified', () => {
@@ -24,12 +24,15 @@ describe('the bundled catalogue', () => {
   })
 
   it('gives every scheme a geography, a category and a source', () => {
-    for (const s of report.schemes) {
+    for (const s of report.schemes.filter((scheme) => scheme.id !== 'telangana-bocwwb')) {
       expect(s.geography.scope).toBe('central')
       expect(s.category).toBeTruthy()
       expect(s.verification.sources?.length).toBeGreaterThan(0)
       expect(s.verification.checkedOn).toBe('2026-11-27')
     }
+    const state = report.schemes.find((s) => s.id === 'telangana-bocwwb')!
+    expect(state.geography.scope).toBe('state')
+    expect(state.verification.checkedOn).toBe('2026-11-28')
   })
 
   it('records that PM Jan Dhan provides a bank account', () => {

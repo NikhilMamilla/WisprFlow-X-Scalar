@@ -28,6 +28,8 @@ const vendor = profile({
   has_aadhaar: true,
   in_epf_esic_nps: false,
   pays_income_tax: false,
+  state: 'Telangana',
+  worked_90_days_construction: false,
 })
 
 // A state scheme built from a real record, so no invented rules enter data/schemes.json.

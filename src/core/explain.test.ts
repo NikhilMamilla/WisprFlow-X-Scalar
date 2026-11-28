@@ -79,7 +79,8 @@ describe('geography', () => {
   })
 
   it('never hides a central scheme behind a state check', () => {
-    for (const s of SCHEMES) expect(matchScheme(profile({ state: 'Bihar' }), s).status).not.toBe('not_applicable')
+    for (const s of SCHEMES.filter((scheme) => scheme.geography.scope === 'central'))
+      expect(matchScheme(profile({ state: 'Bihar' }), s).status).not.toBe('not_applicable')
   })
 
   it('treats a discontinued scheme as unavailable', () => {
@@ -98,6 +99,7 @@ describe('regression guard for the six schemes', () => {
       ['pmjjby', 'qualifies'],
       ['svanidhi', 'qualifies'],
       ['pmjdy', 'not_needed'],
+      ['telangana-bocwwb', 'needs_info'],
     ])
   })
 
