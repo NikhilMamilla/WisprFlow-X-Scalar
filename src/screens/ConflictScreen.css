@@ -1,12 +1,14 @@
 .conflict-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: var(--sp-2);
   justify-content: center;
+  width: 100%;
+  max-width: 420px;
 }
 
 .conflict-buttons .btn {
-  min-width: 100px;
-  min-height: 56px;
-  font-size: 20px;
+  flex: 1 1 30%;
+  min-height: var(--sp-7);
+  font-size: var(--fs-body);
 }

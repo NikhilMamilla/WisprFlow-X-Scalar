@@ -40,10 +40,17 @@ export default function Flow() {
   const [voicesReady, setVoicesReady] = useState(false)
   const [micMessage, setMicMessage] = useState<string | null>(null)
 
+  const screenRef = useRef<HTMLDivElement>(null)
   const storySession = useRef<ListeningSession | null>(null)
   const answerRecognizer = useRef<ReturnType<typeof createRecognizer>>(null)
   const silenceTimer = useRef<number | undefined>(undefined)
   const hardStopTimer = useRef<number | undefined>(undefined)
+
+  // Screen changes move focus to the new screen's heading for screen readers.
+  useEffect(() => {
+    const heading = screenRef.current?.querySelector<HTMLElement>('[data-screen-title]')
+    heading?.focus()
+  }, [state.screen, showAbout])
 
   const lang = state.lang ?? 'en-IN'
   const stringLang = stringLangFor(lang)
@@ -243,7 +250,7 @@ export default function Flow() {
       <Header />
       {noVoice && <p className="no-voice-banner">{t(stringLang, 'no_voice_notice')}</p>}
 
-      <div key={showAbout ? 'about' : state.screen} className="screen-enter">
+      <div key={showAbout ? 'about' : state.screen} className="screen-enter" ref={screenRef}>
         {showAbout && <AboutScreen lang={stringLang} onBack={() => setShowAbout(false)} />}
 
         {!showAbout && state.screen === 'language' && (

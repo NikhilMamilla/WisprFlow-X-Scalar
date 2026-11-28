@@ -10,7 +10,7 @@ export default function LanguageScreen({ onPick }: { onPick: (lang: LanguageCode
       <DotField />
       <div className="language-content">
         <HelloBubbles />
-        <h1>
+        <h1 tabIndex={-1} data-screen-title>
           Haq <span className="accent">Bolo</span>
         </h1>
         <p className="tagline">Speak. We find your schemes.</p>

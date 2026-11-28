@@ -56,7 +56,11 @@ export default function QuestionScreen({
   return (
     <div className={primaryFallback ? 'question-screen primary-fallback' : 'question-screen'}>
       <span className="eyebrow">{t(lang, 'eyebrow_question')}</span>
-      <p className="question-text">{text}</p>
+      <div aria-live="polite" aria-atomic="true">
+        <p className="question-text" tabIndex={-1} data-screen-title>
+          {text}
+        </p>
+      </div>
       {listening && <p className="listening-indicator">{interim || t(lang, 'mic_listening')}</p>}
 
       {mode === 'yesno' && (

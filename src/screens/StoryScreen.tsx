@@ -40,7 +40,9 @@ export default function StoryScreen({
       <DotField />
       <div className="story-content">
         <span className="eyebrow">{t(lang, 'eyebrow_story')}</span>
-        <p className="prompt">{t(lang, 'story_prompt')}</p>
+        <h1 className="story-title" tabIndex={-1} data-screen-title>
+          {t(lang, 'story_prompt')}
+        </h1>
 
         {message && <p className="mic-message">{message}</p>}
 
@@ -52,14 +54,22 @@ export default function StoryScreen({
               <span className="ring" />
             </div>
           )}
-          <button type="button" className={listening ? 'story-mic listening' : 'story-mic'} onClick={onMicTap}>
+          <button
+            type="button"
+            className={listening ? 'story-mic listening' : 'story-mic'}
+            aria-pressed={listening}
+            aria-label={t(lang, listening ? 'mic_stop' : 'mic_start')}
+            onClick={onMicTap}
+          >
             {listening ? t(lang, 'mic_stop') : t(lang, 'mic_start')}
           </button>
         </div>
 
         <Waveform active={listening} bars={7} />
 
-        <p className="transcript">{interim || (listening ? t(lang, 'mic_listening') : ' ')}</p>
+        <p className="transcript" aria-live="polite">
+          {interim || (listening ? t(lang, 'mic_listening') : ' ')}
+        </p>
 
         <ProfileChips profile={profile} lang={lang} />
 
