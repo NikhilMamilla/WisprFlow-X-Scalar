@@ -44,9 +44,20 @@ It deliberately does **not** depend on an LLM. Eligibility is deterministic and 
 
 Every user-facing string lives in `src/i18n/strings.ts`. Telugu UI text is written but **needs native review**; it is marked in the file. Scheme content falls back Telugu -> Hindi, never to English or Roman script (`src/core/localization.ts`).
 
+## Pilot plan (targets, not results)
+
+The first target is about 200 street vendors and construction workers in two or three markets and labour adda points in Hyderabad, using the Telugu and Hindi voice flow. The measures we would use: at least 80% finish a session without help, a CSC operator agrees with at least 95% of 50 reviewed sessions, and at least 40% of workers contacted after 30 days enrolled in one scheme. These are targets. There is no baseline or pilot data yet.
+
+## What it depends on
+
+- **Speech:** the browser's Web Speech API. On Chrome, recognition is done by the browser vendor's speech service, so audio leaves the device; the About screen says so. If recognition is unavailable, fails twice or the microphone is denied, the app falls back to typed input, Haan/Nahi buttons and a "Play sample" story.
+- **No AI model and no paid API.** Matching is plain code over the scheme data. The app needs no key. `/api/extract` returns 501 ("key not set") and nothing depends on it.
+- **Hosting:** the matching runs in the browser, so the built `dist/` can be served by any static host as well as by the included Express server and Docker setup.
+- **Data:** a hand-checked JSON catalogue with a source link and a check date on every scheme. If an official source changes, the affected scheme is flagged and re-checked; rules we could not confirm are shown as unverified.
+
 ## Scheme catalogue
 
-Six hand-built schemes in `data/schemes.json`: e-Shram, PM-SYM, PMSBY, PMJJBY, PM SVANidhi and PM Jan Dhan Yojana. PM Jan Dhan is also a prerequisite: insurance and pension need a bank account in the user's own name.
+Seven hand-built schemes in `data/schemes.json`: six national ones (e-Shram, PM-SYM, PMSBY, PMJJBY, PM SVANidhi, PM Jan Dhan Yojana) and one Telangana scheme (the Telangana Building and Other Construction Workers Welfare Board registration, for construction workers). The Telangana record comes from the team's research register; it is described only as a registration, with no benefit amounts, because the Board has not published its claim procedure. PM Jan Dhan is also a prerequisite: insurance and pension need a bank account in the user's own name.
 
 Each scheme record carries identity (id, aliases), classification (category, tags, beneficiary groups), geography (central / state / UT / multi-state / district), boolean-field eligibility rules, documents, optional application and structured benefit data, and verification metadata (status, check date, sources).
 
@@ -122,9 +133,9 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the data model, registry, r
 
 ## Known limitations
 
-- Six schemes only; rules are hand-built and one of them (e-Shram, PM SVANidhi) is explicitly only partially verified.
+- Seven schemes only; rules are hand-built and two of them (e-Shram, PM SVANidhi) are explicitly only partially verified.
 - Some `source_url` values are the closest official document the team had, not necessarily the scheme's own page; the catalogue validator warns about non-government domains.
 - District-level schemes can be evaluated from a user-supplied district, but there is no bundled district list, so a district is compared only as text against what a scheme declares. An Indic-script district is treated as unverified rather than guessed.
-- No state or district schemes are in the catalogue yet, so in the current build the location questions never appear.
+- Only one state scheme (Telangana construction workers) is in the catalogue. The state question appears only when a scheme needs it; everyone else is never asked.
 - Telugu translations need native review.
 - Browser support depends on the Web Speech API; typed input and the sample story work without a microphone.

@@ -101,3 +101,20 @@ export default function ProfileChips({
     </div>
   )
 }
+
+// Shared with the printed sheet so it labels every fact the same way as the chips.
+export const CHIP_ORDER = ORDER
+export { chipParts }
+export function chipLabel(field: ProfileField, lang: StringLang): string {
+  const keys: Partial<Record<ProfileField, string>> = {
+    occupation: 'chip_occupation',
+    age: 'chip_age',
+    monthly_income: 'chip_income',
+    dependants: 'chip_dependants',
+    urban_or_rural: 'chip_place',
+    state: 'chip_state',
+    district: 'chip_district',
+    ...FIELD_LABEL,
+  }
+  return t(lang, keys[field] ?? field)
+}

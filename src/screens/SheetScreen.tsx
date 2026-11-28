@@ -1,17 +1,8 @@
 import { SCHEMES, type MatchResult, type Profile } from '../core'
 import { t, type StringLang } from '../i18n/strings'
-import { documentNames, occupationLabel, schemeName, urbanRuralLabel } from './localize'
+import { CHIP_ORDER, chipLabel, chipParts } from './ProfileChips'
+import { documentNames, formatCheckedOn, schemeName } from './localize'
 import './SheetScreen.css'
-
-// Village/city plus the state and district when the user gave them.
-function locationText(profile: Profile, lang: StringLang): string {
-  const parts = [
-    profile.urban_or_rural ? urbanRuralLabel(profile.urban_or_rural, lang) : null,
-    profile.state,
-    profile.district,
-  ].filter((value): value is string => Boolean(value))
-  return parts.length > 0 ? parts.join(' · ') : '—'
-}
 
 function statusLabel(id: string, status: MatchResult['status'], lang: StringLang): string {
   if (status === 'qualifies') {
@@ -54,44 +45,53 @@ export default function SheetScreen({
       </div>
 
       <div className="sheet-page">
+        <p className="sheet-prepared">{t(lang, 'sheet_footer')}</p>
         <span className="eyebrow no-print">{t(lang, 'eyebrow_sheet')}</span>
         <h1>{t(lang, 'sheet_title')}</h1>
-        <p>
-          {t(lang, 'sheet_age_label')}: {profile.age ?? '—'} · {t(lang, 'sheet_occupation_label')}:{' '}
-          {profile.occupation ? occupationLabel(profile.occupation, lang) : '—'} ·{' '}
-          {t(lang, 'sheet_location_label')}: {locationText(profile, lang)}
-        </p>
 
-        <table>
-          <tbody>
-            {ordered.map((r) => {
-              const scheme = SCHEMES.find((s) => s.id === r.id)
-              if (!scheme) return null
-              return (
-                <tr key={r.id}>
-                  <td>{schemeName(scheme, lang)}</td>
-                  <td>{statusLabel(r.id, r.status, lang)}</td>
-                  <td>
-                    {t(lang, 'checked_on')} {scheme.verification.checkedOn ?? '—'} ·{' '}
-                    <a className="quiet-link" href={scheme.source_url} target="_blank" rel="noreferrer">
-                      {t(lang, 'link_source')}
-                    </a>
-                  </td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
+        <h2>{t(lang, 'sheet_details_heading')}</h2>
+        <dl className="sheet-details">
+          {CHIP_ORDER.map((field) => {
+            const known = profile[field] !== null
+            // The 90-day question only applies to construction workers; skip it when never asked.
+            if (!known && field === 'worked_90_days_construction') return null
+            return (
+              <div key={field} className="sheet-detail">
+                <dt>{chipLabel(field, lang)}</dt>
+                <dd>{known ? chipParts(profile, field, lang).value : t(lang, 'sheet_not_told')}</dd>
+              </div>
+            )
+          })}
+        </dl>
+
+        <h2>{t(lang, 'sheet_schemes_heading')}</h2>
+        <ul className="sheet-schemes">
+          {ordered.map((r) => {
+            const scheme = SCHEMES.find((s) => s.id === r.id)
+            if (!scheme) return null
+            return (
+              <li key={r.id}>
+                <strong>{schemeName(scheme, lang)}</strong>
+                <span className="sheet-status">{statusLabel(r.id, r.status, lang)}</span>
+                <span className="sheet-checked">
+                  {t(lang, 'checked_on')} {formatCheckedOn(scheme.verification.checkedOn)} ·{' '}
+                  <a className="quiet-link" href={scheme.source_url} target="_blank" rel="noreferrer">
+                    {t(lang, 'link_source')}
+                  </a>
+                </span>
+              </li>
+            )
+          })}
+        </ul>
 
         <h2>{t(lang, 'sheet_documents_heading')}</h2>
-        <ul>
+        <ul className="sheet-docs">
           {documents.map((d) => (
             <li key={d}>{d}</li>
           ))}
         </ul>
 
-        {hasUnverified && <p>{t(lang, 'sheet_note_unverified')}</p>}
-        <p className="footer">{t(lang, 'sheet_footer')}</p>
+        {hasUnverified && <p className="sheet-note">{t(lang, 'sheet_note_unverified')}</p>}
       </div>
     </div>
   )

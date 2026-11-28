@@ -6,7 +6,7 @@
 }
 
 .about-screen p {
-  font-size: var(--size-body-min);
+  font-size: var(--fs-body);
   color: var(--ink2);
   margin: 16px 0;
 }

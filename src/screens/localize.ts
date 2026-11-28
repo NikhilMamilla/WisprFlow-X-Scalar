@@ -31,3 +31,11 @@ export function occupationLabel(occupation: Occupation, lang: StringLang): strin
 export function urbanRuralLabel(value: 'urban' | 'rural', lang: StringLang): string {
   return t(lang, value === 'urban' ? 'label_urban' : 'label_rural')
 }
+
+// "2026-11-28" -> "28 Nov 2026". Falls back to the raw text for anything unparseable.
+export function formatCheckedOn(iso: string | null | undefined): string {
+  if (!iso) return '—'
+  const date = new Date(`${iso}T00:00:00`)
+  if (Number.isNaN(date.getTime())) return iso
+  return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+}

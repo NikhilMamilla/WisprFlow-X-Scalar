@@ -1,6 +1,6 @@
 import { SCHEMES, locationSensitive, type MatchResult, type Profile } from '../core'
 import { t, type StringLang } from '../i18n/strings'
-import { documentNames, schemeBenefit, schemeName } from './localize'
+import { documentNames, formatCheckedOn, schemeBenefit, schemeName } from './localize'
 import './ResultsScreen.css'
 
 function reasons(result: MatchResult, lang: StringLang): string[] {
@@ -70,9 +70,16 @@ function Card({
         </ul>
       )}
 
-      <p className="documents">{documentNames(scheme, lang).join(', ')}</p>
+      <details className="docs">
+        <summary>{t(lang, 'results_docs_toggle')}</summary>
+        <ul>
+          {documentNames(scheme, lang).map((d) => (
+            <li key={d}>{d}</li>
+          ))}
+        </ul>
+      </details>
       <p className="checked-on">
-        {t(lang, 'checked_on')} {scheme.verification.checkedOn ?? '—'} ·{' '}
+        {t(lang, 'checked_on')} {formatCheckedOn(scheme.verification.checkedOn)} ·{' '}
         <a className="quiet-link" href={scheme.source_url} target="_blank" rel="noreferrer">
           {t(lang, 'link_source')}
         </a>
@@ -143,24 +150,34 @@ export default function ResultsScreen({
   return (
     <div className="results-screen">
       <span className="eyebrow">{t(lang, 'eyebrow_results')}</span>
-      <h1>{t(lang, 'results_summary_header')}</h1>
-      <p className="why">{t(lang, 'results_trust_note')}</p>
+      <h1 className="results-title">{t(lang, 'results_summary_header')}</h1>
+      <p className="results-note">{t(lang, 'results_trust_note')}</p>
       {groups.map(({ heading, items, highlight, pillClass, pillKey }) => {
         if (items.length === 0) return null
+        const cards = items.map((r) => (
+          <Card
+            key={r.id}
+            result={r}
+            profile={profile}
+            lang={lang}
+            highlighted={highlight}
+            pillClass={pillClass}
+            pillLabel={t(lang, pillKey)}
+          />
+        ))
+        // Presentation only: the "not eligible" group stays out of the way until opened.
+        if (heading === 'results_heading_not_eligible') {
+          return (
+            <details key={heading} className="result-group result-collapsed">
+              <summary>{t(lang, 'results_not_eligible_toggle', { n: items.length })}</summary>
+              {cards}
+            </details>
+          )
+        }
         return (
           <section key={heading} className="result-group">
             <h2>{t(lang, heading)}</h2>
-            {items.map((r) => (
-              <Card
-                key={r.id}
-                result={r}
-                profile={profile}
-                lang={lang}
-                highlighted={highlight}
-                pillClass={pillClass}
-                pillLabel={t(lang, pillKey)}
-              />
-            ))}
+            {cards}
           </section>
         )
       })}

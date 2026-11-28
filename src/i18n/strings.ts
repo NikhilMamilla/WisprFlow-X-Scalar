@@ -286,15 +286,24 @@ export const STRINGS: Record<string, Entry> = {
     te: 'హక్ బోలో ద్వారా తయారు చేయబడింది. ఇది దరఖాస్తు కాదు. దీన్ని సీఎస్సీ లేదా కార్మిక కార్యాలయానికి తీసుకెళ్లండి.', // NEEDS NATIVE TELUGU REVIEW
   },
   print_label: { en: 'Print', hi: 'प्रिंट करें', te: 'ప్రింట్ చేయండి' }, // NEEDS NATIVE TELUGU REVIEW
+  sheet_details_heading: { en: 'Aapki jaankari', hi: 'आपकी जानकारी', te: 'మీ వివరాలు' }, // NEEDS NATIVE TELUGU REVIEW
+  sheet_schemes_heading: { en: 'Yeh schemes', hi: 'ये योजनाएं', te: 'ఈ పథకాలు' }, // NEEDS NATIVE TELUGU REVIEW
+  sheet_not_told: { en: 'Bataya nahi', hi: 'बताया नहीं', te: 'చెప్పలేదు' }, // NEEDS NATIVE TELUGU REVIEW
+  results_docs_toggle: { en: 'Kya le jaana hai', hi: 'क्या ले जाना है', te: 'ఏమి తీసుకెళ్లాలి' }, // NEEDS NATIVE TELUGU REVIEW
+  results_not_eligible_toggle: {
+    en: 'Abhi eligible nahi ({n})',
+    hi: 'अभी योग्य नहीं ({n})',
+    te: 'ఇప్పుడు అర్హులు కాదు ({n})', // NEEDS NATIVE TELUGU REVIEW
+  },
 
   // --- about ---
   app_about_link: { en: 'About', hi: 'जानकारी', te: 'గురించి' }, // NEEDS NATIVE TELUGU REVIEW
   eyebrow_about: { en: 'About', hi: 'जानकारी', te: 'గురించి' }, // NEEDS NATIVE TELUGU REVIEW
   about_title: { en: 'Haq Bolo ke baare mein', hi: 'हक़ बोलो के बारे में', te: 'హక్ బోలో గురించి' }, // NEEDS NATIVE TELUGU REVIEW
   about_honesty_schemes: {
-    en: 'Yeh list haath se bani hai aur sirf 6 schemes ko dekhti hai. Poori list nahi hai.',
-    hi: 'यह सूची हाथ से बनी है और केवल 6 योजनाओं को देखती है। पूरी सूची नहीं है।',
-    te: 'ఈ జాబితా చేతితో తయారు చేసినది, 6 పథకాలను మాత్రమే చూస్తుంది. పూర్తి జాబితా కాదు.', // NEEDS NATIVE TELUGU REVIEW
+    en: 'Yeh list haath se bani hai aur abhi sirf 7 schemes ko dekhti hai (6 poore India ke, 1 Telangana ka). Poori list nahi hai.',
+    hi: 'यह सूची हाथ से बनी है और अभी केवल 7 योजनाओं को देखती है (6 पूरे भारत की, 1 तेलंगाना की)। पूरी सूची नहीं है।',
+    te: 'ఈ జాబితా చేతితో తయారు చేసినది, ప్రస్తుతం 7 పథకాలను మాత్రమే చూస్తుంది (6 దేశవ్యాప్తం, 1 తెలంగాణది). పూర్తి జాబితా కాదు.', // NEEDS NATIVE TELUGU REVIEW
   },
   about_honesty_decision: {
     en: 'Yeh sirf margdarshan hai, sarkar ka faisla nahi. Office jaakar confirm kariye.',
@@ -302,9 +311,9 @@ export const STRINGS: Record<string, Entry> = {
     te: 'ఇది కేవలం మార్గదర్శనం, ప్రభుత్వ నిర్ణయం కాదు. కార్యాలయంలో నిర్ధారించుకోండి.', // NEEDS NATIVE TELUGU REVIEW
   },
   about_honesty_voice: {
-    en: 'Aapki awaaz is phone/browser ke speech service se samjhi jaati hai. Transcript isi browser mein rehta hai, hamare server par nahi jaata.',
-    hi: 'आपकी आवाज़ इस फ़ोन/ब्राउज़र की स्पीच सेवा से समझी जाती है। ट्रांसक्रिप्ट इसी ब्राउज़र में रहता है, हमारे सर्वर पर नहीं जाता।',
-    te: 'మీ మాటను ఈ ఫోన్/బ్రౌజర్ స్పీచ్ సేవ అర్థం చేసుకుంటుంది. ట్రాన్స్క్రిప్ట్ ఈ బ్రౌజర్‌లోనే ఉంటుంది, మా సర్వర్‌కు వెళ్లదు.', // NEEDS NATIVE TELUGU REVIEW
+    en: 'Aapki awaaz aapke browser ki speech service se samjhi jaati hai. Matching is app mein plain rules se hoti hai; koi AI model aapki kahani nahi padhta. Hamare server par kuch store nahi hota.',
+    hi: 'आपकी आवाज़ आपके ब्राउज़र की स्पीच सेवा से समझी जाती है। मिलान इस ऐप में सरल नियमों से होता है; कोई AI मॉडल आपकी कहानी नहीं पढ़ता। हमारे सर्वर पर कुछ स्टोर नहीं होता।',
+    te: 'మీ మాటను మీ బ్రౌజర్ స్పీచ్ సేవ అర్థం చేసుకుంటుంది. పథకాల సరిపోలిక ఈ యాప్‌లో సాధారణ నియమాలతో జరుగుతుంది; ఏ AI మోడల్ మీ కథను చదవదు. మా సర్వర్‌లో ఏమీ నిల్వ చేయబడదు.', // NEEDS NATIVE TELUGU REVIEW
   },
   back_label: { en: 'Back', hi: 'वापस', te: 'వెనుకకు' }, // NEEDS NATIVE TELUGU REVIEW
 
