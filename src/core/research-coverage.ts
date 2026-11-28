@@ -24,13 +24,17 @@ export interface CoverageArea {
   label: string
   kind: CoverageKind
   status: CoverageStatus
-  records: number
+  records: number // every record in the area, discovered or researched
+  researched: number // records with at least one piece of registered evidence
+  discovered: number // listing-only records, counted but never as coverage
   verified: number
   note?: string
 }
 
 export interface CoverageTotals {
   records: number
+  researched: number
+  discoveredOnly: number
   central: number
   state: number
   unionTerritory: number
@@ -57,18 +61,33 @@ export interface CoverageReport {
   priorities: string[]
 }
 
+// Import readiness is a separate question from coverage: a well-researched
+// scheme can still be NEEDS_INFO while it waits for one missing detail. Only a
+// research status that is actually blocked makes an area NEEDS_MORE_RESEARCH.
 const needsWork = (record: ResearchRecord): boolean =>
-  record.status === 'NEEDS_RESEARCH' ||
-  record.status === 'CONFLICTING' ||
-  record.importReadiness === 'NEEDS_INFO'
+  record.status === 'NEEDS_RESEARCH' || record.status === 'CONFLICTING'
 
-// Records exist and every one of them is verified -> COVERED. Records exist but
-// at least one is not yet verified -> PARTIAL. No records -> whatever the
-// researcher claimed, otherwise NOT_RESEARCHED.
+// A scheme seen on a listing page and never looked at is a discovery, not
+// research. Counting it as coverage would inflate every number in the report.
+export function discoveredOnly(record: ResearchRecord): boolean {
+  return (
+    (record.status === 'DISCOVERED' || record.status === 'CATALOGUED') &&
+    record.eligibilityEvidence.length === 0 &&
+    record.verificationEvidence.length === 0
+  )
+}
+
+// COVERED needs every record in the area researched and verified. Researched but
+// incomplete -> PARTIAL. Only listings -> NEEDS_MORE_RESEARCH, because something
+// was found and nothing was studied. No records -> NOT_RESEARCHED.
 function areaStatus(matched: ResearchRecord[]): CoverageStatus {
   if (matched.length === 0) return 'NOT_RESEARCHED'
-  if (matched.some(needsWork)) return 'NEEDS_MORE_RESEARCH'
-  if (matched.every((record) => record.verificationStatus === 'VERIFIED')) return 'COVERED'
+  const researched = matched.filter((record) => !discoveredOnly(record))
+  if (researched.length === 0) return 'NEEDS_MORE_RESEARCH'
+  if (researched.some(needsWork)) return 'NEEDS_MORE_RESEARCH'
+  if (researched.length === matched.length && researched.every((record) => record.verificationStatus === 'VERIFIED')) {
+    return 'COVERED'
+  }
   return 'PARTIAL'
 }
 
@@ -80,13 +99,16 @@ function area(
   claim?: CoverageClaim,
 ): CoverageArea {
   const status = matched.length === 0 && claim ? claim.status : areaStatus(matched)
+  const researched = matched.filter((record) => !discoveredOnly(record))
   return {
     key,
     label,
     kind,
     status,
     records: matched.length,
-    verified: matched.filter((record) => record.verificationStatus === 'VERIFIED').length,
+    researched: researched.length,
+    discovered: matched.length - researched.length,
+    verified: researched.filter((record) => record.verificationStatus === 'VERIFIED').length,
     ...(claim?.note && matched.length === 0 ? { note: claim.note } : {}),
   }
 }
@@ -151,8 +173,11 @@ export function buildCoverageReport(records: readonly ResearchRecord[], claims: 
     return rank(a) - rank(b)
   })
 
+  const researchedRecords = records.filter((record) => !discoveredOnly(record))
   const totals: CoverageTotals = {
     records: records.length,
+    researched: researchedRecords.length,
+    discoveredOnly: records.length - researchedRecords.length,
     central: centralRecords.length,
     state: records.filter((record) => record.level === 'STATE').length,
     unionTerritory: records.filter((record) => record.level === 'UT').length,
@@ -194,10 +219,12 @@ export function formatCoverageReport(report: CoverageReport): string {
   const lines = [
     'Research coverage',
     '-----------------',
-    `records: ${t.records}  central: ${t.central}  state: ${t.state}  UT: ${t.unionTerritory}`,
+    `records: ${t.records} (researched ${t.researched}, discovered only ${t.discoveredOnly})`,
+    `central: ${t.central}  state: ${t.state}  UT: ${t.unionTerritory}`,
     `verified: ${t.verified}  partially verified: ${t.partiallyVerified}  eligibility stage + evidence: ${t.eligibilityVerified}`,
     `import ready: ${t.importReady}  imported: ${t.imported}  missing sources: ${t.missingSources}`,
     `conflicting: ${t.conflicts}  needs research: ${t.needsResearch}  categories: ${t.categories}`,
+    `discovery is not coverage: ${t.discoveredOnly} record(s) are listings only`,
     '',
     countLine('States', report.states),
     countLine('Union Territories', report.unionTerritories),
@@ -205,10 +232,10 @@ export function formatCoverageReport(report: CoverageReport): string {
     countLine('Age bands', report.ageBands),
     '',
     'Coverage by beneficiary group',
-    ...report.groups.map((g) => `  ${g.label}: ${g.status} (${g.records} record(s))`),
+    ...report.groups.map((g) => `  ${g.label}: ${g.status} (${g.researched} researched, ${g.discovered} discovered)`),
     '',
     'Coverage by category',
-    ...report.categories.map((c) => `  ${c.label}: ${c.status} (${c.records} record(s))`),
+    ...report.categories.map((c) => `  ${c.label}: ${c.status} (${c.researched} researched, ${c.discovered} discovered)`),
     '',
     'Research gaps and priorities',
     ...report.priorities.map((p) => `  ${p}`),

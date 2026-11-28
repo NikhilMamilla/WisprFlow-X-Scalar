@@ -197,6 +197,8 @@ export const RESEARCH_GROUPS = [
   { key: 'orphans', label: 'Orphans' },
   { key: 'veterans', label: 'Veterans and defence families' },
   { key: 'entrepreneurs', label: 'Entrepreneurs' },
+  { key: 'weavers', label: 'Weavers and handloom workers' },
+  { key: 'transgender', label: 'Transgender persons' },
 ] as const
 export type ResearchGroup = (typeof RESEARCH_GROUPS)[number]['key']
 
@@ -207,6 +209,21 @@ export const COVERAGE_AGE_BANDS = [
   { key: 'seniors_60_plus', label: 'Seniors (60+)' },
 ] as const
 export type CoverageAgeBand = (typeof COVERAGE_AGE_BANDS)[number]['key']
+
+// What the scheme gives, as the source states it. Amounts are only recorded
+// when a source prints them; none is inferred.
+export const BENEFIT_KINDS = ['cash', 'in_kind', 'service', 'loan', 'subsidy', 'insurance'] as const
+export type BenefitKind = (typeof BENEFIT_KINDS)[number]
+
+export interface ResearchBenefit {
+  kind: BenefitKind
+  summary?: string
+  amountInr?: number
+  // Free text for anything an amount cannot express ("up to", "per acre",
+  // "60 days at 50% wages"), copied from the source rather than computed.
+  amountNote?: string
+  frequency?: string
+}
 
 export interface ResearchEvidence {
   sourceId: string
@@ -270,6 +287,10 @@ export interface ResearchRecord {
   eligibilityEvidence: ResearchEvidence[]
   verificationEvidence: ResearchEvidence[]
   benefitSummary?: string
+  benefit?: ResearchBenefit
+  // District-restricted schemes only. Empty means statewide (or not studied).
+  districts: string[]
+  applicationNotes?: string
   eligibilityConditions: ResearchCondition[]
   exclusions: string[]
   prerequisites: string[]
@@ -392,7 +413,15 @@ export function validateResearch(input: unknown, options: ResearchValidationOpti
   }
 
   // --- source register ---
+  // A source can be associated with a catalogue scheme or with a research
+  // record that has not been imported yet, so both namespaces are accepted.
+  const declaredRecordIds = new Set(
+    (input.records as unknown[]).filter(isRecord).map((record) => (isText(record.id) ? record.id : '')).filter(Boolean),
+  )
   const sourceById = new Map<string, ResearchSource>()
+  // One URL registered twice is one source pretending to be two: either a
+  // duplicate entry or two ids that will drift apart.
+  const sourceUrlOwner = new Map<string, string>()
   input.sources.forEach((raw, index) => {
     const at = `sources[${index}]`
     if (!isRecord(raw)) {
@@ -406,6 +435,12 @@ export function validateResearch(input: unknown, options: ResearchValidationOpti
     else if (!ID_PATTERN.test(raw.id)) error(key('id'), 'invalid_source_id', `id "${raw.id}" must be lowercase letters, digits, - or _`)
     else if (sourceById.has(raw.id)) error(key('id'), 'duplicate_source_id', `duplicate source id "${raw.id}"`)
     if (!validUrl(raw.url)) error(key('url'), 'invalid_url', `"${String(raw.url)}" is not a valid http(s) URL`)
+    else {
+      const url = raw.url as string
+      const owner = sourceUrlOwner.get(url)
+      if (owner) error(key('url'), 'duplicate_source_url', `the same URL is already registered as "${owner}"`)
+      else sourceUrlOwner.set(url, id || at)
+    }
     if (!isText(raw.title)) error(key('title'), 'missing_field', 'title is required')
     if (!isText(raw.issuedBy)) error(key('issuedBy'), 'missing_field', 'issuedBy (issuing authority) is required')
     if (!inList(GOVERNMENT_LEVELS, raw.level)) error(key('level'), 'invalid_level', `unknown government level "${String(raw.level)}"`)
@@ -435,6 +470,14 @@ export function validateResearch(input: unknown, options: ResearchValidationOpti
     }
     if (raw.schemeIds !== undefined && (!Array.isArray(raw.schemeIds) || raw.schemeIds.some((s) => !isText(s)))) {
       error(key('schemeIds'), 'invalid_scheme_ids', 'schemeIds must be an array of scheme ids')
+    } else if (Array.isArray(raw.schemeIds) && options.schemeIds) {
+      raw.schemeIds.forEach((schemeId, i) => {
+        if (!isText(schemeId)) return
+        const known = declaredRecordIds.has(schemeId) || options.schemeIds?.includes(schemeId)
+        if (!known) {
+          error(`${key('schemeIds')}[${i}]`, 'unknown_scheme_reference', `"${schemeId}" is neither a research record nor a catalogue scheme`)
+        }
+      })
     }
     if (id && !sourceById.has(id)) sourceById.set(id, raw as unknown as ResearchSource)
   })
@@ -579,6 +622,39 @@ export function validateResearch(input: unknown, options: ResearchValidationOpti
       error(key('confidence'), 'invalid_confidence', 'confidence must be high, medium or low')
     }
 
+    if (raw.benefit !== undefined) {
+      if (!isRecord(raw.benefit)) {
+        error(key('benefit'), 'invalid_benefit', 'benefit must be an object with a kind')
+      } else {
+        if (!inList(BENEFIT_KINDS, raw.benefit.kind)) {
+          error(key('benefit.kind'), 'invalid_benefit_kind', `unknown benefit kind "${String(raw.benefit.kind)}"`)
+        }
+        if (
+          raw.benefit.amountInr !== undefined &&
+          (typeof raw.benefit.amountInr !== 'number' || !Number.isFinite(raw.benefit.amountInr) || raw.benefit.amountInr <= 0)
+        ) {
+          error(key('benefit.amountInr'), 'invalid_benefit_amount', 'amountInr must be a positive number when present')
+        }
+        for (const field of ['summary', 'amountNote', 'frequency'] as const) {
+          if (raw.benefit[field] !== undefined && !isText(raw.benefit[field])) {
+            error(key(`benefit.${field}`), 'invalid_benefit', `${field} must be a non-empty string when present`)
+          }
+        }
+      }
+    }
+    if (raw.applicationNotes !== undefined && !isText(raw.applicationNotes)) {
+      error(key('applicationNotes'), 'invalid_application_notes', 'applicationNotes must be a non-empty string')
+    }
+    if (raw.districts !== undefined) {
+      if (!Array.isArray(raw.districts) || raw.districts.some((district) => !isText(district))) {
+        error(key('districts'), 'invalid_districts', 'districts must be an array of district names')
+      } else if (level === 'CENTRAL' && raw.districts.length > 0) {
+        error(key('districts'), 'level_mismatch', 'a central record cannot list districts')
+      } else if (raw.districts.length > 0) {
+        warn(key('districts'), 'districts_unverified', 'no verified district table is bundled; these district names cannot be cross-checked')
+      }
+    }
+
     if (raw.eligibilityConditions !== undefined) {
       if (!Array.isArray(raw.eligibilityConditions)) {
         error(key('eligibilityConditions'), 'invalid_conditions', 'eligibilityConditions must be an array')
@@ -670,6 +746,42 @@ export function validateResearch(input: unknown, options: ResearchValidationOpti
         warn(key('eligibilityConditions'), 'no_conditions_recorded', 'no eligibility conditions recorded')
       }
     }
+    // --- a research status may not outrun its evidence ---
+    const conditions = Array.isArray(raw.eligibilityConditions) ? raw.eligibilityConditions : []
+    const unsourcedCondition = conditions.some((condition) => isRecord(condition) && condition.sourceId === undefined)
+    if (status === 'ELIGIBILITY_VERIFIED' || status === 'READY_FOR_IMPORT') {
+      if (conditions.length === 0) {
+        error(
+          key('eligibilityConditions'),
+          'eligibility_verified_without_conditions',
+          'eligibility cannot be verified when no eligibility condition is recorded',
+        )
+      }
+      if (unsourcedCondition) {
+        error(
+          key('eligibilityConditions'),
+          'eligibility_verified_with_unsourced_condition',
+          'every condition must name the source that states it before eligibility can be verified',
+        )
+      }
+      if (evidenceCount === 0) {
+        error(key('eligibilityEvidence'), 'eligibility_verified_without_evidence', 'eligibility verification needs eligibility evidence')
+      }
+    }
+    if (status === 'OFFICIALLY_VERIFIED' && evidenceCount + verificationCount === 0) {
+      error(key('verificationEvidence'), 'official_verification_without_evidence', 'official verification needs at least one source')
+    }
+    if (verificationStatus === 'VERIFIED' && conditions.length > 0 && unsourcedCondition) {
+      error(
+        key('eligibilityConditions'),
+        'verified_with_unsourced_condition',
+        'a fully verified record cannot have an eligibility condition without a source',
+      )
+    }
+    if ((status === 'OUTDATED' || raw.schemeStatus === 'CLOSED') && verificationStatus === 'VERIFIED') {
+      warn(path, 'outdated_marked_verified', 'a closed or outdated scheme should not be marked fully verified')
+    }
+
     if (validDate(raw.discoveredOn) && raw.discoveredOn > today) {
       warn(key('discoveredOn'), 'future_date', 'discoveredOn is in the future')
     }
@@ -739,6 +851,7 @@ function normalizeRecord(raw: Record<string, unknown>): ResearchRecord {
     eligibilityConditions: Array.isArray(raw.eligibilityConditions)
       ? (raw.eligibilityConditions as ResearchCondition[])
       : [],
+    districts: textList(raw.districts),
     exclusions: textList(raw.exclusions),
     prerequisites: textList(raw.prerequisites),
     documents: textList(raw.documents),
