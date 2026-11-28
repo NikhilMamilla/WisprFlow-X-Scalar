@@ -129,6 +129,16 @@ Status:
 - 28 tests; engine regression suite unchanged and passing.
 - Not built: UI, chat, voice, localisation of the new strings.
 
+## M9.6 - Citizen journey orchestration (implemented)
+In-memory sessions that sequence start → question → answer → re-evaluation → results, reusing the matcher and the M9.5 explanation layer. See docs/CITIZEN_JOURNEY_ORCHESTRATION_M9_6.md.
+
+Status:
+- `src/core/journey.ts`: JourneyStore plus stateless `beginJourney`/`submitAnswer`/`pauseJourney`/`resumeJourney`/`completeJourney`.
+- Derived states: COLLECTING_INFORMATION, READY_WITH_RESULTS, NEEDS_VERIFICATION; explicit PAUSED and COMPLETED.
+- Deterministic question order: coverage, then providing fields, then fixed field order, then id.
+- Invalid answers are refused with typed errors and leave the frozen session untouched.
+- 37 tests; no scheme, rule or research data changed. Sessions live in memory only.
+
 ## M5 (original plan, now later work) - Optional LLM extractor and Telugu polish
 POST /api/extract uses the LLM only if LLM_API_KEY is set, otherwise the rule-based extractor. Same output schema. Improve Telugu phrases and voice fallbacks from VOICE_FINDINGS.md.
 Done when: app behaves identically with no key, and better on messy speech with a key.
