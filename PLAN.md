@@ -119,6 +119,16 @@ Status:
 - New `npm run research -- sources` re-verification queue (deterministic, no network); 2 tests.
 - Register now 98 records / 101 sources; 0 import-ready; data/schemes.json unchanged.
 
+## M9.5 - Citizen explanation layer (implemented)
+A read-only layer over the matcher: four citizen states, condition-by-condition reasons, questions generated from unanswered conditions, and source/provenance output. See docs/CITIZEN_EXPLANATION_LAYER_M9_5.md.
+
+Status:
+- `src/core/citizen.ts`: LIKELY_ELIGIBLE / NOT_ELIGIBLE / MORE_INFORMATION_NEEDED / NEEDS_VERIFICATION, derived from the existing rule evaluations; no rule, scheme or verification status changed.
+- Questions are one per unanswered field, deduplicated across schemes, with stable ids, input types, groups and validation.
+- Application facts are only reported when documented; everything else is listed as unavailable and shows "Information not verified yet."
+- 28 tests; engine regression suite unchanged and passing.
+- Not built: UI, chat, voice, localisation of the new strings.
+
 ## M5 (original plan, now later work) - Optional LLM extractor and Telugu polish
 POST /api/extract uses the LLM only if LLM_API_KEY is set, otherwise the rule-based extractor. Same output schema. Improve Telugu phrases and voice fallbacks from VOICE_FINDINGS.md.
 Done when: app behaves identically with no key, and better on messy speech with a key.
