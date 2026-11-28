@@ -378,7 +378,7 @@
     {
       "id": "tg-rajiv-yuva-guidelines",
       "url": "https://cdn.s3waas.gov.in/s3fa3a3c407f82377f55c19c5d403335c7/uploads/2025/02/2025040263.pdf",
-      "title": "Rajiv Yuva Vikasam scheme guidelines (economic support schemes)",
+      "title": "G.O.Ms.No.7 (25.03.2025) - welfare corporation economic support",
       "issuedBy": "Government of Telangana",
       "level": "STATE",
       "geography": [
@@ -390,7 +390,10 @@
       "change": {
         "status": "UNCHECKED"
       },
-      "licenseNotes": "PDF served from a Government of Telangana S3WaaS CDN path; the copy indexed by a third-party site was used only to read the text, the citation points at the government host."
+      "licenseNotes": "Current subsidy slabs, income limits, age limits, documents and the OBMMS application route for corporation schemes, including Rajiv Yuva Vikasam.",
+      "schemeIds": [
+        "research-bc-margin-money"
+      ]
     },
     {
       "id": "scpwd-aasara-go",
@@ -880,7 +883,8 @@
         "status": "UNCHECKED"
       },
       "schemeIds": [
-        "research-aarogyasri"
+        "research-aarogyasri",
+        "research-cm-relief-fund"
       ],
       "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
     },
@@ -1536,6 +1540,365 @@
         "research-pm-surya-ghar"
       ],
       "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "aarogyasri-faq",
+      "url": "https://rajivaarogyasri.telangana.gov.in/ASRI2.0/portal/faq.html",
+      "title": "FAQ - Rajiv Aarogyasri",
+      "issuedBy": "Rajiv Aarogyasri Health Care Trust",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "faq",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-aarogyasri"
+      ],
+      "licenseNotes": "Undated FAQ; still states the old Rs 1.5 lakh + Rs 50,000 buffer cover, which conflicts with the current scheme page."
+    },
+    {
+      "id": "cmrf-portal",
+      "url": "https://cmrf.telangana.gov.in/about",
+      "title": "About Chief Minister's Relief Fund",
+      "issuedBy": "Chief Minister's Relief Fund, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-cm-relief-fund"
+      ],
+      "licenseNotes": "States BPL household eligibility and that expenses have already been incurred; publishes no ceiling or document list."
+    },
+    {
+      "id": "cmrf-online-cmo",
+      "url": "https://cm.telangana.gov.in/2024/07/state-govt-to-accept-cmrf-applications-online-only",
+      "title": "State Govt. to accept CMRF applications online only",
+      "issuedBy": "Chief Minister's Office, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "notification",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-cm-relief-fund"
+      ],
+      "licenseNotes": "CMO press note, 3 July 2024: applications online only, through people representatives."
+    },
+    {
+      "id": "bocwwb-registration",
+      "url": "https://tbocwwb.telangana.gov.in/new_registered_beneficiary.html",
+      "title": "How to get Registered As Beneficiary",
+      "issuedBy": "Telangana Building and Other Construction Workers Welfare Board",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-bocwwb-benefits"
+      ],
+      "licenseNotes": "Registration conditions and fees."
+    },
+    {
+      "id": "lwf-act",
+      "url": "https://labour.telangana.gov.in/content/ActsRules/TELANGANA%20LABOUR%20WELFARE%20FUND%20ACT,%201987.htm",
+      "title": "Telangana Labour Welfare Fund Act, 1987",
+      "issuedBy": "Labour Department, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_LEGAL",
+      "kind": "notification",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-labour-welfare-board"
+      ],
+      "licenseNotes": "Statute: contribution rates, establishment and employee definitions, permitted welfare expenditure."
+    },
+    {
+      "id": "lwf-claims",
+      "url": "https://labour.telangana.gov.in/welfareFundAppls.do",
+      "title": "Labour Welfare Fund - welfare scheme applications",
+      "issuedBy": "Labour Department, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-labour-welfare-board"
+      ],
+      "licenseNotes": "Official application forms for welfare fund claims."
+    },
+    {
+      "id": "pmkisan-guidelines",
+      "url": "https://pmkisan.gov.in/Documents/Revised%20Operational%20Guidelines%20-%20PM-Kisan%20Scheme.pdf",
+      "title": "PM-KISAN revised operational guidelines (21.06.2019)",
+      "issuedBy": "Department of Agriculture and Farmers Welfare, Government of India",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "guidelines",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-pmkisan"
+      ],
+      "licenseNotes": "Defines the landholding family; the 2019 text does not contain the older 2-hectare cap."
+    },
+    {
+      "id": "aif-overview",
+      "url": "https://agriinfra.dac.gov.in/Home/SchemeOverview",
+      "title": "Agriculture Infrastructure Fund - Scheme Overview",
+      "issuedBy": "Department of Agriculture and Farmers Welfare, Government of India",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "guidelines",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-agri-infra-fund"
+      ],
+      "licenseNotes": "3% interest subvention up to Rs 2 crore for 7 years; CGTMSE guarantee for loans up to Rs 2 crore."
+    },
+    {
+      "id": "pmfme-guidelines",
+      "url": "https://pmfme.mofpi.gov.in/newsletters/docs/SchemeGuidelines.pdf",
+      "title": "PMFME scheme guidelines",
+      "issuedBy": "Ministry of Food Processing Industries, Government of India",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "guidelines",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-pmfme"
+      ],
+      "licenseNotes": "35% credit-linked subsidy up to Rs 10 lakh per unit; seed capital Rs 40,000 per SHG member."
+    },
+    {
+      "id": "pmmsy-women-pib",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2157844",
+      "title": "PMMSY support for women beneficiaries",
+      "issuedBy": "Press Information Bureau",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "pib_release",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-pmmsy"
+      ],
+      "licenseNotes": "19 August 2025: 60% assistance for women, ceiling Rs 1.50 crore per project under the entrepreneur model."
+    },
+    {
+      "id": "pm-surya-ghar-portal",
+      "url": "https://pmsuryaghar.gov.in/",
+      "title": "National Portal for Rooftop Solar",
+      "issuedBy": "Ministry of New and Renewable Energy, Government of India",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-pm-surya-ghar"
+      ],
+      "licenseNotes": "Application route: registration with the consumer number and a registered vendor. The page is script-rendered, so the subsidy table is not readable from the HTML."
+    },
+    {
+      "id": "epass-rti-manual",
+      "url": "https://telanganaepass.cgg.gov.in/downloads/SCDD-RTIManual.pdf",
+      "title": "SC Development Department RTI manual (10.04.2023)",
+      "issuedBy": "Scheduled Castes Development Department, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "guidelines",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-post-matric-scholarship",
+        "research-pre-matric-scholarship",
+        "research-tuition-fee-reimbursement"
+      ],
+      "licenseNotes": "SC post-matric and pre-matric rules: Rs 2 lakh income limit, class ranges, amounts, 75% attendance."
+    },
+    {
+      "id": "epass-go298-bc",
+      "url": "https://telanganaepass.cgg.gov.in/downloads/G.O.Ms.No.298-BC%20WELFARE.pdf",
+      "title": "G.O.Rt.No.298, BC Welfare (19.10.2015)",
+      "issuedBy": "Backward Classes Welfare Department, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_LEGAL",
+      "kind": "government_order",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-post-matric-scholarship",
+        "research-pre-matric-scholarship"
+      ],
+      "licenseNotes": "BC pre-matric and post-matric income limits: Rs 1.5 lakh rural, Rs 2 lakh urban."
+    },
+    {
+      "id": "epass-go74-overseas",
+      "url": "https://telanganaepass.cgg.gov.in/downloads/GoMsNo-74.pdf",
+      "title": "G.O.Ms.No.74 (19.12.2017) - overseas scholarship income limit",
+      "issuedBy": "Scheduled Castes Development Department, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_LEGAL",
+      "kind": "government_order",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-overseas-sc"
+      ],
+      "licenseNotes": "Raises the overseas scholarship family income limit from Rs 3 lakh to Rs 5 lakh."
+    },
+    {
+      "id": "epass-go22-overseas",
+      "url": "https://telanganaepass.cgg.gov.in/downloads/GoMsNo-22.pdf",
+      "title": "G.O.Ms.No.22 (10.06.2016) - overseas scholarship grant",
+      "issuedBy": "Scheduled Castes Development Department, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_LEGAL",
+      "kind": "government_order",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-overseas-sc"
+      ],
+      "licenseNotes": "Raises the overseas grant from Rs 10 lakh to Rs 20 lakh."
+    },
+    {
+      "id": "tg-seo-2023",
+      "url": "https://des.telangana.gov.in/publications/Telangana-Socio-Economic-Outlook-2023.pdf",
+      "title": "Telangana Socio Economic Outlook 2023",
+      "issuedBy": "Planning Department, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "other",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-nethanna-bima",
+        "research-chenetha-mithra"
+      ],
+      "licenseNotes": "Describes Nethanna Bima and Chenetha Mitra among the handloom welfare schemes."
+    },
+    {
+      "id": "tg-seo-2026",
+      "url": "https://www.telangana.gov.in/wp-content/uploads/2026/08/Socio-Economic-Outlook-2026.pdf",
+      "title": "Telangana Socio Economic Outlook 2026 - handloom schemes",
+      "issuedBy": "Planning Department, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "other",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [],
+      "licenseNotes": "Lists the handloom schemes in force in 2026; Chenetha Mitra is absent from the list."
     }
   ],
   "records": [
@@ -3824,27 +4187,66 @@
         "construction_workers"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://tbocwwb.telangana.gov.in/new_welfare_schemes.html",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Registered construction workers get marriage gift, maternity benefit, accident and natural-death relief, disability relief, hospitalisation relief and funeral expenses under one registration.",
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "bocwwb-registration"
+        },
+        {
+          "sourceId": "disc-bocwwb-benefits"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "disc-bocwwb-benefits",
+          "note": "Benefit table with G.O. numbers"
+        },
+        {
+          "sourceId": "bocwwb-registration"
+        }
+      ],
+      "benefitSummary": "Registered construction workers get marriage gift Rs 30,000, maternity benefit Rs 30,000, fatal accident relief Rs 6 lakh, disability relief up to Rs 5 lakh, natural death relief Rs 1 lakh, hospitalisation relief Rs 300/day (max Rs 4,500/month), funeral expenses Rs 30,000, and relief for unregistered workers.",
+      "eligibilityConditions": [
+        {
+          "text": "Completed 18 years and not completed 60 years of age.",
+          "sourceId": "bocwwb-registration",
+          "quote": "has completed 18 years of age but has not completed 60 years of age"
+        },
+        {
+          "text": "Engaged in building or other construction work for at least 90 days in the preceding 12 months.",
+          "sourceId": "bocwwb-registration",
+          "quote": "engaged in any building or other construction work for not less than 90 days during the preceding 12 months"
+        },
+        {
+          "text": "Registered with the Board: Rs 50 registration fee plus Rs 12 a year membership (or Rs 60 for five years).",
+          "sourceId": "bocwwb-registration",
+          "quote": "A sum of Rs.50/- towards registration fees and Rs.12/- as membership fee per annum (or) Rs.60/- for five years"
+        }
+      ],
       "exclusions": [],
-      "prerequisites": [],
-      "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "prerequisites": [
+        "Board registration through the Assistant Labour Officer or a MeeSeva centre",
+        "Employment certificate from a labour department officer"
+      ],
+      "documents": [
+        "Two passport photographs",
+        "Age proof (school or medical certificate)",
+        "Nomination form for dependants"
+      ],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
-      "confidence": "medium",
+      "confidence": "high",
       "unresolvedQuestions": [
-        "Benefit amounts and the current registration conditions are stated on the Board page but were not transcribed in this batch.",
-        "Whether the scheme is open for new registrations is not stated on the page."
+        "The Board page says the claim procedure is \"available soon\"; claims are described only in a CAG audit chapter (Assistant Labour Officer or MeeSeva).",
+        "A Khammam district page gives the age band as 18-59, conflicting with the Board's \"not completed 60\".",
+        "No pension or education scholarship appears in the Board's own scheme table."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28. One record for the board registration, not eight records for eight benefits.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -3853,9 +4255,20 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "benefit": {
+        "kind": "cash",
+        "summary": "Benefit package under one registration",
+        "amountNote": "Amounts per the Board table with G.O. numbers: marriage/maternity/funeral Rs 30,000 each; fatal accident Rs 6,00,000; disability up to Rs 5,00,000; natural death Rs 1,00,000; hospitalisation Rs 300/day, max Rs 4,500/month."
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-labour-welfare-board",
@@ -3874,27 +4287,64 @@
         "unorganised_workers"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://sangareddy.telangana.gov.in/labour-department/",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Covers workers in factories, shops and establishments, motor transport and societies; listed benefits include scholarship, marriage gift, medical aid, accident relief and funeral expenses.",
-      "eligibilityConditions": [],
-      "exclusions": [],
-      "prerequisites": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "lwf-act"
+        },
+        {
+          "sourceId": "lwf-claims"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "lwf-act"
+        },
+        {
+          "sourceId": "lwf-claims"
+        }
+      ],
+      "benefitSummary": "Welfare fund benefits including marriage gift, maternity benefit, medical aid, accident relief, funeral expenses, disability relief and scholarships for workers' children.",
+      "eligibilityConditions": [
+        {
+          "text": "Employed in a covered establishment: a factory, a motor transport undertaking, or a shop/establishment employing 20 or more persons.",
+          "sourceId": "lwf-act",
+          "quote": "which employs or on any working day during the preceding twelve months employed twenty or more persons"
+        },
+        {
+          "text": "Employed for at least 30 days in the preceding 12 months, excluding managerial and senior supervisory staff and apprentices.",
+          "sourceId": "lwf-act",
+          "quote": "for a period of thirty days during the period of twelve months"
+        },
+        {
+          "text": "Contributions paid: Rs 2 a year by the employee and Rs 5 a year by the employer.",
+          "sourceId": "lwf-act",
+          "quote": "Every employee shall contribute two rupees per year to the Fund and every employer shall, in respect of each such employee, contribute five rupees per year"
+        }
+      ],
+      "exclusions": [
+        "Managerial staff",
+        "Supervisory staff drawing more than Rs 1,600 a month (unrevised since 1987)",
+        "Apprentices and part-time workers"
+      ],
+      "prerequisites": [
+        "Employment in a covered establishment that remits the fund contribution"
+      ],
       "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
-      "confidence": "low",
+      "confidence": "medium",
       "unresolvedQuestions": [
-        "The district page lists benefits but not the governing Labour Welfare Fund rules or amounts.",
-        "Whether the board covers all listed sectors statewide is not confirmed."
+        "No Board-issued schedule of benefit amounts could be obtained (the Board pamphlet returns HTTP 403); district pages differ from each other in places.",
+        "The Rs 1,600 supervisory wage ceiling in the 1987 Act has never been revised and may exclude most supervisors in practice.",
+        "The Act lists permitted heads of welfare expenditure, not individual entitlements, so a worker's exact claim set is not legally enumerated."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28. Contribution and coverage rules come from the statute; amounts are marked as district-published.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -3903,9 +4353,20 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "benefit": {
+        "kind": "cash",
+        "summary": "Claim-based welfare benefits",
+        "amountNote": "District labour pages publish: marriage gift Rs 10,000, natural death Rs 10,000, accidental death Rs 30,000, funeral Rs 5,000, maternity Rs 5,000, medical aid Rs 20,000, disability Rs 10,000-20,000, scholarships Rs 1,000-4,000. These are district-published, not Board-published."
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-handloom-thrift-fund",
@@ -3976,24 +4437,38 @@
       "schemeStatus": "UNKNOWN",
       "discoveryUrl": "https://gadwal.telangana.gov.in/handlooms-and-textiles-department/",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Subsidy on yarn, dyes and chemicals paid partly to the purchaser and partly into weavers accounts in proportion to wages.",
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "tg-seo-2023"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "tg-seo-2023"
+        }
+      ],
+      "benefitSummary": "40% subsidy on yarn, dyes and chemicals: 5% to the yarn purchaser, 35% into weavers' accounts pro rata to wages.",
+      "eligibilityConditions": [
+        {
+          "text": "Handloom weavers and ancillary workers, within and outside the cooperative fold.",
+          "sourceId": "tg-seo-2023"
+        }
+      ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "status": "OUTDATED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
-      "confidence": "medium",
+      "confidence": "low",
       "unresolvedQuestions": [
-        "The 40% split is described on district pages; the current departmental order was not read.",
-        "Whether powerloom workers are covered is unclear."
+        "The scheme is absent from the 2026 state outlook list of handloom schemes; no closure or replacement order was found.",
+        "The 2023 revision to Rs 3,000 a month appears only in press reports.",
+        "No official eligibility order or document list was located."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Marked OUTDATED because the last official description is 2022-23 and the current state scheme list omits it; the replacement is not officially stated.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -4002,9 +4477,20 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "OUTDATED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "benefit": {
+        "kind": "subsidy",
+        "summary": "Input subsidy on yarn, dyes and chemicals",
+        "amountNote": "40% subsidy; 35% credited to weavers pro rata to wages, 5% to the yarn purchaser."
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-nethanna-bima",
@@ -4022,27 +4508,48 @@
         "weavers"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://www.des.telangana.gov.in/publications/Socio%20Economic%20Outlook-2024.pdf",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Group life insurance for handloom, powerloom and ancillary workers enrolled under the weaver thrift scheme.",
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "tg-seo-2023"
+        },
+        {
+          "sourceId": "disc-nethanna-bima"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "tg-seo-2023"
+        }
+      ],
+      "benefitSummary": "Group life insurance for handloom, powerloom and ancillary workers.",
+      "eligibilityConditions": [
+        {
+          "text": "Handloom, powerloom and ancillary workers covered by the weaver welfare programme.",
+          "sourceId": "tg-seo-2023"
+        },
+        {
+          "text": "Scheme launched 07.08.2022 and implemented from 14.08.2022, on the Rythu Bima model.",
+          "sourceId": "tg-seo-2023"
+        }
+      ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "Cover amount and claim process are not in the outlook chapter read.",
-        "Age limits and enrolment window are unconfirmed."
+        "The cover amount is not printed in the state outlook chapter; it appears only on district pages.",
+        "Age limits (18-59) and the enrolment window are not stated in the source read.",
+        "Whether enrolment is still open is not published."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28 at the level the sources allow: existence, launch date and beneficiary class are official; the amount is not.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -4051,9 +4558,20 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "benefit": {
+        "kind": "insurance",
+        "summary": "Group life insurance cover",
+        "amountNote": "District handloom pages state a Rs 5 lakh cover; the state outlook describes the scheme without printing a figure."
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-journalists-health",
@@ -4166,27 +4684,66 @@
         "sc_st_obc"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://telanganaepass.cgg.gov.in/",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Scholarships for eligible students before Class XI, administered through ePASS with community-specific schemes.",
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "epass-rti-manual"
+        },
+        {
+          "sourceId": "epass-go298-bc"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "epass-rti-manual"
+        }
+      ],
+      "benefitSummary": "SC Classes V-VIII: Rs 100 a month for boys, Rs 150 for girls (10 months a year). SC Classes IX-X: Rs 3,000 a year for day scholars. BC and other rates per the 2015 order.",
+      "eligibilityConditions": [
+        {
+          "text": "SC: studying in Class V to VIII in a government, local-body or aided school, family income not more than Rs 2.00 lakh a year.",
+          "sourceId": "epass-rti-manual"
+        },
+        {
+          "text": "SC: Class IX and X students, parental income below Rs 2.00 lakh a year.",
+          "sourceId": "epass-rti-manual"
+        },
+        {
+          "text": "BC: Class IX and X, income not more than Rs 1.50 lakh rural or Rs 2.00 lakh urban.",
+          "sourceId": "epass-go298-bc"
+        },
+        {
+          "text": "Scholarship may be taken only once in any class, and not alongside another centrally funded pre-matric scholarship.",
+          "sourceId": "epass-rti-manual"
+        }
+      ],
       "exclusions": [],
-      "prerequisites": [],
-      "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "prerequisites": [
+        "Caste and income certificates from MeeSeva",
+        "Aadhaar",
+        "Joint bank account with parent for minors"
+      ],
+      "documents": [
+        "Caste certificate",
+        "Income certificate",
+        "Aadhaar",
+        "Bank passbook",
+        "Photograph",
+        "Application countersigned by the school head"
+      ],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "Per-class rates and income limits differ by community and were not recorded.",
-        "The current academic-year deadline is unknown."
+        "No official figure was found for Class I-IV pre-matric support under this scheme; the state scheme starts at Class V for SC.",
+        "The current ePASS pre-matric registration page returned HTTP 404 during this check."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28 from the RTI manual and the 2015 BC order; amounts are for the SC stream.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -4195,9 +4752,24 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "applicationUrl": "https://telanganaepass.cgg.gov.in/",
+      "applicationNotes": "Online registration on ePASS; the printed application is countersigned by the school head and forwarded to the Hostel Welfare Officer, who verifies by Aadhaar fingerprint.",
+      "benefit": {
+        "kind": "cash",
+        "summary": "Monthly scholarship",
+        "amountInr": 1500,
+        "frequency": "per year for classes V-VIII girls; amounts differ by class and gender",
+        "amountNote": "Boys Rs 100/month and girls Rs 150/month for 10 months (Class V-VIII); Rs 3,000/year for day scholars in Class IX-X."
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-post-matric-scholarship",
@@ -4217,27 +4789,83 @@
         "minorities"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://telanganaepass.cgg.gov.in/",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Scholarships for study after Class X, with tuition and maintenance components processed through ePASS.",
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "epass-rti-manual"
+        },
+        {
+          "sourceId": "epass-go298-bc"
+        },
+        {
+          "sourceId": "disc-pre-matric-scholarship"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "epass-rti-manual"
+        },
+        {
+          "sourceId": "epass-go298-bc"
+        }
+      ],
+      "benefitSummary": "Tuition fee reimbursement paid to the institution plus a maintenance fee paid to the student; rates differ by course and department.",
+      "eligibilityConditions": [
+        {
+          "text": "Post-matriculation or post-secondary course in a recognised institution in India (SC).",
+          "sourceId": "epass-rti-manual"
+        },
+        {
+          "text": "SC: family income not more than Rs 2.00 lakh a year.",
+          "sourceId": "epass-rti-manual"
+        },
+        {
+          "text": "BC: family income not more than Rs 1.50 lakh a year in rural areas, Rs 2.00 lakh in urban areas.",
+          "sourceId": "epass-go298-bc"
+        },
+        {
+          "text": "Minorities: income not more than Rs 1.50 lakh a year rural, Rs 2.00 lakh urban.",
+          "sourceId": "disc-pre-matric-scholarship"
+        },
+        {
+          "text": "Differently abled: parent or guardian income below Rs 1.00 lakh a year.",
+          "sourceId": "disc-pre-matric-scholarship"
+        },
+        {
+          "text": "75% attendance per quarter for sanction and renewal.",
+          "sourceId": "epass-rti-manual"
+        }
+      ],
       "exclusions": [],
-      "prerequisites": [],
-      "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "prerequisites": [
+        "Caste certificate",
+        "Income certificate from MeeSeva",
+        "Aadhaar",
+        "Aadhaar-linked bank account",
+        "Bonafide certificate"
+      ],
+      "documents": [
+        "Caste certificate",
+        "Income certificate",
+        "Aadhaar",
+        "Bank passbook",
+        "Bonafide certificate",
+        "Photograph"
+      ],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "Rates and income ceilings vary by community and course.",
-        "Renewal conditions were not read."
+        "The ePASS \"Who is eligible\" page returns HTTP 404, so the widely quoted SC ceiling of Rs 2.50 lakh could not be read on an official page; the last verifiable official SC figure is Rs 2 lakh (RTI manual, 2023).",
+        "RTF and MTF rupee rates are not published in a government document that loaded; only the PwD welfare rate table is official (Intermediate/Degree Rs 5,000, PG/Professional Rs 6,500 a year).",
+        "A 2024 SC post-matric G.O. that may supersede the RTI manual could not be opened."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28 as one umbrella record: four departments, four income tests, all recorded with their own source. The portal figure of Rs 2.5 lakh is deliberately not recorded.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -4246,9 +4874,17 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "applicationUrl": "https://telanganaepass.cgg.gov.in/",
+      "applicationNotes": "Register on ePASS; SC applicants complete biometric Aadhaar authentication at a MeeSeva centre. From A.Y. 2026-27 the amounts are paid by DBT.",
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-tuition-fee-reimbursement",
@@ -4267,27 +4903,40 @@
         "students"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://www.telangana.gov.in/departments/backward-classes-welfare",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Reimburses tuition fees for eligible post-matric students in recognised courses.",
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "epass-rti-manual"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "epass-rti-manual"
+        }
+      ],
+      "benefitSummary": "Compulsory non-refundable tuition fee paid to the institution on the student's behalf; separate from the maintenance fee paid to the student.",
+      "eligibilityConditions": [
+        {
+          "text": "Eligible post-matric student in a recognised course; the fee is reimbursed to the institution, which may not collect it from the student.",
+          "sourceId": "epass-rti-manual"
+        }
+      ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "status": "SOURCE_IDENTIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
-      "confidence": "medium",
+      "confidence": "low",
       "unresolvedQuestions": [
-        "Course list, income ceiling and reimbursement caps were not captured.",
-        "Whether private unaided colleges are covered is unconfirmed."
+        "No government document that loaded states the group-wise RTF amounts; only college reproductions of the ePASS table do.",
+        "Whether RTF and the post-matric scholarship are one sanction or two is not stated in the RTI manual."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28 only as far as the definition: RTF goes to the college, MTF to the student. No amount recorded.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -4296,9 +4945,15 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-maintenance-fee",
@@ -4367,27 +5022,77 @@
         "sc_st_obc"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://telanganaepass.cgg.gov.in/OverseasLinks.do",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Financial assistance for eligible SC students pursuing higher education abroad.",
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "epass-go74-overseas"
+        },
+        {
+          "sourceId": "disc-overseas-sc"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "epass-go74-overseas"
+        },
+        {
+          "sourceId": "epass-go22-overseas"
+        },
+        {
+          "sourceId": "disc-overseas-sc"
+        }
+      ],
+      "benefitSummary": "Scholarship grant up to Rs 20 lakh or the admission letter amount, whichever is less, plus a one-way economy ticket and visa charges.",
+      "eligibilityConditions": [
+        {
+          "text": "Family income, including the applicant, below Rs 5.00 lakh a year.",
+          "sourceId": "epass-go74-overseas"
+        },
+        {
+          "text": "At least 60% in graduation and the required GRE/GMAT and English test scores.",
+          "sourceId": "disc-overseas-sc"
+        },
+        {
+          "text": "Only one child from a family is eligible.",
+          "sourceId": "disc-overseas-sc"
+        },
+        {
+          "text": "Post-graduate admission in a top university in one of ten countries: USA, Canada, Germany, France, UK, Singapore, Japan, South Korea, Australia, New Zealand.",
+          "sourceId": "disc-overseas-sc"
+        },
+        {
+          "text": "Selection is merit-based by the State Level Screening Committee.",
+          "sourceId": "disc-overseas-sc"
+        }
+      ],
       "exclusions": [],
-      "prerequisites": [],
-      "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "prerequisites": [
+        "Admission letter from an eligible university",
+        "Valid passport and visa",
+        "GRE/GMAT and language test scores"
+      ],
+      "documents": [
+        "Caste and residence certificates",
+        "Income certificate",
+        "Memos from SSC to degree",
+        "Test score reports",
+        "Passport and visa",
+        "Admission letter",
+        "Bank passbook"
+      ],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
-      "confidence": "medium",
+      "confidence": "high",
       "unresolvedQuestions": [
-        "Income ceiling, course list and grant amount were not recorded.",
-        "The current application window is unknown."
+        "The SC stream does not publish numeric GRE/GMAT/TOEFL floors (only \"as per GO\"); the ST and BC pages do.",
+        "The guidelines PDF with the full course and university list is dead-linked on the portal."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28. Income limit is Rs 5 lakh (G.O.Ms.No.74, 2017), superseding the Rs 3 lakh in G.O.Ms.No.66.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -4396,9 +5101,23 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "applicationUrl": "https://telanganaepass.cgg.gov.in/OverseasLinks.do",
+      "applicationNotes": "Register on the ePASS overseas services page, then attend certificate verification for merit selection by the state committee.",
+      "benefit": {
+        "kind": "cash",
+        "summary": "Overseas study grant",
+        "amountInr": 2000000,
+        "amountNote": "Up to Rs 20 lakh or the admission letter, whichever is less; one-way ticket and visa charges."
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-overseas-st",
@@ -4719,27 +5438,43 @@
         "women"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://www.kgbv.telangana.gov.in/KGBV/aboutUs.do",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Residential schooling for girls from disadvantaged groups, with classes up to XII at some locations.",
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "disc-kgbv"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "disc-kgbv"
+        }
+      ],
+      "benefitSummary": "Residential schooling with diet, notebooks, textbooks, uniforms and bedding; diet charges Rs 1,330 a month (Classes 6-7), Rs 1,540 (8-10) and Rs 2,100 (Intermediate).",
+      "eligibilityConditions": [
+        {
+          "text": "Girls from disadvantaged groups studying in Classes VI to XII, with 495 KGBVs functioning in 31 districts of Telangana.",
+          "sourceId": "disc-kgbv"
+        }
+      ],
       "exclusions": [],
-      "prerequisites": [],
+      "prerequisites": [
+        "Admission through the school; the state portal publishes no admission procedure"
+      ],
       "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "status": "OFFICIALLY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "Admission eligibility per class was not recorded.",
-        "Whether all 33 districts have a KGBV is not stated."
+        "No admission procedure, seat intake or document list is published on the KGBV site.",
+        "The national Samagra Shiksha KGBV page did not load during this check, so the 10-18 age band and category criteria could not be re-read at source.",
+        "Why 2 districts have no KGBV is not stated."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28 for facilities and coverage counts; admission criteria left open.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -4748,9 +5483,20 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "benefit": {
+        "kind": "in_kind",
+        "summary": "Free residential schooling with meals and materials",
+        "amountNote": "Diet charges per boarder: Rs 1,330/month (Class 6-7), Rs 1,540/month (8-10), Rs 2,100/month (Intermediate)."
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-mid-day-meal",
@@ -4770,27 +5516,41 @@
         "students"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://schooledu.telangana.gov.in/MDM/StateAbssd.do",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "A cooked meal on school days for students in covered government, aided and local-body schools.",
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "disc-mid-day-meal"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "disc-mid-day-meal"
+        }
+      ],
+      "benefitSummary": "One hot cooked meal on school working days, with prescribed calorie and protein norms.",
+      "eligibilityConditions": [
+        {
+          "text": "Children studying in government, local-body and government-aided schools on school working days.",
+          "sourceId": "disc-mid-day-meal"
+        }
+      ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "Menu norms and coverage counts were not transcribed.",
-        "Whether classes above the elementary level are covered is unconfirmed."
+        "The scheme has been renamed PM POSHAN nationally; the state page read still uses the Mid Day Meal name.",
+        "The per-child nutrition norms (450 kcal/12 g primary, 700 kcal/20 g upper primary) could not be re-read from an official page that loaded.",
+        "Class coverage above Class VIII is not stated on the state page."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28 for the entitlement and delivery route; nutrition norms left open.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -4799,9 +5559,19 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "benefit": {
+        "kind": "in_kind",
+        "summary": "Cooked school meal"
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-bc-study-circles",
@@ -4916,31 +5686,72 @@
       "department": "Rajiv Aarogyasri Health Care Trust",
       "category": "health",
       "subcategory": "cashless treatment",
-      "beneficiaryGroups": [
-        "sc_st_obc"
-      ],
+      "beneficiaryGroups": [],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://rajivaarogyasri.telangana.gov.in/ASRI2.0/portal/aarogyasri-scheme.html",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Cashless treatment for listed serious illnesses and procedures at network hospitals for eligible low-income families.",
-      "eligibilityConditions": [],
-      "exclusions": [],
-      "prerequisites": [],
-      "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "eligibilityEvidence": [
+        {
+          "sourceId": "disc-aarogyasri",
+          "note": "Eligibility and no-enrolment rule"
+        },
+        {
+          "sourceId": "aarogyasri-faq",
+          "note": "Confirms the ration-card test and the old cover figure"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "disc-aarogyasri",
+          "note": "Scheme page states the Rs 10 lakh cover"
+        },
+        {
+          "sourceId": "aarogyasri-faq",
+          "note": "FAQ still shows the superseded cover"
+        }
+      ],
+      "benefitSummary": "Cashless treatment for listed procedures for BPL families, up to Rs 10 lakh a year under the converged scheme (1,672 treatments).",
+      "eligibilityConditions": [
+        {
+          "text": "Members of below-poverty-line families enumerated in the Civil Supplies food security (white ration) card database.",
+          "sourceId": "disc-aarogyasri",
+          "quote": "The beneficiaries of the scheme are the members of Below Poverty Line (BPL) families as enumerated and photographed in Food Security card"
+        },
+        {
+          "text": "No separate enrolment: the food security card holder is covered automatically.",
+          "sourceId": "disc-aarogyasri",
+          "quote": "There is no separate enrollment, all the BPL families holding valid white ration card are automatically covered"
+        },
+        {
+          "text": "A Telangana native without a white card can get a CMCO referral card for identified diseases.",
+          "sourceId": "disc-aarogyasri"
+        }
+      ],
+      "exclusions": [
+        "No separate income ceiling is published; eligibility is the food-security card test.",
+        "Fails to show the card within 48 hours in an emergency, per the scheme page."
+      ],
+      "prerequisites": [
+        "Food security (white) card",
+        "Medical reports for the procedure"
+      ],
+      "documents": [
+        "White ration card / health card",
+        "Medical reports"
+      ],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
-      "confidence": "medium",
+      "confidence": "high",
       "unresolvedQuestions": [
-        "The income ceiling and current procedure list were not transcribed.",
-        "The relationship to Ayushman Bharat PM-JAY in Telangana needs confirming."
+        "The Aarogyasri FAQ still states Rs 1.5 lakh + Rs 50,000, while the scheme page states Rs 10 lakh; the FAQ is treated as outdated but has not been withdrawn.",
+        "Whether CMCO referral cards are still issued, and on what income test, is not stated on the Trust portal.",
+        "The exact list of 1,672 procedures is not published as a downloadable document on the portal."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28. Eligibility is the food-security card test, not an income figure; the record therefore carries no income threshold. Cover figure conflict with the FAQ preserved.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -4949,9 +5760,23 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "applicationNotes": "No application: treatment is availed at a network government or empanelled hospital with the card; 104 is the helpline. No enrolment portal exists.",
+      "benefit": {
+        "kind": "service",
+        "summary": "Cashless hospital treatment up to Rs 10,00,000 a year per family",
+        "amountInr": 1000000,
+        "frequency": "per family per year",
+        "amountNote": "The scheme page and the 2025-26 budget state Rs 10 lakh; the FAQ still states Rs 1.5 lakh plus a Rs 50,000 buffer."
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-cm-relief-fund",
@@ -4967,27 +5792,65 @@
       "subcategory": "emergency assistance",
       "beneficiaryGroups": [],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://www.telangana.gov.in/cm-relief-fund",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Discretionary assistance for people facing expensive medical treatment, road accidents and other unforeseen distress.",
-      "eligibilityConditions": [],
-      "exclusions": [],
-      "prerequisites": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "cmrf-portal"
+        },
+        {
+          "sourceId": "cmrf-online-cmo"
+        },
+        {
+          "sourceId": "disc-aarogyasri"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "cmrf-portal"
+        },
+        {
+          "sourceId": "cmrf-online-cmo"
+        }
+      ],
+      "benefitSummary": "Discretionary relief for medical expenses already incurred and for loss of life, property or livelihood in unforeseen incidents. No published ceiling.",
+      "eligibilityConditions": [
+        {
+          "text": "Individuals from below-poverty-line households.",
+          "sourceId": "cmrf-portal",
+          "quote": "designed to offer financial assistance to individuals from Below Poverty Line (BPL) households"
+        },
+        {
+          "text": "Primarily medical expenses that have already been incurred.",
+          "sourceId": "cmrf-portal",
+          "quote": "primarily covering medical expenses that have already been incurred"
+        },
+        {
+          "text": "Treatment already covered by Rajiv Aarogyasri is not also funded from CMRF.",
+          "sourceId": "disc-aarogyasri",
+          "quote": "it would no longer be permissible for the BPL population to approach the Government for providing relief for medical purposes from the CMRF"
+        }
+      ],
+      "exclusions": [
+        "Treatment covered by Aarogyasri (official cross-reference on the Aarogyasri page)."
+      ],
+      "prerequisites": [
+        "Application through the CMRF portal, recommended by a people representative"
+      ],
       "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "status": "OFFICIALLY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "This is discretionary, not an entitlement; limits and approval process were not recorded.",
-        "Application route and processing time are unknown."
+        "No maximum assistance amount is published on the CMRF portal, the CMO site or the state portal; press figures are not official.",
+        "No official list of required documents was found.",
+        "No income ceiling is published; eligibility is stated only as BPL."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28. Deliberately recorded without an amount: the widely repeated Rs 5 lakh figure appears only on non-official sites.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -4996,9 +5859,17 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "applicationUrl": "https://cmrf.telangana.gov.in",
+      "applicationNotes": "Applications are accepted online only, uploaded through MLAs/MLCs with their recommendation (CMO note, 3 July 2024).",
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-telemanas",
@@ -5315,27 +6186,59 @@
         "entrepreneurs"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://www.telangana.gov.in/departments/backward-classes-welfare",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Subsidy and bank finance for livelihood or self-employment units run by eligible BC beneficiaries.",
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "tg-rajiv-yuva-guidelines"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "tg-rajiv-yuva-guidelines"
+        }
+      ],
+      "benefitSummary": "Subsidy of 70% to 100% of unit cost depending on the slab, with the balance as a bank loan; the 2025 order caps the unit cost at Rs 4 lakh.",
+      "eligibilityConditions": [
+        {
+          "text": "Rural family income not more than Rs 1.50 lakh a year; urban not more than Rs 2.00 lakh.",
+          "sourceId": "tg-rajiv-yuva-guidelines"
+        },
+        {
+          "text": "Age 21 to 55 for non-agricultural schemes, 21 to 60 for agriculture and allied sectors.",
+          "sourceId": "tg-rajiv-yuva-guidelines"
+        },
+        {
+          "text": "Subsidy slabs by unit cost: up to Rs 50,000 - 100%; Rs 50,001-1,00,000 - 90%; Rs 1,00,001-2,00,000 - 80%; Rs 2,00,001-4,00,000 - 70%.",
+          "sourceId": "tg-rajiv-yuva-guidelines"
+        }
+      ],
       "exclusions": [],
-      "prerequisites": [],
-      "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "prerequisites": [
+        "Registration on the OBMMS portal",
+        "Hard copy submission at the MPDO office or municipal commissioner office",
+        "Caste certificate issued after Telangana formation"
+      ],
+      "documents": [
+        "Aadhaar card",
+        "Ration card or income certificate",
+        "Caste certificate",
+        "Pattadar passbook for agriculture",
+        "SADAREM certificate for persons with disabilities",
+        "Passport photograph"
+      ],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
-      "confidence": "low",
+      "confidence": "high",
       "unresolvedQuestions": [
-        "Unit cost and subsidy percentage were not recorded.",
-        "Whether urban and rural applicants use different schemes is unclear."
+        "District pages still publish the older slabs (80/70/60% with a Rs 5 lakh maximum and Rs 10-12 lakh unit cost), which conflict with the 2025 order.",
+        "Whether \"margin money\" survives as a separate named scheme alongside Rajiv Yuva Vikasam is not stated in the order."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28 from G.O.Ms.No.7 (25.03.2025); the older district slabs are recorded as a conflict, not deleted.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -5344,9 +6247,22 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "applicationUrl": "https://tgobmms.cgg.gov.in/",
+      "applicationNotes": "Register on OBMMS within the notified window, submit the printed application at the Mandal Praja Palana Seva Kendra or municipal office; the district collector sanctions and the corporation pays by DBT.",
+      "benefit": {
+        "kind": "subsidy",
+        "summary": "Margin money subsidy on unit cost",
+        "amountNote": "100% up to Rs 50,000; 90% up to Rs 1 lakh; 80% up to Rs 2 lakh; 70% up to Rs 4 lakh (G.O.Ms.No.7, 25.03.2025). Older district pages show 60% up to Rs 5 lakh on unit costs of Rs 10-12 lakh."
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-rajiv-abhyudaya",
@@ -5567,24 +6483,38 @@
       "schemeStatus": "UNKNOWN",
       "discoveryUrl": "https://pmfby.gov.in/guidelines",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Crop insurance against specified non-preventable risks for farmers growing notified crops in notified areas.",
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "disc-pmfby"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "disc-pmfby"
+        }
+      ],
+      "benefitSummary": "Crop insurance against notified non-preventable risks; the farmer pays a capped share of the actuarial premium.",
+      "eligibilityConditions": [
+        {
+          "text": "Farmer growing a notified crop in a notified area of a participating state for the season.",
+          "sourceId": "disc-pmfby"
+        }
+      ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
-      "status": "CATALOGUED",
+      "status": "CONFLICTING",
       "verificationStatus": "UNVERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
-      "confidence": "medium",
+      "confidence": "low",
       "unresolvedQuestions": [
-        "Which Telangana crops and districts are notified this season was not established.",
-        "Premium rates are set by the scheme but were not transcribed."
+        "Official answers conflict on whether Telangana is in PMFBY: a 2024 Rajya Sabha reply says Telangana re-joined, a March 2026 Lok Sabha reply lists Telangana among states not implementing the scheme.",
+        "No Telangana notification for the current Rabi season was found, so no notified crops, cut-off date or premium can be recorded.",
+        "The 2023 operational guidelines PDF returned HTTP 404 during this check; premium rates were therefore not recorded."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Kept as CONFLICTING rather than resolved: two official replies describe opposite states of affairs, and the state has published no current notification.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -5593,9 +6523,15 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "CONFLICTING",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-pmkisan",
@@ -5612,27 +6548,69 @@
         "farmers"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://pmkisan.gov.in/",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Income support of Rs 6,000 a year in three instalments by direct transfer to eligible landholding farmer families.",
-      "eligibilityConditions": [],
-      "exclusions": [],
-      "prerequisites": [],
-      "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "eligibilityEvidence": [
+        {
+          "sourceId": "pmkisan-guidelines"
+        },
+        {
+          "sourceId": "disc-pmkisan"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "pmkisan-guidelines"
+        },
+        {
+          "sourceId": "disc-pmkisan"
+        }
+      ],
+      "benefitSummary": "Rs 6,000 a year in three instalments of Rs 2,000, paid by direct transfer.",
+      "eligibilityConditions": [
+        {
+          "text": "Landholding farmer family: husband, wife and minor children owning cultivable land as per state land records.",
+          "sourceId": "pmkisan-guidelines"
+        },
+        {
+          "text": "Aadhaar is mandatory and the benefit is paid only into a bank account.",
+          "sourceId": "disc-pmkisan"
+        },
+        {
+          "text": "eKYC completed for the registered farmer.",
+          "sourceId": "disc-pmkisan"
+        }
+      ],
+      "exclusions": [
+        "Institutional landholders",
+        "Constitutional post holders, ministers, MPs, MLAs, MLCs, mayors and district panchayat chairpersons",
+        "Serving or retired government officers and employees (except Class IV / Group D)",
+        "Pensioners drawing Rs 10,000 or more a month (except Class IV / Group D)",
+        "Anyone who paid income tax in the last assessment year",
+        "Registered professionals (doctors, engineers, lawyers, chartered accountants, architects)",
+        "Non-resident Indians"
+      ],
+      "prerequisites": [
+        "Aadhaar",
+        "Bank account",
+        "Land records in the farmer's name"
+      ],
+      "documents": [
+        "Aadhaar number",
+        "Bank account number and IFSC"
+      ],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
-      "confidence": "medium",
+      "confidence": "high",
       "unresolvedQuestions": [
-        "Exclusion list and landholding verification rules were not recorded.",
-        "Telangana beneficiary counts are not published on the portal page."
+        "The 2019 FAQ still mentions a 2-hectare cap that the current portal and revised guidelines omit; no formal withdrawal order was found, so the record does not include the cap.",
+        "Benefit releases are reported as temporarily withheld for suspected duplicate or post-2019 land-purchase cases pending physical verification."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28 from the portal and the revised guidelines. The superseded 2-hectare cap is preserved as an open question, not as a rule.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -5641,9 +6619,23 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "applicationUrl": "https://pmkisan.gov.in/",
+      "applicationNotes": "New farmer registration on the PM-KISAN portal; states identify eligible families; eKYC is mandatory and available at CSCs and on the mobile app.",
+      "benefit": {
+        "kind": "cash",
+        "summary": "Income support",
+        "amountInr": 6000,
+        "frequency": "per year, in three instalments of Rs 2,000"
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-pmkusum",
@@ -5661,27 +6653,52 @@
         "farmers"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://tgredco.telangana.gov.in/PMKusum.aspx",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Solar energy in agriculture: decentralised solar plants and solarisation of agricultural pumps, with Telangana targets set by TGREDCO.",
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "disc-pmkusum"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "disc-pmkusum"
+        }
+      ],
+      "benefitSummary": "Component A: grid-connected solar plant with a 25-year tariff fixed by TGERC; Components B and C support solar pumps and pump solarisation.",
+      "eligibilityConditions": [
+        {
+          "text": "Component A: decentralised solar plant of 500 kW to 2 MW on barren, uncultivable or agricultural land within 5 km of a 33/11 kV substation (Telangana).",
+          "sourceId": "disc-pmkusum"
+        },
+        {
+          "text": "Applicant may be an individual farmer, group of farmers, cooperative, panchayat, FPO, water users association, SHG or federation, using own or leased land.",
+          "sourceId": "disc-pmkusum"
+        }
+      ],
       "exclusions": [],
-      "prerequisites": [],
-      "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "prerequisites": [
+        "Land ownership or lease documents",
+        "Mobile number for portal registration",
+        "Application fee (Component A: Rs 5,000 per MW plus GST)"
+      ],
+      "documents": [
+        "Land ownership proof",
+        "Identity proof"
+      ],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "Component-wise subsidy and the current application window were not recorded.",
-        "Land and substation-distance conditions are summarised, not quoted."
+        "No Telangana order confirming the state 30% subsidy share for Components B and C was located.",
+        "The scheme period and whether new applications are open were not confirmed from an official page that loaded.",
+        "Component B/C eligibility detail is not on the TGREDCO page read."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28 for Component A and the delivery agency; subsidy split left as an open question.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -5690,9 +6707,20 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "benefit": {
+        "kind": "subsidy",
+        "summary": "Solar plant with fixed 25-year tariff",
+        "amountNote": "Telangana pre-levellised tariff Rs 3.13/kWh for Component A, fixed for 25 years. Component B/C subsidy split (30% central, 30% state, 40% farmer/loan) is the national framework; no Telangana order confirming the state share was found."
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-agri-infra-fund",
@@ -5710,27 +6738,56 @@
         "entrepreneurs"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://agriinfra.dac.gov.in/",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Financing support for eligible agricultural infrastructure projects with interest subvention and credit guarantee.",
-      "eligibilityConditions": [],
-      "exclusions": [],
-      "prerequisites": [],
-      "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "eligibilityEvidence": [
+        {
+          "sourceId": "aif-overview"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "aif-overview"
+        }
+      ],
+      "benefitSummary": "Interest subvention of 3% a year on loans up to Rs 2 crore for 7 years, plus CGTMSE credit guarantee with the fee paid by government.",
+      "eligibilityConditions": [
+        {
+          "text": "Eligible entity: farmer, FPO, cooperative, SHG or federation, agri-entrepreneur, startup, PACS, state agency, or a PPP project.",
+          "sourceId": "aif-overview"
+        },
+        {
+          "text": "Minimum owner contribution of 10% of the fixed project cost.",
+          "sourceId": "aif-overview"
+        },
+        {
+          "text": "Working capital is not eligible; a borrower may put up to 25 projects at different locations.",
+          "sourceId": "aif-overview"
+        }
+      ],
+      "exclusions": [
+        "Working capital loans",
+        "PSUs directly (only through a PPP project)"
+      ],
+      "prerequisites": [
+        "Detailed Project Report",
+        "Aadhaar and mobile number for portal registration"
+      ],
+      "documents": [
+        "Detailed Project Report"
+      ],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
-      "confidence": "medium",
+      "confidence": "high",
       "unresolvedQuestions": [
-        "Whether Telangana offers a state top-up was not established.",
-        "Eligible project list was not transcribed."
+        "The credit guarantee coverage percentage is not stated on the AIF pages.",
+        "There is no per-borrower maximum loan published; only the benefit cap of Rs 2 crore."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28 from the scheme overview page (last updated 24 Oct 2026).",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -5739,9 +6796,23 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "applicationUrl": "https://agriinfra.dac.gov.in/",
+      "applicationNotes": "Fully online: register with mobile and Aadhaar, apply on the portal with a DPR; the application is routed to the chosen lender.",
+      "benefit": {
+        "kind": "loan",
+        "summary": "Interest subvention and credit guarantee on project loans",
+        "amountInr": 20000000,
+        "amountNote": "3% subvention up to Rs 2 crore for a maximum of 7 years; CGTMSE cover for loans up to Rs 2 crore; no capital or margin subsidy."
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-pmmsy",
@@ -5759,27 +6830,60 @@
         "entrepreneurs"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://warangal.telangana.gov.in/fisheries",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Support for fish and prawn production, ponds, hatcheries, aquaculture systems, vehicles and retail outlets, with rates by activity and category.",
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "disc-pmmsy"
+        },
+        {
+          "sourceId": "pmmsy-women-pib"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "pmmsy-women-pib"
+        },
+        {
+          "sourceId": "disc-pmmsy"
+        }
+      ],
+      "benefitSummary": "Assistance of 40% of unit cost for general category and 60% for SC, ST and women beneficiaries; women entrepreneur projects up to Rs 1.5 crore with 60% support.",
+      "eligibilityConditions": [
+        {
+          "text": "Applicant aged 18 to 60 years.",
+          "sourceId": "disc-pmmsy"
+        },
+        {
+          "text": "One project per person.",
+          "sourceId": "disc-pmmsy"
+        },
+        {
+          "text": "Lease of at least 10 years for infrastructure projects, 7 years for non-infrastructure projects.",
+          "sourceId": "disc-pmmsy"
+        }
+      ],
       "exclusions": [],
-      "prerequisites": [],
-      "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "prerequisites": [
+        "Detailed Project Report or self-contained proposal",
+        "Land or lease documents"
+      ],
+      "documents": [
+        "DPR/SCP",
+        "Land availability and statutory clearances"
+      ],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "Activity-wise subsidy rates were not recorded.",
-        "Whether Telangana has opened the current application window is unclear."
+        "The scheme was reported as continued only until September 2026; no official notification beyond that was located.",
+        "Activity-wise unit costs and subsidy rates are not in the sources read and vary by sub-component."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28; the 40/60 split and the women ceiling are official, the activity-wise table is not recorded.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -5788,9 +6892,21 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "applicationNotes": "Submit the DPR to the District Fisheries Office; proposals are not accepted directly by the central department.",
+      "benefit": {
+        "kind": "subsidy",
+        "summary": "Capital assistance on unit cost",
+        "amountNote": "40% general, 60% SC/ST/women; women entrepreneur model up to Rs 1.50 crore project cost at 60% support (PIB, 19 Aug 2025). Rates vary by activity."
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-fish-seed-subsidy",
@@ -6206,27 +7322,62 @@
         "women"
       ],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://tgfps.telangana.gov.in/pmfme/support-to-fpos-shgs-producer-cooperatives",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Credit-linked grant support for group value-chain activities such as grading, storage, processing, packaging and marketing.",
-      "eligibilityConditions": [],
-      "exclusions": [],
-      "prerequisites": [],
-      "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "eligibilityEvidence": [
+        {
+          "sourceId": "pmfme-guidelines"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "pmfme-guidelines"
+        }
+      ],
+      "benefitSummary": "Credit-linked capital subsidy of 35% of eligible project cost up to Rs 10 lakh per unit; 35% up to Rs 3 crore for group common infrastructure; seed capital of Rs 40,000 per SHG member up to Rs 4 lakh per SHG.",
+      "eligibilityConditions": [
+        {
+          "text": "Individual micro food processing unit: unincorporated, employing fewer than 10 workers, preferably in the district's ODOP product.",
+          "sourceId": "pmfme-guidelines"
+        },
+        {
+          "text": "Group applicants: FPO, SHG or its federation, cooperative or government agency for common infrastructure.",
+          "sourceId": "pmfme-guidelines"
+        },
+        {
+          "text": "Beneficiary contribution of at least 10% of the project cost, with the balance as a bank loan.",
+          "sourceId": "pmfme-guidelines"
+        }
+      ],
+      "exclusions": [
+        "Poultry, piggery and goatry rearing",
+        "Trading of fresh fish or meat",
+        "Repacking only",
+        "Canteens, hotels, restaurants and tiffin services"
+      ],
+      "prerequisites": [
+        "Udyam or equivalent registration as a micro unit",
+        "Bank loan sanction",
+        "Application through the PMFME portal with a District Resource Person"
+      ],
+      "documents": [
+        "KYC documents",
+        "Land or lease documents",
+        "Machinery quotations",
+        "Construction estimates"
+      ],
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
-      "confidence": "medium",
+      "confidence": "high",
       "unresolvedQuestions": [
-        "Grant percentage and project ceilings were not recorded.",
-        "Whether the window is open is unclear."
+        "The 30 September 2026 extension order to 31 March 2027 is hosted on a state PMU site, not on mofpi.gov.in.",
+        "The exclusion list comes from the scheme's district resource material rather than the guidelines text read here."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28 from the scheme guidelines PDF; eligible project cost excludes land and caps technical civil work at 30%.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -6235,9 +7386,23 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "applicationUrl": "https://pmfme.mofpi.gov.in/",
+      "applicationNotes": "Applications are filed on the PMFME online MIS portal and processed by the District Resource Person, district nodal officer and the bank.",
+      "benefit": {
+        "kind": "subsidy",
+        "summary": "Credit-linked capital subsidy",
+        "amountInr": 1000000,
+        "amountNote": "35% of eligible project cost, maximum Rs 10 lakh per unit; group infrastructure 35% up to Rs 3 crore; SHG seed capital Rs 40,000 per member, maximum Rs 4 lakh per SHG."
+      },
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-t-idea",
@@ -6710,27 +7875,58 @@
       "subcategory": "rooftop solar subsidy",
       "beneficiaryGroups": [],
       "ageBands": [],
-      "schemeStatus": "UNKNOWN",
+      "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://tgredco.telangana.gov.in/SolarLinks.aspx",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "benefitSummary": "Central financial assistance for residential rooftop solar, with Telangana applications routed through TGREDCO.",
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "disc-pm-surya-ghar"
+        },
+        {
+          "sourceId": "pm-surya-ghar-portal"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "pm-surya-ghar-portal"
+        }
+      ],
+      "benefitSummary": "Central financial assistance for residential rooftop solar: Rs 30,000 per kW for the first 2 kW, Rs 18,000 per kW for the third, capped at Rs 78,000.",
+      "eligibilityConditions": [
+        {
+          "text": "Residential electricity consumer with a valid consumer account number for the distribution utility.",
+          "sourceId": "disc-pm-surya-ghar"
+        },
+        {
+          "text": "Application only through the national portal, using a vendor registered on it.",
+          "sourceId": "pm-surya-ghar-portal"
+        },
+        {
+          "text": "Modules must meet the domestic content requirement to be eligible for central assistance.",
+          "sourceId": "disc-pm-surya-ghar"
+        }
+      ],
       "exclusions": [],
-      "prerequisites": [],
-      "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "prerequisites": [
+        "Electricity consumer number",
+        "Registered portal vendor",
+        "Bank account proof"
+      ],
+      "documents": [
+        "Cancelled cheque or bank passbook scan",
+        "Electricity bill / consumer number"
+      ],
+      "status": "OFFICIALLY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "The exact per-kW subsidy figures were reported by search results but not confirmed on this page.",
-        "Whether net metering is available statewide is unclear."
+        "The MNRE guidelines PDF (07.06.2024) returned no response during verification; subsidy figures should be re-read from it before import.",
+        "No itemised document checklist is published on the portal beyond bank proof."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "Verified 2026-11-28: identity, route and consumer-number test are portal-confirmed; the rupee figures are marked as guideline values.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -6739,9 +7935,22 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-28",
+          "note": "M9.3 verification pass"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "applicationUrl": "https://pmsuryaghar.gov.in/",
+      "applicationNotes": "Register on the national portal, apply for rooftop solar, select a registered vendor, then upload system details for DISCOM inspection and net meter.",
+      "benefit": {
+        "kind": "subsidy",
+        "summary": "Central financial assistance",
+        "amountNote": "Rs 30,000/kW up to 2 kW, Rs 18,000/kW for the third kW, total capped at Rs 78,000 (MNRE guidelines, 07.06.2024). The guidelines PDF did not load during this check, so the figures are recorded as guideline values, not portal-verified."
+      },
+      "lastVerifiedOn": "2026-11-28"
     }
   ],
   "coverageClaims": [],
