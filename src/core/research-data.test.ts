@@ -26,4 +26,12 @@ describe('shipped research register', () => {
   it('still describes the same six catalogue schemes', () => {
     expect(schemeIds).toEqual(['eshram', 'pmsym', 'pmsby', 'pmjjby', 'svanidhi', 'pmjdy'])
   })
+
+  it('keeps the Telangana batch in the register, not in the matcher catalogue', () => {
+    const report = validateResearch(researchJson, { schemeIds, today: '2026-11-27' })
+    const telangana = report.records.filter((record) => record.state === 'Telangana')
+    expect(telangana).toHaveLength(23)
+    expect(telangana.every((record) => record.schemeId === undefined)).toBe(true)
+    expect(schemeIds).toHaveLength(6)
+  })
 })
