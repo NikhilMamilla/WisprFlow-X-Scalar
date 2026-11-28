@@ -3131,6 +3131,10 @@
         {
           "text": "Dialysis patients and beedi thekadars appear as separate categories in the 2026 MCR HRD Institute table at Rs 2,016, but this record does not yet describe their eligibility.",
           "sourceId": "mcrhrdi-welfare-policies"
+        },
+        {
+          "text": "Old age pensionable age was reduced from 65 to 57 years (Socio Economic Outlook 2021, chapter on social security); the CAG audit table showing 65 describes the 2018-21 rules, so the two are not necessarily in conflict.",
+          "sourceId": "tg-socio-economic-outlook-2021"
         }
       ],
       "exclusions": [
@@ -3151,7 +3155,7 @@
       "lastVerifiedOn": "2026-11-27",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "The old-age age limit is 57 in the 2021 state outlook but 65 in the CAG audit table for 2018-21; no order after 2019 was read, so the current limit is unconfirmed.",
+        "The Socio Economic Outlook 2021 says the old-age age was cut from 65 to 57, while the CAG audit table (2018-21) still says 65; the order that made the change was not found, so 57 is recorded as current policy without an order number.",
         "The pension amount is the 2019 order figure; confirm whether it was enhanced after 2019.",
         "The Aasara portal did not respond at audit; confirm the current application route.",
         "Exclusions beyond income and land (children in employment, four-wheeler owners, government pensioners) come from the CAG summary and are not recorded as separate fields.",
@@ -3187,7 +3191,7 @@
           "note": "Aasara includes a single women category; the separate record was not researched"
         }
       ],
-      "notes": "M9.1 audit: old-age age corrected from 65 to 57, verification downgraded to partial, the unreachable 2019 GO URL marked GONE, and the application URL removed. M9.8: the same 2019 order was read in an accessible NACO copy, so the amount is now traceable to a legal source; the dead scpwd link stays on the record as GONE. M9.9: added the CAG audit criteria table and the 2026 MCR HRD summary; the rate and age disagreements are recorded rather than resolved."
+      "notes": "M9.1 audit: old-age age corrected from 65 to 57, verification downgraded to partial, the unreachable 2019 GO URL marked GONE, and the application URL removed. M9.8: the same 2019 order was read in an accessible NACO copy, so the amount is now traceable to a legal source; the dead scpwd link stays on the record as GONE. M9.9: added the CAG audit criteria table and the 2026 MCR HRD summary; the rate and age disagreements are recorded rather than resolved. M9.10: old-age age traced to the 2021 Socio Economic Outlook; no Government Order for it and no post-2019 rate order could be retrieved, so both remain unresolved in the register."
     },
     {
       "id": "research-tg-kalyana-lakshmi",
