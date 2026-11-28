@@ -1,4 +1,10 @@
-/* Leftover base reset. Design tokens live in theme.css. */
+/* Base reset. Design tokens live in theme.css. */
+html {
+  overflow-y: auto;
+  scrollbar-gutter: auto;
+}
+
 #root {
   min-height: 100vh;
+  min-height: 100dvh;
 }

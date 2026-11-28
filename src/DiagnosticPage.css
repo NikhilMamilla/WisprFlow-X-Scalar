@@ -6,7 +6,7 @@
   max-width: 480px;
   margin: 0 auto;
   font-family: system-ui, sans-serif;
-  font-size: 20px;
+  font-size: var(--fs-body);
 }
 
 .panel {
@@ -17,11 +17,11 @@
 
 .panel h2 {
   margin: 0 0 8px;
-  font-size: 22px;
+  font-size: var(--fs-h3);
 }
 
 .support-panel .ua {
-  font-size: 14px;
+  font-size: var(--fs-meta);
   word-break: break-all;
   color: #555;
 }
@@ -36,7 +36,7 @@
   flex: 1;
   min-width: 100px;
   min-height: 56px;
-  font-size: 22px;
+  font-size: var(--fs-h3);
   border-radius: 10px;
   border: 2px solid #333;
   background: white;
@@ -50,7 +50,7 @@
 .mic-button {
   width: 100%;
   min-height: 64px;
-  font-size: 22px;
+  font-size: var(--fs-h3);
   border-radius: 12px;
   border: none;
   background: #1a7f37;
@@ -67,7 +67,7 @@
 
 .speak-box {
   width: 100%;
-  font-size: 20px;
+  font-size: var(--fs-body);
   padding: 8px;
   box-sizing: border-box;
 }
@@ -81,11 +81,11 @@
 
 .button-row button {
   min-height: 48px;
-  font-size: 18px;
+  font-size: var(--fs-body);
   flex: 1;
 }
 
 .voice-list {
   padding-left: 20px;
-  font-size: 16px;
+  font-size: var(--fs-small);
 }

@@ -239,7 +239,7 @@ export default function Flow() {
   const showSkip = state.offTopicFailures >= OFF_TOPIC_LIMIT
 
   return (
-    <div className={isNight ? 'flow theme-night' : 'flow'}>
+    <div className={isNight ? 'flow theme-night' : 'flow'} lang={stringLang}>
       <Header />
       {noVoice && <p className="no-voice-banner">{t(stringLang, 'no_voice_notice')}</p>}
 
@@ -315,13 +315,7 @@ export default function Flow() {
         )}
       </div>
 
-      {state.screen !== 'sheet' && (
-        <button type="button" className="about-link" onClick={() => setShowAbout((v) => !v)}>
-          {t(stringLang, 'app_about_link')}
-        </button>
-      )}
-
-      <Footer />
+      <Footer lang={stringLang} onAbout={state.screen === 'sheet' ? undefined : () => setShowAbout((v) => !v)} />
     </div>
   )
 }
