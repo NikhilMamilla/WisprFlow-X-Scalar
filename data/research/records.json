@@ -1,5 +1,5 @@
 {
-  "_note": "Research register for Haq Bolo. These six records describe the six schemes already in data/schemes.json; nothing here is new scheme data. Records for state and UT schemes are added by researchers, not by this file's author. Beneficiary-group and age-band tagging of the imported records is deliberately incomplete: an untagged area reports NOT_RESEARCHED, which is the truth.",
+  "_note": "Haq Bolo research register. The six research-* records below describe the six schemes in data/schemes.json; the research-tg-* records describe Telangana state schemes, none of which is imported into the catalogue. Only what an official source states is recorded; unknown stays unknown. Records that are CATALOGUED or NEEDS_RESEARCH were discovered but not yet researched in depth, and say so.",
   "checked_on": "2026-11-27",
   "sources": [
     {
@@ -11,9 +11,48 @@
       "tier": "PRIMARY_OFFICIAL",
       "kind": "pib_release",
       "retrievedOn": "2026-11-27",
-      "schemeIds": ["eshram"],
-      "change": { "status": "UNCHECKED" },
-      "licenseNotes": "Government release; quoted only as the closest official document the team held."
+      "schemeIds": [
+        "eshram"
+      ],
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "licenseNotes": "Government release; kept as the document the team originally used. The official e-Shram FAQ is now cited alongside it."
+    },
+    {
+      "id": "eshram-faqs",
+      "url": "https://eshram.gov.in/faqs",
+      "title": "e-Shram frequently asked questions",
+      "issuedBy": "Ministry of Labour and Employment",
+      "level": "CENTRAL",
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "faq",
+      "retrievedOn": "2026-11-27",
+      "verifiedOn": "2026-11-27",
+      "schemeIds": [
+        "eshram"
+      ],
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "eshram-schemes",
+      "url": "https://eshram.gov.in/Schemes",
+      "title": "e-Shram scheme finder: eligibility stated for PM-SYM, PMSBY and PMJJBY",
+      "issuedBy": "Ministry of Labour and Employment",
+      "level": "CENTRAL",
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "ministry_site",
+      "retrievedOn": "2026-11-27",
+      "schemeIds": [
+        "pmsym",
+        "pmsby",
+        "pmjjby"
+      ],
+      "change": {
+        "status": "UNCHECKED"
+      }
     },
     {
       "id": "labour-pmsym-enrolment",
@@ -24,8 +63,79 @@
       "tier": "PRIMARY_OFFICIAL",
       "kind": "ministry_site",
       "retrievedOn": "2026-11-27",
-      "schemeIds": ["pmsym"],
-      "change": { "status": "UNCHECKED" }
+      "schemeIds": [
+        "pmsym"
+      ],
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "dfs-pmsby",
+      "url": "https://financialservices.gov.in/pmsby",
+      "title": "Pradhan Mantri Suraksha Bima Yojana: eligibility FAQ",
+      "issuedBy": "Department of Financial Services, Ministry of Finance",
+      "level": "CENTRAL",
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "faq",
+      "retrievedOn": "2026-11-27",
+      "verifiedOn": "2026-11-27",
+      "schemeIds": [
+        "pmsby"
+      ],
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "dfs-pmjjby",
+      "url": "https://financialservices.gov.in/pmjjby",
+      "title": "Pradhan Mantri Jeevan Jyoti Bima Yojana: eligibility FAQ",
+      "issuedBy": "Department of Financial Services, Ministry of Finance",
+      "level": "CENTRAL",
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "faq",
+      "retrievedOn": "2026-11-27",
+      "verifiedOn": "2026-11-27",
+      "schemeIds": [
+        "pmjjby"
+      ],
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "pmjdy-scheme",
+      "url": "https://pmjdy.gov.in/scheme",
+      "title": "Pradhan Mantri Jan-Dhan Yojana: scheme details and benefits",
+      "issuedBy": "Department of Financial Services, Ministry of Finance",
+      "level": "CENTRAL",
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "ministry_site",
+      "retrievedOn": "2026-11-27",
+      "verifiedOn": "2026-11-27",
+      "schemeIds": [
+        "pmjdy"
+      ],
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "dfs-pmjdy",
+      "url": "https://financialservices.gov.in/pradhan-mantri-jan-dhan-yojana-pmjdy",
+      "title": "Pradhan Mantri Jan Dhan Yojana: scheme page",
+      "issuedBy": "Department of Financial Services, Ministry of Finance",
+      "level": "CENTRAL",
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "ministry_site",
+      "retrievedOn": "2026-11-27",
+      "schemeIds": [
+        "pmjdy"
+      ],
+      "change": {
+        "status": "UNCHECKED"
+      }
     },
     {
       "id": "svanidhi-portal-faq",
@@ -36,21 +146,357 @@
       "tier": "SECONDARY_OFFICIAL",
       "kind": "faq",
       "retrievedOn": "2026-11-27",
-      "schemeIds": ["svanidhi", "pmsby", "pmjjby", "pmjdy"],
-      "change": { "status": "UNCHECKED" },
-      "licenseNotes": "Hosted on the PM SVANidhi portal (qcin.org), not a gov.in domain. Treated as secondary: it is the portal's own FAQ, not a notification. The catalogue validator warns about this URL."
+      "schemeIds": [
+        "svanidhi",
+        "pmsby",
+        "pmjjby",
+        "pmjdy"
+      ],
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "licenseNotes": "Hosted on the PM SVANidhi portal (qcin.org), not a gov.in domain. Kept as historical evidence only; the official portal and the MoHUA guidelines are now the cited sources."
     },
     {
-      "id": "india-gov-svanidhi-spotlight",
-      "url": "https://www.india.gov.in/spotlight/pm-street-vendors-atmanirbhar-nidhi-pm-svanidhi",
-      "title": "PM Street Vendor's AtmaNirbhar Nidhi spotlight",
-      "issuedBy": "National Portal of India",
+      "id": "svanidhi-portal",
+      "url": "https://pmsvanidhi.mohua.gov.in/",
+      "title": "PM Street Vendor's AtmaNirbhar Nidhi: official portal",
+      "issuedBy": "Ministry of Housing and Urban Affairs",
       "level": "CENTRAL",
       "tier": "PRIMARY_OFFICIAL",
       "kind": "ministry_site",
       "retrievedOn": "2026-11-27",
-      "schemeIds": ["svanidhi"],
-      "change": { "status": "UNCHECKED" }
+      "verifiedOn": "2026-11-27",
+      "schemeIds": [
+        "svanidhi"
+      ],
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "svanidhi-guidelines",
+      "url": "https://mohua.gov.in/static/uploads/2026/01/bde957bc3a87fb001c05ddd09484edda.pdf",
+      "title": "PM SVANidhi scheme guidelines",
+      "issuedBy": "Ministry of Housing and Urban Affairs",
+      "level": "CENTRAL",
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "guidelines",
+      "retrievedOn": "2026-11-27",
+      "schemeIds": [
+        "svanidhi"
+      ],
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "tg-portal-initiatives",
+      "url": "https://www.telangana.gov.in/Government-Initiatives",
+      "title": "Government Initiatives - Telangana State Portal",
+      "issuedBy": "Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-27",
+      "verifiedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "wanaparthy-schemes",
+      "url": "https://wanaparthy.telangana.gov.in/schemes",
+      "title": "Schemes - Wanaparthy District",
+      "issuedBy": "Wanaparthy District Administration, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-27",
+      "verifiedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "licenseNotes": "District websites list statewide schemes; a listing here is a discovery source, not proof of district-level operation."
+    },
+    {
+      "id": "wanaparthy-rythu-bharosa",
+      "url": "https://wanaparthy.telangana.gov.in/scheme/rythu-bharosa-scheme/",
+      "title": "Rythu Bharosa Scheme - Wanaparthy District",
+      "issuedBy": "Wanaparthy District Administration, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-27",
+      "verifiedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "rythubharosa-portal",
+      "url": "https://rythubharosa.telangana.gov.in/",
+      "title": "Rythu Bharosa - Telangana",
+      "issuedBy": "Agriculture Department, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "other",
+      "retrievedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "wanaparthy-indiramma-indlu",
+      "url": "https://wanaparthy.telangana.gov.in/scheme/indiramma-indlu-scheme/",
+      "title": "Indiramma Indlu Scheme - Wanaparthy District",
+      "issuedBy": "Wanaparthy District Administration, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-27",
+      "verifiedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "indiramma-portal",
+      "url": "https://indirammaindlu.telangana.gov.in/",
+      "title": "Indiramma Indlu",
+      "issuedBy": "Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "other",
+      "retrievedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "telanganaepass-kalyana",
+      "url": "https://telanganaepass.cgg.gov.in/KalyanaLakshmiLinks.jsp",
+      "title": "Kalyana Lakshmi Pathakam and Shaadi Mubarak services",
+      "issuedBy": "Telangana ePASS",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "other",
+      "retrievedOn": "2026-11-27",
+      "verifiedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "suryapet-kalyana",
+      "url": "https://suryapet.telangana.gov.in/scheme/kalyana-lakshmi-scheme/",
+      "title": "Kalyana Lakshmi Scheme - Suryapet District",
+      "issuedBy": "Suryapet District Administration, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-27",
+      "verifiedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "dalitbandhu-portal",
+      "url": "https://dalitbandhu.telangana.gov.in/",
+      "title": "Telangana Dalit Bandhu",
+      "issuedBy": "Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "other",
+      "retrievedOn": "2026-11-27",
+      "verifiedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "wdcw-arogya-lakshmi",
+      "url": "https://wdcw.tg.nic.in/Arogya_Lakshmi.html",
+      "title": "Arogya Lakshmi Programme",
+      "issuedBy": "Department of Women, Children, Disabled and Senior Citizens, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-27",
+      "verifiedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "medchal-rajiv-yuva",
+      "url": "https://medchal-malkajgiri.telangana.gov.in/scheme/rajiv-yuva-vikasam-scheme",
+      "title": "Rajiv Yuva Vikasam Scheme - Medchal Malkajgiri District",
+      "issuedBy": "Medchal Malkajgiri District Administration, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "tg-rajiv-yuva-guidelines",
+      "url": "https://cdn.s3waas.gov.in/s3fa3a3c407f82377f55c19c5d403335c7/uploads/2025/02/2025040263.pdf",
+      "title": "Rajiv Yuva Vikasam scheme guidelines (economic support schemes)",
+      "issuedBy": "Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "guidelines",
+      "retrievedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "licenseNotes": "PDF served from a Government of Telangana S3WaaS CDN path; the copy indexed by a third-party site was used only to read the text, the citation points at the government host."
+    },
+    {
+      "id": "scpwd-aasara-go",
+      "url": "http://scpwd.telangana.gov.in/documents/Gos/Sectionn%20-%2024%20Social%20Securty%20(Aasara%20Pensions).pdf",
+      "title": "G.O. Ms. No. 34: enhancement of Aasara pensions",
+      "issuedBy": "Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_LEGAL",
+      "kind": "government_order",
+      "retrievedOn": "2026-11-27",
+      "change": {
+        "status": "GONE",
+        "lastCheckedOn": "2026-11-27",
+        "note": "The host did not respond on 2026-11-27 (connection failure, no HTTP status). Kept for traceability only; no longer cited as evidence."
+      },
+      "licenseNotes": "Government Order PDF hosted by the State Commissioner for Persons with Disabilities. URL unreachable at audit; text was only readable through a search index."
+    },
+    {
+      "id": "cag-aasara-audit",
+      "url": "https://cag.gov.in/webroot/uploads/download_audit_report/2021/DBT-Aasara-Report_English-065cdb0c5e2b6f6.54080329.pdf",
+      "title": "CAG performance audit of Aasara pensions (Direct Benefit Transfer)",
+      "issuedBy": "Comptroller and Auditor General of India",
+      "level": "CENTRAL",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "other",
+      "retrievedOn": "2026-11-27",
+      "schemeIds": [
+        "research-tg-aasara-pensions"
+      ],
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "licenseNotes": "Audit report tabulates the category-wise eligibility criteria it audited; used for eligibility, not as a scheme guideline."
+    },
+    {
+      "id": "medak-schemes",
+      "url": "https://medak.telangana.gov.in/schemes",
+      "title": "Schemes - Medak District",
+      "issuedBy": "Medak District Administration, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "adilabad-schemes",
+      "url": "https://adilabad.telangana.gov.in/schemes",
+      "title": "Schemes - Adilabad District",
+      "issuedBy": "Adilabad District Administration, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      }
+    },
+    {
+      "id": "mulugu-schemes",
+      "url": "https://mulugu.telangana.gov.in/schemes",
+      "title": "Schemes - Mulugu District",
+      "issuedBy": "Mulugu District Administration, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "licenseNotes": "States that Rythu Bharosa replaces the former Rythu Bandhu programme; used for that relationship only."
+    },
+    {
+      "id": "tg-socio-economic-outlook-2021",
+      "url": "https://telangana.gov.in/wp-content/uploads/2023/05/Telangana-Socio-Economic-Outlook-2021.pdf",
+      "title": "Telangana Socio Economic Outlook 2021 - Aasara Pensions",
+      "issuedBy": "Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "other",
+      "retrievedOn": "2026-11-27",
+      "verifiedOn": "2026-11-27",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "licenseNotes": "State government publication. States that the pensionable age for old-age pensions was reduced from 65 to 57 and that the monthly pension has been Rs 2,016 (Rs 3,016 for disabled pensioners) since June 2019."
     }
   ],
   "records": [
@@ -59,17 +505,46 @@
       "schemeId": "eshram",
       "name": "e-Shram registration",
       "officialName": "e-Shram registration",
-      "aliases": ["e shram", "eshram card"],
+      "aliases": [
+        "e shram",
+        "eshram card"
+      ],
       "level": "CENTRAL",
       "department": "Ministry of Labour and Employment",
       "category": "labour",
-      "beneficiaryGroups": ["unorganised_workers"],
+      "beneficiaryGroups": [
+        "unorganised_workers"
+      ],
       "ageBands": [],
       "schemeStatus": "ACTIVE",
       "discoveryUrl": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc_9692_20260825_14270901.pdf",
-      "eligibilityEvidence": [{ "sourceId": "pib-eshram-2026" }],
-      "verificationEvidence": [{ "sourceId": "pib-eshram-2026" }],
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "eshram-faqs"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "eshram-faqs"
+        },
+        {
+          "sourceId": "pib-eshram-2026"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Any worker in the unorganised sector who is not a member of ESIC or EPFO",
+          "sourceId": "eshram-faqs"
+        },
+        {
+          "text": "Aged 16 years and above",
+          "sourceId": "eshram-faqs"
+        },
+        {
+          "text": "No income criterion for registration",
+          "sourceId": "eshram-faqs"
+        }
+      ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
@@ -80,34 +555,101 @@
       "lastVerifiedOn": "2026-11-27",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "The rule set is only partially verified; confirm the age and occupation conditions against a current notification."
+        "The catalogue's e-Shram rule set has not been compared field by field with the official FAQ in M9; no catalogue change was made.",
+        "The official FAQ states 16+ with no income criterion; confirm the catalogue agrees."
       ],
       "importReadiness": "IMPORTED",
       "statusHistory": [
-        { "status": "DISCOVERED", "on": "2026-11-27" },
-        { "status": "CATALOGUED", "on": "2026-11-27" },
-        { "status": "SOURCE_IDENTIFIED", "on": "2026-11-27" },
-        { "status": "READY_FOR_IMPORT", "on": "2026-11-27", "note": "catalogue record created in M5" },
-        { "status": "IMPORTED", "on": "2026-11-27" }
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "READY_FOR_IMPORT",
+          "on": "2026-11-27",
+          "note": "catalogue record created in M5"
+        },
+        {
+          "status": "IMPORTED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27",
+          "note": "M9 evidence audit: official FAQ added as primary evidence"
+        }
       ],
-      "relationships": [{ "type": "RELATED", "schemeId": "pmsym", "note": "both target unorganised workers" }]
+      "relationships": [
+        {
+          "type": "RELATED",
+          "schemeId": "pmsym",
+          "note": "both target unorganised workers"
+        }
+      ]
     },
     {
       "id": "research-pmsym",
       "schemeId": "pmsym",
       "name": "PM Shram Yogi Maan-dhan",
       "officialName": "Pradhan Mantri Shram Yogi Maan-dhan Yojana",
-      "aliases": ["PM-SYM", "shram yogi pension"],
+      "aliases": [
+        "PM-SYM",
+        "shram yogi pension"
+      ],
       "level": "CENTRAL",
       "department": "Ministry of Labour and Employment",
       "category": "pension",
-      "beneficiaryGroups": ["unorganised_workers"],
+      "beneficiaryGroups": [
+        "unorganised_workers"
+      ],
       "ageBands": [],
       "schemeStatus": "ACTIVE",
-      "discoveryUrl": "https://labour.gov.in/enrolment-process",
-      "eligibilityEvidence": [{ "sourceId": "labour-pmsym-enrolment" }],
-      "verificationEvidence": [{ "sourceId": "labour-pmsym-enrolment" }],
-      "eligibilityConditions": [],
+      "discoveryUrl": "https://eshram.gov.in/Schemes",
+      "benefit": {
+        "kind": "cash",
+        "summary": "Assured monthly pension after 60, with spouse and joint enrolment options",
+        "amountNote": "Rs 3,000 per month from age 60; the spouse receives 50% of the pension after the beneficiary's death; a couple both enrolled receives Rs 6,000 per month jointly. Contribution slabs were not verified.",
+        "frequency": "monthly after 60"
+      },
+      "eligibilityEvidence": [
+        {
+          "sourceId": "eshram-schemes"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "eshram-schemes"
+        },
+        {
+          "sourceId": "labour-pmsym-enrolment"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Indian citizen",
+          "sourceId": "eshram-schemes"
+        },
+        {
+          "text": "Unorganised worker (street vendor, agriculture, construction, leather, handloom, mid-day meal, rickshaw, rag picking, carpenter, fisherfolk and similar)",
+          "sourceId": "eshram-schemes"
+        },
+        {
+          "text": "Aged 18 to 40 years",
+          "sourceId": "eshram-schemes"
+        },
+        {
+          "text": "Monthly income below Rs 15,000 and not a member of EPFO, ESIC or a government-funded NPS",
+          "sourceId": "eshram-schemes"
+        }
+      ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
@@ -117,32 +659,80 @@
       "lastResearchedOn": "2026-11-27",
       "lastVerifiedOn": "2026-11-27",
       "confidence": "high",
-      "unresolvedQuestions": [],
+      "unresolvedQuestions": [
+        "The contribution slabs and the 50% matching contribution need a primary PM-SYM page or notification; only the eligibility text was confirmed."
+      ],
       "importReadiness": "IMPORTED",
       "statusHistory": [
-        { "status": "DISCOVERED", "on": "2026-11-27" },
-        { "status": "SOURCE_IDENTIFIED", "on": "2026-11-27" },
-        { "status": "IMPORTED", "on": "2026-11-27" }
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "IMPORTED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27",
+          "note": "M9 evidence audit: official eligibility text added"
+        }
       ],
-      "relationships": []
+      "relationships": [],
+      "notes": "M9.1 audit: benefit wording now matches the e-Shram scheme page exactly; the earlier text implied the figure came from a general pension list."
     },
     {
       "id": "research-pmsby",
       "schemeId": "pmsby",
       "name": "PM Suraksha Bima Yojana",
       "officialName": "Pradhan Mantri Suraksha Bima Yojana",
-      "aliases": ["PMSBY", "accident insurance"],
+      "aliases": [
+        "PMSBY",
+        "accident insurance"
+      ],
       "level": "CENTRAL",
       "department": "Department of Financial Services, Ministry of Finance",
       "category": "insurance",
       "beneficiaryGroups": [],
       "ageBands": [],
       "schemeStatus": "ACTIVE",
-      "discoveryUrl": "https://pmsvanidhi.qcin.org/assets/documents/FAQ-%20SVANidhi%20se%20Samriddhi.pdf",
-      "eligibilityEvidence": [{ "sourceId": "svanidhi-portal-faq" }],
-      "verificationEvidence": [{ "sourceId": "svanidhi-portal-faq" }],
-      "eligibilityConditions": [],
-      "exclusions": [],
+      "discoveryUrl": "https://financialservices.gov.in/pmsby",
+      "benefit": {
+        "kind": "insurance",
+        "summary": "Accident cover for bank and post office account holders",
+        "amountNote": "The Department of Financial Services FAQ covers accidental death and disablement; the cover amount was not re-verified in M9."
+      },
+      "eligibilityEvidence": [
+        {
+          "sourceId": "dfs-pmsby"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "dfs-pmsby"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Individual (single or joint) account holder of a participating bank or post office",
+          "sourceId": "dfs-pmsby"
+        },
+        {
+          "text": "Aged 18 to 70 years",
+          "sourceId": "dfs-pmsby"
+        },
+        {
+          "text": "Enrolled through one bank or post office account only",
+          "sourceId": "dfs-pmsby"
+        }
+      ],
+      "exclusions": [
+        "Institutional account holders are not eligible"
+      ],
       "prerequisites": [],
       "documents": [],
       "status": "IMPORTED",
@@ -150,15 +740,29 @@
       "discoveredOn": "2026-11-27",
       "lastResearchedOn": "2026-11-27",
       "lastVerifiedOn": "2026-11-27",
-      "confidence": "medium",
+      "confidence": "high",
       "unresolvedQuestions": [
-        "The evidence is the PM SVANidhi portal FAQ, not a notification for this scheme. Replace it with a primary source."
+        "The catalogue cites the PM SVANidhi FAQ for this scheme; the official DFS FAQ is now the evidence, and the catalogue source_url is unchanged in M9."
       ],
       "importReadiness": "IMPORTED",
       "statusHistory": [
-        { "status": "DISCOVERED", "on": "2026-11-27" },
-        { "status": "SOURCE_IDENTIFIED", "on": "2026-11-27" },
-        { "status": "IMPORTED", "on": "2026-11-27" }
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "IMPORTED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27",
+          "note": "M9 evidence audit: DFS primary source added"
+        }
       ],
       "relationships": []
     },
@@ -167,17 +771,46 @@
       "schemeId": "pmjjby",
       "name": "PM Jeevan Jyoti Bima Yojana",
       "officialName": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
-      "aliases": ["PMJJBY", "life insurance"],
+      "aliases": [
+        "PMJJBY",
+        "life insurance"
+      ],
       "level": "CENTRAL",
       "department": "Department of Financial Services, Ministry of Finance",
       "category": "insurance",
       "beneficiaryGroups": [],
       "ageBands": [],
       "schemeStatus": "ACTIVE",
-      "discoveryUrl": "https://pmsvanidhi.qcin.org/assets/documents/FAQ-%20SVANidhi%20se%20Samriddhi.pdf",
-      "eligibilityEvidence": [{ "sourceId": "svanidhi-portal-faq" }],
-      "verificationEvidence": [{ "sourceId": "svanidhi-portal-faq" }],
-      "eligibilityConditions": [],
+      "discoveryUrl": "https://financialservices.gov.in/pmjjby",
+      "benefit": {
+        "kind": "insurance",
+        "summary": "Life cover for bank and post office account holders, auto-debited yearly",
+        "amountNote": "The DFS FAQ states the cover and premium; the premium figure was not re-verified in M9."
+      },
+      "eligibilityEvidence": [
+        {
+          "sourceId": "dfs-pmjjby"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "dfs-pmjjby"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Individual (single or joint) account holder of a participating bank or post office",
+          "sourceId": "dfs-pmjjby"
+        },
+        {
+          "text": "Aged 18 to 50 years",
+          "sourceId": "dfs-pmjjby"
+        },
+        {
+          "text": "Premium auto-debited from the account with consent",
+          "sourceId": "dfs-pmjjby"
+        }
+      ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
@@ -186,15 +819,29 @@
       "discoveredOn": "2026-11-27",
       "lastResearchedOn": "2026-11-27",
       "lastVerifiedOn": "2026-11-27",
-      "confidence": "medium",
+      "confidence": "high",
       "unresolvedQuestions": [
-        "The evidence is the PM SVANidhi portal FAQ, not a notification for this scheme. Replace it with a primary source."
+        "The catalogue cites the PM SVANidhi FAQ for this scheme; the official DFS FAQ is now the evidence, and the catalogue source_url is unchanged in M9."
       ],
       "importReadiness": "IMPORTED",
       "statusHistory": [
-        { "status": "DISCOVERED", "on": "2026-11-27" },
-        { "status": "SOURCE_IDENTIFIED", "on": "2026-11-27" },
-        { "status": "IMPORTED", "on": "2026-11-27" }
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "IMPORTED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27",
+          "note": "M9 evidence audit: DFS primary source added"
+        }
       ],
       "relationships": []
     },
@@ -203,17 +850,55 @@
       "schemeId": "svanidhi",
       "name": "PM SVANidhi",
       "officialName": "PM Street Vendor's AtmaNirbhar Nidhi",
-      "aliases": ["PM SVANidhi", "street vendor loan"],
+      "aliases": [
+        "PM SVANidhi",
+        "street vendor loan"
+      ],
       "level": "CENTRAL",
       "department": "Ministry of Housing and Urban Affairs",
       "category": "entrepreneurship",
-      "beneficiaryGroups": ["street_vendors", "entrepreneurs"],
+      "beneficiaryGroups": [
+        "street_vendors",
+        "entrepreneurs"
+      ],
       "ageBands": [],
       "schemeStatus": "ACTIVE",
-      "discoveryUrl": "https://www.india.gov.in/spotlight/pm-street-vendors-atmanirbhar-nidhi-pm-svanidhi",
-      "eligibilityEvidence": [{ "sourceId": "india-gov-svanidhi-spotlight" }],
-      "verificationEvidence": [{ "sourceId": "india-gov-svanidhi-spotlight" }],
-      "eligibilityConditions": [],
+      "discoveryUrl": "https://pmsvanidhi.mohua.gov.in/",
+      "benefit": {
+        "kind": "loan",
+        "summary": "Micro-credit working capital loan for urban street vendors",
+        "amountNote": "The portal states enhanced loan amount limits; the current slab figures were not read in M9."
+      },
+      "eligibilityEvidence": [
+        {
+          "sourceId": "svanidhi-guidelines"
+        },
+        {
+          "sourceId": "svanidhi-portal"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "svanidhi-guidelines"
+        },
+        {
+          "sourceId": "svanidhi-portal"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Street vendor as defined in the Street Vendors (Protection of Livelihood and Regulation of Street Vending) Act, 2014",
+          "sourceId": "svanidhi-guidelines"
+        },
+        {
+          "text": "Urban local body area in a State or UT that has notified rules under that Act",
+          "sourceId": "svanidhi-portal"
+        },
+        {
+          "text": "Vending activity must fit the Act's definition of a street vendor; the guidelines set out how urban local bodies identify eligible vendors",
+          "sourceId": "svanidhi-guidelines"
+        }
+      ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
@@ -224,32 +909,80 @@
       "lastVerifiedOn": "2026-11-27",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "The rule set is only partially verified; the urban-only condition needs a primary source."
+        "Telangana appears in the portal's performance table, but its notification status should be confirmed from the state notification list.",
+        "The loan tranche amounts were not re-read in M9."
       ],
       "importReadiness": "IMPORTED",
       "statusHistory": [
-        { "status": "DISCOVERED", "on": "2026-11-27" },
-        { "status": "SOURCE_IDENTIFIED", "on": "2026-11-27" },
-        { "status": "IMPORTED", "on": "2026-11-27" }
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "IMPORTED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27",
+          "note": "M9 evidence audit: official portal and MoHUA guidelines added"
+        }
       ],
-      "relationships": []
+      "relationships": [],
+      "notes": "M9.1 audit: the certificate-of-vending condition was softened to what the guidelines actually state."
     },
     {
       "id": "research-pmjdy",
       "schemeId": "pmjdy",
       "name": "PM Jan Dhan Yojana",
       "officialName": "Pradhan Mantri Jan Dhan Yojana",
-      "aliases": ["PMJDY", "jan dhan account"],
+      "aliases": [
+        "PMJDY",
+        "jan dhan account"
+      ],
       "level": "CENTRAL",
       "department": "Department of Financial Services, Ministry of Finance",
       "category": "financial_inclusion",
       "beneficiaryGroups": [],
       "ageBands": [],
       "schemeStatus": "ACTIVE",
-      "discoveryUrl": "https://pmsvanidhi.qcin.org/assets/documents/FAQ-%20SVANidhi%20se%20Samriddhi.pdf",
-      "eligibilityEvidence": [{ "sourceId": "svanidhi-portal-faq" }],
-      "verificationEvidence": [{ "sourceId": "svanidhi-portal-faq" }],
-      "eligibilityConditions": [],
+      "discoveryUrl": "https://pmjdy.gov.in/scheme",
+      "benefit": {
+        "kind": "service",
+        "summary": "Basic savings bank account with no minimum balance",
+        "amountNote": "Free RuPay card with accident cover of Rs 2 lakh for accounts opened after 28.8.2018, and an overdraft up to Rs 10,000 for eligible holders",
+        "frequency": "ongoing"
+      },
+      "eligibilityEvidence": [
+        {
+          "sourceId": "pmjdy-scheme"
+        },
+        {
+          "sourceId": "dfs-pmjdy"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "pmjdy-scheme"
+        },
+        {
+          "sourceId": "dfs-pmjdy"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Unbanked person without any other bank account",
+          "sourceId": "pmjdy-scheme"
+        },
+        {
+          "text": "Account can be opened at any bank branch or Business Correspondent outlet",
+          "sourceId": "pmjdy-scheme"
+        }
+      ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
@@ -258,17 +991,1782 @@
       "discoveredOn": "2026-11-27",
       "lastResearchedOn": "2026-11-27",
       "lastVerifiedOn": "2026-11-27",
-      "confidence": "medium",
+      "confidence": "high",
       "unresolvedQuestions": [
-        "The evidence is the PM SVANidhi portal FAQ, not a Jan Dhan notification. Replace it with a primary source."
+        "The catalogue cites the PM SVANidhi FAQ for this scheme; the official PMJDY pages are now the evidence, and the catalogue source_url is unchanged in M9."
       ],
       "importReadiness": "IMPORTED",
       "statusHistory": [
-        { "status": "DISCOVERED", "on": "2026-11-27" },
-        { "status": "SOURCE_IDENTIFIED", "on": "2026-11-27" },
-        { "status": "IMPORTED", "on": "2026-11-27" }
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "IMPORTED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27",
+          "note": "M9 evidence audit: PMJDY primary sources added"
+        }
       ],
       "relationships": []
+    },
+    {
+      "id": "research-tg-rythu-bharosa",
+      "name": "Rythu Bharosa",
+      "officialName": "Telangana Rythu Bharosa Scheme",
+      "aliases": [
+        "Rythu Bharosa Scheme",
+        "Agriculture Investment Support"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Agriculture Department, Government of Telangana",
+      "category": "agriculture",
+      "subcategory": "farmer income support",
+      "beneficiaryGroups": [
+        "farmers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/scheme/rythu-bharosa-scheme/",
+      "benefitSummary": "Investment support of Rs 6,000 per acre per crop season, paid by DBT.",
+      "benefit": {
+        "kind": "cash",
+        "summary": "Direct income support to meet agricultural input costs",
+        "amountNote": "Rs 6,000 per acre per season; Rs 12,000 per acre per year across Kharif and Rabi",
+        "frequency": "per crop season"
+      },
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "wanaparthy-rythu-bharosa"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "wanaparthy-rythu-bharosa"
+        },
+        {
+          "sourceId": "rythubharosa-portal"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Resident of Telangana",
+          "sourceId": "wanaparthy-rythu-bharosa"
+        },
+        {
+          "text": "Small or marginal farmer, tenant farmer leasing agricultural land, or agricultural labourer",
+          "sourceId": "wanaparthy-rythu-bharosa"
+        },
+        {
+          "text": "Aged 18 to 59 years",
+          "sourceId": "wanaparthy-rythu-bharosa"
+        },
+        {
+          "text": "Owns or leases agriculturally suitable land",
+          "sourceId": "wanaparthy-rythu-bharosa"
+        }
+      ],
+      "exclusions": [
+        "Mining areas, industrial zones and real estate land are not eligible"
+      ],
+      "prerequisites": [],
+      "documents": [
+        "Aadhaar card",
+        "Land ownership certificate or lease documents",
+        "Bank passbook",
+        "Ration card",
+        "Domicile certificate",
+        "Mobile number",
+        "PAN card"
+      ],
+      "applicationUrl": "https://rythubharosa.telangana.gov.in/",
+      "applicationNotes": "The district page describes an online application and status route on the scheme portal, with Gram Panchayat follow-up. The portal itself was not exercised for this research.",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "lastVerifiedOn": "2026-11-27",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "The district page states 18 to 59 years; confirm against the current Agriculture Department order.",
+        "Whether the per-acre amount changed in the 2025-26 or 2026-27 budget.",
+        "The district page says landless agricultural labourers are eligible while also requiring land ownership or a lease; that contradiction needs the scheme guideline."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": [],
+      "notes": "M9.1 audit: the per-acre figure was removed from the structured amount field (it is per acre, not per beneficiary) and verification downgraded to partial because the conditions come from a district summary, not the scheme guideline."
+    },
+    {
+      "id": "research-tg-indiramma-indlu",
+      "name": "Indiramma Indlu",
+      "officialName": "Indiramma Indlu Scheme",
+      "aliases": [
+        "Indiramma Houses"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "housing",
+      "subcategory": "housing assistance",
+      "beneficiaryGroups": [],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/scheme/indiramma-indlu-scheme/",
+      "benefitSummary": "Rs 5 lakh construction assistance and 250 square yards of land for landless beneficiaries.",
+      "benefit": {
+        "kind": "subsidy",
+        "summary": "100% subsidy to build a permanent house on one's own plot",
+        "amountInr": 500000,
+        "amountNote": "Rs 5 lakh construction assistance; 250 square yards of land for landless beneficiaries",
+        "frequency": "one-time"
+      },
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "wanaparthy-indiramma-indlu"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "wanaparthy-indiramma-indlu"
+        },
+        {
+          "sourceId": "indiramma-portal"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Landless or homeless family in Telangana",
+          "sourceId": "wanaparthy-indiramma-indlu"
+        },
+        {
+          "text": "Constructs a permanent house on the beneficiary's own plot, or on land provided under the scheme",
+          "sourceId": "wanaparthy-indiramma-indlu"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "applicationUrl": "https://indirammaindlu.telangana.gov.in/",
+      "applicationNotes": "The district page names the Indiramma Indlu portal as the application route; officials record progress in a mobile application.",
+      "status": "OFFICIALLY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "lastVerifiedOn": "2026-11-27",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "No official income limit or selection order was found on the page.",
+        "Whether the older 2BHK Dignity Housing programme still runs alongside this scheme."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": [
+        {
+          "type": "RELATED",
+          "recordId": "research-tg-2bhk-housing",
+          "note": "both are state housing programmes; no merger"
+        }
+      ]
+    },
+    {
+      "id": "research-tg-rajiv-yuva-vikasam",
+      "name": "Rajiv Yuva Vikasam",
+      "officialName": "Rajiv Yuva Vikasam Scheme",
+      "aliases": [
+        "Yuva Vikasam",
+        "Economic Support Scheme"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Welfare corporations for SC, ST, BC, Minority and EBC/EWS communities, Government of Telangana",
+      "category": "employment",
+      "subcategory": "self-employment",
+      "beneficiaryGroups": [
+        "sc_st_obc",
+        "minorities",
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://medchal-malkajgiri.telangana.gov.in/scheme/rajiv-yuva-vikasam-scheme",
+      "benefitSummary": "Loan-linked self-employment support up to Rs 4 lakh unit cost, with subsidy slabs up to 100%.",
+      "benefit": {
+        "kind": "loan",
+        "summary": "Bank loan with a government subsidy for a self-employment venture",
+        "amountNote": "District pages state assistance up to Rs 3 lakh. The guideline's unit-cost slabs are: 100% subsidy up to Rs 50,000; 90% up to Rs 1 lakh; 80% up to Rs 2 lakh; 70% up to Rs 4 lakh; minor irrigation 100%.",
+        "frequency": "one-time"
+      },
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "tg-rajiv-yuva-guidelines"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "tg-rajiv-yuva-guidelines"
+        },
+        {
+          "sourceId": "medchal-rajiv-yuva"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Unemployed youth from SC, ST, BC, Minority and EBC/EWS communities",
+          "sourceId": "medchal-rajiv-yuva"
+        },
+        {
+          "text": "Aged 21 to 55 years for non-agricultural schemes, 21 to 60 for agriculture and allied sectors",
+          "sourceId": "tg-rajiv-yuva-guidelines"
+        },
+        {
+          "text": "Annual family income within Rs 1.5 lakh in rural areas or Rs 2 lakh in urban areas",
+          "sourceId": "tg-rajiv-yuva-guidelines"
+        },
+        {
+          "text": "Only one self-employment scheme per household within five years",
+          "sourceId": "tg-rajiv-yuva-guidelines"
+        }
+      ],
+      "exclusions": [
+        "A household that received a self-employment scheme in the previous five years"
+      ],
+      "prerequisites": [],
+      "documents": [
+        "Aadhaar card",
+        "Ration card or income certificate",
+        "Caste certificate issued after Telangana formation",
+        "Permanent driving licence for transport sector schemes",
+        "Pattadar passbook for agricultural schemes",
+        "SADAREM certificate for persons with disabilities",
+        "Passport-size photograph"
+      ],
+      "applicationNotes": "Applications were registered on the TGOBMMS portal from 15 March to 14 April 2025, then submitted at Mandal Praja Palana Seva Kendralu in rural areas or the Municipal Commissioner office in urban areas. tgobmmsnew.cgg.gov.in did not respond when checked on 2026-11-27.",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "lastVerifiedOn": "2026-11-27",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Whether a new application window has opened since 14 April 2025.",
+        "Whether the Rs 3 lakh figure quoted by district pages is the loan or the total unit cost.",
+        "The guideline PDF is a government-hosted copy; confirm it is the final approved version."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": [],
+      "notes": "M9.1 audit: the application portal did not respond, so the URL was moved out of applicationUrl."
+    },
+    {
+      "id": "research-tg-aasara-pensions",
+      "name": "Aasara Pensions",
+      "officialName": "Aasara Pension Scheme",
+      "aliases": [
+        "Aasara",
+        "social security pension"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "social_welfare",
+      "subcategory": "pensions",
+      "beneficiaryGroups": [
+        "senior_citizens",
+        "widows",
+        "persons_with_disabilities",
+        "weavers",
+        "unorganised_workers",
+        "women"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://www.telangana.gov.in/state-web-directory",
+      "benefitSummary": "Monthly social security pension for old age, widows, disability and listed worker categories.",
+      "benefit": {
+        "kind": "cash",
+        "amountInr": 2016,
+        "amountNote": "Rs 2,016 per month for old age, widows, weavers, toddy tappers, HIV-AIDS, beedi workers, single women and filaria patients; Rs 3,016 for persons with disabilities. The state Socio Economic Outlook 2021 confirms these amounts since June 2019; the current rate is unconfirmed.",
+        "frequency": "monthly"
+      },
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "cag-aasara-audit"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "sourceId": "tg-socio-economic-outlook-2021"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Old age pension: aged 57 years and above (the age limit was reduced from 65; the CAG audit covering 2018-21 still tabulates 65)",
+          "sourceId": "tg-socio-economic-outlook-2021"
+        },
+        {
+          "text": "Widow pension: aged 18 years and above",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "Disability pension: any age, with 40% disability (51% for hearing impairment)",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "Weavers aged 50 and above; toddy tappers aged 50 and above who are members of a toddy tappers cooperative society",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "Beedi workers above 18 who began beedi rolling before 28 February 2014",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "Single women: separated or deserted for more than a year; unmarried rural women above 30 and urban women above 35",
+          "sourceId": "cag-aasara-audit"
+        }
+      ],
+      "exclusions": [
+        "Household annual income above Rs 1.5 lakh in rural areas or Rs 2 lakh in urban areas",
+        "Landholding above 3 acres wet or 7.5 acres dry"
+      ],
+      "prerequisites": [],
+      "documents": [
+        "Aadhaar card",
+        "Proof of age",
+        "Bank account details"
+      ],
+      "applicationNotes": "District pages direct applicants to the Aasara portal, but aasara.telangana.gov.in did not respond when checked on 2026-11-27. Until that is confirmed, apply through the MeeSeva centre or the DRDA/MPDO office named in the 2014 order.",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "lastVerifiedOn": "2026-11-27",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "The old-age age limit is 57 in the 2021 state outlook but 65 in the CAG table for 2018-21; the current Government Order is needed.",
+        "The pension amount is a 2019 figure; confirm the current rate.",
+        "The Aasara portal did not respond at audit; confirm the current application route.",
+        "Exclusions beyond income and land (children in employment, four-wheeler owners, government pensioners) come from the CAG summary and are not recorded as separate fields."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": [
+        {
+          "type": "RELATED",
+          "recordId": "research-tg-single-women-pension",
+          "note": "Aasara includes a single women category; the separate record was not researched"
+        }
+      ],
+      "notes": "M9.1 audit: old-age age corrected from 65 to 57, verification downgraded to partial, the unreachable 2019 GO URL marked GONE, and the application URL removed because it did not respond."
+    },
+    {
+      "id": "research-tg-kalyana-lakshmi",
+      "name": "Kalyana Lakshmi",
+      "officialName": "Kalyana Lakshmi Pathakam",
+      "aliases": [
+        "Kalyana Lakshmi Pathakam",
+        "marriage assistance"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "women_child",
+      "subcategory": "marriage assistance",
+      "beneficiaryGroups": [
+        "women",
+        "sc_st_obc"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://telanganaepass.cgg.gov.in/KalyanaLakshmiLinks.jsp",
+      "benefitSummary": "One-time marriage assistance of Rs 1,00,116 for eligible brides.",
+      "benefit": {
+        "kind": "cash",
+        "amountInr": 100116,
+        "amountNote": "One-time assistance, raised from Rs 75,116 on 19 March 2018",
+        "frequency": "one-time"
+      },
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "telanganaepass-kalyana"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "telanganaepass-kalyana"
+        },
+        {
+          "sourceId": "suryapet-kalyana"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Unmarried girl who is a resident of Telangana",
+          "sourceId": "suryapet-kalyana"
+        },
+        {
+          "text": "Aged 18 years or above at the time of marriage",
+          "sourceId": "suryapet-kalyana"
+        },
+        {
+          "text": "Belongs to SC, ST, BC or EBC",
+          "sourceId": "telanganaepass-kalyana"
+        },
+        {
+          "text": "Parental annual income within Rs 2 lakh for SC and ST, and within Rs 2 lakh urban or Rs 1.5 lakh rural for BC and EBC",
+          "sourceId": "telanganaepass-kalyana"
+        },
+        {
+          "text": "Marriage on or after 2 October 2014",
+          "sourceId": "suryapet-kalyana"
+        }
+      ],
+      "exclusions": [
+        "Assistance is one-time only"
+      ],
+      "prerequisites": [],
+      "documents": [],
+      "applicationUrl": "https://telanganaepass.cgg.gov.in/KalyanaLakshmiLinks.jsp",
+      "applicationNotes": "Applications are registered on the Telangana ePASS Kalyana Lakshmi service. The ePASS notice asks applicants to update the bride's mother's bank account details for verification.",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "lastVerifiedOn": "2026-11-27",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Sources disagree on the amount for disabled girls; the higher figure seen on a non-official aggregator is not recorded.",
+        "Whether the BC/EBC rural income limit of Rs 1.5 lakh is still current."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": [
+        {
+          "type": "RELATED",
+          "recordId": "research-tg-shaadi-mubarak",
+          "note": "parallel scheme for minority brides"
+        }
+      ]
+    },
+    {
+      "id": "research-tg-shaadi-mubarak",
+      "name": "Shaadi Mubarak",
+      "officialName": "Shaadi Mubaarak",
+      "aliases": [
+        "Shaadi Mubharak"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "women_child",
+      "subcategory": "marriage assistance",
+      "beneficiaryGroups": [
+        "women",
+        "minorities"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://telanganaepass.cgg.gov.in/KalyanaLakshmiLinks.jsp",
+      "benefitSummary": "One-time marriage assistance for minority brides, described by district pages together with Kalyana Lakshmi.",
+      "benefit": {
+        "kind": "cash",
+        "amountNote": "District pages describe Kalyana Lakshmi and Shaadi Mubarak together at Rs 1,00,116; a separate amount for this scheme was not confirmed",
+        "frequency": "one-time"
+      },
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "telanganaepass-kalyana"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "telanganaepass-kalyana"
+        },
+        {
+          "sourceId": "adilabad-schemes"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Unmarried girl belonging to a minority community",
+          "sourceId": "telanganaepass-kalyana"
+        },
+        {
+          "text": "Resident of Telangana",
+          "sourceId": "adilabad-schemes"
+        },
+        {
+          "text": "Aged 18 years or above at the time of marriage",
+          "sourceId": "adilabad-schemes"
+        },
+        {
+          "text": "Family annual income within Rs 2 lakh",
+          "sourceId": "telanganaepass-kalyana"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "applicationUrl": "https://telanganaepass.cgg.gov.in/KalyanaLakshmiLinks.jsp",
+      "applicationNotes": "Registered through the Telangana ePASS Shaadi Mubarak service alongside Kalyana Lakshmi.",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "lastVerifiedOn": "2026-11-27",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "The separate benefit amount for Shaadi Mubarak is not stated in the sources read.",
+        "Whether the minority income limit is Rs 2 lakh with no rural/urban split."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": [
+        {
+          "type": "RELATED",
+          "recordId": "research-tg-kalyana-lakshmi",
+          "note": "parallel scheme for SC/ST/BC/EBC brides"
+        }
+      ]
+    },
+    {
+      "id": "research-tg-dalit-bandhu",
+      "name": "Dalit Bandhu",
+      "officialName": "Telangana Dalit Bandhu",
+      "aliases": [
+        "Dalit Bandhu Scheme"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Scheduled Castes Development Department (SC Corporation), Government of Telangana",
+      "category": "social_welfare",
+      "subcategory": "economic support",
+      "beneficiaryGroups": [
+        "sc_st_obc",
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://dalitbandhu.telangana.gov.in/",
+      "benefitSummary": "One-time capital assistance of Rs 10 lakh per SC family as a 100% grant.",
+      "benefit": {
+        "kind": "subsidy",
+        "summary": "Capital assistance to start a livelihood of the family's choice, without bank loan linkage",
+        "amountInr": 1000000,
+        "amountNote": "Rs 10 lakh per SC family, 100% grant",
+        "frequency": "one-time"
+      },
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "dalitbandhu-portal"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "dalitbandhu-portal"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Scheduled Caste family in Telangana",
+          "sourceId": "dalitbandhu-portal"
+        },
+        {
+          "text": "One-time assistance per family",
+          "sourceId": "dalitbandhu-portal"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "applicationUrl": "https://dalitbandhu.telangana.gov.in/",
+      "applicationNotes": "The portal presents the scheme; no application route was stated on the page read.",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "lastVerifiedOn": "2026-11-27",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Income ceiling, age limit and beneficiary selection method are not stated on the portal.",
+        "Whether the scheme is open statewide or continues constituency-wise."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tg-arogya-lakshmi",
+      "name": "Arogya Lakshmi",
+      "officialName": "Arogya Lakshmi Programme",
+      "aliases": [
+        "Arogya Laxmi"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Department of Women, Children, Disabled and Senior Citizens",
+      "category": "health",
+      "subcategory": "maternal nutrition",
+      "beneficiaryGroups": [
+        "women",
+        "children"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://wdcw.tg.nic.in/Arogya_Lakshmi.html",
+      "benefitSummary": "One full hot meal a day at the Anganwadi centre for pregnant and lactating women, plus iron and folic acid.",
+      "benefit": {
+        "kind": "in_kind",
+        "summary": "Spot feeding at the Anganwadi centre",
+        "amountNote": "Rice, dal with leafy vegetables or sambar, and vegetables for at least 25 days a month; one boiled egg and 200 ml milk for 30 days a month; iron and folic acid tablets",
+        "frequency": "daily, 25-30 days a month"
+      },
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "wdcw-arogya-lakshmi"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "wdcw-arogya-lakshmi"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Pregnant or lactating woman registered at an ICDS Anganwadi centre",
+          "sourceId": "wdcw-arogya-lakshmi"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "applicationNotes": "Delivered through ICDS Anganwadi centres; no separate application route is stated.",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "VERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "lastVerifiedOn": "2026-11-27",
+      "confidence": "high",
+      "unresolvedQuestions": [
+        "Whether the programme is running in all 149 ICDS projects at the time of reading.",
+        "How a woman enrols if she is not already registered at an Anganwadi centre."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tg-kcr-kit",
+      "name": "KCR Kit",
+      "officialName": "KCR Kit Scheme",
+      "aliases": [
+        "KCR Kit Scheme"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "women_child",
+      "subcategory": "maternity kit",
+      "beneficiaryGroups": [
+        "women",
+        "children"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://adilabad.telangana.gov.in/schemes",
+      "benefitSummary": "A kit of 16 articles for mother and infant, given after delivery.",
+      "benefit": {
+        "kind": "in_kind",
+        "summary": "Maternity kit for the mother and newborn",
+        "amountInr": 2000,
+        "amountNote": "16 types of articles worth about Rs 2,000, per the district page",
+        "frequency": "one-time per delivery"
+      },
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "adilabad-schemes"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "adilabad-schemes"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Mother who has delivered, to whom the kit is given soon after delivery",
+          "sourceId": "adilabad-schemes"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "OFFICIALLY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "lastVerifiedOn": "2026-11-27",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "The district page is from 2018; the current kit contents and value are unconfirmed.",
+        "Whether the scheme is limited to government hospitals or to BPL mothers."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tg-mahalakshmi",
+      "name": "Mahalakshmi",
+      "officialName": "Mahalakshmi Scheme",
+      "aliases": [
+        "Maha Lakshmi",
+        "Mahalaxmi"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "women_child",
+      "subcategory": "women empowerment",
+      "beneficiaryGroups": [
+        "women",
+        "transgender"
+      ],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://www.telangana.gov.in/Government-Initiatives",
+      "benefitSummary": "Rs 2,500 a month for women heads of family, LPG cylinders at Rs 500 and free TSRTC bus travel.",
+      "benefit": {
+        "kind": "cash",
+        "amountInr": 2500,
+        "amountNote": "Rs 2,500 per month for women heads of family; domestic LPG at Rs 500 per cylinder; free travel on TSRTC Palle Velugu and Express buses",
+        "frequency": "monthly"
+      },
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "tg-portal-initiatives"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "tg-portal-initiatives"
+        },
+        {
+          "sourceId": "wanaparthy-schemes"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Woman who is the head of her family and a resident of Telangana",
+          "sourceId": "tg-portal-initiatives"
+        },
+        {
+          "text": "For the financial assistance: BPL or Antyodaya category with annual family income below Rs 2 lakh, per the district page",
+          "sourceId": "wanaparthy-schemes"
+        },
+        {
+          "text": "Free bus travel: all women, girls and transgender persons with a valid Aadhaar card",
+          "sourceId": "wanaparthy-schemes"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [
+        "Aadhaar card"
+      ],
+      "applicationNotes": "The district page says applications are processed through the Praja Palana programme; no online portal was confirmed.",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "lastVerifiedOn": "2026-11-27",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "The state portal describes Rs 2,500 for women heads of family without an income test; the district page adds BPL and Rs 2 lakh income limits. Confirm which applies.",
+        "Whether the LPG subsidy is per cylinder with no annual cap."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": [
+        {
+          "type": "RELATED",
+          "recordId": "research-tg-gruha-jyothi",
+          "note": "launched as part of the same six-guarantee package"
+        }
+      ]
+    },
+    {
+      "id": "research-tg-gruha-jyothi",
+      "name": "Gruha Jyothi",
+      "officialName": "Gruha Jyothi Scheme",
+      "aliases": [
+        "free electricity 200 units"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "utilities",
+      "subcategory": "electricity",
+      "beneficiaryGroups": [],
+      "ageBands": [],
+      "schemeStatus": "ACTIVE",
+      "discoveryUrl": "https://www.telangana.gov.in/Government-Initiatives",
+      "benefitSummary": "Free electricity up to 200 units a month for eligible households.",
+      "benefit": {
+        "kind": "subsidy",
+        "summary": "Zero electricity bill up to 200 units a month",
+        "amountNote": "Consumption above 200 units is charged at the regular tariff",
+        "frequency": "monthly"
+      },
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "tg-portal-initiatives"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "tg-portal-initiatives"
+        },
+        {
+          "sourceId": "wanaparthy-schemes"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Low-income household holding a ration card",
+          "sourceId": "tg-portal-initiatives"
+        },
+        {
+          "text": "Monthly consumption of 200 units or less",
+          "sourceId": "wanaparthy-schemes"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "applicationNotes": "The district page refers to applications through Praja Palana; the exact enrolment route was not confirmed.",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "lastVerifiedOn": "2026-11-27",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Whether tenanted households and multiple connections per family are covered.",
+        "How eligibility is linked to the ration card in practice."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tg-cheyutha",
+      "name": "Cheyutha",
+      "officialName": "Cheyutha Scheme",
+      "aliases": [
+        "Cheyutha"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "health",
+      "beneficiaryGroups": [
+        "senior_citizens",
+        "widows",
+        "persons_with_disabilities",
+        "weavers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://www.telangana.gov.in/Government-Initiatives",
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "tg-portal-initiatives"
+        },
+        {
+          "sourceId": "wanaparthy-schemes"
+        }
+      ],
+      "verificationEvidence": [],
+      "eligibilityConditions": [
+        {
+          "text": "State portal: economically backward section of Telangana, with free corporate treatment in empanelled hospitals under Rajiv Aarogyasri",
+          "sourceId": "tg-portal-initiatives"
+        },
+        {
+          "text": "District page: BPL household with a white ration card, in one of the listed categories such as senior citizens, widows, persons with disabilities, beedi workers or single women",
+          "sourceId": "wanaparthy-schemes"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CONFLICTING",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Two official pages describe different schemes under the name Cheyutha: a 2023 health cover launched with Mahalakshmi, and a 2018 financial assistance page for vulnerable groups.",
+        "Resolve with a Government Order before any eligibility is recorded as verified.",
+        "Which of the two, if either, is currently open."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Recorded as CONFLICTING on purpose. Nothing was merged and no benefit amount is stated because the sources disagree.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CONFLICTING",
+          "on": "2026-11-27",
+          "note": "official pages describe different schemes with the same name"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tg-rythu-bandhu",
+      "name": "Rythu Bandhu",
+      "officialName": "Agriculture Investment Support Scheme (Rythu Bandhu)",
+      "aliases": [
+        "Rythu Bandhu Scheme"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "agriculture",
+      "subcategory": "farmer income support",
+      "beneficiaryGroups": [
+        "farmers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "CLOSED",
+      "discoveryUrl": "https://medak.telangana.gov.in/schemes",
+      "benefitSummary": "Earlier per-acre investment support scheme, described by district pages as replaced by Rythu Bharosa.",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [
+        {
+          "sourceId": "medak-schemes"
+        },
+        {
+          "sourceId": "mulugu-schemes"
+        }
+      ],
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "OUTDATED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "lastVerifiedOn": "2026-11-27",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "No closure order was read; the replacement is stated on district pages only.",
+        "The per-acre amount was not verified and is therefore not recorded.",
+        "Whether any arrears or pending instalments remain payable."
+      ],
+      "importReadiness": "NOT_READY",
+      "notes": "Kept as a separate record so a reader who asks for Rythu Bandhu is not silently shown Rythu Bharosa as if it were the same scheme. M9.1 audit: the district pages support the scheme existence and its replacement, not eligibility, so they are recorded as verification evidence only.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "OUTDATED",
+          "on": "2026-11-27",
+          "note": "district pages state Rythu Bharosa replaced it"
+        }
+      ],
+      "relationships": [
+        {
+          "type": "REPLACED_BY",
+          "recordId": "research-tg-rythu-bharosa"
+        }
+      ]
+    },
+    {
+      "id": "research-tg-kanti-velugu",
+      "name": "Kanti Velugu",
+      "officialName": "Telangana Kanti Velugu",
+      "aliases": [
+        "universal eye screening"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "health",
+      "subcategory": "eye care",
+      "beneficiaryGroups": [],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://medak.telangana.gov.in/schemes",
+      "benefitSummary": "Universal eye screening, free spectacles and surgery referrals.",
+      "benefit": {
+        "kind": "service",
+        "summary": "Universal eye screening for the population of Telangana",
+        "amountNote": "Free spectacles where refraction correction is needed; surgeries for cases that require them",
+        "frequency": "campaign"
+      },
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "medak-schemes"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "medak-schemes"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Any citizen of Telangana, screened universally",
+          "sourceId": "medak-schemes"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "OFFICIALLY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "lastVerifiedOn": "2026-11-27",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "The district page is from 2019; whether a further screening round is running is unknown.",
+        "Where to go for screening now."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tg-2bhk-housing",
+      "name": "2BHK Dignity Housing",
+      "officialName": "2 Bed Room Housing Programme",
+      "aliases": [
+        "Double bedroom houses",
+        "2BHK"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "housing",
+      "subcategory": "housing assistance",
+      "beneficiaryGroups": [],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://adilabad.telangana.gov.in/schemes",
+      "benefitSummary": "A 560 sq ft two-bedroom house for houseless poor families.",
+      "benefit": {
+        "kind": "in_kind",
+        "summary": "Two-bedroom house with hall, kitchen and two toilets",
+        "amountNote": "Plinth area of 560 sq ft, built in phases for houseless poor families",
+        "frequency": "one-time"
+      },
+      "districts": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "adilabad-schemes"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "adilabad-schemes"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Houseless poor family in Telangana",
+          "sourceId": "adilabad-schemes"
+        }
+      ],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "applicationUrl": "https://2bhk.telangana.gov.in/",
+      "status": "OFFICIALLY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "lastVerifiedOn": "2026-11-27",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Whether this programme is still allocating houses now that Indiramma Indlu is running.",
+        "The selection criteria and waiting list are not stated on the page."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": [
+        {
+          "type": "RELATED",
+          "recordId": "research-tg-indiramma-indlu",
+          "note": "both are state housing programmes"
+        }
+      ]
+    },
+    {
+      "id": "research-tg-rythu-bima",
+      "name": "Rythu Bima",
+      "officialName": "Rythu Bima",
+      "aliases": [
+        "farmer life insurance"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "agriculture",
+      "subcategory": "farmer insurance",
+      "beneficiaryGroups": [
+        "farmers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/schemes",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Locate the official guideline: benefit amount, age limit, enrolment and whether it is still open.",
+        "The district listing is the only evidence found so far."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered from a district schemes list; not researched further in this batch.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tg-mission-bhagiratha",
+      "name": "Mission Bhagiratha",
+      "officialName": "Mission Bhagiratha",
+      "aliases": [
+        "drinking water mission"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "utilities",
+      "subcategory": "drinking water",
+      "beneficiaryGroups": [],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/schemes",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "A piped drinking water mission is a service, not an individual entitlement; confirm whether it belongs in a scheme catalogue at all.",
+        "Find the official mission page and current coverage."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tg-mission-kakatiya",
+      "name": "Mission Kakatiya",
+      "officialName": "Mission Kakatiya",
+      "aliases": [
+        "tank restoration"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "agriculture",
+      "subcategory": "irrigation",
+      "beneficiaryGroups": [
+        "farmers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/schemes",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "This is an irrigation infrastructure programme with no individual application; decide whether it is in scope.",
+        "Find the official programme page."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tg-haritha-haram",
+      "name": "Haritha Haram",
+      "officialName": "Telanganaku Haritha Haram",
+      "aliases": [
+        "green drive"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "environment",
+      "subcategory": "afforestation",
+      "beneficiaryGroups": [],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/schemes",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "No individual entitlement was identified; likely out of scope for a scheme finder.",
+        "Find the official programme page before deciding."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tg-sheep-distribution",
+      "name": "Sheep Distribution",
+      "officialName": "Sheep Distribution Scheme",
+      "aliases": [
+        "sheep units"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "agriculture",
+      "subcategory": "livestock",
+      "beneficiaryGroups": [
+        "unorganised_workers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/schemes",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Unit size, subsidy share and eligibility (shepherd families, Golla/Kuruma communities) need the official guideline.",
+        "Whether the scheme is currently open."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tg-dalit-land-distribution",
+      "name": "Land distribution to Dalits",
+      "officialName": "Land distribution to Dalits",
+      "aliases": [
+        "Dalit land distribution"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "social_welfare",
+      "subcategory": "land",
+      "beneficiaryGroups": [
+        "sc_st_obc"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/schemes",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Eligibility, land extent and the assigning authority need an official order.",
+        "Whether new land is still being assigned."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tg-she-teams",
+      "name": "SHE Teams",
+      "officialName": "SHE Teams",
+      "aliases": [
+        "women safety teams"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "women_child",
+      "subcategory": "safety",
+      "beneficiaryGroups": [
+        "women"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/schemes",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "This is a police service, not a benefit scheme; decide scope with the team.",
+        "How a woman reaches SHE Teams and what they provide."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tg-single-women-pension",
+      "name": "Single Women Pension",
+      "officialName": "Aasara single women pension",
+      "aliases": [
+        "single women pension"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "category": "social_welfare",
+      "subcategory": "pensions",
+      "beneficiaryGroups": [
+        "women",
+        "widows"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/schemes",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-27",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Aasara already covers single women; decide whether this should remain a separate record or become a relationship only.",
+        "The exact current age rules were not re-read for this record."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-27"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-27"
+        }
+      ],
+      "relationships": [
+        {
+          "type": "RELATED",
+          "recordId": "research-tg-aasara-pensions",
+          "note": "same pension framework"
+        }
+      ]
     }
   ],
   "coverageClaims": []
