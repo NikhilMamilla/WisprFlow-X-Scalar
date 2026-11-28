@@ -244,6 +244,8 @@ Coverage is derived from the register, never assumed: central government, the 28
 
 `NONE_FOUND` is a statement about a search, not about the country. It requires a note saying what was searched, it never creates a record, it is overridden as soon as a record exists, and the report prints the caveat every time. No national scheme count is hardcoded anywhere.
 
+`npm run research -- sources` prints a re-verification queue: `GONE` links first, then sources whose last check is older than 90 days, then sources never checked. It is derived from the dates in the register and never fetches anything, so a failed fetch can never be mistaken for a scheme closing, and the queue never changes a verification status by itself.
+
 The coverage report also counts records by department and prints the count, because discovery is run department by department and the next pass should start where the last one stopped. The department map itself lives in `docs/RESEARCH_DISCOVERY_REGISTER.md`.
 
 Discovery is not coverage. A record that exists only on a listing page (status `DISCOVERED`/`CATALOGUED` with no registered evidence) is counted as `discovered`, never as `researched`, and an area is never `COVERED` while one sits unexamined; an area with listings only reports `NEEDS_MORE_RESEARCH`. The report prints both counts, because a register that inflates coverage with unopened tabs is worse than a small one.

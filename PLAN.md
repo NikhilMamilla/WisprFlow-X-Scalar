@@ -108,6 +108,17 @@ Status:
 - Register now 88 records / 95 sources: 41 researched, 12 verified, 27 partial, 0 import-ready.
 - No engine, matcher or UI change; data/schemes.json unchanged.
 
+## M9.4 - Targeted evidence closure (implemented)
+Disability and transgender discovery plus CMRF/ePASS/PMFBY evidence work. See docs/RESEARCH_EVIDENCE_CLOSURE_M9_4.md.
+
+Status:
+- Five M9.3 overstatements corrected (PMMSY conditions, Aarogyasri amount, post-matric attributions, Nethanna Bima status, PM Surya Ghar wording).
+- 10 new records: 8 disability (pension, two scholarships, aids, economic rehabilitation, bus pass, marriage incentive, residential schools) and 2 transgender (welfare board, economic rehabilitation).
+- CMRF: no ceiling exists; the Rs 2 lakh and Rs 10 lakh figures are Aarogyasri's old and current covers.
+- PMFBY: Telangana enrolled through 2024-25, absent from the 2026 official table; still CONFLICTING.
+- New `npm run research -- sources` re-verification queue (deterministic, no network); 2 tests.
+- Register now 98 records / 101 sources; 0 import-ready; data/schemes.json unchanged.
+
 ## M5 (original plan, now later work) - Optional LLM extractor and Telugu polish
 POST /api/extract uses the LLM only if LLM_API_KEY is set, otherwise the rule-based extractor. Same output schema. Improve Telugu phrases and voice fallbacks from VOICE_FINDINGS.md.
 Done when: app behaves identically with no key, and better on messy speech with a key.
