@@ -1,0 +1,85 @@
+{
+  "schemes": [
+    {
+      "id": "telangana-bocwwb",
+      "aliases": [
+        "bocwwb",
+        "construction workers welfare board"
+      ],
+      "name_en": "Telangana BOCW Welfare Board registration",
+      "name_hi": "तेलंगाना भवन एवं अन्य निर्माण श्रमिक कल्याण बोर्ड पंजीकरण",
+      "name_te": "తెలంగాణ భవన మరియు ఇతర నిర్మాణ కార్మికుల సంక్షేమ బోర్డు నమోదు",
+      "benefit_en": "Registration as a building or other construction worker with the Telangana BOCW Welfare Board. Registration is done through the Assistant Labour Officer or a MeeSeva centre.",
+      "benefit_hi": "तेलंगाना भवन एवं अन्य निर्माण श्रमिक कल्याण बोर्ड में निर्माण श्रमिक के रूप में पंजीकरण। पंजीकरण सहायक श्रम अधिकारी या मी-सेवा केंद्र के ज़रिए होता है।",
+      "benefit_te": "తెలంగాణ భవన మరియు ఇతర నిర్మాణ కార్మికుల సంక్షేమ బోర్డులో నిర్మాణ కార్మికుడిగా నమోదు. నమోదు సహాయక కార్మిక అధికారి లేదా మీసేవ కేంద్రం ద్వారా జరుగుతుంది.",
+      "benefit_en_roman": "Telangana BOCW Welfare Board mein construction worker ke roop mein registration. Registration Assistant Labour Officer ya MeeSeva centre se hota hai.",
+      "category": "labour",
+      "tags": [
+        "construction_workers",
+        "registration"
+      ],
+      "beneficiaryGroups": [
+        "worker"
+      ],
+      "geography": {
+        "scope": "state",
+        "states": [
+          "Telangana"
+        ]
+      },
+      "rules": {
+        "age_min": 18,
+        "age_max": 59,
+        "requires": [
+          "worked_90_days_construction"
+        ],
+        "not": []
+      },
+      "documents": [
+        {
+          "en": "Two passport photographs",
+          "hi": "दो पासपोर्ट फ़ोटो",
+          "en_roman": "Do passport photo",
+          "te": "రెండు పాస్‌పోర్ట్ ఫోటోలు"
+        },
+        {
+          "en": "Age proof (school or medical certificate)",
+          "hi": "आयु प्रमाण (स्कूल या मेडिकल प्रमाणपत्र)",
+          "en_roman": "Age proof (school ya medical certificate)",
+          "te": "వయస్సు ధ్రువీకరణ (పాఠశాల లేదా వైద్య ధ్రువపత్రం)"
+        },
+        {
+          "en": "Nomination form for dependants",
+          "hi": "आश्रितों के लिए नामांकन फ़ॉर्म",
+          "en_roman": "Dependants ke liye nomination form",
+          "te": "ఆధారపడినవారి కోసం నామినేషన్ ఫారం"
+        }
+      ],
+      "application": {
+        "steps": [
+          {
+            "en": "Visit the Assistant Labour Officer or a MeeSeva centre.",
+            "hi": "सहायक श्रम अधिकारी या मी-सेवा केंद्र जाएं।",
+            "en_roman": "Assistant Labour Officer ya MeeSeva centre jayein."
+          }
+        ]
+      },
+      "source_url": "https://tbocwwb.telangana.gov.in/new_registered_beneficiary.html",
+      "verification": {
+        "status": "VERIFIED",
+        "checkedOn": "2026-11-28",
+        "confidence": "high",
+        "sources": [
+          {
+            "title": "How to get Registered As Beneficiary",
+            "url": "https://tbocwwb.telangana.gov.in/new_registered_beneficiary.html",
+            "type": "state_government",
+            "issuedBy": "Telangana Building and Other Construction Workers Welfare Board"
+          }
+        ],
+        "notes": "Unresolved from the research record: the Board page says the claim procedure is available soon; a Khammam district page gives the age band as 18-59 while the Board says not completed 60; no pension or education scholarship appears in the Board's own scheme table. Telugu strings NEEDS NATIVE TELUGU REVIEW."
+      },
+      "verify_note": "Age 18 to 59 and at least 90 days of building or construction work in the last 12 months. Registration only; no benefit amount or claim procedure is stated here. Telugu strings NEEDS NATIVE TELUGU REVIEW."
+    }
+  ]
+}

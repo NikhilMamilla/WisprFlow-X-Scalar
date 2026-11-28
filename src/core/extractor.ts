@@ -32,6 +32,9 @@ const BOOL_KEYWORDS: Record<BooleanField, Phrase[]> = {
   in_epf_esic_nps: phrases([
     'epf', 'pf', 'esic', 'esi', 'nps', 'provident fund', 'पीएफ', 'ईपीएफ', 'पी एफ', 'ईएसआईसी', 'పీఎఫ్*',
   ]),
+  worked_90_days_construction: phrases([
+    '90 din', '90 days', '90 day', 'pichhle saal construction', 'निर्माण कार्य 90 दिन', '90 दिन', 'నిర్మాణ పని 90',
+  ]),
   pays_income_tax: phrases([
     'income tax', 'tax', 'itr', 'इनकम टैक्स', 'टैक्स', 'आयकर', 'ట్యాక్స్*', 'పన్ను*',
   ]),

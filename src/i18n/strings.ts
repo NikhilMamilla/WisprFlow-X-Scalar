@@ -56,6 +56,11 @@ export const STRINGS: Record<string, Entry> = {
     hi: 'क्या आपका अपना बैंक खाता है, आपके नाम पर?',
     te: 'మీ పేరు మీద మీ సొంత బ్యాంక్ ఖాతా ఉందా?', // NEEDS NATIVE TELUGU REVIEW
   },
+  followup_worked_90_days_construction: {
+    en: 'Pichhle 12 mahine mein construction ka kaam 90 din se zyada kiya hai?',
+    hi: 'पिछले 12 महीनों में निर्माण का काम 90 दिन से ज़्यादा किया है?',
+    te: 'గత 12 నెలల్లో నిర్మాణ పని 90 రోజులకు మించి చేశారా?', // NEEDS NATIVE TELUGU REVIEW
+  },
   followup_has_aadhaar: {
     en: 'Kya aapke paas Aadhaar card hai?',
     hi: 'क्या आपके पास आधार कार्ड है?',
@@ -201,12 +206,14 @@ export const STRINGS: Record<string, Entry> = {
   field_occupation: { en: 'work', hi: 'काम', te: 'పని' }, // NEEDS NATIVE TELUGU REVIEW
   field_urban_or_rural: { en: 'city or village', hi: 'शहर या गांव', te: 'పట్నం లేదా గ్రామం' }, // NEEDS NATIVE TELUGU REVIEW
   field_has_bank_account: { en: 'bank account', hi: 'बैंक खाता', te: 'బ్యాంక్ ఖాతా' }, // NEEDS NATIVE TELUGU REVIEW
+  field_worked_90_days_construction: { en: '90 days of construction work', hi: '90 दिन निर्माण कार्य', te: '90 రోజుల నిర్మాణ పని' }, // NEEDS NATIVE TELUGU REVIEW
   field_has_aadhaar: { en: 'Aadhaar card', hi: 'आधार कार्ड', te: 'ఆధార్ కార్డు' }, // NEEDS NATIVE TELUGU REVIEW
   field_in_epf_esic_nps: { en: 'PF/ESIC/NPS', hi: 'पीएफ़/ईएसआईसी/एनपीएस', te: 'పీఎఫ్/ఈఎస్ఐసీ/ఎన్‌పీఎస్' }, // NEEDS NATIVE TELUGU REVIEW
   field_pays_income_tax: { en: 'income tax', hi: 'इनकम टैक्स', te: 'ఇన్‌కమ్ ట్యాక్స్' }, // NEEDS NATIVE TELUGU REVIEW
   field_state: { en: 'state', hi: 'राज्य', te: 'రాష్ట్రం' }, // NEEDS NATIVE TELUGU REVIEW
   field_district: { en: 'district', hi: 'ज़िला', te: 'జిల్లా' }, // NEEDS NATIVE TELUGU REVIEW
   link_source: { en: 'Source', hi: 'स्रोत', te: 'మూలం' }, // NEEDS NATIVE TELUGU REVIEW
+  checked_on: { en: 'Checked on', hi: 'जाँच की तारीख', te: 'తనిఖీ తేదీ' }, // NEEDS NATIVE TELUGU REVIEW
   badge_unverified: {
     en: 'Rules not fully verified — confirm at the office',
     hi: 'नियम पूरी तरह सत्यापित नहीं हैं — कार्यालय में पुष्टि करें',
@@ -250,6 +257,11 @@ export const STRINGS: Record<string, Entry> = {
     te: 'మీరు పీఎఫ్/ఈఎస్ఐసీ/ఎన్‌పీఎస్‌లో ఉన్నారు', // NEEDS NATIVE TELUGU REVIEW
   },
   rule_requires_has_aadhaar: { en: 'Aadhaar card nahi hai', hi: 'आधार कार्ड नहीं है', te: 'ఆధార్ కార్డు లేదు' }, // NEEDS NATIVE TELUGU REVIEW
+  rule_requires_worked_90_days_construction: {
+    en: '90 din construction kaam pichhle 12 mahine mein nahi hua',
+    hi: 'पिछले 12 महीनों में 90 दिन निर्माण कार्य नहीं हुआ',
+    te: 'గత 12 నెలల్లో 90 రోజుల నిర్మాణ పని లేదు', // NEEDS NATIVE TELUGU REVIEW
+  },
   rule_requires_has_bank_account: {
     en: 'apna bank account nahi hai',
     hi: 'अपना बैंक खाता नहीं है',

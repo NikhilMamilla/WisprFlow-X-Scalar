@@ -1,5 +1,5 @@
 {
-      "_note": "Hand-built dataset for the Haq Bolo prototype. Six schemes only. Rules were checked against official sources on 27 Nov 2026. Always confirm at the office. Benefit amounts are deliberately left general where not verified. name_te / benefit_te / document te are presentation translations only (Telugu, needs native review); the official names stay in name_en and the rules are language-independent. M5 fields: aliases, category, beneficiaryGroups, tags, geography, provides, verification. rules_verified is derived from verification.status at load time.",
+  "_note": "Hand-built dataset for the Haq Bolo prototype. Six schemes only. Rules were checked against official sources on 27 Nov 2026. Always confirm at the office. Benefit amounts are deliberately left general where not verified. name_te / benefit_te / document te are presentation translations only (Telugu, needs native review); the official names stay in name_en and the rules are language-independent. M5 fields: aliases, category, beneficiaryGroups, tags, geography, provides, verification. rules_verified is derived from verification.status at load time.",
   "checked_on": "2026-11-27",
   "schemes": [
     {
@@ -11,24 +11,59 @@
       "benefit_hi": "असंगठित श्रमिकों के लिए मुफ़्त पंजीकरण। आपका रिकॉर्ड कल्याण योजनाओं से जोड़ा जा सकता है।",
       "benefit_te": "అసంఘటిత కార్మికులకు ఉచిత నమోదు. మీ రికార్డును సంక్షేమ పథకాలతో అనుసంధానించవచ్చు.",
       "benefit_en_roman": "Asangathit mazdooron ke liye muft registration. Aapka record welfare schemes se jud sakta hai.",
-      "aliases": ["e shram", "e-shram card", "eshram card"],
+      "aliases": [
+        "e shram",
+        "e-shram card",
+        "eshram card"
+      ],
       "category": "labour",
-      "beneficiaryGroups": ["individual", "worker"],
-      "tags": ["unorganised_workers", "registration"],
-      "geography": { "scope": "central", "authority": "Ministry of Labour and Employment" },
+      "beneficiaryGroups": [
+        "individual",
+        "worker"
+      ],
+      "tags": [
+        "unorganised_workers",
+        "registration"
+      ],
+      "geography": {
+        "scope": "central",
+        "authority": "Ministry of Labour and Employment"
+      },
       "rules": {
         "age_min": 16,
         "age_max": null,
-        "not": ["pays_income_tax", "in_epf_esic_nps"],
+        "not": [
+          "pays_income_tax",
+          "in_epf_esic_nps"
+        ],
         "requires": []
       },
       "documents": [
-        { "en": "Aadhaar card", "hi": "आधार कार्ड", "en_roman": "Aadhaar card", "te": "ఆధార్ కార్డు" },
-        { "en": "Mobile number linked to Aadhaar", "hi": "आधार से जुड़ा मोबाइल नंबर", "en_roman": "Aadhaar se juda mobile number", "te": "ఆధార్‌తో అనుసంధానించిన మొబైల్ నంబర్" },
-        { "en": "Bank account details", "hi": "बैंक खाते की जानकारी", "en_roman": "Bank account ki jaankari", "te": "బ్యాంక్ ఖాతా వివరాలు" }
+        {
+          "en": "Aadhaar card",
+          "hi": "आधार कार्ड",
+          "en_roman": "Aadhaar card",
+          "te": "ఆధార్ కార్డు"
+        },
+        {
+          "en": "Mobile number linked to Aadhaar",
+          "hi": "आधार से जुड़ा मोबाइल नंबर",
+          "en_roman": "Aadhaar se juda mobile number",
+          "te": "ఆధార్‌తో అనుసంధానించిన మొబైల్ నంబర్"
+        },
+        {
+          "en": "Bank account details",
+          "hi": "बैंक खाते की जानकारी",
+          "en_roman": "Bank account ki jaankari",
+          "te": "బ్యాంక్ ఖాతా వివరాలు"
+        }
       ],
       "source_url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc_9692_20260825_14270901.pdf",
-      "verification": { "status": "PARTIALLY_VERIFIED", "checkedOn": "2026-11-27", "confidence": "medium" },
+      "verification": {
+        "status": "PARTIALLY_VERIFIED",
+        "checkedOn": "2026-11-27",
+        "confidence": "medium"
+      },
       "verify_note": "Sources disagree on the upper age limit: a Dec 2024 PIB document says 16 to 59, an Aug 2026 PIB document says 16 and above. Registration is free. Ask no fee."
     },
     {
@@ -40,24 +75,57 @@
       "benefit_hi": "60 साल की उम्र के बाद हर महीने ₹3,000 की निश्चित पेंशन, जिसमें सरकार आपकी मासिक राशि के बराबर योगदान देती है।",
       "benefit_te": "60 ఏళ్ల తర్వాత నెలకు ₹3,000 ఖాయిల పెన్షన్, ఇందులో ప్రభుత్వం మీ నెలవారీ విరాళంతో సమానంగా డబ్బు వేస్తుంది.",
       "benefit_en_roman": "60 saal ki umar ke baad har mahine ₹3,000 ki guaranteed pension, jisme sarkar aapke mahine ke paise ke barabar paisa deti hai.",
-      "aliases": ["pm sym", "pm-sym", "shram yogi maandhan"],
+      "aliases": [
+        "pm sym",
+        "pm-sym",
+        "shram yogi maandhan"
+      ],
       "category": "pension",
-      "beneficiaryGroups": ["individual", "worker"],
-      "tags": ["unorganised_workers", "pension"],
-      "geography": { "scope": "central", "authority": "Ministry of Labour and Employment" },
+      "beneficiaryGroups": [
+        "individual",
+        "worker"
+      ],
+      "tags": [
+        "unorganised_workers",
+        "pension"
+      ],
+      "geography": {
+        "scope": "central",
+        "authority": "Ministry of Labour and Employment"
+      },
       "rules": {
         "age_min": 18,
         "age_max": 40,
         "income_max_monthly": 15000,
-        "not": ["pays_income_tax", "in_epf_esic_nps"],
-        "requires": ["has_aadhaar", "has_bank_account"]
+        "not": [
+          "pays_income_tax",
+          "in_epf_esic_nps"
+        ],
+        "requires": [
+          "has_aadhaar",
+          "has_bank_account"
+        ]
       },
       "documents": [
-        { "en": "Aadhaar card", "hi": "आधार कार्ड", "en_roman": "Aadhaar card", "te": "ఆధార్ కార్డు" },
-        { "en": "Savings bank or Jan Dhan account number with IFSC", "hi": "बचत बैंक या जन धन खाता नंबर, IFSC के साथ", "en_roman": "Savings bank ya Jan Dhan account number, IFSC ke saath", "te": "IFSCతో పొదుపు బ్యాంక్ లేదా జన్ ధన్ ఖాతా నంబర్" }
+        {
+          "en": "Aadhaar card",
+          "hi": "आधार कार्ड",
+          "en_roman": "Aadhaar card",
+          "te": "ఆధార్ కార్డు"
+        },
+        {
+          "en": "Savings bank or Jan Dhan account number with IFSC",
+          "hi": "बचत बैंक या जन धन खाता नंबर, IFSC के साथ",
+          "en_roman": "Savings bank ya Jan Dhan account number, IFSC ke saath",
+          "te": "IFSCతో పొదుపు బ్యాంక్ లేదా జన్ ధన్ ఖాతా నంబర్"
+        }
       ],
       "source_url": "https://labour.gov.in/enrolment-process",
-      "verification": { "status": "VERIFIED", "checkedOn": "2026-11-27", "confidence": "high" },
+      "verification": {
+        "status": "VERIFIED",
+        "checkedOn": "2026-11-27",
+        "confidence": "high"
+      },
       "verify_note": "Unorganised worker, entry age 18 to 40, monthly income up to Rs 15,000, not in EPF, NPS or ESIC, not an income tax payer."
     },
     {
@@ -69,23 +137,51 @@
       "benefit_hi": "बहुत कम सालाना प्रीमियम पर दुर्घटना बीमा, जो आपके बैंक खाते से लिया जाता है।",
       "benefit_te": "చాలా తక్కువ వార్షిక ప్రీమియంతో ప్రమాద బీమా, ఇది మీ బ్యాంక్ ఖాతా నుండి కట్ అవుతుంది.",
       "benefit_en_roman": "Bahut kam yearly premium par accident insurance, jo aapke bank account se liya jaata hai.",
-      "aliases": ["suraksha bima", "pm accident insurance"],
+      "aliases": [
+        "suraksha bima",
+        "pm accident insurance"
+      ],
       "category": "insurance",
-      "beneficiaryGroups": ["individual", "worker"],
-      "tags": ["insurance", "accident"],
-      "geography": { "scope": "central", "authority": "Department of Financial Services, Ministry of Finance" },
+      "beneficiaryGroups": [
+        "individual",
+        "worker"
+      ],
+      "tags": [
+        "insurance",
+        "accident"
+      ],
+      "geography": {
+        "scope": "central",
+        "authority": "Department of Financial Services, Ministry of Finance"
+      },
       "rules": {
         "age_min": 18,
         "age_max": 70,
         "not": [],
-        "requires": ["has_bank_account"]
+        "requires": [
+          "has_bank_account"
+        ]
       },
       "documents": [
-        { "en": "Aadhaar card", "hi": "आधार कार्ड", "en_roman": "Aadhaar card", "te": "ఆధార్ కార్డు" },
-        { "en": "Bank account with consent for auto-debit", "hi": "ऑटो-डेबिट की सहमति वाला बैंक खाता", "en_roman": "Auto-debit consent waala bank account", "te": "ఆటో-డెబిట్ అనుమతి ఉన్న బ్యాంక్ ఖాతా" }
+        {
+          "en": "Aadhaar card",
+          "hi": "आधार कार्ड",
+          "en_roman": "Aadhaar card",
+          "te": "ఆధార్ కార్డు"
+        },
+        {
+          "en": "Bank account with consent for auto-debit",
+          "hi": "ऑटो-डेबिट की सहमति वाला बैंक खाता",
+          "en_roman": "Auto-debit consent waala bank account",
+          "te": "ఆటో-డెబిట్ అనుమతి ఉన్న బ్యాంక్ ఖాతా"
+        }
       ],
       "source_url": "https://pmsvanidhi.qcin.org/assets/documents/FAQ-%20SVANidhi%20se%20Samriddhi.pdf",
-      "verification": { "status": "VERIFIED", "checkedOn": "2026-11-27", "confidence": "high" },
+      "verification": {
+        "status": "VERIFIED",
+        "checkedOn": "2026-11-27",
+        "confidence": "high"
+      },
       "verify_note": "Age 18 to 70 with a bank account. Cover and premium amounts are not stated here on purpose: confirm at the bank."
     },
     {
@@ -97,23 +193,51 @@
       "benefit_hi": "कम सालाना प्रीमियम पर जीवन बीमा, जो आपके बैंक खाते से लिया जाता है।",
       "benefit_te": "తక్కువ వార్షిక ప్రీమియంతో జీవిత బీమా, ఇది మీ బ్యాంక్ ఖాతా నుండి కట్ అవుతుంది.",
       "benefit_en_roman": "Kam yearly premium par life insurance, jo aapke bank account se liya jaata hai.",
-      "aliases": ["jeevan jyoti", "pm life insurance"],
+      "aliases": [
+        "jeevan jyoti",
+        "pm life insurance"
+      ],
       "category": "insurance",
-      "beneficiaryGroups": ["individual", "worker"],
-      "tags": ["insurance", "life"],
-      "geography": { "scope": "central", "authority": "Department of Financial Services, Ministry of Finance" },
+      "beneficiaryGroups": [
+        "individual",
+        "worker"
+      ],
+      "tags": [
+        "insurance",
+        "life"
+      ],
+      "geography": {
+        "scope": "central",
+        "authority": "Department of Financial Services, Ministry of Finance"
+      },
       "rules": {
         "age_min": 18,
         "age_max": 50,
         "not": [],
-        "requires": ["has_bank_account"]
+        "requires": [
+          "has_bank_account"
+        ]
       },
       "documents": [
-        { "en": "Aadhaar card", "hi": "आधार कार्ड", "en_roman": "Aadhaar card", "te": "ఆధార్ కార్డు" },
-        { "en": "Bank account with consent for auto-debit", "hi": "ऑटो-डेबिट की सहमति वाला बैंक खाता", "en_roman": "Auto-debit consent waala bank account", "te": "ఆటో-డెబిట్ అనుమతి ఉన్న బ్యాంక్ ఖాతా" }
+        {
+          "en": "Aadhaar card",
+          "hi": "आधार कार्ड",
+          "en_roman": "Aadhaar card",
+          "te": "ఆధార్ కార్డు"
+        },
+        {
+          "en": "Bank account with consent for auto-debit",
+          "hi": "ऑटो-डेबिट की सहमति वाला बैंक खाता",
+          "en_roman": "Auto-debit consent waala bank account",
+          "te": "ఆటో-డెబిట్ అనుమతి ఉన్న బ్యాంక్ ఖాతా"
+        }
       ],
       "source_url": "https://pmsvanidhi.qcin.org/assets/documents/FAQ-%20SVANidhi%20se%20Samriddhi.pdf",
-      "verification": { "status": "VERIFIED", "checkedOn": "2026-11-27", "confidence": "high" },
+      "verification": {
+        "status": "VERIFIED",
+        "checkedOn": "2026-11-27",
+        "confidence": "high"
+      },
       "verify_note": "Age 18 to 50 with a bank account. Cover and premium amounts are not stated here on purpose: confirm at the bank."
     },
     {
@@ -125,24 +249,58 @@
       "benefit_hi": "रेहड़ी-पटरी विक्रेताओं के लिए कार्यशील पूंजी ऋण।",
       "benefit_te": "వీధి వ్యాపారులకు పని మూలధన రుణం.",
       "benefit_en_roman": "Rehdi-patri vendors ke liye working capital loan.",
-      "aliases": ["pm svanidhi", "svanidhi loan"],
+      "aliases": [
+        "pm svanidhi",
+        "svanidhi loan"
+      ],
       "category": "entrepreneurship",
-      "beneficiaryGroups": ["individual", "business", "worker"],
-      "tags": ["street_vendors", "loan"],
-      "geography": { "scope": "central", "authority": "Ministry of Housing and Urban Affairs" },
+      "beneficiaryGroups": [
+        "individual",
+        "business",
+        "worker"
+      ],
+      "tags": [
+        "street_vendors",
+        "loan"
+      ],
+      "geography": {
+        "scope": "central",
+        "authority": "Ministry of Housing and Urban Affairs"
+      },
       "rules": {
-        "occupation_in": ["street_vendor"],
+        "occupation_in": [
+          "street_vendor"
+        ],
         "urban_only": true,
         "not": [],
         "requires": []
       },
       "documents": [
-        { "en": "Aadhaar card", "hi": "आधार कार्ड", "en_roman": "Aadhaar card", "te": "ఆధార్ కార్డు" },
-        { "en": "Mobile number linked to Aadhaar", "hi": "आधार से जुड़ा मोबाइल नंबर", "en_roman": "Aadhaar se juda mobile number", "te": "ఆధార్‌తో అనుసంధానించిన మొబైల్ నంబర్" },
-        { "en": "Proof you vend (vending certificate or local body letter, if you have one)", "hi": "आप विक्रय करते हैं इसका प्रमाण (वेंडिंग सर्टिफिकेट या नगर निकाय का पत्र, अगर है)", "en_roman": "Aap vend karte hain iska proof (vending certificate ya local body ka letter, agar hai)", "te": "మీరు వ్యాపారం చేస్తున్నారని రుజువు (వెండింగ్ సర్టిఫికెట్ లేదా స్థానిక సంస్థ లేఖ ఉంటే)" }
+        {
+          "en": "Aadhaar card",
+          "hi": "आधार कार्ड",
+          "en_roman": "Aadhaar card",
+          "te": "ఆధార్ కార్డు"
+        },
+        {
+          "en": "Mobile number linked to Aadhaar",
+          "hi": "आधार से जुड़ा मोबाइल नंबर",
+          "en_roman": "Aadhaar se juda mobile number",
+          "te": "ఆధార్‌తో అనుసంధానించిన మొబైల్ నంబర్"
+        },
+        {
+          "en": "Proof you vend (vending certificate or local body letter, if you have one)",
+          "hi": "आप विक्रय करते हैं इसका प्रमाण (वेंडिंग सर्टिफिकेट या नगर निकाय का पत्र, अगर है)",
+          "en_roman": "Aap vend karte hain iska proof (vending certificate ya local body ka letter, agar hai)",
+          "te": "మీరు వ్యాపారం చేస్తున్నారని రుజువు (వెండింగ్ సర్టిఫికెట్ లేదా స్థానిక సంస్థ లేఖ ఉంటే)"
+        }
       ],
       "source_url": "https://www.india.gov.in/spotlight/pm-street-vendors-atmanirbhar-nidhi-pm-svanidhi",
-      "verification": { "status": "PARTIALLY_VERIFIED", "checkedOn": "2026-11-27", "confidence": "medium" },
+      "verification": {
+        "status": "PARTIALLY_VERIFIED",
+        "checkedOn": "2026-11-27",
+        "confidence": "medium"
+      },
       "verify_note": "Defined for urban vendors vending on or before 24 March 2020, but the scheme was restructured in Dec 2025 to add new beneficiaries. Current cutoff not confirmed. Show as 'possible match, confirm with your municipal office'."
     },
     {
@@ -154,25 +312,136 @@
       "benefit_hi": "आपके अपने नाम पर एक बेसिक बैंक खाता। बीमा और पेंशन योजनाओं के लिए यह ज़रूरी है।",
       "benefit_te": "మీ పేరు మీద ఒక బేసిక్ బ్యాంక్ ఖాతా. బీమా, పెన్షన్ పథకాలకు ఇది అవసరం.",
       "benefit_en_roman": "Aapke apne naam par ek basic bank account. Insurance aur pension schemes ke liye yeh zaroori hai.",
-      "aliases": ["jan dhan", "pmjdy account"],
+      "aliases": [
+        "jan dhan",
+        "pmjdy account"
+      ],
       "category": "financial_inclusion",
-      "beneficiaryGroups": ["individual", "household"],
-      "tags": ["bank_account", "financial_inclusion"],
-      "geography": { "scope": "central", "authority": "Department of Financial Services, Ministry of Finance" },
-      "provides": ["has_bank_account"],
+      "beneficiaryGroups": [
+        "individual",
+        "household"
+      ],
+      "tags": [
+        "bank_account",
+        "financial_inclusion"
+      ],
+      "geography": {
+        "scope": "central",
+        "authority": "Department of Financial Services, Ministry of Finance"
+      },
+      "provides": [
+        "has_bank_account"
+      ],
       "rules": {
         "age_min": 18,
-        "only_if": { "has_bank_account": false },
+        "only_if": {
+          "has_bank_account": false
+        },
         "not": [],
         "requires": []
       },
       "documents": [
-        { "en": "Aadhaar card", "hi": "आधार कार्ड", "en_roman": "Aadhaar card", "te": "ఆధార్ కార్డు" },
-        { "en": "If you have no Aadhaar: an address proof", "hi": "अगर आधार नहीं है: पता प्रमाण", "en_roman": "Agar Aadhaar nahi hai: address proof", "te": "ఆధార్ లేకపోతే: చిరునామా రుజువు" }
+        {
+          "en": "Aadhaar card",
+          "hi": "आधार कार्ड",
+          "en_roman": "Aadhaar card",
+          "te": "ఆధార్ కార్డు"
+        },
+        {
+          "en": "If you have no Aadhaar: an address proof",
+          "hi": "अगर आधार नहीं है: पता प्रमाण",
+          "en_roman": "Agar Aadhaar nahi hai: address proof",
+          "te": "ఆధార్ లేకపోతే: చిరునామా రుజువు"
+        }
       ],
       "source_url": "https://pmsvanidhi.qcin.org/assets/documents/FAQ-%20SVANidhi%20se%20Samriddhi.pdf",
-      "verification": { "status": "VERIFIED", "checkedOn": "2026-11-27", "confidence": "high" },
+      "verification": {
+        "status": "VERIFIED",
+        "checkedOn": "2026-11-27",
+        "confidence": "high"
+      },
       "verify_note": "Any adult without a bank account. Confirm the required documents at the bank."
+    },
+    {
+      "id": "telangana-bocwwb",
+      "aliases": [
+        "bocwwb",
+        "construction workers welfare board"
+      ],
+      "name_en": "Telangana BOCW Welfare Board registration",
+      "name_hi": "तेलंगाना भवन एवं अन्य निर्माण श्रमिक कल्याण बोर्ड पंजीकरण",
+      "name_te": "తెలంగాణ భవన మరియు ఇతర నిర్మాణ కార్మికుల సంక్షేమ బోర్డు నమోదు",
+      "benefit_en": "Registration as a building or other construction worker with the Telangana BOCW Welfare Board. Registration is done through the Assistant Labour Officer or a MeeSeva centre.",
+      "benefit_hi": "तेलंगाना भवन एवं अन्य निर्माण श्रमिक कल्याण बोर्ड में निर्माण श्रमिक के रूप में पंजीकरण। पंजीकरण सहायक श्रम अधिकारी या मी-सेवा केंद्र के ज़रिए होता है।",
+      "benefit_te": "తెలంగాణ భవన మరియు ఇతర నిర్మాణ కార్మికుల సంక్షేమ బోర్డులో నిర్మాణ కార్మికుడిగా నమోదు. నమోదు సహాయక కార్మిక అధికారి లేదా మీసేవ కేంద్రం ద్వారా జరుగుతుంది.",
+      "benefit_en_roman": "Telangana BOCW Welfare Board mein construction worker ke roop mein registration. Registration Assistant Labour Officer ya MeeSeva centre se hota hai.",
+      "category": "labour",
+      "tags": [
+        "construction_workers",
+        "registration"
+      ],
+      "beneficiaryGroups": [
+        "worker"
+      ],
+      "geography": {
+        "scope": "state",
+        "states": [
+          "Telangana"
+        ]
+      },
+      "rules": {
+        "age_min": 18,
+        "age_max": 59,
+        "requires": [
+          "worked_90_days_construction"
+        ],
+        "not": []
+      },
+      "documents": [
+        {
+          "en": "Two passport photographs",
+          "hi": "दो पासपोर्ट फ़ोटो",
+          "en_roman": "Do passport photo",
+          "te": "రెండు పాస్‌పోర్ట్ ఫోటోలు"
+        },
+        {
+          "en": "Age proof (school or medical certificate)",
+          "hi": "आयु प्रमाण (स्कूल या मेडिकल प्रमाणपत्र)",
+          "en_roman": "Age proof (school ya medical certificate)",
+          "te": "వయస్సు ధ్రువీకరణ (పాఠశాల లేదా వైద్య ధ్రువపత్రం)"
+        },
+        {
+          "en": "Nomination form for dependants",
+          "hi": "आश्रितों के लिए नामांकन फ़ॉर्म",
+          "en_roman": "Dependants ke liye nomination form",
+          "te": "ఆధారపడినవారి కోసం నామినేషన్ ఫారం"
+        }
+      ],
+      "application": {
+        "steps": [
+          {
+            "en": "Visit the Assistant Labour Officer or a MeeSeva centre.",
+            "hi": "सहायक श्रम अधिकारी या मी-सेवा केंद्र जाएं।",
+            "en_roman": "Assistant Labour Officer ya MeeSeva centre jayein."
+          }
+        ]
+      },
+      "source_url": "https://tbocwwb.telangana.gov.in/new_registered_beneficiary.html",
+      "verification": {
+        "status": "VERIFIED",
+        "checkedOn": "2026-11-28",
+        "confidence": "high",
+        "sources": [
+          {
+            "title": "How to get Registered As Beneficiary",
+            "url": "https://tbocwwb.telangana.gov.in/new_registered_beneficiary.html",
+            "type": "state_government",
+            "issuedBy": "Telangana Building and Other Construction Workers Welfare Board"
+          }
+        ],
+        "notes": "Unresolved from the research record: the Board page says the claim procedure is available soon; a Khammam district page gives the age band as 18-59 while the Board says not completed 60; no pension or education scholarship appears in the Board's own scheme table. Telugu strings NEEDS NATIVE TELUGU REVIEW."
+      },
+      "verify_note": "Age 18 to 59 and at least 90 days of building or construction work in the last 12 months. Registration only; no benefit amount or claim procedure is stated here. Telugu strings NEEDS NATIVE TELUGU REVIEW."
     }
   ]
 }

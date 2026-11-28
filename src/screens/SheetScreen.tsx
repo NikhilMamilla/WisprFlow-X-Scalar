@@ -71,6 +71,12 @@ export default function SheetScreen({
                 <tr key={r.id}>
                   <td>{schemeName(scheme, lang)}</td>
                   <td>{statusLabel(r.id, r.status, lang)}</td>
+                  <td>
+                    {t(lang, 'checked_on')} {scheme.verification.checkedOn ?? '—'} ·{' '}
+                    <a className="quiet-link" href={scheme.source_url} target="_blank" rel="noreferrer">
+                      {t(lang, 'link_source')}
+                    </a>
+                  </td>
                 </tr>
               )
             })}

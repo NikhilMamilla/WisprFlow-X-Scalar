@@ -89,7 +89,7 @@ export default function Landing() {
               <strong>Works without a microphone.</strong> Type the answers if you prefer.
             </li>
             <li>
-              <strong>Six schemes, checked by hand.</strong> We say when something is still unverified.
+              <strong>Seven schemes, checked by hand.</strong> We say when something is still unverified.
             </li>
           </ul>
         </section>
@@ -144,7 +144,7 @@ export default function Landing() {
         <section className="lp-section" id="schemes" aria-labelledby="schemes-title">
           <h2 id="schemes-title">The schemes in this version</h2>
           <p className="lp-section-lede">
-            This is the whole dataset today: six schemes. Each card shows what the scheme gives and how well its rules
+            This is the whole dataset today: seven schemes. Each card shows what the scheme gives and how well its rules
             are checked. It does not show whether you qualify &mdash; that depends on your answers.
           </p>
           <ul className="lp-scheme-list">

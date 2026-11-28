@@ -12,6 +12,7 @@ export const BOOLEAN_FIELDS = [
   'has_aadhaar',
   'in_epf_esic_nps',
   'pays_income_tax',
+  'worked_90_days_construction',
 ] as const
 export type BooleanField = (typeof BOOLEAN_FIELDS)[number]
 
@@ -38,6 +39,7 @@ export interface Profile {
   has_aadhaar: boolean | null
   in_epf_esic_nps: boolean | null
   pays_income_tax: boolean | null
+  worked_90_days_construction: boolean | null
   dependants: number | null
   state: string | null // canonical state/UT name once recognised
   district: string | null // user's own district spelling; never guessed
@@ -57,6 +59,7 @@ export function emptyProfile(): Profile {
     has_aadhaar: null,
     in_epf_esic_nps: null,
     pays_income_tax: null,
+    worked_90_days_construction: null,
     dependants: null,
     state: null,
     district: null,
@@ -83,6 +86,7 @@ export const PROFILE_JSON_SCHEMA = {
     has_aadhaar: nullableBool,
     in_epf_esic_nps: nullableBool,
     pays_income_tax: nullableBool,
+    worked_90_days_construction: nullableBool,
     dependants: { type: ['integer', 'null'], minimum: 0 },
     state: { type: ['string', 'null'] },
     district: { type: ['string', 'null'] },

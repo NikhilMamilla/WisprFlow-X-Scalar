@@ -71,9 +71,12 @@ function Card({
       )}
 
       <p className="documents">{documentNames(scheme, lang).join(', ')}</p>
-      <a className="quiet-link" href={scheme.source_url} target="_blank" rel="noreferrer">
-        {t(lang, 'link_source')}
-      </a>
+      <p className="checked-on">
+        {t(lang, 'checked_on')} {scheme.verification.checkedOn ?? '—'} ·{' '}
+        <a className="quiet-link" href={scheme.source_url} target="_blank" rel="noreferrer">
+          {t(lang, 'link_source')}
+        </a>
+      </p>
       {!scheme.rules_verified && <span className="badge-unverified">{t(lang, 'badge_unverified')}</span>}
     </div>
   )

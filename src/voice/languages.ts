@@ -19,8 +19,17 @@ export const SAMPLE_STORY: Record<'hi' | 'en' | 'te', string> = {
   en: 'Main thela lagata hoon, teen bachche hain, kiraye ke ghar mein rehta hoon, bank account bhai ke naam pe hai.',
 }
 
-export function sampleStoryFor(lang: 'hi' | 'en' | 'te'): string {
-  return SAMPLE_STORY[lang] ?? SAMPLE_STORY.en
+// A second Hinglish sample: a Hyderabad construction worker with 90+ days in the
+// year and his own account, so the Telangana registration can be demonstrated.
+export const SECOND_SAMPLE_STORY: Record<'hi' | 'en' | 'te', string> = {
+  hi: SAMPLE_STORY.hi,
+  te: SAMPLE_STORY.te,
+  en: 'Main Hyderabad mein construction worker hoon, 32 saal ka hoon, pichhle saal 90 din se zyada kaam kiya, mera apna bank account hai.',
+}
+
+export function sampleStoryFor(lang: 'hi' | 'en' | 'te', index = 0): string {
+  const stories = [SAMPLE_STORY[lang] ?? SAMPLE_STORY.en, SECOND_SAMPLE_STORY[lang] ?? SECOND_SAMPLE_STORY.en]
+  return stories[index % stories.length]
 }
 
 // Fixed sentence used by the developer diagnostic page only.

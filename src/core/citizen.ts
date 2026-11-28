@@ -141,6 +141,7 @@ const FIELD_LABEL: Record<ProfileField, string> = {
   has_aadhaar: 'an Aadhaar card',
   in_epf_esic_nps: 'PF, ESIC or NPS membership',
   pays_income_tax: 'paying income tax',
+  worked_90_days_construction: '90 days of construction work',
   dependants: 'the number of people who depend on you',
   state: 'your state',
   district: 'your district',
@@ -159,6 +160,7 @@ const BOOLEAN_LABEL: Record<BooleanField, string> = {
   has_aadhaar: 'an Aadhaar card',
   in_epf_esic_nps: 'PF, ESIC or NPS membership',
   pays_income_tax: 'income tax payment',
+  worked_90_days_construction: '90 days of construction work in the last year',
 }
 
 // Statement wording for boolean rules: "Have a bank account", "Not pay income tax".
@@ -167,6 +169,10 @@ const BOOLEAN_STATEMENT: Record<BooleanField, { have: string; notHave: string }>
   has_aadhaar: { have: 'Have an Aadhaar card', notHave: 'Not have an Aadhaar card' },
   in_epf_esic_nps: { have: 'Be covered by PF, ESIC or NPS', notHave: 'Not be covered by PF, ESIC or NPS' },
   pays_income_tax: { have: 'Pay income tax', notHave: 'Not pay income tax' },
+  worked_90_days_construction: {
+    have: 'Have worked 90 days in building or construction in the last 12 months',
+    notHave: 'Not have worked 90 days in building or construction in the last 12 months',
+  },
 }
 
 const rupees = (value: number): string => `₹${value.toLocaleString('en-IN')}`
@@ -537,6 +543,12 @@ const QUESTION_TEXT: Record<ProfileField, { text: string; help: string | null; i
     group: 'your_situation',
   },
   pays_income_tax: { text: 'Do you pay income tax?', help: null, input: 'yes_no', group: 'your_situation' },
+  worked_90_days_construction: {
+    text: 'In the last 12 months, did you do building or construction work for 90 days or more?',
+    help: 'Count the days you worked on a site, in a year.',
+    input: 'yes_no',
+    group: 'your_situation',
+  },
 }
 
 const QUESTION_ORDER: ProfileField[] = [

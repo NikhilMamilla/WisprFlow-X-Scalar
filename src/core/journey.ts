@@ -20,7 +20,7 @@ import { findRegion, normalizeDistrict } from './geo'
 import { matchSchemes, type MatchResult } from './matcher'
 import type { Scheme } from './scheme'
 import { SCHEMES } from './schemes'
-import { OCCUPATIONS, emptyProfile, type Occupation, type Profile, type ProfileField } from './types'
+import { BOOLEAN_FIELDS, OCCUPATIONS, emptyProfile, type Occupation, type Profile, type ProfileField } from './types'
 
 export type JourneyStatus = 'COLLECTING_INFORMATION' | 'READY_WITH_RESULTS' | 'NEEDS_VERIFICATION' | 'PAUSED' | 'COMPLETED'
 
@@ -148,7 +148,7 @@ function deepFreeze<T>(value: T): T {
   return Object.freeze(value)
 }
 
-const BOOLEAN_PROFILE_FIELDS = ['has_bank_account', 'has_aadhaar', 'in_epf_esic_nps', 'pays_income_tax'] as const
+const BOOLEAN_PROFILE_FIELDS = [...BOOLEAN_FIELDS] as const
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === 'object' && value !== null && !Array.isArray(value)
 

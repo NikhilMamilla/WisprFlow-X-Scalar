@@ -26,6 +26,7 @@ export default function StoryScreen({
   onMicTap: () => void
   onSubmitText: (text: string) => void
 }) {
+  const [sampleIndex, setSampleIndex] = useState(0)
   const [typed, setTyped] = useState('')
 
   function submitTyped() {
@@ -74,7 +75,10 @@ export default function StoryScreen({
             <button type="button" className="btn btn-primary" onClick={submitTyped}>
               {t(lang, 'submit_label')}
             </button>
-            <button type="button" className="btn btn-secondary" onClick={() => onSubmitText(sampleStoryFor(lang))}>
+            <button type="button" className="btn btn-secondary" onClick={() => {
+                onSubmitText(sampleStoryFor(lang, sampleIndex))
+                setSampleIndex((n) => n + 1)
+              }}>
               {t(lang, 'play_sample_label')}
             </button>
           </div>
