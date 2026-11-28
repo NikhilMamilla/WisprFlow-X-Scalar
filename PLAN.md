@@ -149,6 +149,19 @@ Status:
 - 18 new tests (55 in the journey suite); no scheme, rule, research or explanation change.
 - Next: M9.8 - wire the journey core into the results screen (frontend only, no new eligibility logic).
 
+## M10 - Citizen frontend foundation (implemented)
+Landing page as the public entry point, handing over to the existing voice journey. See docs/M10_CITIZEN_FRONTEND_FOUNDATION.md.
+
+Status:
+- `src/landing/Landing.tsx` + CSS: hero, CTAs, trust strip, features, how-it-works, real six-scheme preview with verification badges, accessibility section, honest footer.
+- `src/App.tsx`: default route is the landing; `#/start` opens the existing Flow unchanged.
+- Reused existing screens, components and theme tokens; no second journey state machine, no eligibility change, no new dependency.
+- 5 landing tests; tsc, 672 tests, lint and vite build pass. Docker not rebuilt (token gate rule).
+- Next: visual review on a phone, then M11.
+
+## M9.10 - Order retrieval (implemented)
+Old-age age 57 traced to the Socio Economic Outlook 2021; no Cheyutha order or post-2019 rate order could be retrieved. See docs/M9_10_ORDER_RETRIEVAL.md.
+
 ## M9.9 - High-impact evidence closure (implemented)
 Six highest-priority records investigated against primary sources; statuses changed only where evidence allowed. See docs/EVIDENCE_CLOSURE_M9_9.md.
 
