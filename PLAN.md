@@ -71,6 +71,24 @@ Status:
 - Not done in M8: no state, UT or district scheme has been researched yet, so every state and UT reports NOT_RESEARCHED; beneficiary-group and age-band tagging of the six imported records is incomplete; no source has been re-fetched, so all change-detection states are UNCHECKED; no research UI.
 - Verification: `npx tsc -b` clean, `npx vitest run` 543 passing, `npm run research -- validate` 6 records / 4 sources, coverage and gaps run on the real register, oxlint, production build.
 
+## M9 - Telangana research campaign (implemented)
+Research-only milestone: a source-backed Telangana research baseline in the M8 register, plus an evidence audit of the six central schemes. See docs/RESEARCH_TELANGANA.md.
+
+Status:
+- Completed: 23 Telangana records (15 researched, 8 catalogued with questions), 29 sources, 8 relationships, one deliberately CONFLICTING record (Cheyutha), one OUTDATED record (Rythu Bandhu, replaced by Rythu Bharosa); official evidence added for all six central schemes; record model extended with an optional benefit block, application notes and district scope.
+- Preserved: data/schemes.json untouched, every eligibility rule and outcome unchanged, no scheme imported, no UI change.
+- Not done in M9: no education or scholarship research, no district-specific research (33 districts, none studied), no current GOs for several 2018-2019 amounts, no import of the verified schemes, no native Telugu review.
+- Verification: research validation clean (29 records, 29 sources), coverage and gaps run on the real register, `npx tsc -b`, full Vitest suite, production build, oxlint.
+
+## M9.1 - Research quality audit (implemented)
+Evidence audit of the Telangana register and remediation of what it found. See docs/RESEARCH_QUALITY_AUDIT_M9_1.md.
+
+Status:
+- Corrected: Aasara old-age limit (65 -> 57, from the 2021 state outlook), two verification statuses downgraded (Aasara, Rythu Bharosa), Rythu Bharosa's per-acre amount removed from the per-beneficiary field, svanidhi and PM-SYM wording tightened, one 404 source removed, one unreachable GO marked GONE, two dead application links withdrawn.
+- Infrastructure: validation now refuses eligibility-verified records without sourced conditions or evidence, duplicate source URLs, dangling source scheme ids, and warns when a closed scheme is marked verified; coverage separates researched from listing-only records and never counts discovery as coverage.
+- Preserved: 29 records, 0 imports, data/schemes.json unchanged, matcher and UI untouched.
+- Verification: research validation clean, coverage/gaps/list run, tsc, full Vitest suite, build, lint.
+
 ## M5 (original plan, now later work) - Optional LLM extractor and Telugu polish
 POST /api/extract uses the LLM only if LLM_API_KEY is set, otherwise the rule-based extractor. Same output schema. Improve Telugu phrases and voice fallbacks from VOICE_FINDINGS.md.
 Done when: app behaves identically with no key, and better on messy speech with a key.

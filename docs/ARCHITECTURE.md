@@ -238,11 +238,15 @@ Coverage is derived from the register, never assumed: central government, the 28
 | --- | --- |
 | `COVERED` | records exist and all of them are verified |
 | `PARTIAL` | records exist but at least one is not verified |
-| `NEEDS_MORE_RESEARCH` | a record in the area is conflicting, needs research or needs information |
+| `NEEDS_MORE_RESEARCH` | a record in the area is conflicting or marked needs-research |
 | `NOT_RESEARCHED` | no record, and no claim |
 | `NONE_FOUND` | a researcher searched and recorded finding nothing |
 
 `NONE_FOUND` is a statement about a search, not about the country. It requires a note saying what was searched, it never creates a record, it is overridden as soon as a record exists, and the report prints the caveat every time. No national scheme count is hardcoded anywhere.
+
+Discovery is not coverage. A record that exists only on a listing page (status `DISCOVERED`/`CATALOGUED` with no registered evidence) is counted as `discovered`, never as `researched`, and an area is never `COVERED` while one sits unexamined; an area with listings only reports `NEEDS_MORE_RESEARCH`. The report prints both counts, because a register that inflates coverage with unopened tabs is worse than a small one.
+
+Validation enforces the same distinction: `ELIGIBILITY_VERIFIED` needs at least one recorded condition, a source id on every condition and eligibility evidence; `OFFICIALLY_VERIFIED` needs evidence; a source URL cannot be registered twice; and a source's associated scheme id must be a catalogue scheme or a research record.
 
 ### CLI
 
