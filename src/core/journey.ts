@@ -521,21 +521,29 @@ function normalizeAnswer(
   return reject('answer yes or no')
 }
 
-export function submitAnswer(session: JourneySession, questionId: string, raw: unknown, options: JourneyOptions = {}): JourneyOutcome {
+// Every mutating operation shares these two checks, so a new operation cannot
+// forget one of them.
+function guardMutable(session: JourneySession, action: string): JourneyError | null {
   if (session.completed) {
-    return fail({
+    return {
       code: 'SESSION_COMPLETED',
-      message: 'This journey is complete. Resume it before adding another answer.',
+      message: `This journey is complete. Resume it before ${action}.`,
       details: { sessionId: session.id },
-    })
+    }
   }
   if (session.paused) {
-    return fail({
+    return {
       code: 'SESSION_PAUSED',
-      message: 'This journey is paused. Resume it before adding another answer.',
+      message: `This journey is paused. Resume it before ${action}.`,
       details: { sessionId: session.id },
-    })
+    }
   }
+  return null
+}
+
+export function submitAnswer(session: JourneySession, questionId: string, raw: unknown, options: JourneyOptions = {}): JourneyOutcome {
+  const blocked = guardMutable(session, 'adding another answer')
+  if (blocked) return fail(blocked)
 
   const answered = session.answers.find((entry) => entry.questionId === questionId)
   if (answered) {
@@ -591,12 +599,8 @@ export function submitAnswer(session: JourneySession, questionId: string, raw: u
 // Correction replaces the latest value for a field. Earlier history is kept: the
 // new record names the value it replaced, so the log can be read backwards.
 export function correctAnswer(session: JourneySession, field: ProfileField, raw: unknown, options: JourneyOptions = {}): JourneyOutcome {
-  if (session.completed) {
-    return fail({ code: 'SESSION_COMPLETED', message: 'This journey is complete. Resume it before correcting an answer.', details: { sessionId: session.id } })
-  }
-  if (session.paused) {
-    return fail({ code: 'SESSION_PAUSED', message: 'This journey is paused. Resume it before correcting an answer.', details: { sessionId: session.id } })
-  }
+  const blocked = guardMutable(session, 'correcting an answer')
+  if (blocked) return fail(blocked)
 
   const earlier = session.answers.filter((entry) => entry.field === field)
   if (earlier.length === 0) {
@@ -640,12 +644,8 @@ export function correctAnswer(session: JourneySession, field: ProfileField, raw:
 // Skipping records "not now" and nothing else: the profile is untouched, so no
 // rule can read a skip as a no.
 export function skipQuestion(session: JourneySession, questionId?: string, options: JourneyOptions = {}): JourneyOutcome {
-  if (session.completed) {
-    return fail({ code: 'SESSION_COMPLETED', message: 'This journey is complete. Resume it before skipping a question.', details: { sessionId: session.id } })
-  }
-  if (session.paused) {
-    return fail({ code: 'SESSION_PAUSED', message: 'This journey is paused. Resume it before skipping a question.', details: { sessionId: session.id } })
-  }
+  const blocked = guardMutable(session, 'skipping a question')
+  if (blocked) return fail(blocked)
   const current = session.nextQuestion
   if (!current) {
     return fail({ code: 'NOTHING_TO_SKIP', message: 'There is no open question to skip.', details: { sessionId: session.id } })
@@ -682,12 +682,8 @@ export function skipQuestion(session: JourneySession, questionId?: string, optio
 // Put a skipped question back in front of the citizen without erasing the record
 // that it was skipped. The policy allows one revisit per question.
 export function revisitSkipped(session: JourneySession, field: ProfileField, options: JourneyOptions = {}): JourneyOutcome {
-  if (session.completed) {
-    return fail({ code: 'SESSION_COMPLETED', message: 'This journey is complete. Resume it before revisiting a question.', details: { sessionId: session.id } })
-  }
-  if (session.paused) {
-    return fail({ code: 'SESSION_PAUSED', message: 'This journey is paused. Resume it before revisiting a question.', details: { sessionId: session.id } })
-  }
+  const blocked = guardMutable(session, 'revisiting a question')
+  if (blocked) return fail(blocked)
   if (session.profile[field] !== null) {
     return fail({ code: 'INVALID_STATE', message: 'That question has already been answered.', details: { field } })
   }
@@ -739,28 +735,28 @@ export function completeJourney(session: JourneySession, options: JourneyOptions
 // Views and the in-memory store
 // ---------------------------------------------------------------------------
 
+const GROUP_FOR_STATE = {
+  LIKELY_ELIGIBLE: 'likelyEligible',
+  NOT_ELIGIBLE: 'notEligible',
+  MORE_INFORMATION_NEEDED: 'moreInformationNeeded',
+  NEEDS_VERIFICATION: 'needsVerification',
+} as const
+
 export function viewOf(session: JourneySession): JourneyView {
   const results: JourneyResults = { likelyEligible: [], notEligible: [], moreInformationNeeded: [], needsVerification: [] }
-  const counts: Record<CitizenState, number> = {
-    LIKELY_ELIGIBLE: 0,
-    NOT_ELIGIBLE: 0,
-    MORE_INFORMATION_NEEDED: 0,
-    NEEDS_VERIFICATION: 0,
-  }
-  for (const explanation of session.explanations) {
-    counts[explanation.state] += 1
-    if (explanation.state === 'LIKELY_ELIGIBLE') results.likelyEligible.push(explanation)
-    else if (explanation.state === 'NOT_ELIGIBLE') results.notEligible.push(explanation)
-    else if (explanation.state === 'MORE_INFORMATION_NEEDED') results.moreInformationNeeded.push(explanation)
-    else results.needsVerification.push(explanation)
-  }
+  for (const explanation of session.explanations) results[GROUP_FOR_STATE[explanation.state]].push(explanation)
   return {
     sessionId: session.id,
     status: session.status,
     reason: session.reason,
     profile: session.profile,
     results,
-    counts,
+    counts: {
+      LIKELY_ELIGIBLE: results.likelyEligible.length,
+      NOT_ELIGIBLE: results.notEligible.length,
+      MORE_INFORMATION_NEEDED: results.moreInformationNeeded.length,
+      NEEDS_VERIFICATION: results.needsVerification.length,
+    },
     excluded: [...session.excluded],
     questions: [...session.questions],
     nextQuestion: session.nextQuestion,
@@ -810,6 +806,11 @@ export function complete(session: JourneySession, options: JourneyOptions = {}):
 
 // In-memory sessions. Restarting the process loses every journey: that is the
 // documented contract, not an accident.
+const unknownSession = (sessionId: string): JourneyResponse => ({
+  ok: false,
+  error: { code: 'UNKNOWN_SESSION', message: 'No journey exists with that id.', details: { sessionId } },
+})
+
 export class JourneyStore {
   private readonly sessions = new Map<string, JourneySession>()
   private readonly options: JourneyOptions
@@ -824,8 +825,7 @@ export class JourneyStore {
 
   get(sessionId: string): JourneyResponse {
     const session = this.sessions.get(sessionId)
-    if (!session) return { ok: false, error: { code: 'UNKNOWN_SESSION', message: 'No journey exists with that id.', details: { sessionId } } }
-    return response({ ok: true, session })
+    return session ? response({ ok: true, session }) : unknownSession(sessionId)
   }
 
   has(sessionId: string): boolean {
@@ -833,39 +833,31 @@ export class JourneyStore {
   }
 
   answer(sessionId: string, questionId: string, raw: unknown): JourneyResponse {
-    const session = this.sessions.get(sessionId)
-    if (!session) return { ok: false, error: { code: 'UNKNOWN_SESSION', message: 'No journey exists with that id.', details: { sessionId } } }
-    return this.keep(submitAnswer(session, questionId, raw, this.options))
+    return this.apply(sessionId, (session) => submitAnswer(session, questionId, raw, this.options))
   }
 
   correct(sessionId: string, field: ProfileField, raw: unknown): JourneyResponse {
-    const session = this.sessions.get(sessionId)
-    if (!session) return { ok: false, error: { code: 'UNKNOWN_SESSION', message: 'No journey exists with that id.', details: { sessionId } } }
-    return this.keep(correctAnswer(session, field, raw, this.options))
+    return this.apply(sessionId, (session) => correctAnswer(session, field, raw, this.options))
   }
 
   skip(sessionId: string, questionId?: string): JourneyResponse {
-    const session = this.sessions.get(sessionId)
-    if (!session) return { ok: false, error: { code: 'UNKNOWN_SESSION', message: 'No journey exists with that id.', details: { sessionId } } }
-    return this.keep(skipQuestion(session, questionId, this.options))
+    return this.apply(sessionId, (session) => skipQuestion(session, questionId, this.options))
   }
 
   revisit(sessionId: string, field: ProfileField): JourneyResponse {
-    const session = this.sessions.get(sessionId)
-    if (!session) return { ok: false, error: { code: 'UNKNOWN_SESSION', message: 'No journey exists with that id.', details: { sessionId } } }
-    return this.keep(revisitSkipped(session, field, this.options))
+    return this.apply(sessionId, (session) => revisitSkipped(session, field, this.options))
   }
 
   pause(sessionId: string): JourneyResponse {
-    return this.transition(sessionId, pauseJourney)
+    return this.apply(sessionId, (session) => pauseJourney(session, this.options))
   }
 
   resume(sessionId: string): JourneyResponse {
-    return this.transition(sessionId, resumeJourney)
+    return this.apply(sessionId, (session) => resumeJourney(session, this.options))
   }
 
   complete(sessionId: string): JourneyResponse {
-    return this.transition(sessionId, completeJourney)
+    return this.apply(sessionId, (session) => completeJourney(session, this.options))
   }
 
   // Only the store holds sessions; there is no way to look one up another way.
@@ -873,10 +865,10 @@ export class JourneyStore {
     return this.sessions.size
   }
 
-  private transition(sessionId: string, step: (session: JourneySession, options: JourneyOptions) => JourneyOutcome): JourneyResponse {
+  // Look the session up, run the operation, store the result only if it succeeded.
+  private apply(sessionId: string, step: (session: JourneySession) => JourneyOutcome): JourneyResponse {
     const session = this.sessions.get(sessionId)
-    if (!session) return { ok: false, error: { code: 'UNKNOWN_SESSION', message: 'No journey exists with that id.', details: { sessionId } } }
-    return this.keep(step(session, this.options))
+    return session ? this.keep(step(session)) : unknownSession(sessionId)
   }
 
   private keep(outcome: JourneyOutcome): JourneyResponse {
