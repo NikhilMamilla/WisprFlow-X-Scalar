@@ -214,6 +214,103 @@ describe('research record validation', () => {
     expect(report.records).toHaveLength(2)
   })
 
+  it('rejects the same source URL registered twice', () => {
+    const report = validateResearch(
+      document([record()], [source('s1'), source('s2', { url: 'https://labour.gov.in/s1' })]),
+    )
+    expect(codes(report)).toContain('duplicate_source_url')
+  })
+
+  it('rejects a source pointing at a scheme that does not exist', () => {
+    const report = validateResearch(
+      document([record()], [source('s1', { schemeIds: ['ghost-scheme'] })]),
+      { schemeIds: ['eshram'] },
+    )
+    expect(codes(report)).toContain('unknown_scheme_reference')
+    // A research record id is a valid target before import.
+    const ok = validateResearch(document([record()], [source('s1', { schemeIds: ['r1'] })]), { schemeIds: ['eshram'] })
+    expect(ok.errors).toEqual([])
+  })
+
+  it('does not allow eligibility to be verified without sourced conditions', () => {
+    const base = {
+      status: 'ELIGIBILITY_VERIFIED',
+      verificationStatus: 'PARTIALLY_VERIFIED',
+      verificationEvidence: [{ sourceId: 's1' }],
+      lastVerifiedOn: '2026-11-20',
+    }
+    const noConditions = validateResearch(document([record({ ...base, eligibilityEvidence: [{ sourceId: 's1' }] })]))
+    expect(codes(noConditions)).toContain('eligibility_verified_without_conditions')
+    const unsourced = validateResearch(
+      document([
+        record({
+          ...base,
+          eligibilityEvidence: [{ sourceId: 's1' }],
+          eligibilityConditions: [{ text: 'Must be 18 or older' }],
+        }),
+      ]),
+    )
+    expect(codes(unsourced)).toContain('eligibility_verified_with_unsourced_condition')
+    const noEvidence = validateResearch(
+      document([
+        record({
+          ...base,
+          eligibilityEvidence: [],
+          eligibilityConditions: [{ text: 'Must be 18 or older', sourceId: 's1' }],
+        }),
+      ]),
+    )
+    expect(codes(noEvidence)).toContain('eligibility_verified_without_evidence')
+    const good = validateResearch(
+      document([
+        record({
+          ...base,
+          eligibilityEvidence: [{ sourceId: 's1' }],
+          eligibilityConditions: [{ text: 'Must be 18 or older', sourceId: 's1' }],
+        }),
+      ]),
+    )
+    expect(good.errors).toEqual([])
+  })
+
+  it('requires evidence for official verification and warns when a closed scheme is marked verified', () => {
+    expect(codes(validateResearch(document([record({ status: 'OFFICIALLY_VERIFIED', eligibilityEvidence: [], discoveryUrl: undefined, eligibilityConditions: [] })])))).toContain(
+      'official_verification_without_evidence',
+    )
+    const closed = validateResearch(
+      document([
+        record({
+          status: 'OUTDATED',
+          schemeStatus: 'CLOSED',
+          verificationStatus: 'VERIFIED',
+          verificationEvidence: [{ sourceId: 's1' }],
+          lastVerifiedOn: '2026-11-20',
+        }),
+      ]),
+    )
+    expect(closed.ok).toBe(true)
+    expect(codes(closed)).toContain('outdated_marked_verified')
+  })
+
+  it('validates the benefit block and district scope', () => {
+    const ok = validateResearch(
+      document([record({ benefit: { kind: 'cash', amountInr: 12000, frequency: 'per crop season' } })]),
+    )
+    expect(ok.errors).toEqual([])
+    expect(ok.records[0].benefit?.amountInr).toBe(12000)
+    expect(codes(validateResearch(document([record({ benefit: { kind: 'vibes' } })])))).toContain('invalid_benefit_kind')
+    expect(codes(validateResearch(document([record({ benefit: { kind: 'cash', amountInr: -1 } })])))).toContain(
+      'invalid_benefit_amount',
+    )
+    expect(codes(validateResearch(document([record({ level: 'CENTRAL', districts: ['Bihar'] })])))).toContain(
+      'level_mismatch',
+    )
+    // District names are not checked against a table the project does not have.
+    expect(
+      codes(validateResearch(document([record({ level: 'STATE', state: 'Telangana', districts: ['Bhadradri Kothagudem'] })]))),
+    ).toContain('districts_unverified')
+  })
+
   it('validates the source register', () => {
     expect(codes(validateResearch(document([record()], [source('s1', { url: 'not a url' })])))).toContain('invalid_url')
     expect(codes(validateResearch(document([record()], [source('s1'), source('s1')])))).toContain('duplicate_source_id')
@@ -269,8 +366,19 @@ describe('research lifecycle', () => {
   })
 
   it('refuses import readiness before eligibility is verified', () => {
-    // Reached the status without evidence: the guard, not the status string, decides.
-    const recordBefore = validated({ status: 'ELIGIBILITY_VERIFIED', verificationStatus: 'UNVERIFIED' })
+    // The status string is not enough: the guard reads the evidence, so a record
+    // whose evidence was withdrawn still cannot be promoted.
+    const recordBefore = {
+      ...validated({
+        status: 'ELIGIBILITY_VERIFIED',
+        verificationStatus: 'PARTIALLY_VERIFIED',
+        verificationEvidence: [{ sourceId: 's1' }],
+        lastVerifiedOn: '2026-11-20',
+        eligibilityEvidence: [{ sourceId: 's1' }],
+        eligibilityConditions: [{ text: 'Must be 18 or older', sourceId: 's1' }],
+      }),
+      verificationEvidence: [],
+    }
     const result = applyTransition(recordBefore, 'READY_FOR_IMPORT', { on: '2026-11-05' })
     expect(result.ok).toBe(false)
     expect(result.record.importReadiness).toBe('NOT_READY')
@@ -296,6 +404,8 @@ describe('research lifecycle', () => {
       verificationEvidence: [{ sourceId: 's1' }],
       lastVerifiedOn: '2026-11-20',
       importReadiness: 'NEEDS_INFO',
+      eligibilityEvidence: [{ sourceId: 's1' }],
+      eligibilityConditions: [{ text: 'Must be 18 or older', sourceId: 's1' }],
     })
     const result = applyTransition(eligible, 'READY_FOR_IMPORT', { on: '2026-11-21' })
     expect(result.ok).toBe(true)

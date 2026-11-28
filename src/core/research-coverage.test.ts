@@ -12,6 +12,7 @@ const record = (overrides: Partial<ResearchRecord> = {}): ResearchRecord => ({
   eligibilityEvidence: [{ sourceId: 's1' }],
   verificationEvidence: [{ sourceId: 's1' }],
   eligibilityConditions: [],
+  districts: [],
   exclusions: [],
   prerequisites: [],
   documents: [],
@@ -113,6 +114,47 @@ describe('coverage audit', () => {
     expect(report.totals.needsResearch).toBe(1)
     expect(report.totals.importReady).toBe(1)
     expect(report.totals.missingSources).toBe(1)
+  })
+
+  it('does not count a listing-only record as researched coverage', () => {
+    const listing = record({
+      id: 'listing',
+      level: 'STATE',
+      state: 'Bihar',
+      status: 'CATALOGUED',
+      verificationStatus: 'UNVERIFIED',
+      eligibilityEvidence: [],
+      verificationEvidence: [],
+      importReadiness: 'NEEDS_INFO',
+    })
+    const report = buildCoverageReport([listing])
+    const bihar = areaOf(report, 'Bihar')
+    expect(bihar?.records).toBe(1)
+    expect(bihar?.researched).toBe(0)
+    expect(bihar?.discovered).toBe(1)
+    expect(bihar?.status).toBe('NEEDS_MORE_RESEARCH')
+    expect(report.totals.researched).toBe(0)
+    expect(report.totals.discoveredOnly).toBe(1)
+    expect(formatCoverageReport(report)).toContain('discovery is not coverage: 1')
+  })
+
+  it('is only COVERED when every record in the area is researched and verified', () => {
+    const researched = record({ id: 'a', level: 'STATE', state: 'Bihar' })
+    const listing = record({
+      id: 'b',
+      level: 'STATE',
+      state: 'Bihar',
+      status: 'CATALOGUED',
+      verificationStatus: 'UNVERIFIED',
+      eligibilityEvidence: [],
+      verificationEvidence: [],
+      importReadiness: 'NEEDS_INFO',
+    })
+    expect(areaOf(buildCoverageReport([researched]), 'Bihar')?.status).toBe('COVERED')
+    const mixed = areaOf(buildCoverageReport([researched, listing]), 'Bihar')
+    expect(mixed?.status).toBe('PARTIAL')
+    expect(mixed?.researched).toBe(1)
+    expect(mixed?.discovered).toBe(1)
   })
 
   it('renders a report with the caveat and the gaps', () => {
