@@ -945,14 +945,15 @@
       "retrievedOn": "2026-11-28",
       "verifiedOn": "2026-11-28",
       "change": {
-        "status": "UNCHECKED"
+        "status": "UNCHANGED",
+        "lastCheckedOn": "2026-11-28"
       },
       "schemeIds": [
         "research-aids-appliances",
         "research-bc-federation-assistance",
         "research-tg-disability-aids"
       ],
-      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+      "licenseNotes": "Registration portal page re-read on 2026-11-28; item-wise eligibility is published separately as Annexure-A and Annexure-B spreadsheets, which were not opened."
     },
     {
       "id": "disc-indira-mahila-shakti",
@@ -2104,6 +2105,99 @@
         "status": "UNCHECKED",
         "lastCheckedOn": "2026-11-28"
       }
+    },
+    {
+      "id": "wdsc-tg-ers",
+      "url": "https://wdsc.telangana.gov.in/EconomicRehabilitationScheem.html",
+      "title": "Economic Rehabilitation Scheme for transgender persons (department page)",
+      "issuedBy": "Department for Empowerment of Persons with Disabilities, Senior Citizens & Transgender Persons, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "reliability": "medium",
+      "licenseNotes": "Page content was read on 2026-11-28, but repeated direct requests to the host failed from the audit machine (connection error), so the host is intermittent and the page carries no visible date.",
+      "schemeIds": [
+        "research-tg-transgender-economic-rehab"
+      ],
+      "change": {
+        "status": "UNCHECKED",
+        "lastCheckedOn": "2026-11-28"
+      }
+    },
+    {
+      "id": "wcd-snp-rules-2022",
+      "url": "https://wcd.gov.in/documents/uploaded/SNP%20Rules%20Notification%20dated%2012.09.2022.pdf",
+      "title": "Integrated Nutrition Support Programme - Saksham Anganwadi and Poshan (2.0) Rules, 2022",
+      "issuedBy": "Ministry of Women and Child Development, Government of India",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_LEGAL",
+      "kind": "notification",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "reliability": "high",
+      "licenseNotes": "Rules notified under the National Food Security Act, 2013; they set national entitlement, not the Telangana ration or enrolment process.",
+      "schemeIds": [
+        "research-supplementary-nutrition"
+      ],
+      "change": {
+        "status": "UNCHECKED",
+        "lastCheckedOn": "2026-11-28"
+      }
+    },
+    {
+      "id": "wcd-poshan2-guidelines",
+      "url": "https://wcd.gov.in/documents/uploaded/Mission%20Saksham%20Anganwadi%20and%20Poshan%202.0%20scheme%20guidelines.pdf",
+      "title": "Mission Saksham Anganwadi and Poshan 2.0 scheme guidelines",
+      "issuedBy": "Ministry of Women and Child Development, Government of India",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "guidelines",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "reliability": "high",
+      "licenseNotes": "Programme guidelines; state implementation details are outside the document.",
+      "schemeIds": [
+        "research-supplementary-nutrition"
+      ],
+      "change": {
+        "status": "UNCHECKED",
+        "lastCheckedOn": "2026-11-28"
+      }
+    },
+    {
+      "id": "mcrhrdi-welfare-policies",
+      "url": "https://mcrhrdi.gov.in/2026/group1/week3/Welfare%20Policies_Telangana.pdf",
+      "title": "Welfare Policies of Telangana (Group-I training material)",
+      "issuedBy": "MCR HRD Institute of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "SECONDARY_OFFICIAL",
+      "kind": "other",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "reliability": "medium",
+      "licenseNotes": "Government training institute presentation (February 2026); a summary, not an order, so it cannot settle a conflict on its own.",
+      "schemeIds": [
+        "research-tg-aasara-pensions",
+        "research-tg-cheyutha"
+      ],
+      "change": {
+        "status": "UNCHECKED",
+        "lastCheckedOn": "2026-11-28"
+      }
     }
   ],
   "records": [
@@ -2961,7 +3055,7 @@
       "benefit": {
         "kind": "cash",
         "amountInr": 2016,
-        "amountNote": "Rs 2,016 per month for old age, widows, weavers, toddy tappers, HIV-AIDS, beedi workers, single women and filaria patients; Rs 3,016 for persons with disabilities. The amounts come from G.O.Ms.No.34 dated 28-05-2019, read in an accessible NACO copy on 2026-11-28; whether they were enhanced after 2019 is still unconfirmed.",
+        "amountNote": "Rs 2,016 per month for old age, widows, weavers, toddy tappers, HIV-AIDS, beedi workers, single women and filaria patients; Rs 3,016 for persons with disabilities, per G.O.Ms.No.34 dated 28-05-2019. The 2026 MCR HRD Institute material instead lists Rs 4,016 for disabled pensioners, so the current disabled rate is unconfirmed; the post-2019 position for other categories is also unconfirmed.",
         "frequency": "monthly"
       },
       "districts": [],
@@ -3005,6 +3099,38 @@
         {
           "text": "Single women: separated or deserted for more than a year; unmarried rural women above 30 and urban women above 35",
           "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "Old age: 65 years and above (CAG audit Table 1.1, covering 2018-21).",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "Widow: 18 years and above.",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "Disabled: any age, with at least 40 per cent disability (51 per cent for hearing impairment).",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "Weaver: 50 years and above; toddy tapper: 50 years and above and a registered member of a toddy tappers cooperative society.",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "HIV-AIDS: undergoing anti-retroviral therapy; filaria: Grade II or III.",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "Beedi worker: rolling beedis from contractor-supplied raw material before 28 February 2014.",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "One member per household, preferably a woman, for every category except disabled, widows and beedi workers; pension stops on death, remarriage of a widow or a fall below the disability percentage.",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "Dialysis patients and beedi thekadars appear as separate categories in the 2026 MCR HRD Institute table at Rs 2,016, but this record does not yet describe their eligibility.",
+          "sourceId": "mcrhrdi-welfare-policies"
         }
       ],
       "exclusions": [
@@ -3025,10 +3151,11 @@
       "lastVerifiedOn": "2026-11-27",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "The old-age age limit is 57 in the 2021 state outlook but 65 in the G.O. table for 2018-21; the current order is needed.",
+        "The old-age age limit is 57 in the 2021 state outlook but 65 in the CAG audit table for 2018-21; no order after 2019 was read, so the current limit is unconfirmed.",
         "The pension amount is the 2019 order figure; confirm whether it was enhanced after 2019.",
         "The Aasara portal did not respond at audit; confirm the current application route.",
-        "Exclusions beyond income and land (children in employment, four-wheeler owners, government pensioners) come from the CAG summary and are not recorded as separate fields."
+        "Exclusions beyond income and land (children in employment, four-wheeler owners, government pensioners) come from the CAG summary and are not recorded as separate fields.",
+        "Disabled pension is Rs 3,016 in the 2019 order but Rs 4,016 in the 2026 training material; the order behind any enhancement was not found."
       ],
       "importReadiness": "NEEDS_INFO",
       "statusHistory": [
@@ -3060,7 +3187,7 @@
           "note": "Aasara includes a single women category; the separate record was not researched"
         }
       ],
-      "notes": "M9.1 audit: old-age age corrected from 65 to 57, verification downgraded to partial, the unreachable 2019 GO URL marked GONE, and the application URL removed. M9.8: the same 2019 order was read in an accessible NACO copy, so the amount is now traceable to a legal source; the dead scpwd link stays on the record as GONE."
+      "notes": "M9.1 audit: old-age age corrected from 65 to 57, verification downgraded to partial, the unreachable 2019 GO URL marked GONE, and the application URL removed. M9.8: the same 2019 order was read in an accessible NACO copy, so the amount is now traceable to a legal source; the dead scpwd link stays on the record as GONE. M9.9: added the CAG audit criteria table and the 2026 MCR HRD summary; the rate and age disagreements are recorded rather than resolved."
     },
     {
       "id": "research-tg-kalyana-lakshmi",
@@ -3757,6 +3884,10 @@
         {
           "text": "Wanaparthy district page: monthly pension of ₹4,000 (₹6,000 for disabled beneficiaries) plus ₹10 lakh Aarogyasri cover, for BPL white-ration-card holders in the listed categories",
           "sourceId": "wanaparthy-cheyutha-detail"
+        },
+        {
+          "text": "MCR HRD Institute training material (February 2026) presents 'Aasara/Cheyutha Pensions' as one pension scheme: Rs 2,016 for old age, widow, toddy tapper, weaver, HIV-ART, filaria and dialysis; Rs 4,016 for differently abled; Rs 2,016 financial assistance for single women, beedi workers and beedi thekadars. It lists Rajiv Aarogyasri's Rs 10 lakh cover separately.",
+          "sourceId": "mcrhrdi-welfare-policies"
         }
       ],
       "exclusions": [],
@@ -3770,10 +3901,11 @@
       "unresolvedQuestions": [
         "The state portal and the Suryapet page describe Cheyutha as a ₹10 lakh Aarogyasri health cover; the Wanaparthy page describes the same name as a monthly pension (₹4,000 / ₹6,000 for disabled) plus the health cover, and its application route is a pension form. No Government Order read so far settles which is correct.",
         "The 2025-26 budget speech lists Cheyutha among the Abhayahastam welfare schemes without a benefit amount; it does not resolve the conflict.",
-        "Which of the two readings, if either, is currently open, and whether the ₹4,000 / ₹6,000 amounts are real or a district-page error."
+        "Which of the two readings, if either, is currently open, and whether the ₹4,000 / ₹6,000 amounts are real or a district-page error.",
+        "The 2026 MCR HRD Institute material treats Cheyutha as the pension scheme (Rs 2,016; Rs 4,016 for disabled) and keeps the Rs 10 lakh cover under Rajiv Aarogyasri, which does not explain the Wanaparthy page figures of Rs 4,000 and Rs 6,000."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "M9.8: added two district pages that contradict each other on what Cheyutha is. The conflict is deliberately unresolved; no amount is recorded in the benefit field and no condition was merged away.",
+      "notes": "M9.8: added two district pages that contradict each other on what Cheyutha is. The conflict is deliberately unresolved; no amount is recorded in the benefit field and no condition was merged away. M9.9: a government training-institute summary was added; it corroborates the pension reading but is not an order, so the conflict stays.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -4358,20 +4490,52 @@
       "schemeStatus": "UNKNOWN",
       "discoveryUrl": "https://wanaparthy.telangana.gov.in/schemes",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
-      "eligibilityConditions": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "sourceId": "naco-aasara-go34"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "sourceId": "naco-aasara-go34"
+        }
+      ],
+      "eligibilityConditions": [
+        {
+          "text": "Unmarried women above 30 years in rural areas and above 35 years in urban areas.",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "Married women above 18 years who are separated from or deserted by their husband for more than one year.",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "Assistance stops if the woman remarries or the separation ends.",
+          "sourceId": "cag-aasara-audit"
+        },
+        {
+          "text": "One member per household for this category.",
+          "sourceId": "cag-aasara-audit"
+        }
+      ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-27",
-      "lastResearchedOn": "2026-11-27",
+      "lastResearchedOn": "2026-11-28",
       "confidence": "low",
       "unresolvedQuestions": [
-        "Aasara already covers single women; decide whether this should remain a separate record or become a relationship only.",
-        "The exact current age rules were not re-read for this record."
+        "Whether the 2019 rate is still current; no post-2019 order was read.",
+        "The Telangana application route and required documents are not recorded from a state source.",
+        "Whether the rural 30 / urban 35 age split is still applied after the 2024 pension reorganisation."
       ],
       "importReadiness": "NEEDS_INFO",
       "statusHistory": [
@@ -4382,6 +4546,18 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-27"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-28"
         }
       ],
       "relationships": [
@@ -4389,8 +4565,22 @@
           "type": "RELATED",
           "recordId": "research-tg-aasara-pensions",
           "note": "same pension framework"
+        },
+        {
+          "type": "RELATED",
+          "recordId": "research-tg-aasara-pensions",
+          "note": "Single women are an Aasara pension category."
         }
-      ]
+      ],
+      "benefit": {
+        "kind": "cash",
+        "summary": "Monthly financial assistance for single women under Aasara",
+        "amountInr": 2016,
+        "amountNote": "Rs 2,016 per month per G.O.Ms.No.34 dated 28-05-2019; whether it was enhanced after 2019 is unconfirmed.",
+        "frequency": "monthly"
+      },
+      "notes": "M9.9: criteria and amount sourced from the CAG audit and the 2019 order; kept as its own record because it has distinct age rules.",
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-bocwwb-benefits",
@@ -6157,24 +6347,46 @@
       "schemeStatus": "UNKNOWN",
       "discoveryUrl": "https://tgobmms.cgg.gov.in/getAnAHomePage.action",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "disc-aids-appliances"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "disc-aids-appliances"
+        }
+      ],
       "benefitSummary": "Applications for assistive aids such as wheelchairs and selected education and communication devices for eligible persons with disabilities.",
-      "eligibilityConditions": [],
+      "eligibilityConditions": [
+        {
+          "text": "Permanent resident of Telangana.",
+          "sourceId": "disc-aids-appliances"
+        },
+        {
+          "text": "Person with a disability of 40 per cent or more; item-wise criteria are published separately in Annexure-A and Annexure-B.",
+          "sourceId": "disc-aids-appliances"
+        },
+        {
+          "text": "Apply online through the OBMMS portal with a food security card number or a Meeseva income number; the portal listed a submission deadline of 10-02-2026 for the Annexure-A items at the time of reading.",
+          "sourceId": "disc-aids-appliances"
+        }
+      ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
       "confidence": "low",
       "unresolvedQuestions": [
-        "Item list, income limit and camp schedule were not recorded.",
-        "The portal page was reachable; the application window is not shown."
+        "Annexure-A and Annexure-B eligibility spreadsheets were not opened, so per-item criteria (age, income, disability type) are unrecorded.",
+        "Whether the 10-02-2026 window is still open, and which items are covered in the current cycle.",
+        "The supplying agency, distribution camps and any income limit are not recorded."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "M9.9: general eligibility and the application route read from the OBMMS portal; item-level annexures remain unread.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -6183,9 +6395,22 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-28"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-indira-mahila-shakti",
@@ -6289,7 +6514,7 @@
     {
       "id": "research-supplementary-nutrition",
       "name": "Supplementary Nutrition Programme",
-      "officialName": "Supplementary Nutrition Programme including Take Home Ration",
+      "officialName": "Supplementary Nutrition under Mission Saksham Anganwadi and Poshan 2.0",
       "aliases": [
         "SNP",
         "take home ration",
@@ -6308,24 +6533,55 @@
       "schemeStatus": "UNKNOWN",
       "discoveryUrl": "https://kothagudem.telangana.gov.in/wcds/",
       "districts": [],
-      "eligibilityEvidence": [],
-      "verificationEvidence": [],
+      "eligibilityEvidence": [
+        {
+          "sourceId": "wcd-snp-rules-2022"
+        },
+        {
+          "sourceId": "wcd-poshan2-guidelines"
+        }
+      ],
+      "verificationEvidence": [
+        {
+          "sourceId": "wcd-snp-rules-2022"
+        },
+        {
+          "sourceId": "wcd-poshan2-guidelines"
+        }
+      ],
       "benefitSummary": "Supplementary food through Anganwadi centres, including take-home ration for younger children and pregnant or lactating women.",
-      "eligibilityConditions": [],
+      "eligibilityConditions": [
+        {
+          "text": "Children from 6 months to 6 years, including those suffering from malnutrition.",
+          "sourceId": "wcd-snp-rules-2022"
+        },
+        {
+          "text": "Pregnant women and lactating mothers until six months after child birth.",
+          "sourceId": "wcd-snp-rules-2022"
+        },
+        {
+          "text": "Provided for 300 days a year to beneficiaries registered at an Anganwadi Centre with Aadhaar identification.",
+          "sourceId": "wcd-snp-rules-2022"
+        },
+        {
+          "text": "Adolescent girls aged 14-18 are covered only in aspirational districts and the North-Eastern region under the 2022 guidelines.",
+          "sourceId": "wcd-poshan2-guidelines"
+        }
+      ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
-      "status": "CATALOGUED",
-      "verificationStatus": "UNVERIFIED",
+      "status": "ELIGIBILITY_VERIFIED",
+      "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
       "confidence": "medium",
       "unresolvedQuestions": [
-        "Age-wise quantity norms were not recorded.",
-        "Whether all Anganwadis follow the same ration list is unknown."
+        "The national entitlement is established; the Telangana ration list, quantity per beneficiary and enrolment process were not read from a state source.",
+        "Whether the Telangana programme uses the Poshan 2.0 take-home ration or a state-specific menu."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "notes": "M9.9: national rules and guidelines read; state implementation deliberately left unverified.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -6334,9 +6590,22 @@
         {
           "status": "CATALOGUED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "SOURCE_IDENTIFIED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-28"
         }
       ],
-      "relationships": []
+      "relationships": [],
+      "lastVerifiedOn": "2026-11-28"
     },
     {
       "id": "research-tsmfc-subsidy",
@@ -8858,30 +9127,57 @@
       "eligibilityEvidence": [
         {
           "sourceId": "wanaparthy-welfare"
+        },
+        {
+          "sourceId": "wdsc-tg-ers"
         }
       ],
       "verificationEvidence": [
         {
           "sourceId": "wanaparthy-welfare"
+        },
+        {
+          "sourceId": "wdsc-tg-ers"
         }
       ],
-      "eligibilityConditions": [],
+      "eligibilityConditions": [
+        {
+          "text": "Transgender identity card issued by the District Collector, or a certificate from the competent authority.",
+          "sourceId": "wdsc-tg-ers"
+        },
+        {
+          "text": "Age between 21 and 55 years.",
+          "sourceId": "wdsc-tg-ers"
+        },
+        {
+          "text": "Annual income below Rs 1.50 lakh in rural areas and Rs 2.00 lakh in urban areas, or a white ration card.",
+          "sourceId": "wdsc-tg-ers"
+        },
+        {
+          "text": "The applicant must be unemployed and a resident of Telangana.",
+          "sourceId": "wdsc-tg-ers"
+        },
+        {
+          "text": "Applications are called by district notification and submitted manually with Aadhaar, income certificate, age proof and photographs; units up to Rs 50,000 are selected by a District Level Committee.",
+          "sourceId": "wdsc-tg-ers"
+        }
+      ],
       "exclusions": [],
       "prerequisites": [],
       "documents": [],
-      "status": "SOURCE_IDENTIFIED",
+      "status": "ELIGIBILITY_VERIFIED",
       "verificationStatus": "PARTIALLY_VERIFIED",
       "discoveredOn": "2026-11-28",
       "lastResearchedOn": "2026-11-28",
       "lastVerifiedOn": "2026-11-28",
       "confidence": "low",
       "unresolvedQuestions": [
-        "The district page states a 100% subsidy loan of Rs 75,000 for one unit in 2025-26; no state order or guideline was located.",
-        "The department economic rehabilitation page (unreachable here) is reported to list Rs 50,000 at 100% and 80/70/60% bank-linked slabs; that is not confirmed.",
-        "Whether the scheme requires a transgender identity card is stated by the department page, not by the district page."
+        "The department page and the Wanaparthy district page state different unit costs (Rs 50,000 vs Rs 75,000); no order or notification with a date was read.",
+        "The department page is undated and the host failed repeated direct requests from the audit machine, so its currency is unconfirmed.",
+        "Whether the FY2025-26 application form on the same host is still open."
       ],
       "importReadiness": "NEEDS_INFO",
-      "notes": "Added 2026-11-28 as a discovery with one district-published figure; eligibility is not recorded.",
+      "notes": "M9.9: eligibility conditions read from the department page; the unit-cost conflict is retained rather than averaged.",
       "statusHistory": [
         {
           "status": "DISCOVERED",
@@ -8890,6 +9186,14 @@
         {
           "status": "SOURCE_IDENTIFIED",
           "on": "2026-11-28"
+        },
+        {
+          "status": "ELIGIBILITY_VERIFIED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "OFFICIALLY_VERIFIED",
+          "on": "2026-11-28"
         }
       ],
       "relationships": [],
@@ -8897,8 +9201,8 @@
       "benefit": {
         "kind": "loan",
         "summary": "Subsidised livelihood unit",
-        "amountInr": 75000,
-        "amountNote": "One unit of Rs 75,000 at 100% subsidy, 2025-26, per a district page."
+        "amountInr": 50000,
+        "amountNote": "Rs 50,000 unit cost at 100 per cent subsidy per the department page (80/70/60 per cent slabs with bank linkage above that). The Wanaparthy district page states Rs 75,000 at 100 per cent for 2025-26; the two figures disagree and neither is dated in a way that settles it."
       }
     }
   ],
