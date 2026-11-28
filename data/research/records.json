@@ -497,6 +497,1045 @@
         "status": "UNCHECKED"
       },
       "licenseNotes": "State government publication. States that the pensionable age for old-age pensions was reduced from 65 to 57 and that the monthly pension has been Rs 2,016 (Rs 3,016 for disabled pensioners) since June 2019."
+    },
+    {
+      "id": "disc-bocwwb-benefits",
+      "url": "https://tbocwwb.telangana.gov.in/new_welfare_schemes.html",
+      "title": "Welfare Schemes - Telangana Building and Other Construction Workers Welfare Board",
+      "issuedBy": "Labour Department (BOCWWB)",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-bocwwb-benefits"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-labour-welfare-board",
+      "url": "https://sangareddy.telangana.gov.in/labour-department/",
+      "title": "Labour Department - Sangareddy District",
+      "issuedBy": "Labour Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-labour-welfare-board"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-handloom-thrift-fund",
+      "url": "https://wanaparthy.telangana.gov.in/handlooms-and-textiles",
+      "title": "Handlooms and Textiles - Wanaparthy District",
+      "issuedBy": "Handlooms and Textiles Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-handloom-thrift-fund"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-chenetha-mithra",
+      "url": "https://gadwal.telangana.gov.in/handlooms-and-textiles-department/",
+      "title": "Handlooms and Textiles Department - Jogulamba Gadwal",
+      "issuedBy": "Handlooms and Textiles Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-chenetha-mithra"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-nethanna-bima",
+      "url": "https://www.des.telangana.gov.in/publications/Socio%20Economic%20Outlook-2024.pdf",
+      "title": "Telangana Socio Economic Outlook 2024",
+      "issuedBy": "Handlooms and Textiles Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "other",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-nethanna-bima"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-journalists-health",
+      "url": "https://jhs.telangana.gov.in/",
+      "title": "Telangana Journalist Health Scheme",
+      "issuedBy": "Rajiv Aarogyasri Health Care Trust",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-journalists-health"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-journalists-welfare-fund",
+      "url": "https://mediaacademy.telangana.gov.in/wp-content/uploads/2024/06/G.O.225.pdf",
+      "title": "G.O. 225 - Working Journalists Welfare Fund rules",
+      "issuedBy": "Information and Public Relations Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "government_order",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-journalists-welfare-fund"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-pre-matric-scholarship",
+      "url": "https://telanganaepass.cgg.gov.in/",
+      "title": "Telangana ePASS",
+      "issuedBy": "Social Welfare, BC Welfare, Tribal Welfare and Minorities Welfare Departments",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-pre-matric-scholarship",
+        "research-post-matric-scholarship",
+        "research-maintenance-fee"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-tuition-fee-reimbursement",
+      "url": "https://www.telangana.gov.in/departments/backward-classes-welfare",
+      "title": "Backward Classes Welfare Department - Telangana State Portal",
+      "issuedBy": "Backward Classes Welfare Department and welfare departments",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-tuition-fee-reimbursement",
+        "research-bc-study-circles",
+        "research-bc-margin-money",
+        "research-rajiv-abhyudaya"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-overseas-sc",
+      "url": "https://telanganaepass.cgg.gov.in/OverseasLinks.do",
+      "title": "Overseas Scholarships - ePASS",
+      "issuedBy": "Scheduled Castes Development Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-overseas-sc",
+        "research-overseas-st",
+        "research-overseas-minority"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-overseas-bc",
+      "url": "https://narayanpet.telangana.gov.in/bc-welfare/",
+      "title": "BC Welfare - Narayanpet District",
+      "issuedBy": "Backward Classes Welfare Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-overseas-bc"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-best-available-schools",
+      "url": "https://suryapet.telangana.gov.in/tribal-development",
+      "title": "Tribal Development - Suryapet District",
+      "issuedBy": "Social Welfare and Tribal Welfare Departments",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-best-available-schools"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-tgtwreis",
+      "url": "https://tgtwreis.telangana.gov.in/",
+      "title": "Telangana Tribal Welfare Residential Educational Institutions Society",
+      "issuedBy": "Tribal Welfare Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-tgtwreis"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-tmreis",
+      "url": "https://jagtial.telangana.gov.in/minorities-welfare-department",
+      "title": "Minorities Welfare Department - Jagtial District",
+      "issuedBy": "Minorities Welfare Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-tmreis",
+        "research-tsmfc-subsidy"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-kgbv",
+      "url": "https://www.kgbv.telangana.gov.in/KGBV/aboutUs.do",
+      "title": "KGBV Telangana - About Us",
+      "issuedBy": "School Education Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-kgbv"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-mid-day-meal",
+      "url": "https://schooledu.telangana.gov.in/MDM/StateAbssd.do",
+      "title": "Mid Day Meal - Telangana School Education",
+      "issuedBy": "School Education Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-mid-day-meal"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-bc-hostels",
+      "url": "https://kamareddy.telangana.gov.in/bc-development",
+      "title": "BC Development - Kamareddy District",
+      "issuedBy": "Backward Classes Welfare Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-bc-hostels"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-aarogyasri",
+      "url": "https://rajivaarogyasri.telangana.gov.in/ASRI2.0/portal/aarogyasri-scheme.html",
+      "title": "Rajiv Aarogyasri Scheme - Health Care Trust",
+      "issuedBy": "Rajiv Aarogyasri Health Care Trust",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-aarogyasri"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-cm-relief-fund",
+      "url": "https://www.telangana.gov.in/cm-relief-fund",
+      "title": "Chief Minister's Relief Fund - Telangana State Portal",
+      "issuedBy": "Chief Minister's Office",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-cm-relief-fund"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-telemanas",
+      "url": "https://telemanas.mohfw.gov.in/telemanas-services",
+      "title": "Tele MANAS services",
+      "issuedBy": "Ministry of Health and Family Welfare",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "ministry_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-telemanas"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-aids-appliances",
+      "url": "https://tgobmms.cgg.gov.in/getAnAHomePage.action",
+      "title": "Telangana Online Beneficiary Management and Monitoring System",
+      "issuedBy": "Department for Empowerment of Persons with Disabilities, Senior Citizens and Transgender Persons",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-aids-appliances",
+        "research-bc-federation-assistance"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-indira-mahila-shakti",
+      "url": "https://www.serp.telangana.gov.in/mshakthi/mShakthi-1.jsp",
+      "title": "SERP Telangana - Mahila Shakthi",
+      "issuedBy": "Society for Elimination of Rural Poverty (SERP), Rural Development",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-indira-mahila-shakti"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-shg-bank-linkage",
+      "url": "https://wanaparthy.telangana.gov.in/district-rural-development-agency-drda/",
+      "title": "District Rural Development Agency - Wanaparthy",
+      "issuedBy": "Rural Development / DRDA",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-shg-bank-linkage"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-supplementary-nutrition",
+      "url": "https://kothagudem.telangana.gov.in/wcds/",
+      "title": "Women and Child Development - Bhadradri Kothagudem",
+      "issuedBy": "Women, Children, Disabled and Senior Citizens Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-supplementary-nutrition"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-sc-land-purchase",
+      "url": "https://mahabubabad.telangana.gov.in/sc-corporation",
+      "title": "SC Corporation - Mahabubabad District",
+      "issuedBy": "Scheduled Castes Development Corporation",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-sc-land-purchase"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-indira-soura-giri-jala",
+      "url": "https://cm.telangana.gov.in/2025/05/honble-cm-sri-revanth-reddy-launches-indira-soura-giri-jala-vikasam-scheme-to-empower-tribal-farmers-with-land-rights-and-solar-irrigation-in-telangana",
+      "title": "CMO release - Indira Soura Giri Jala Vikasam launch",
+      "issuedBy": "Tribal Welfare Department / TRICOR",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "other",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-indira-soura-giri-jala"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-pmfby",
+      "url": "https://pmfby.gov.in/guidelines",
+      "title": "PMFBY guidelines",
+      "issuedBy": "Department of Agriculture and Farmers Welfare, Government of India",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "guidelines",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-pmfby"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-pmkisan",
+      "url": "https://pmkisan.gov.in/",
+      "title": "PM-KISAN portal",
+      "issuedBy": "Department of Agriculture and Farmers Welfare, Government of India",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "ministry_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-pmkisan"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-pmkusum",
+      "url": "https://tgredco.telangana.gov.in/PMKusum.aspx",
+      "title": "TGREDCO - PM-KUSUM",
+      "issuedBy": "Ministry of New and Renewable Energy, implemented by TGREDCO",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-pmkusum"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-agri-infra-fund",
+      "url": "https://agriinfra.dac.gov.in/",
+      "title": "National Agriculture Infra Financing Facility",
+      "issuedBy": "Department of Agriculture and Farmers Welfare, Government of India",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "ministry_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-agri-infra-fund"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-pmmsy",
+      "url": "https://warangal.telangana.gov.in/fisheries",
+      "title": "Fisheries Department - Warangal",
+      "issuedBy": "Department of Fisheries, Government of India; Telangana Fisheries Department",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-pmmsy",
+        "research-fish-seed-subsidy"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-seed-subsidy",
+      "url": "https://ossds.telangana.gov.in/",
+      "title": "Telangana T-SEED portal",
+      "issuedBy": "Agriculture Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-seed-subsidy"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-farm-mechanisation",
+      "url": "https://mgov.telangana.gov.in/FarmMechGuide.html",
+      "title": "Farm Mechanisation guidelines",
+      "issuedBy": "Agriculture Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "guidelines",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-farm-mechanisation"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-crop-loan-interest",
+      "url": "https://kothagudem.telangana.gov.in/agriculture/",
+      "title": "Agriculture Department - Bhadradri Kothagudem",
+      "issuedBy": "Agriculture Department with lending institutions",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-crop-loan-interest"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-micro-irrigation",
+      "url": "https://sangareddy.telangana.gov.in/horticulture-sericulture/",
+      "title": "Horticulture and Sericulture - Sangareddy District",
+      "issuedBy": "Horticulture Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-micro-irrigation"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-midh",
+      "url": "https://suryapet.telangana.gov.in/horticulture-and-sericulture",
+      "title": "Horticulture and Sericulture - Suryapet District",
+      "issuedBy": "Horticulture Department (centrally sponsored)",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-midh"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-sericulture-assistance",
+      "url": "https://warangal.telangana.gov.in/sericulture",
+      "title": "Sericulture - Warangal",
+      "issuedBy": "Sericulture Department with Central Silk Board",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-sericulture-assistance"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-fapp",
+      "url": "https://tgfps.telangana.gov.in/telangana-food-processing-and-preservation-policy/",
+      "title": "Telangana Food Processing and Preservation Policy",
+      "issuedBy": "Industries and Commerce Department / Telangana Food Processing Society",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-fapp"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-pmfme",
+      "url": "https://tgfps.telangana.gov.in/pmfme/support-to-fpos-shgs-producer-cooperatives",
+      "title": "PMFME - Support to FPOs/SHGs/Producer Cooperatives",
+      "issuedBy": "Ministry of Food Processing Industries, delivered by TGFPS",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-pmfme"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-t-idea",
+      "url": "https://tgfps.telangana.gov.in/t-idea",
+      "title": "T-IDEA - TGFPS",
+      "issuedBy": "Industries and Commerce Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-t-idea"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-tihcl",
+      "url": "https://tihcl.telangana.gov.in/",
+      "title": "Telangana Industrial Health Clinic Limited",
+      "issuedBy": "Industries and Commerce Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-tihcl"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-t-spark",
+      "url": "https://startup.telangana.gov.in/grants",
+      "title": "Grants - Startup Telangana",
+      "issuedBy": "Telangana Innovation Cell, IT and Electronics Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-t-spark"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-wehub-ujaagar",
+      "url": "https://wehub.telangana.gov.in/sie",
+      "title": "Social Impact Entrepreneurship - WE Hub",
+      "issuedBy": "WE Hub, IT and Electronics Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-wehub-ujaagar"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-tworks-access",
+      "url": "https://tworks.telangana.gov.in/tworks-accessprogram",
+      "title": "T-Works Access Program",
+      "issuedBy": "T-Works, Government of Telangana",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-tworks-access"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-task",
+      "url": "https://task.telangana.gov.in/",
+      "title": "TASK - Telangana Academy for Skill and Knowledge",
+      "issuedBy": "IT and Electronics Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-task"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-employment-portal",
+      "url": "http://employment.telangana.gov.in/",
+      "title": "Directorate of Employment and Training",
+      "issuedBy": "Labour, Employment, Training and Factories Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-employment-portal"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-tgsrtc-passes",
+      "url": "https://tgsrtc.telangana.gov.in/bus-pass-services",
+      "title": "Bus Pass Services - TGSRTC",
+      "issuedBy": "Telangana State Road Transport Corporation, Transport Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-tgsrtc-passes"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-mepma",
+      "url": "https://kamareddy.telangana.gov.in/mepma",
+      "title": "MEPMA - Kamareddy District",
+      "issuedBy": "Municipal Administration and Urban Development Department",
+      "level": "STATE",
+      "geography": [
+        "Telangana"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-mepma"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
+    },
+    {
+      "id": "disc-pm-surya-ghar",
+      "url": "https://tgredco.telangana.gov.in/SolarLinks.aspx",
+      "title": "TGREDCO - Solar links",
+      "issuedBy": "Ministry of New and Renewable Energy, routed through TGREDCO",
+      "level": "CENTRAL",
+      "geography": [
+        "India"
+      ],
+      "tier": "PRIMARY_OFFICIAL",
+      "kind": "department_site",
+      "retrievedOn": "2026-11-28",
+      "verifiedOn": "2026-11-28",
+      "change": {
+        "status": "UNCHECKED"
+      },
+      "schemeIds": [
+        "research-pm-surya-ghar"
+      ],
+      "licenseNotes": "Fetched on 2026-11-28; used for discovery only, not eligibility verification."
     }
   ],
   "records": [
@@ -2767,7 +3806,2944 @@
           "note": "same pension framework"
         }
       ]
+    },
+    {
+      "id": "research-bocwwb-benefits",
+      "name": "BOCWWB welfare benefits",
+      "officialName": "Telangana Building and Other Construction Workers Welfare Board benefits",
+      "aliases": [
+        "construction workers welfare board",
+        "BOCWWB"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Labour Department (BOCWWB)",
+      "category": "labour",
+      "subcategory": "construction worker benefits",
+      "beneficiaryGroups": [
+        "construction_workers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://tbocwwb.telangana.gov.in/new_welfare_schemes.html",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Registered construction workers get marriage gift, maternity benefit, accident and natural-death relief, disability relief, hospitalisation relief and funeral expenses under one registration.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Benefit amounts and the current registration conditions are stated on the Board page but were not transcribed in this batch.",
+        "Whether the scheme is open for new registrations is not stated on the page."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-labour-welfare-board",
+      "name": "Telangana Labour Welfare Board schemes",
+      "officialName": "Labour Welfare Fund benefits",
+      "aliases": [
+        "Labour Welfare Fund",
+        "LWF"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Labour Department",
+      "category": "labour",
+      "subcategory": "registered worker benefits",
+      "beneficiaryGroups": [
+        "unorganised_workers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://sangareddy.telangana.gov.in/labour-department/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Covers workers in factories, shops and establishments, motor transport and societies; listed benefits include scholarship, marriage gift, medical aid, accident relief and funeral expenses.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "The district page lists benefits but not the governing Labour Welfare Fund rules or amounts.",
+        "Whether the board covers all listed sectors statewide is not confirmed."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-handloom-thrift-fund",
+      "name": "Nethannaku Cheyutha (handloom thrift fund)",
+      "officialName": "Telangana State Handloom Weavers Thrift Fund and Savings-cum-Security Scheme",
+      "aliases": [
+        "Nethanna Podupu",
+        "THWTFSSS"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Handlooms and Textiles Department",
+      "category": "social_welfare",
+      "subcategory": "weaver savings",
+      "beneficiaryGroups": [
+        "weavers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/handlooms-and-textiles",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "A contributory savings scheme where the weaver contribution is matched by the state and paid out as a maturity benefit.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Current contribution rates and maturity terms are not on the district page.",
+        "Whether enrolment is open is not stated."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-chenetha-mithra",
+      "name": "Chenetha Mithra",
+      "officialName": "40% Input Subsidy Linked Wage Compensation",
+      "aliases": [
+        "input subsidy linked wage compensation"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Handlooms and Textiles Department",
+      "category": "labour",
+      "subcategory": "weaver wage support",
+      "beneficiaryGroups": [
+        "weavers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://gadwal.telangana.gov.in/handlooms-and-textiles-department/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Subsidy on yarn, dyes and chemicals paid partly to the purchaser and partly into weavers accounts in proportion to wages.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "The 40% split is described on district pages; the current departmental order was not read.",
+        "Whether powerloom workers are covered is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-nethanna-bima",
+      "name": "Nethanna Bima",
+      "officialName": "Nethanna Bima group life insurance",
+      "aliases": [
+        "weaver life insurance"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Handlooms and Textiles Department",
+      "category": "insurance",
+      "subcategory": "weaver insurance",
+      "beneficiaryGroups": [
+        "weavers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://www.des.telangana.gov.in/publications/Socio%20Economic%20Outlook-2024.pdf",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Group life insurance for handloom, powerloom and ancillary workers enrolled under the weaver thrift scheme.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Cover amount and claim process are not in the outlook chapter read.",
+        "Age limits and enrolment window are unconfirmed."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-journalists-health",
+      "name": "Working Journalists Health Scheme",
+      "officialName": "Telangana Journalists Health Scheme",
+      "aliases": [
+        "journalists health scheme"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Rajiv Aarogyasri Health Care Trust",
+      "category": "health",
+      "subcategory": "journalist health cover",
+      "beneficiaryGroups": [],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://jhs.telangana.gov.in/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Health cover for accredited working journalists and their dependants through network hospitals.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "The portal is a landing page; eligibility, cover and enrolment are not stated on it.",
+        "Whether the scheme is currently open is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-journalists-welfare-fund",
+      "name": "Telangana Working Journalists Welfare Fund",
+      "officialName": "Working Journalists Welfare Fund",
+      "aliases": [
+        "journalists welfare fund"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Information and Public Relations Department",
+      "category": "social_welfare",
+      "subcategory": "journalist welfare",
+      "beneficiaryGroups": [],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://mediaacademy.telangana.gov.in/wp-content/uploads/2024/06/G.O.225.pdf",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "A welfare fund for working journalists with benefits defined in the governing order.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "The order PDF was reachable but its benefit schedule was not transcribed.",
+        "Membership conditions need reading the order."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-pre-matric-scholarship",
+      "name": "Pre-Matric Scholarships",
+      "officialName": "Pre-Matric Scholarships (ePASS)",
+      "aliases": [
+        "pre matric scholarship"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Social Welfare, BC Welfare, Tribal Welfare and Minorities Welfare Departments",
+      "category": "education",
+      "subcategory": "school scholarship",
+      "beneficiaryGroups": [
+        "students",
+        "sc_st_obc"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://telanganaepass.cgg.gov.in/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Scholarships for eligible students before Class XI, administered through ePASS with community-specific schemes.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Per-class rates and income limits differ by community and were not recorded.",
+        "The current academic-year deadline is unknown."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-post-matric-scholarship",
+      "name": "Post-Matric Scholarships",
+      "officialName": "Post-Matric Scholarships (ePASS)",
+      "aliases": [
+        "post matric scholarship"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Social Welfare, BC Welfare, Tribal Welfare and Minorities Welfare Departments",
+      "category": "education",
+      "subcategory": "college scholarship",
+      "beneficiaryGroups": [
+        "students",
+        "sc_st_obc",
+        "minorities"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://telanganaepass.cgg.gov.in/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Scholarships for study after Class X, with tuition and maintenance components processed through ePASS.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Rates and income ceilings vary by community and course.",
+        "Renewal conditions were not read."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tuition-fee-reimbursement",
+      "name": "Tuition Fee Reimbursement",
+      "officialName": "Reimbursement of Tuition Fee (RTF)",
+      "aliases": [
+        "RTF",
+        "fee reimbursement"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Backward Classes Welfare Department and welfare departments",
+      "category": "education",
+      "subcategory": "fee reimbursement",
+      "beneficiaryGroups": [
+        "students"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://www.telangana.gov.in/departments/backward-classes-welfare",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Reimburses tuition fees for eligible post-matric students in recognised courses.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Course list, income ceiling and reimbursement caps were not captured.",
+        "Whether private unaided colleges are covered is unconfirmed."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-maintenance-fee",
+      "name": "Maintenance Fee (MTF)",
+      "officialName": "Maintenance Fee / Mess Charges",
+      "aliases": [
+        "MTF",
+        "mess charges"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Backward Classes Welfare Department and welfare departments",
+      "category": "education",
+      "subcategory": "student maintenance",
+      "beneficiaryGroups": [
+        "students"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://telanganaepass.cgg.gov.in/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Maintenance or mess-charge support paid alongside post-matric scholarships.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Hosteller and day-scholar rates were not recorded.",
+        "Which communities are covered in the current year is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-overseas-sc",
+      "name": "Ambedkar Overseas Vidya Nidhi (SC)",
+      "officialName": "Ambedkar Overseas Vidya Nidhi - Scheduled Castes",
+      "aliases": [
+        "SC overseas scholarship"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Scheduled Castes Development Department",
+      "category": "education",
+      "subcategory": "overseas scholarship",
+      "beneficiaryGroups": [
+        "students",
+        "sc_st_obc"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://telanganaepass.cgg.gov.in/OverseasLinks.do",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Financial assistance for eligible SC students pursuing higher education abroad.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Income ceiling, course list and grant amount were not recorded.",
+        "The current application window is unknown."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-overseas-st",
+      "name": "Ambedkar Overseas Vidya Nidhi (ST)",
+      "officialName": "Ambedkar Overseas Vidya Nidhi - Scheduled Tribes",
+      "aliases": [
+        "ST overseas scholarship"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Tribal Welfare Department",
+      "category": "education",
+      "subcategory": "overseas scholarship",
+      "beneficiaryGroups": [
+        "students",
+        "sc_st_obc"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://telanganaepass.cgg.gov.in/OverseasLinks.do",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Financial assistance for eligible ST students pursuing higher education abroad.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Grant amount and eligible universities were not recorded.",
+        "The current application window is unknown."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-overseas-minority",
+      "name": "CM Overseas Scholarship (Minorities)",
+      "officialName": "Chief Minister's Overseas Scholarship Scheme for Minorities",
+      "aliases": [
+        "minority overseas scholarship"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Minorities Welfare Department",
+      "category": "education",
+      "subcategory": "overseas scholarship",
+      "beneficiaryGroups": [
+        "students",
+        "minorities"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://telanganaepass.cgg.gov.in/OverseasLinks.do",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Financial assistance and a one-way ticket for eligible minority students studying abroad.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Eligibility income limit and course list were not recorded.",
+        "Whether the scheme is open this year is unknown."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-overseas-bc",
+      "name": "MJP BC Overseas Vidya Nidhi",
+      "officialName": "Mahatma Jyothiba Phule BC Overseas Vidya Nidhi",
+      "aliases": [
+        "BC overseas scholarship"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Backward Classes Welfare Department",
+      "category": "education",
+      "subcategory": "overseas scholarship",
+      "beneficiaryGroups": [
+        "students",
+        "sc_st_obc"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://narayanpet.telangana.gov.in/bc-welfare/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Financial assistance for eligible BC and EBC students pursuing higher study abroad.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Amount and income ceiling were not recorded.",
+        "The current application window is unknown."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-best-available-schools",
+      "name": "Best Available Schools Scheme",
+      "officialName": "Best Available Schools Scheme",
+      "aliases": [
+        "BAS"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Social Welfare and Tribal Welfare Departments",
+      "category": "education",
+      "subcategory": "school admission support",
+      "beneficiaryGroups": [
+        "students",
+        "sc_st_obc"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://suryapet.telangana.gov.in/tribal-development",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Places eligible SC and ST children in selected private schools with boarding, tuition and maintenance support.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "The number of seats and income limit are not on the district page.",
+        "Whether the scheme covers both SC and ST under one order is unconfirmed."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tgtwreis",
+      "name": "Tribal Welfare Residential Schools",
+      "officialName": "Telangana Tribal Welfare Residential Educational Institutions Society",
+      "aliases": [
+        "TGTWREIS",
+        "Gurukulams",
+        "Mini Gurukulams"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Tribal Welfare Department",
+      "category": "education",
+      "subcategory": "residential education",
+      "beneficiaryGroups": [
+        "students",
+        "sc_st_obc"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://tgtwreis.telangana.gov.in/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Residential schools, junior colleges and degree colleges for tribal students.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Admission process and seat numbers were not recorded.",
+        "The society site does not state current class-wise availability."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tmreis",
+      "name": "Minorities Residential Schools",
+      "officialName": "Telangana Minorities Residential Educational Institutions Society",
+      "aliases": [
+        "TMREIS"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Minorities Welfare Department",
+      "category": "education",
+      "subcategory": "residential education",
+      "beneficiaryGroups": [
+        "students",
+        "minorities"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://jagtial.telangana.gov.in/minorities-welfare-department",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Residential schooling for minority students through the minorities residential schools society.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Admission criteria and entrance test details were not recorded.",
+        "The parent society site was not fetched in this batch."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-kgbv",
+      "name": "Kasturba Gandhi Balika Vidyalaya",
+      "officialName": "Kasturba Gandhi Balika Vidyalaya (KGBV)",
+      "aliases": [
+        "KGBV"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "School Education Department",
+      "category": "education",
+      "subcategory": "girls residential schooling",
+      "beneficiaryGroups": [
+        "students",
+        "women"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://www.kgbv.telangana.gov.in/KGBV/aboutUs.do",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Residential schooling for girls from disadvantaged groups, with classes up to XII at some locations.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Admission eligibility per class was not recorded.",
+        "Whether all 33 districts have a KGBV is not stated."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-mid-day-meal",
+      "name": "Mid Day Meal",
+      "officialName": "Mid Day Meal Scheme",
+      "aliases": [
+        "MDM",
+        "school meals"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "School Education Department",
+      "category": "education",
+      "subcategory": "school meals",
+      "beneficiaryGroups": [
+        "children",
+        "students"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://schooledu.telangana.gov.in/MDM/StateAbssd.do",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "A cooked meal on school days for students in covered government, aided and local-body schools.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Menu norms and coverage counts were not transcribed.",
+        "Whether classes above the elementary level are covered is unconfirmed."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-bc-study-circles",
+      "name": "BC Study Circles",
+      "officialName": "BC Study Circles",
+      "aliases": [
+        "study circles"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Backward Classes Welfare Department",
+      "category": "education",
+      "subcategory": "exam coaching",
+      "beneficiaryGroups": [
+        "students",
+        "sc_st_obc"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://www.telangana.gov.in/departments/backward-classes-welfare",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Coaching and study support for BC students preparing for competitive examinations and government jobs.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Which exams and centres are covered was not recorded.",
+        "Whether hostel and stipend are included is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-bc-hostels",
+      "name": "BC Welfare Hostels",
+      "officialName": "BC Welfare Hostels",
+      "aliases": [
+        "BC hostels"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Backward Classes Welfare Department",
+      "category": "education",
+      "subcategory": "hostel facilities",
+      "beneficiaryGroups": [
+        "students",
+        "sc_st_obc"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://kamareddy.telangana.gov.in/bc-development",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Boarding and lodging for BC students in departmental hostels.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Seat numbers and mess charges were not recorded.",
+        "Whether hostels are free at all levels is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-aarogyasri",
+      "name": "Rajiv Aarogyasri",
+      "officialName": "Rajiv Aarogyasri Health Scheme",
+      "aliases": [
+        "Aarogyasri",
+        "state health scheme"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Rajiv Aarogyasri Health Care Trust",
+      "category": "health",
+      "subcategory": "cashless treatment",
+      "beneficiaryGroups": [
+        "sc_st_obc"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://rajivaarogyasri.telangana.gov.in/ASRI2.0/portal/aarogyasri-scheme.html",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Cashless treatment for listed serious illnesses and procedures at network hospitals for eligible low-income families.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "The income ceiling and current procedure list were not transcribed.",
+        "The relationship to Ayushman Bharat PM-JAY in Telangana needs confirming."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-cm-relief-fund",
+      "name": "Chief Minister's Relief Fund",
+      "officialName": "Chief Minister's Relief Fund (CMRF)",
+      "aliases": [
+        "CMRF"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Chief Minister's Office",
+      "category": "social_welfare",
+      "subcategory": "emergency assistance",
+      "beneficiaryGroups": [],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://www.telangana.gov.in/cm-relief-fund",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Discretionary assistance for people facing expensive medical treatment, road accidents and other unforeseen distress.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "This is discretionary, not an entitlement; limits and approval process were not recorded.",
+        "Application route and processing time are unknown."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-telemanas",
+      "name": "Tele-MANAS",
+      "officialName": "Tele Mental Health Assistance and Networking Across States",
+      "aliases": [
+        "Tele MANAS",
+        "14416"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Ministry of Health and Family Welfare",
+      "category": "health",
+      "subcategory": "mental health helpline",
+      "beneficiaryGroups": [],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://telemanas.mohfw.gov.in/telemanas-services",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Free 24x7 telephone counselling and mental-health support with referral, on 14416.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "State cell staffing and languages offered were not recorded.",
+        "Whether follow-up care is free is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-aids-appliances",
+      "name": "Free aids and appliances for PwDs",
+      "officialName": "Free Aids and Appliances Scheme",
+      "aliases": [
+        "assistive devices"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Department for Empowerment of Persons with Disabilities, Senior Citizens and Transgender Persons",
+      "category": "disability",
+      "subcategory": "assistive devices",
+      "beneficiaryGroups": [
+        "persons_with_disabilities"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://tgobmms.cgg.gov.in/getAnAHomePage.action",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Applications for assistive aids such as wheelchairs and selected education and communication devices for eligible persons with disabilities.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Item list, income limit and camp schedule were not recorded.",
+        "The portal page was reachable; the application window is not shown."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-indira-mahila-shakti",
+      "name": "Indira Mahila Shakti",
+      "officialName": "Indira Mahila Shakti",
+      "aliases": [
+        "IMS"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Society for Elimination of Rural Poverty (SERP), Rural Development",
+      "category": "women_child",
+      "subcategory": "SHG enterprise support",
+      "beneficiaryGroups": [
+        "women"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://www.serp.telangana.gov.in/mshakthi/mShakthi-1.jsp",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Supports women self-help group enterprises with finance, skills, branding, marketing and shared processing facilities.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Eligibility for each support line and the current application route were not recorded.",
+        "Whether the scheme is open to all SHGs or selected federations is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-shg-bank-linkage",
+      "name": "SHG bank linkage and Vaddi Leni Runalu",
+      "officialName": "SHG Bank Linkage with interest relief",
+      "aliases": [
+        "VLR",
+        "interest free SHG loans"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Rural Development / DRDA",
+      "category": "financial_inclusion",
+      "subcategory": "SHG credit",
+      "beneficiaryGroups": [
+        "women"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://wanaparthy.telangana.gov.in/district-rural-development-agency-drda/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Bank credit to rural women self-help groups with interest relief on qualifying loans repaid on time.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Loan ceilings and the interest-relief period were not recorded.",
+        "Whether this is statewide or district-specific is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-supplementary-nutrition",
+      "name": "Supplementary Nutrition Programme",
+      "officialName": "Supplementary Nutrition Programme including Take Home Ration",
+      "aliases": [
+        "SNP",
+        "take home ration",
+        "THR"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Women, Children, Disabled and Senior Citizens Department",
+      "category": "women_child",
+      "subcategory": "nutrition",
+      "beneficiaryGroups": [
+        "children",
+        "women"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://kothagudem.telangana.gov.in/wcds/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Supplementary food through Anganwadi centres, including take-home ration for younger children and pregnant or lactating women.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Age-wise quantity norms were not recorded.",
+        "Whether all Anganwadis follow the same ration list is unknown."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tsmfc-subsidy",
+      "name": "TSMFC bank-linked subsidy",
+      "officialName": "Telangana State Minorities Finance Corporation bank-linked subsidy",
+      "aliases": [
+        "TSMFC subsidy"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Telangana State Minorities Finance Corporation",
+      "category": "entrepreneurship",
+      "subcategory": "minority enterprise subsidy",
+      "beneficiaryGroups": [
+        "minorities",
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://jagtial.telangana.gov.in/minorities-welfare-department",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Subsidy linked with bank finance for self-employment ventures by economically disadvantaged minority applicants.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Subsidy slabs and unit cost limits were not recorded.",
+        "The corporation site returned an error when fetched; the district page is the source."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-bc-margin-money",
+      "name": "BC Margin Money Scheme",
+      "officialName": "BC Margin Money Scheme",
+      "aliases": [
+        "margin money"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Backward Classes Welfare Department",
+      "category": "entrepreneurship",
+      "subcategory": "BC enterprise subsidy",
+      "beneficiaryGroups": [
+        "sc_st_obc",
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://www.telangana.gov.in/departments/backward-classes-welfare",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Subsidy and bank finance for livelihood or self-employment units run by eligible BC beneficiaries.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Unit cost and subsidy percentage were not recorded.",
+        "Whether urban and rural applicants use different schemes is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-rajiv-abhyudaya",
+      "name": "Rajiv Abhyudaya Yojana",
+      "officialName": "Rajiv Abhyudaya Yojana",
+      "aliases": [
+        "Abhyudaya"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Backward Classes Welfare Department",
+      "category": "entrepreneurship",
+      "subcategory": "urban BC enterprise support",
+      "beneficiaryGroups": [
+        "sc_st_obc",
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://www.telangana.gov.in/departments/backward-classes-welfare",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Subsidy and bank loan support for BC beneficiaries setting up units in urban municipalities and corporations.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Amounts and eligibility were not recorded.",
+        "The current application window is unknown."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-bc-federation-assistance",
+      "name": "BC federation group assistance",
+      "officialName": "BC Federation group financial assistance",
+      "aliases": [
+        "BC federations"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Backward Classes Welfare Department",
+      "category": "entrepreneurship",
+      "subcategory": "group enterprise support",
+      "beneficiaryGroups": [
+        "artisans",
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://tgobmms.cgg.gov.in/getAnAHomePage.action",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Group livelihood support for occupational and community cooperatives, including washermen and Nayee Brahmin federations.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Which federations are currently eligible was not recorded.",
+        "Amounts and application windows are not shown on the portal page."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-sc-land-purchase",
+      "name": "SC Land Purchase Scheme",
+      "officialName": "SC Land Purchase Scheme",
+      "aliases": [
+        "land purchase scheme"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Scheduled Castes Development Corporation",
+      "category": "agriculture",
+      "subcategory": "land purchase support",
+      "beneficiaryGroups": [
+        "farmers",
+        "sc_st_obc"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://mahabubabad.telangana.gov.in/sc-corporation",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Agricultural land and associated irrigation support for landless SC agricultural families, with priority described for SC women.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Land value ceiling and subsidy share were not recorded.",
+        "Whether the scheme is currently open is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-indira-soura-giri-jala",
+      "name": "Indira Soura Giri Jala Vikasam",
+      "officialName": "Indira Soura Giri Jala Vikasam",
+      "aliases": [
+        "solar tribal irrigation"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Tribal Welfare Department / TRICOR",
+      "category": "agriculture",
+      "subcategory": "tribal irrigation support",
+      "beneficiaryGroups": [
+        "farmers",
+        "sc_st_obc"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://cm.telangana.gov.in/2025/05/honble-cm-sri-revanth-reddy-launches-indira-soura-giri-jala-vikasam-scheme-to-empower-tribal-farmers-with-land-rights-and-solar-irrigation-in-telangana",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Supports land rights and solar-powered irrigation for tribal farmers.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Guidelines, eligibility and district allocation were not published in the launch release read.",
+        "The implementing agency and application route are unconfirmed."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-pmfby",
+      "name": "Pradhan Mantri Fasal Bima Yojana",
+      "officialName": "Pradhan Mantri Fasal Bima Yojana",
+      "aliases": [
+        "PMFBY",
+        "crop insurance"
+      ],
+      "level": "CENTRAL",
+      "department": "Department of Agriculture and Farmers Welfare, Government of India",
+      "category": "insurance",
+      "subcategory": "crop insurance",
+      "beneficiaryGroups": [
+        "farmers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://pmfby.gov.in/guidelines",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Crop insurance against specified non-preventable risks for farmers growing notified crops in notified areas.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Which Telangana crops and districts are notified this season was not established.",
+        "Premium rates are set by the scheme but were not transcribed."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-pmkisan",
+      "name": "PM-KISAN",
+      "officialName": "Pradhan Mantri Kisan Samman Nidhi",
+      "aliases": [
+        "PM Kisan"
+      ],
+      "level": "CENTRAL",
+      "department": "Department of Agriculture and Farmers Welfare, Government of India",
+      "category": "agriculture",
+      "subcategory": "income support",
+      "beneficiaryGroups": [
+        "farmers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://pmkisan.gov.in/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Income support of Rs 6,000 a year in three instalments by direct transfer to eligible landholding farmer families.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Exclusion list and landholding verification rules were not recorded.",
+        "Telangana beneficiary counts are not published on the portal page."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-pmkusum",
+      "name": "PM-KUSUM",
+      "officialName": "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan",
+      "aliases": [
+        "PM KUSUM",
+        "solar pumps"
+      ],
+      "level": "CENTRAL",
+      "department": "Ministry of New and Renewable Energy, implemented by TGREDCO",
+      "category": "utilities",
+      "subcategory": "solar agriculture",
+      "beneficiaryGroups": [
+        "farmers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://tgredco.telangana.gov.in/PMKusum.aspx",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Solar energy in agriculture: decentralised solar plants and solarisation of agricultural pumps, with Telangana targets set by TGREDCO.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Component-wise subsidy and the current application window were not recorded.",
+        "Land and substation-distance conditions are summarised, not quoted."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-agri-infra-fund",
+      "name": "Agriculture Infrastructure Fund",
+      "officialName": "Agriculture Infrastructure Fund",
+      "aliases": [
+        "AIF"
+      ],
+      "level": "CENTRAL",
+      "department": "Department of Agriculture and Farmers Welfare, Government of India",
+      "category": "agriculture",
+      "subcategory": "post-harvest finance",
+      "beneficiaryGroups": [
+        "farmers",
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://agriinfra.dac.gov.in/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Financing support for eligible agricultural infrastructure projects with interest subvention and credit guarantee.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Whether Telangana offers a state top-up was not established.",
+        "Eligible project list was not transcribed."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-pmmsy",
+      "name": "Pradhan Mantri Matsya Sampada Yojana",
+      "officialName": "Pradhan Mantri Matsya Sampada Yojana",
+      "aliases": [
+        "PMMSY"
+      ],
+      "level": "CENTRAL",
+      "department": "Department of Fisheries, Government of India; Telangana Fisheries Department",
+      "category": "agriculture",
+      "subcategory": "fisheries development",
+      "beneficiaryGroups": [
+        "fisherfolk",
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://warangal.telangana.gov.in/fisheries",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Support for fish and prawn production, ponds, hatcheries, aquaculture systems, vehicles and retail outlets, with rates by activity and category.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Activity-wise subsidy rates were not recorded.",
+        "Whether Telangana has opened the current application window is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-fish-seed-subsidy",
+      "name": "Fish seed subsidy",
+      "officialName": "Supply of fish seed on 100% subsidy",
+      "aliases": [
+        "fish seed"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Fisheries Department",
+      "category": "agriculture",
+      "subcategory": "fish seed support",
+      "beneficiaryGroups": [
+        "fisherfolk"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://warangal.telangana.gov.in/fisheries",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Fish seed supplied free of cost to eligible public water bodies to support fish production.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Which water bodies qualify and who receives the seed were not recorded.",
+        "Whether this is a statewide norm or a district arrangement is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-seed-subsidy",
+      "name": "Subsidised seed distribution",
+      "officialName": "Subsidy Seed Distribution System (T-SEED)",
+      "aliases": [
+        "T-SEED",
+        "OSSDS"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Agriculture Department",
+      "category": "agriculture",
+      "subcategory": "seed subsidy",
+      "beneficiaryGroups": [
+        "farmers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://ossds.telangana.gov.in/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Allocates and issues subsidised seed through authorised sale points in the state distribution system.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Crop-wise subsidy amounts were not recorded.",
+        "Eligibility for allocation is set seasonally and was not read."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-farm-mechanisation",
+      "name": "Farm Mechanisation Scheme",
+      "officialName": "Farm Mechanisation and Custom Hiring Centres",
+      "aliases": [
+        "CHC",
+        "farm machinery subsidy"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Agriculture Department",
+      "category": "agriculture",
+      "subcategory": "machinery subsidy",
+      "beneficiaryGroups": [
+        "farmers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://mgov.telangana.gov.in/FarmMechGuide.html",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Supports purchase of farm machinery and custom hiring centre packages, with category-specific subsidy limits.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Package-wise rates were not transcribed into the record.",
+        "Whether the scheme is open this year is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-crop-loan-interest",
+      "name": "Vaddileni Runalu and Pavala Vaddi",
+      "officialName": "Interest-free crop loans and interest assistance",
+      "aliases": [
+        "Vaddileni Runalu",
+        "Pavala Vaddi"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Agriculture Department with lending institutions",
+      "category": "financial_inclusion",
+      "subcategory": "crop loan interest support",
+      "beneficiaryGroups": [
+        "farmers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://kothagudem.telangana.gov.in/agriculture/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Interest-free crop loans up to Rs 1 lakh and interest assistance for crop loans repaid on time.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "The district page describes slabs; the current state order was not read.",
+        "Whether the scheme runs in the current year is unconfirmed."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-micro-irrigation",
+      "name": "Micro Irrigation",
+      "officialName": "Telangana Micro Irrigation Project",
+      "aliases": [
+        "TGMIP",
+        "drip subsidy",
+        "sprinkler subsidy"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Horticulture Department",
+      "category": "agriculture",
+      "subcategory": "irrigation subsidy",
+      "beneficiaryGroups": [
+        "farmers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://sangareddy.telangana.gov.in/horticulture-sericulture/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Subsidy for drip, mini sprinkler and portable sprinkler systems for eligible farmers.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Category-wise subsidy percentages were not recorded.",
+        "The department micro-irrigation page did not respond when fetched; district page used."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-midh",
+      "name": "Mission for Integrated Development of Horticulture",
+      "officialName": "Mission for Integrated Development of Horticulture",
+      "aliases": [
+        "MIDH"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Horticulture Department (centrally sponsored)",
+      "category": "agriculture",
+      "subcategory": "horticulture development",
+      "beneficiaryGroups": [
+        "farmers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://suryapet.telangana.gov.in/horticulture-and-sericulture",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Assistance for new gardens, protected cultivation, mechanisation, post-harvest management and marketing infrastructure.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Component rates vary by year and were not recorded.",
+        "The current annual action plan was not read."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-sericulture-assistance",
+      "name": "Sericulture assistance (Silk Samagra-2)",
+      "officialName": "Silk Samagra-2 and state sericulture assistance",
+      "aliases": [
+        "Silk Samagra",
+        "mulberry subsidy"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Sericulture Department with Central Silk Board",
+      "category": "agriculture",
+      "subcategory": "sericulture subsidy",
+      "beneficiaryGroups": [
+        "farmers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://warangal.telangana.gov.in/sericulture",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Subsidy for mulberry plantation, rearing houses, equipment and disinfectants, with a higher share for SC and ST farmers.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Subsidy shares differ by component and were summarised, not quoted.",
+        "Whether the current batch is open is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-fapp",
+      "name": "Telangana Food Processing and Preservation Policy",
+      "officialName": "T-FAPP incentives",
+      "aliases": [
+        "T-FAPP"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Industries and Commerce Department / Telangana Food Processing Society",
+      "category": "entrepreneurship",
+      "subcategory": "food processing incentives",
+      "beneficiaryGroups": [
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://tgfps.telangana.gov.in/telangana-food-processing-and-preservation-policy/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Capital grant, power rebate, interest subvention and fee reimbursement for eligible food processing units, with top-ups for SC, ST, minority, SHG and FPO units.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "The policy page summarises incentives; the guideline PDF was not read.",
+        "Eligibility thresholds and caps were not recorded."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-pmfme",
+      "name": "PMFME support to FPOs, SHGs and cooperatives",
+      "officialName": "PM Formalisation of Micro Food Processing Enterprises - group support",
+      "aliases": [
+        "PMFME"
+      ],
+      "level": "CENTRAL",
+      "department": "Ministry of Food Processing Industries, delivered by TGFPS",
+      "category": "entrepreneurship",
+      "subcategory": "food processing group support",
+      "beneficiaryGroups": [
+        "entrepreneurs",
+        "women"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://tgfps.telangana.gov.in/pmfme/support-to-fpos-shgs-producer-cooperatives",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Credit-linked grant support for group value-chain activities such as grading, storage, processing, packaging and marketing.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Grant percentage and project ceilings were not recorded.",
+        "Whether the window is open is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-t-idea",
+      "name": "T-IDEA",
+      "officialName": "Telangana State Industrial Development and Entrepreneur Advancement incentives",
+      "aliases": [
+        "T-IDEA"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Industries and Commerce Department",
+      "category": "entrepreneurship",
+      "subcategory": "industrial incentives",
+      "beneficiaryGroups": [
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://tgfps.telangana.gov.in/t-idea",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Package of capital subsidy, stamp duty reimbursement, land cost rebate, power cost reimbursement, SGST reimbursement and interest subsidy for eligible units.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Incentive rates differ by category and zone and were not recorded.",
+        "The current policy year and claim window were not confirmed."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tihcl",
+      "name": "Telangana Industrial Health Clinic",
+      "officialName": "Telangana Industrial Health Clinic Limited",
+      "aliases": [
+        "TIHCL"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Industries and Commerce Department",
+      "category": "entrepreneurship",
+      "subcategory": "sick MSME revival",
+      "beneficiaryGroups": [
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://tihcl.telangana.gov.in/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Diagnostic and revival financing for sick and incipient-sick micro and small manufacturing enterprises.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Eligibility thresholds and loan terms were not recorded.",
+        "Whether the clinic is currently lending is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-t-spark",
+      "name": "T-Spark and T-Fund",
+      "officialName": "Telangana startup grants",
+      "aliases": [
+        "T-Spark",
+        "T-Fund",
+        "TSIRI"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Telangana Innovation Cell, IT and Electronics Department",
+      "category": "entrepreneurship",
+      "subcategory": "startup grants",
+      "beneficiaryGroups": [
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://startup.telangana.gov.in/grants",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Grant funding for prototype building, talent, research and marketing for early-stage startups, plus state investment through T-Fund.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Grant sizes and eligibility by stage were not recorded.",
+        "Whether applications are open is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-wehub-ujaagar",
+      "name": "WE Hub Project Ujaagar",
+      "officialName": "WE Hub - Project Ujaagar and incubation programmes",
+      "aliases": [
+        "WE Hub",
+        "Ujaagar"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "WE Hub, IT and Electronics Department",
+      "category": "entrepreneurship",
+      "subcategory": "women entrepreneurship",
+      "beneficiaryGroups": [
+        "women",
+        "minorities",
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://wehub.telangana.gov.in/sie",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Pre-incubation, incubation, acceleration and a minority-women-focused programme for women entrepreneurs.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Cohort dates and selection criteria were not recorded.",
+        "Whether stipends are offered is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tworks-access",
+      "name": "T-Works Access Program",
+      "officialName": "T-Works Access Program",
+      "aliases": [
+        "T-Works"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "T-Works, Government of Telangana",
+      "category": "skill_development",
+      "subcategory": "prototyping access",
+      "beneficiaryGroups": [
+        "entrepreneurs"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://tworks.telangana.gov.in/tworks-accessprogram",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Workbench, power, storage, fast-track prototyping and mentorship for registered startups at the state prototyping facility.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Fees and eligibility stage were not recorded.",
+        "Whether the programme is currently accepting applicants is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-task",
+      "name": "TASK",
+      "officialName": "Telangana Academy for Skill and Knowledge",
+      "aliases": [
+        "TASK",
+        "finishing school"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "IT and Electronics Department",
+      "category": "skill_development",
+      "subcategory": "skilling and placement",
+      "beneficiaryGroups": [
+        "students",
+        "unorganised_workers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://task.telangana.gov.in/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Industry-aligned skilling, finishing-school courses and placement support for students and unemployed graduates.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Course list and fees were not recorded.",
+        "Eligibility by institution is not stated on the landing page."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-employment-portal",
+      "name": "Employment and Training services",
+      "officialName": "Directorate of Employment and Training - job melas and overseas recruitment",
+      "aliases": [
+        "TOMCOM",
+        "employment exchange"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Labour, Employment, Training and Factories Department",
+      "category": "employment",
+      "subcategory": "job matching",
+      "beneficiaryGroups": [
+        "unorganised_workers"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "http://employment.telangana.gov.in/",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Job-seeker registration, job melas, employer listings, overseas recruitment through TOMCOM and a German language training programme.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Eligibility for each service was not recorded.",
+        "The site is served over plain HTTP."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-tgsrtc-passes",
+      "name": "TGSRTC concessional bus passes",
+      "officialName": "TGSRTC bus pass concessions",
+      "aliases": [
+        "bus pass",
+        "TGSRTC concession"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Telangana State Road Transport Corporation, Transport Department",
+      "category": "transport",
+      "subcategory": "travel concession",
+      "beneficiaryGroups": [
+        "persons_with_disabilities"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://tgsrtc.telangana.gov.in/bus-pass-services",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Concessional and free bus passes for listed categories including journalists, dialysis patients, persons with disabilities, martyrs spouses and freedom fighters, plus monthly season tickets.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "Category-wise concession rates were not recorded.",
+        "Free travel for women is delivered under Mahalakshmi, a separate record."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": [
+        {
+          "type": "RELATED",
+          "recordId": "research-tg-mahalakshmi",
+          "note": "Free travel for women is delivered under Mahalakshmi; this record covers the other concession categories."
+        }
+      ]
+    },
+    {
+      "id": "research-mepma",
+      "name": "MEPMA urban livelihood programmes",
+      "officialName": "Mission for Elimination of Poverty in Municipal Areas",
+      "aliases": [
+        "MEPMA",
+        "EST&P"
+      ],
+      "level": "STATE",
+      "state": "Telangana",
+      "department": "Municipal Administration and Urban Development Department",
+      "category": "employment",
+      "subcategory": "urban livelihood",
+      "beneficiaryGroups": [
+        "women",
+        "street_vendors"
+      ],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://kamareddy.telangana.gov.in/mepma",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Urban livelihood programmes including employment and self-employment support, SHG interest subsidy, street vendor support and shelter for the urban homeless.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "low",
+      "unresolvedQuestions": [
+        "Which components are active in each urban local body was not recorded.",
+        "Amounts and eligibility were not captured."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
+    },
+    {
+      "id": "research-pm-surya-ghar",
+      "name": "PM Surya Ghar rooftop solar",
+      "officialName": "PM Surya Ghar: Muft Bijli Yojana",
+      "aliases": [
+        "rooftop solar subsidy"
+      ],
+      "level": "CENTRAL",
+      "department": "Ministry of New and Renewable Energy, routed through TGREDCO",
+      "category": "utilities",
+      "subcategory": "rooftop solar subsidy",
+      "beneficiaryGroups": [],
+      "ageBands": [],
+      "schemeStatus": "UNKNOWN",
+      "discoveryUrl": "https://tgredco.telangana.gov.in/SolarLinks.aspx",
+      "districts": [],
+      "eligibilityEvidence": [],
+      "verificationEvidence": [],
+      "benefitSummary": "Central financial assistance for residential rooftop solar, with Telangana applications routed through TGREDCO.",
+      "eligibilityConditions": [],
+      "exclusions": [],
+      "prerequisites": [],
+      "documents": [],
+      "status": "CATALOGUED",
+      "verificationStatus": "UNVERIFIED",
+      "discoveredOn": "2026-11-28",
+      "lastResearchedOn": "2026-11-28",
+      "confidence": "medium",
+      "unresolvedQuestions": [
+        "The exact per-kW subsidy figures were reported by search results but not confirmed on this page.",
+        "Whether net metering is available statewide is unclear."
+      ],
+      "importReadiness": "NEEDS_INFO",
+      "notes": "Discovered in the M9.2 expansion and catalogued from one official page; eligibility not researched.",
+      "statusHistory": [
+        {
+          "status": "DISCOVERED",
+          "on": "2026-11-28"
+        },
+        {
+          "status": "CATALOGUED",
+          "on": "2026-11-28"
+        }
+      ],
+      "relationships": []
     }
   ],
-  "coverageClaims": []
+  "coverageClaims": [],
+  "updatedOn": "2026-11-28"
 }
