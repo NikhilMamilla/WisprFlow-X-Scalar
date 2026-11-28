@@ -11,6 +11,7 @@ import {
   startJourney,
   validateInitialProfile,
   viewOf,
+  type JourneyResponse,
   type JourneySession,
   type JourneyView,
 } from './journey'
@@ -517,5 +518,367 @@ describe('integrity', () => {
     const first = beginJourney({ age: 33 }, options)
     const second = beginJourney({ age: 33 }, options)
     expect(first.ok && second.ok && first.session).toEqual(second.ok ? second.session : null)
+  })
+})
+describe('answer correction', () => {
+  const must = (response: JourneyResponse) => {
+    if (!response.ok) throw new Error(`expected a journey, got ${response.error.code}`)
+    return response.journey
+  }
+
+  // Answers everything except income and Aadhaar.
+  const nearComplete = {
+    age: 30,
+    occupation: 'street_vendor',
+    urban_or_rural: 'urban',
+    has_bank_account: true,
+    in_epf_esic_nps: false,
+    pays_income_tax: false,
+  }
+
+  // Answers the current question with a value its input type accepts.
+  const answerCurrent = (store: JourneyStore, sessionId: string, value?: unknown): JourneyView => {
+    const view = must(store.get(sessionId))
+    const question = view.nextQuestion!
+    const fallback = question.input === 'number' ? 30 : question.field === 'occupation' ? 'street vendor' : question.field === 'state' ? 'Telangana' : true
+    return must(store.answer(sessionId, question.id, value === undefined ? fallback : value))
+  }
+
+  it('replaces the value, keeps both history entries and flips eligibility', () => {
+    const store = new JourneyStore(options)
+    const started = must(store.start(nearComplete))
+    const sessionId = started.sessionId
+    const income = started.nextQuestion!
+    expect(income.field).toBe('monthly_income')
+
+    const tooHigh = must(store.answer(sessionId, income.id, 30000))
+    expect(tooHigh.results.notEligible.map((r) => r.schemeId)).toContain('pmsym')
+
+    const corrected = must(store.correct(sessionId, 'monthly_income', 9000))
+    expect(corrected.profile.monthly_income).toBe(9000)
+    expect(corrected.results.notEligible).toEqual([])
+
+    // The original answer is preserved, and the correction names what it replaced.
+    expect(corrected.answers).toHaveLength(2)
+    expect(corrected.answers[0]).toMatchObject({ field: 'monthly_income', value: 30000, action: 'ANSWER' })
+    expect(corrected.answers[1]).toMatchObject({
+      field: 'monthly_income',
+      value: 9000,
+      previousValue: 30000,
+      action: 'CORRECTION',
+      questionId: income.id,
+    })
+    expect(corrected.answers[1].sequence).toBeGreaterThan(corrected.answers[0].sequence)
+    expect(corrected.answers[0].value).toBe(30000)
+
+    // The corrected answer is what the engine now uses.
+    const afterAadhaar = answerCurrent(store, sessionId, true)
+    expect(afterAadhaar.results.likelyEligible.map((r) => r.schemeId)).toContain('pmsym')
+  })
+
+  it('regenerates explanations and brings back a question the first answer had removed', () => {
+    const store = new JourneyStore(options)
+    const started = must(store.start(nearComplete))
+    const sessionId = started.sessionId
+    must(store.answer(sessionId, started.nextQuestion!.id, 30000))
+    // With a failing income the Aadhaar question stops mattering.
+    expect(must(store.get(sessionId)).nextQuestion).toBeNull()
+
+    const corrected = must(store.correct(sessionId, 'monthly_income', 9000))
+    expect(corrected.nextQuestion?.field).toBe('has_aadhaar')
+    const pension = corrected.results.moreInformationNeeded.find((r) => r.schemeId === 'pmsym')!
+    expect(pension.unknown).toContain('pmsym:requires:has_aadhaar')
+    expect(pension.failed).toEqual([])
+  })
+
+  it('rejects an invalid correction without changing the session', () => {
+    const store = new JourneyStore(options)
+    const started = must(store.start({}))
+    const sessionId = started.sessionId
+    answerCurrent(store, sessionId)
+    const before = store.get(sessionId)
+    const rejected = store.correct(sessionId, 'has_bank_account', 'maybe')
+    expect(rejected.ok).toBe(false)
+    if (!rejected.ok) expect(rejected.error.code).toBe('INVALID_ANSWER')
+    expect(store.get(sessionId)).toEqual(before)
+  })
+
+  it('refuses to correct a field that was never answered', () => {
+    const store = new JourneyStore(options)
+    const started = must(store.start({ age: 30 }))
+    const rejected = store.correct(started.sessionId, 'monthly_income', 9000)
+    expect(rejected.ok).toBe(false)
+    if (!rejected.ok) expect(rejected.error.code).toBe('QUESTION_NOT_ANSWERED')
+    expect(must(store.get(started.sessionId)).answers).toHaveLength(0)
+  })
+
+  it('refuses corrections while paused or complete', () => {
+    const store = new JourneyStore(options)
+    const started = must(store.start({}))
+    const sessionId = started.sessionId
+    answerCurrent(store, sessionId)
+    must(store.correct(sessionId, 'has_bank_account', false))
+    must(store.pause(sessionId))
+    const paused = store.correct(sessionId, 'has_bank_account', true)
+    expect(paused.ok).toBe(false)
+    if (!paused.ok) expect(paused.error.code).toBe('SESSION_PAUSED')
+    must(store.resume(sessionId))
+    must(store.complete(sessionId))
+    const completed = store.correct(sessionId, 'has_bank_account', true)
+    expect(completed.ok).toBe(false)
+    if (!completed.ok) expect(completed.error.code).toBe('SESSION_COMPLETED')
+  })
+})
+
+describe('skipping questions', () => {
+  const must = (response: JourneyResponse) => {
+    if (!response.ok) throw new Error(`expected a journey, got ${response.error.code}`)
+    return response.journey
+  }
+
+  it('moves to another question without answering and without changing the profile', () => {
+    const store = new JourneyStore(options)
+    const started = must(store.start({}))
+    const sessionId = started.sessionId
+    const first = started.nextQuestion!
+    const before = started.results
+
+    const skipped = must(store.skip(sessionId, first.id))
+    expect(skipped.skips).toHaveLength(1)
+    expect(skipped.skips[0]).toMatchObject({ questionId: first.id, field: first.field })
+    expect(skipped.answers).toEqual([])
+    expect(skipped.profile).toEqual(emptyProfile())
+    expect(skipped.nextQuestion?.field).not.toBe(first.field)
+    // Same explanations: a skip is not a no and cannot make a scheme ineligible.
+    expect(skipped.results).toEqual(before)
+    expect(skipped.counts.NOT_ELIGIBLE).toBe(0)
+  })
+
+  it('never repeats a skipped question while another open question remains', () => {
+    const store = new JourneyStore(options)
+    const started = must(store.start({}))
+    const sessionId = started.sessionId
+    const first = started.nextQuestion!
+    const skipped = must(store.skip(sessionId, first.id))
+    const next = skipped.nextQuestion!
+    expect(next.field).not.toBe(first.field)
+
+    const value = next.input === 'number' ? 30 : next.field === 'occupation' ? 'street vendor' : true
+    const answered = must(store.answer(sessionId, next.id, value))
+    expect(answered.nextQuestion?.field).not.toBe(first.field)
+    expect(answered.answers).toHaveLength(1)
+  })
+
+  it('offers each skipped question exactly once more, then stops asking', () => {
+    const store = new JourneyStore(options)
+    const started = must(store.start({}))
+    const sessionId = started.sessionId
+    const fields = started.questions.map((q) => q.field)
+    const skipCount = new Map<string, number>()
+
+    for (let guard = 0; guard < fields.length * 2; guard += 1) {
+      const view = must(store.get(sessionId))
+      const question = view.nextQuestion
+      if (!question) break
+      skipCount.set(question.field, (skipCount.get(question.field) ?? 0) + 1)
+      must(store.skip(sessionId, question.id))
+    }
+
+    const final = must(store.get(sessionId))
+    expect(final.nextQuestion).toBeNull()
+    // Every open question was offered twice and no field a third time.
+    for (const field of fields) expect(skipCount.get(field)).toBe(2)
+    expect(final.skips).toHaveLength(fields.length * 2)
+    expect(final.status).toBe('NEEDS_VERIFICATION')
+    expect(final.reason).toBe('missing_information_without_question')
+    expect(final.answers).toEqual([])
+    expect(final.counts.NOT_ELIGIBLE).toBe(0)
+  })
+
+  it('can be revisited explicitly, and the skip record survives the visit', () => {
+    const store = new JourneyStore(options)
+    const started = must(store.start({}))
+    const sessionId = started.sessionId
+    const first = started.nextQuestion!
+    must(store.skip(sessionId, first.id))
+
+    const revisited = must(store.revisit(sessionId, first.field))
+    expect(revisited.nextQuestion?.id).toBe(first.id)
+    expect(revisited.revisitQuestion).toBe(first.field)
+    expect(revisited.skips).toHaveLength(1)
+
+    const answered = must(store.answer(sessionId, first.id, true))
+    expect(answered.revisitQuestion).toBeNull()
+    expect(answered.answers[0].field).toBe(first.field)
+    // The skip stays in history after it was answered.
+    expect(answered.skips).toHaveLength(1)
+  })
+
+  it('rejects an explicit revisit of a question that was not skipped or is already answered', () => {
+    const store = new JourneyStore(options)
+    const started = must(store.start({}))
+    const sessionId = started.sessionId
+    const notSkipped = store.revisit(sessionId, 'age')
+    expect(notSkipped.ok).toBe(false)
+    if (!notSkipped.ok) expect(notSkipped.error.code).toBe('INVALID_STATE')
+
+    const first = started.nextQuestion!
+    must(store.skip(sessionId, first.id))
+    must(store.revisit(sessionId, first.field))
+    must(store.answer(sessionId, first.id, true))
+    const answered = store.revisit(sessionId, first.field)
+    expect(answered.ok).toBe(false)
+    if (!answered.ok) expect(answered.error.code).toBe('INVALID_STATE')
+  })
+
+  it('rejects an unknown or stale question, and a skip while paused, without mutating', () => {
+    const store = new JourneyStore(options)
+    const started = must(store.start({}))
+    const sessionId = started.sessionId
+    const before = store.get(sessionId)
+
+    const unknown = store.skip(sessionId, 'question_nonsense')
+    expect(unknown.ok).toBe(false)
+    if (!unknown.ok) expect(unknown.error.code).toBe('UNKNOWN_QUESTION')
+
+    const other = started.questions.find((q) => q.id !== started.nextQuestion?.id)!
+    const stale = store.skip(sessionId, other.id)
+    expect(stale.ok).toBe(false)
+    if (!stale.ok) expect(stale.error.code).toBe('QUESTION_NOT_CURRENT')
+    expect(store.get(sessionId)).toEqual(before)
+
+    must(store.pause(sessionId))
+    const paused = store.skip(sessionId)
+    expect(paused.ok).toBe(false)
+    if (!paused.ok) expect(paused.error.code).toBe('SESSION_PAUSED')
+  })
+
+  it('reports NOTHING_TO_SKIP when every question is already answered', () => {
+    const store = new JourneyStore(options)
+    const started = must(store.start(fullVendor))
+    expect(started.nextQuestion).toBeNull()
+    const response = store.skip(started.sessionId)
+    expect(response.ok).toBe(false)
+    if (!response.ok) expect(response.error.code).toBe('NOTHING_TO_SKIP')
+  })
+})
+
+describe('session isolation', () => {
+  it('does not leak mutable profile, history, results or questions', () => {
+    const store = new JourneyStore(options)
+    const started = store.start({})
+    if (!started.ok) throw new Error('start failed')
+    const sessionId = started.journey.sessionId
+
+    const view = started.journey
+    expect(Object.isFrozen(view.profile)).toBe(true)
+    try {
+      ;(view.profile as { age: number | null }).age = 99
+    } catch {
+      /* frozen objects throw in strict mode */
+    }
+    view.answers.push({ questionId: 'x', field: 'age', value: 1, action: 'ANSWER', sequence: 99, answeredAt: 'x' })
+    view.questions.push({ ...view.questions[0], id: 'question_injected' })
+    view.results.moreInformationNeeded.length = 0
+    view.skips.push({ questionId: 'x', field: 'age', sequence: 99, skippedAt: 'x' })
+
+    const fresh = store.get(sessionId)
+    if (!fresh.ok) throw new Error('missing')
+    expect(fresh.journey.profile.age).toBeNull()
+    expect(fresh.journey.answers).toEqual([])
+    expect(fresh.journey.skips).toEqual([])
+    expect(fresh.journey.questions.map((q) => q.id)).not.toContain('question_injected')
+    expect(fresh.journey.results.moreInformationNeeded.length).toBeGreaterThan(0)
+  })
+
+  it('keeps two sessions independent', () => {
+    let counter = 0
+    const store = new JourneyStore({ ...options, createId: () => `k${(counter += 1)}` })
+    const a = store.start({})
+    const b = store.start({})
+    if (!a.ok || !b.ok) throw new Error('start failed')
+    const question = a.journey.nextQuestion!
+    if (!store.answer(a.journey.sessionId, question.id, true).ok) throw new Error('answer failed')
+    const bAfter = store.get(b.journey.sessionId)
+    expect(bAfter.ok && bAfter.journey.answers).toEqual([])
+    expect(bAfter.ok && bAfter.journey.profile.has_bank_account).toBeNull()
+  })
+
+  it('leaves the session byte-identical after every rejected operation', () => {
+    const store = new JourneyStore(options)
+    const started = store.start({ age: 30 })
+    if (!started.ok) throw new Error('start failed')
+    const sessionId = started.journey.sessionId
+    const before = store.get(sessionId)
+
+    store.answer(sessionId, started.journey.nextQuestion!.id, 'not an answer')
+    store.correct(sessionId, 'monthly_income', 10)
+    store.skip(sessionId, 'question_nonsense')
+    store.revisit(sessionId, 'age')
+    expect(store.get(sessionId)).toEqual(before)
+  })
+})
+
+describe('lifecycle hardening', () => {
+  it('re-derives the same status after pause and resume', () => {
+    const store = new JourneyStore(options)
+    const started = store.start({ age: 30 })
+    if (!started.ok) throw new Error('start failed')
+    const sessionId = started.journey.sessionId
+    const before = store.get(sessionId)
+    if (!store.pause(sessionId).ok) throw new Error('pause failed')
+    const resumed = store.resume(sessionId)
+    expect(resumed.ok).toBe(true)
+    if (!resumed.ok) return
+    expect(resumed.journey.status).toBe('COLLECTING_INFORMATION')
+    expect(resumed.journey.nextQuestion?.id).toBe(started.journey.nextQuestion?.id)
+    // Only the timestamp moves; answers, profile and questions are identical.
+    const original = before.ok ? before.journey : null
+    expect(resumed.journey.answers).toEqual(original?.answers)
+    expect(resumed.journey.profile).toEqual(original?.profile)
+  })
+
+  it('completes with questions still open, then reopens on request', () => {
+    const store = new JourneyStore(options)
+    const started = store.start({})
+    if (!started.ok) throw new Error('start failed')
+    const sessionId = started.journey.sessionId
+    const completed = store.complete(sessionId)
+    expect(completed.ok && completed.journey.status).toBe('COMPLETED')
+    expect(completed.ok && completed.journey.nextQuestion).not.toBeNull()
+
+    const blocked = [store.answer(sessionId, started.journey.nextQuestion!.id, true), store.skip(sessionId), store.correct(sessionId, 'age', 30)]
+    for (const response of blocked) {
+      expect(response.ok).toBe(false)
+      if (!response.ok) expect(response.error.code).toBe('SESSION_COMPLETED')
+    }
+
+    const reopened = store.resume(sessionId)
+    expect(reopened.ok && reopened.journey.status).toBe('COLLECTING_INFORMATION')
+  })
+
+  it('ends with verification uncertainty when every question is skipped twice', () => {
+    const store = new JourneyStore(options)
+    const started = store.start({ age: 30 })
+    if (!started.ok) throw new Error('start failed')
+    const sessionId = started.journey.sessionId
+    // Skip each question twice: the policy then has nothing left to offer.
+    let guard = 0
+    while (guard < 30) {
+      const current = store.get(sessionId)
+      if (!current.ok) throw new Error('missing')
+      const question = current.journey.nextQuestion
+      if (!question) break
+      if (!store.skip(sessionId, question.id).ok) throw new Error('skip failed')
+      guard += 1
+    }
+    const final = store.get(sessionId)
+    expect(final.ok).toBe(true)
+    if (!final.ok) return
+    expect(final.journey.nextQuestion).toBeNull()
+    expect(final.journey.status).toBe('NEEDS_VERIFICATION')
+    expect(final.journey.reason).toBe('missing_information_without_question')
+    expect(final.journey.counts.NOT_ELIGIBLE).toBe(0)
+    expect(final.journey.answers).toEqual([])
   })
 })
